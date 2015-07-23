@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <title>
+        </title>
+        <link href="../../../RFC-AM Comprehensive/Content/Resources/Stylesheets/UserManual for reference.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h4 class="Heading4">
+            <a name="_Configuring_Event_Actions">
+            </a>Configuration Settings Specific to Email Event Actions</h4>
+        <p class="p_10">When you choose to create an Email Event Action, the following fields and settings are available.</p>
+        <p class="p_10">
+            <img src="../../../RFC-AM Comprehensive/Content/Resources/Images/UserManual for reference/03000064.png" style="height: 284px;width: 462px;" class="img_2" />
+        </p>
+        <ul class="ul_1">
+            <li class="ColorfulListAccent11">
+                <span class="Strong">Email Address(es)</span> – The email address(es) that will receive the Event notification.</li>
+            <li class="ColorfulListAccent11">
+                <span class="Strong">Event Action Message</span> - The message about the Event that will be delivered.<br /><br /><span class="Strong">NOTE</span>:&#160; One or more macros can be configured to generate the Event Action Message.&#160; The default Event Action Message is configured with macros in the following way:</li>
+        </ul>
+        <p class="ColorfulListAccent11_15">
+            <br />Event Source: ${SOURCE.$aName}</p>
+        <p class="ColorfulListAccent11_15">Event Time: ${TIME}</p>
+        <p class="ColorfulListAccent11_15">Event Trigger Type: ${TRIGGER_TYPE}</p>
+        <p class="ColorfulListAccent11_15">&#160;</p>
+        <p class="ColorfulListAccent11_15">Additional Event Source Information:</p>
+        <p class="ColorfulListAccent11_15">Name: ${SOURCE.$aName}</p>
+        <p class="ColorfulListAccent11_15">Asset Location: ${SOURCE.$aLocation}</p>
+        <p class="ColorfulListAccent11_15">Description: ${SOURCE.$aDescription}</p>
+        <p class="p_44">For more information, refer to the <a href="../../../RFC-AM Comprehensive/Content/Asset Manager Administration and Usage Manual/Using Macros.htm#_Using_Macros">Macros</a> section.</p>
+    </body>
+</html>

@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="3" MadCap:lastHeight="2287" MadCap:lastWidth="1109">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>
+            <MadCap:annotation MadCap:createDate="2015-06-08T10:51:11.4773583-05:00" MadCap:creator="Pappillon" MadCap:initials="PA" MadCap:comment="revise and expand\r\n06/13/15 review notes: seriously?  Asset, Attribute, and hardware all belong, sure, but...retired and assigned and whatever?  Not here, thanks.  And Web Interface does not need to be defined." MadCap:editor="Pappillon" MadCap:editDate="2015-06-13T20:23:10.0304728-05:00">Terminology</MadCap:annotation>
+        </h1>
+        <h2><MadCap:variable name="General.ProductName" />
+        </h2>
+        <p><MadCap:variable name="General.ProductName" /> is the top-level component of the software. <MadCap:variable name="General.ProductName" /> performs the configuration, alerting and notification, and asset data management. <MadCap:variable name="General.ProductName" /> provides all information displayed in the asset views, reports and graphs. Information relayed from one or more Zone Managers is used along with user configured policies to track asset location and alerting events.</p>
+        <h2 MadCap:conditions="Default.NewText">Asset</h2>
+        <p MadCap:conditions="Default.NewText">An asset is a physical item to be tracked, for which an asset record must be created in <MadCap:variable name="General.ProductName" />. Assets have Types and Attributes, are assigned Tags, and are assigned to or detected in Locations.</p>
+        <h3>Retired and Deleted Assets</h3>
+        <p>Assets that no longer need to be tracked in <MadCap:variable name="General.ProductName" /> can be retired or deleted. Assets that are retired from <MadCap:variable name="General.ProductName" /> are listed as Retired status as opposed to Active status. Retired assets are not removed from the <MadCap:variable name="General.ProductName" /> database and can be Unretired as required. An asset that is deleted will be completely removed from the system and its associated data is deleted. </p>
+        <h2>Asset Type</h2>
+        <p>Asset Types are data definitions used to describe assets that are tracked with <MadCap:variable name="General.ProductName" />. An Asset Type is defined as a category of asset such as IT assets, monitors or people. Within <MadCap:variable name="General.ProductName" />, Asset Types can be arranged in a hierarchy where child asset types will inherit all attributes associated to the parent type. An example of an asset hierarchy would be “IT Asset &gt; Computer &gt; Laptop”. In this example the Laptop asset type is a child of type Computer which is a child of IT Asset. So a Laptop can be described as a Computer which is an IT Asset.</p>
+        <h2>Attribute</h2>
+        <p>An attribute defines a specific property or characteristic of an Asset Type. Attributes are completely user definable. An example of an attribute might be the manufacturer of the asset or the model of the asset.</p>
+        <h3>Calculated Asset Attribute</h3>
+        <p>Calculated asset attributes are attributes that have been derived from the application of a formula to various asset attributes to produce a value. The Administrator can choose to create the formula or can use one of the pre-created calculated asset attributes that are contained within the data schema.</p>
+        <h3>Custom Attribute Type</h3>
+        <p>A custom attribute type is a combination of attributes into a single grouping to represent a specific quality or characteristic. Custom attribute types are associated to asset types just like standard attributes.</p>
+        <h3>
+            System
+            <MadCap:annotation MadCap:createDate="2015-06-13T20:21:34.1049862-05:00" MadCap:creator="Pappillon" MadCap:initials="PA" MadCap:comment="Check definition--is this correct?" MadCap:editor="Pappillon" MadCap:editDate="2015-06-13T20:21:43.0474977-05:00">Attribute</MadCap:annotation></h3>
+        <p>
+            System Attributes are similar to regular attributes but are non-configurable except for display color formatting. System attributes hold system information about Asset Types that are inherited from the active RFID tag associated with the asset. Examples of system attributes are motion, tamper, low battery, etc.</p>
+        <h2>
+            <MadCap:annotation MadCap:createDate="2015-06-08T13:21:57.4477582-05:00" MadCap:creator="Pappillon" MadCap:initials="PA" MadCap:comment="Need another entry, but should it be sensor tag or just sensor?" MadCap:editor="Pappillon" MadCap:editDate="2015-06-08T13:22:12.5156200-05:00">Tag</MadCap:annotation>
+        </h2>
+        <p>One-way, transmit-only communicators affixed to assets for tracking or monitoring. Tags can be IR-enabled, for use with IR&#160;locators. Sensor tags monitor environmental conditions. </p>
+        <h3>Assigned Tag</h3>
+        <p>Assigned tags are asset tags that have been associated or assigned to an asset. If an asset is deleted or retired from the system the associated tag may be placed back in the unassigned tag list.</p>
+        <h3>Detected Tag</h3>
+        <p>Any tag that has successfully transmitted information to a reader appears as Detected until it is imported into the system.  Tags move from Detected to Unassigned, then are assigned to assets (or, for sensor tags, defined as assets).</p>
+        <h3>Retired and Deleted Tag</h3>
+        <p>Tags that are associated with retired or deleted assets can be removed from the system or requested to be put back into the Unassigned tag queue for reuse on other <MadCap:annotation MadCap:createDate="2015-06-08T13:21:13.7582593-05:00" MadCap:creator="Pappillon" MadCap:initials="PA" MadCap:comment="not sure aboout this heading.  Deleted or recycled/available, not retired?!" MadCap:editor="Pappillon" MadCap:editDate="2015-06-08T13:21:39.4717300-05:00">assets.</MadCap:annotation></p>
+        <h3>Unassigned Tag</h3>
+        <p>Unassigned tags are tags that are imported into the system but are not currently associated to an asset. All tags that are added to the system are considered to be in the Unassigned state until they are associated with an asset. The Unassigned tag population does not change unless a user explicitly associates a tag to an asset, deletes an Unassigned tag, or imports a detected tag.</p>
+        <h2>Data Schema</h2>
+        <p>The schema of a database system is its structure. The schema defines the tables, the fields in each table, and the relationships between fields and tables. The schema used to track assets in <MadCap:variable name="General.ProductName" /> is completely customizable by the Administrator. A schema is comprised of Asset Types, Attributes, and Custom Attributes.</p>
+        <h2>IR&#160;Locator</h2>
+        <p>An IR&#160;Room or Rack Locator is a beacon that sends out a unique user-defined location code. IR-enabled tags receive this code and bundle it with the information they send to readers. </p>
+        <h2>Reader</h2>
+        <p>RF Code readers such as the M200 or M250, receive information from tags. <MadCap:variable name="General.ProductName" /> will be configured with one or more readers to provide real-time tag location and sensor information.</p>
+        <h2>Web Interface</h2>
+        <p>The web interface is the browser-based user interface which is composed of the Administrator and User Consoles. The Administrator Console is designed to manage the system infrastructure and database schema while the User Console manages all aspects of the physical assets.</p>
+        <h2>Zone Manager</h2>
+        <p>Zone Manager is the second-level component of <MadCap:variable name="General.ProductName" />. The Zone Manager interfaces directly with the readers and allows for processing of tag data and transmissions to the <MadCap:variable name="General.ProductName" />.</p>
+    </body>
+</html>

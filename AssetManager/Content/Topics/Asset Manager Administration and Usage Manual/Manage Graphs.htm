@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="2856" MadCap:lastWidth="776">
+    <head><title></title>
+    </head>
+    <body>
+        <h1><a name="__RefHeading___Toc414541426"></a>Manage Graphs</h1>
+        <p>The Manage Graphs task lets you&#160; specify what will be graphed and how. <MadCap:variable name="Variables.ProductName" /> provides some standard graph templates to help you create graphs, but you can also create completely customized Graphs.</p>
+        <p>Graphs can be created on both the Admin Console and the User Console. Configuration fields differ depending upon the type of Graph. Graphs are produced in a linear style with the axis determined by the criteria you specify.</p>
+        <h2>To Create a New Graph</h2>
+        <ol>
+            <li>Navigate to <span class="strong">Reports/Graphs &gt;&#160;Manage Graphs</span> and click <span class="strong">New</span>.</li>
+            <li>Select the Graph Template from the drop-down.</li>
+            <li>Complete all required and any desired additional fields.</li>
+        </ol>
+        <h3>Basic Information</h3>
+        <ul>
+            <li><span class="Strong">Name:</span> Assign a name to the Graph.<br /></li>
+        </ul>
+        <ul>
+            <li><span class="strong">Create output only if data exists:</span> check this box to prevent the creation of empty reports. If unchecked, <MadCap:variable name="General.ProductName" /> will create a report if a report is scheduled to be created, even if the report contains no data.</li>
+        </ul>
+        <h3>Security</h3>
+        <ul>
+            <li><span class="strong">Execution User Account:</span> On the User Console, this drop-down menu provides a list of <MadCap:annotation MadCap:createDate="2015-06-17T17:32:00.3012877-05:00" MadCap:creator="Pappillon" MadCap:initials="PA" MadCap:comment="No idea what that means!  Do group names appear here, as well as individual user IDs?  Looks like only a single selection is possible. " MadCap:editor="Pappillon" MadCap:editDate="2015-06-26T10:08:23.8211785-05:00">users. The Execution User Account, when used in conjunction with Admin Security, can limit report execution to authorized users. The default value of Admin is appropriate for most situations.</MadCap:annotation></li>
+        </ul>
+        <h3>Time</h3>
+        <ul>
+            <li><span class="strong">Lead In Timestamps:</span> Include attribute state changes if they occurred before the specified report time. For example, if you are generating a report to show offline assets during a specific week, and some of the assets went from online to offline before the report start time, then that information will be included in the report. If you leave this box unchecked, the report will only show the state of the attribute at the specified start time.</li>
+            <li><span class="strong">Time Type:</span>Select from Relative, Specific, Calendar, or Consolidated Time Range. </li>
+            <li><span class="strong">Consolidated Report Time:</span> If Consolidated Time Range is chosen, select from Beginning of consolidated report, End of consolidated report, or Same time range as consolidated <MadCap:annotation MadCap:createDate="2015-06-26T10:11:06.6234903-05:00" MadCap:creator="Pappillon" MadCap:initials="PA" MadCap:comment="An explanation wouldn't go amiss!" MadCap:editor="Pappillon" MadCap:editDate="2015-06-26T10:11:13.6728935-05:00">report.</MadCap:annotation> <![CDATA[ ]]></li>
+            <li><span class="strong">Time Range</span> Select the period.</li>
+        </ul>
+        <h3>Schedule</h3>
+        <ul>
+            <li><span class="strong">Schedule:</span> Click the Ellipsis <span class="strong">...</span> button to access the scheduler. Set frequency to daily, weekly, or monthly and select the start time.</li>
+            <li><span class="strong">Enable Schedule:</span>Check this box to enable the schedule. Temporarily disable an schedule without deleting it by unchecking this box.</li>
+        </ul>
+        <h3>Actions</h3>
+        <ul>
+            <li><span class="strong">Action Format:</span>Select output format for report or graph distributed via Action. Reports and Graphs can be sent in CSV, JSON, PDF, SQLITE, or XML formats.</li>
+            <li><span class="strong">Report/Graph Actions:</span> Click the Ellipsis <span class="strong">...</span> button to access a list of available Email, FTP, or HTTP&#160;Post actions. Move actions from&#160;Available to Selected as desired. Click <span class="strong">OK</span>&#160;when finished.</li>
+            <li><span class="strong">Filters:</span> Filters define the criteria that must be met in order for data to be included. Select Attributes, Value Operators, and Values to limit the amount of data included. Leave empty to include all data related to the type and time specified. </li>
+            <li><span class="strong">Post-Conditions:</span>Set to include all status changes for items meeting criteria during any part of specified period.</li>
+            <li><span class="strong">Exceptions:</span> Select to define data change handling. Every change to an Exception Attribute during the report period is included. 
+            If no exception attributes are specified, then all of the column attributes are used as exception attributes for the report.</li>
+            <li><span class="strong">Columns:</span> Select Attributes to display. Click the Ellipsis <span class="strong">...</span> button to access a list of available Attributes. Move actions from&#160;Available to Selected as desired. Click <span class="strong">OK</span>&#160;when finished.</li>
+        </ul>
+        <h3>Appearance</h3>
+        <ul>
+            <li><span class="strong">Graph Size:</span> Choose the size of the graph.</li>
+            <li><span class="strong">Background Color:</span> Leave as default for white or select desired color.</li>
+            <li><span class="strong">Line Thickness:</span> Set border around graph.</li>
+            <li><span class="strong">Group Axis by Unit:</span> Select to group axis values by unit where attributes share a common attribute unit type. If this box is not checked and two or more attributes are chosen, then each of the attributes will be given its own Y-axis.</li>
+            <li><span class="strong">Show graph grid:</span> Select to display a grid on the graph.</li>
+            <li><span class="strong">Graph legend location:</span> Specify location of legend.</li>
+        </ul>
+        <ol start="4">
+            <li><span class="strong">Save Changes</span>.</li>
+        </ol>
+        <h2>To Run a Graph</h2>
+        <ol>
+            <li>Navigate to <span class="strong">Reports/Graphs &gt;&#160;Manage Graphs</span>.</li>
+            <li>Select the Graph from the list in the middle pane.</li>
+            <li>Click <span class="strong">Run Graph</span> or <span class="strong">Run and View Graph</span>.<br />Run Graph behaves as if scheduled to run immediately. Navigate to <span class="strong">Reports/Graphs &gt;&#160;Graphs</span> to view the graph once <MadCap:annotation MadCap:createDate="2015-06-18T13:55:04.6269796-05:00" MadCap:creator="Pappillon" MadCap:initials="PA" MadCap:comment="including actions?" MadCap:editor="Pappillon" MadCap:editDate="2015-06-18T13:55:08.9632276-05:00">completed.</MadCap:annotation><br />Run and View <MadCap:annotation MadCap:createDate="2015-06-18T13:55:12.3664222-05:00" MadCap:creator="Pappillon" MadCap:initials="PA" MadCap:comment="does this include actions?" MadCap:editor="Pappillon" MadCap:editDate="2015-06-18T13:55:17.2016988-05:00">Graph</MadCap:annotation> displays results onscreen without requiring you to navigate away from the Manage Graphs task. </li>
+            <li>Enter a name for the graph.</li>
+            <li>If Run and View Graph selected, click <span class="strong">Run in Background</span> if desired. </li>
+            <li>When complete, the graph opens in a pop-up.</li>
+        </ol>
+        <h2>To Export a Graph</h2>
+        <ol>
+            <li>Navigate to<span class="strong">Reports/Graphs.</span></li>
+            <li>To export a completed graph, select the <span class="strong">Graphs</span> sub-task, select the report, and click <span class="strong">View</span>. To run and export a new graph, <span class="strong">Run and View Graph</span>.</li>
+            <li>From View Graph Window, click <span class="strong">Export</span>.</li>
+        </ol>
+        <h2>To Delete a Graph Template</h2>
+        <ol>
+            <li>Navigate to <span class="strong">Reports/Graphs &gt; Manage Graphs</span>.</li>
+            <li>Select the report from the list in the middle pane.</li>
+            <li>Click <span class="strong">Delete</span>. </li>
+        </ol>
+        <p>The template is deleted, but any reports that have been run remain.</p>
+        <h2>To Delete a Graph </h2>
+        <ol>
+            <li>Navigate to <span class="strong">Reports/Graphs &gt; Graphs</span>.</li>
+            <li>Select the graph.</li>
+            <li>Click <span class="strong">Delete</span>. </li>
+        </ol>
+        <p>The report is deleted, but the template remains. &#160;</p>
+    </body>
+</html>

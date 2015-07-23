@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="2159" MadCap:lastWidth="750">
+    <head><title></title>
+        <link href="../../Resources/Stylesheets/Styles.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1><a name="__RefHeading___Toc414541325"></a><a name="_System_Requirements"></a>System <MadCap:annotation MadCap:createDate="2015-05-11T10:32:53.3455430-05:00" MadCap:creator="DSFoxx" MadCap:initials="DSF" MadCap:comment="Update?  Windows 8x?  " MadCap:editor="DSFoxx" MadCap:editDate="2015-05-11T10:32:59.2568811-05:00">Requirements</MadCap:annotation></h1>
+        <p><MadCap:variable name="General.ProductName" /> must be installed on a physical or virtual server. Once installed and configured, <MadCap:variable name="General.ProductName" /> can be accessed over the network.  While the <MadCap:variable name="General.ProductName" /> server application does not need a dedicated server, it is a common practice to dedicate a separate server for the <MadCap:variable name="General.ProductName" /> database.</p>
+        <h2>Network IP Address/Connectivity</h2>
+        <ul>
+            <li>Every reader you deploy needs its own IP address.</li>
+            <li><MadCap:variable name="General.ProductName" /> needs to be able to reach readers on the appropriate port (default port 6500) and readers need to be able to reach the <MadCap:variable name="General.ProductName" /> server.<br /><br /></li>
+        </ul>
+        <h2>Hardware, Operating System, and Networking Requirements</h2>
+        <p>The following are hardware, OS, and networking requirements for installing <MadCap:variable name="General.ProductName" />:</p>
+        <MadCap:snippetBlock src="../../Resources/Snippets/Operating Systems Supported.flsnp" />
+        <MadCap:snippetBlock src="../../Resources/Snippets/Databases Supported.flsnp" />
+        <p>&#160;</p>
+        <h2>Database Requirements</h2>
+        <p>In addition to the <MadCap:variable name="General.ProductName" /> server, a database is required for storing sensor tag data and configuration data that is gathered and managed by <MadCap:variable name="General.ProductName" />. <MadCap:variable name="General.ProductName" /> is designed to work with Microsoft SQL Server or <a href="http://www.postgresql.org/">PostgreSQL</a>. If you have an existing database environment, create a new database and then connect it to <MadCap:variable name="General.ProductName" />. If you don’t have a database environment prepared or available, or you want the quickest way to dive into your pilot installation, you can use Microsoft SQL Express 2008, which is bundled with <MadCap:variable name="General.ProductName" />. However, this “lite” database is not recommended for long-term or production use; therefore, if you do install <MadCap:variable name="General.ProductName" /> with SQL Express, then you will need to migrate to a production-quality database during the full roll-out by following standard database backup and restore procedures or by using the <MadCap:variable name="General.ProductName" /> export and import functions. For more information about exporting <MadCap:variable name="General.ProductName" /> configuration settings, refer to the Administrator’s Guide <MadCap:annotation MadCap:createDate="2015-05-20T17:40:37.7362893-05:00" MadCap:creator="DSFoxx" MadCap:initials="DSF" MadCap:comment="system's administrator guide hyperlink to go here" MadCap:editor="DSFoxx" MadCap:editDate="2015-05-20T17:40:49.1959448-05:00">online.</MadCap:annotation></p>
+        <p>Before installing <MadCap:variable name="General.ProductName"></MadCap:variable>, record the following database details:</p>
+        <ul>
+            <li>Database host name/IP address</li>
+            <li>Port Number (for example 1433 for SQL)</li>
+            <li>Database name</li>
+            <li>Credentials to authenticate with the database (read/write/create access)</li>
+        </ul>
+        <h2>Hardware <MadCap:annotation MadCap:createDate="2015-05-07T14:58:59.1987269-05:00" MadCap:creator="DSFoxx" MadCap:initials="DSF" MadCap:comment="pilot packs?!  Still offered per Frank 060115, but no idea what the different requirements might be. \r\nAlso, formatting here is really intrusive. " MadCap:editor="Pappillon" MadCap:editDate="2015-06-02T09:32:44.8540461-05:00">Requirements</MadCap:annotation> Table</h2>
+        <p>The following table provides the minimum hardware specifications required to run <MadCap:variable name="Variables.ProductName" /> depending on the number of tags you will deploy in your production environment.</p>
+        <table class="TableNormal" style="border-left-style: solid;border-left-width: 1px;border-left-color: ;border-right-style: solid;border-right-width: 1px;border-right-color: ;border-top-style: solid;border-top-width: 1px;border-top-color: ;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: ;margin-left: 0;margin-right: auto;">
+            <col style="width: 144pt;" />
+            <col style="width: 104pt;" />
+            <col style="width: 113pt;" />
+            <thead>
+                <tr class="tr_2">
+                    <th style="border-left-style: solid;border-left-width: 1px;border-right-style: solid;border-right-width: 1px;border-top-style: solid;border-top-width: 1px;border-bottom-style: solid;border-bottom-width: 1px;"><span class="Strong">Number of Tags in</span>
+                        <br style="mc-tag-and-class: span;" /><span class="Strong">Deployment Environment</span>
+                    </th>
+                    <th style="border-left-style: solid;border-left-width: 1px;border-right-style: solid;border-right-width: 1px;border-top-style: solid;border-top-width: 1px;border-bottom-style: solid;border-bottom-width: 1px;"><span class="Strong">CPU Cores in the</span>
+                        <br style="mc-tag-and-class: span;" /><span class="Strong">Application Server</span>
+                    </th>
+                    <th><span class="Strong">RAM installed in the </span>
+                        <br style="mc-tag-and-class: span;" /><span class="Strong">Application </span><span MadCap:createDate="2015-05-01T20:40:02.1452059-05:00" MadCap:creator="DSFoxx" MadCap:initials="DSF" MadCap:comment="table format: RFC blue header; auto-fit to window, column minimum 108" MadCap:editor="DSFoxx" MadCap:editDate="2015-05-01T20:40:23.8174455-05:00" class="Strong">Server</span>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="tr_1">
+                    <td class="td_1">
+                        <p>&lt; 1,000</p>
+                    </td>
+                    <td class="td_1">
+                        <p>2</p>
+                    </td>
+                    <td class="td_2">
+                        <p>2GB</p>
+                    </td>
+                </tr>
+                <tr class="tr_1">
+                    <td class="td_1">
+                        <p>&lt; 10,000</p>
+                    </td>
+                    <td class="td_1">
+                        <p>2</p>
+                    </td>
+                    <td class="td_2">
+                        <p>3GB</p>
+                    </td>
+                </tr>
+                <tr class="tr_1">
+                    <td class="td_1">
+                        <p>&lt; 20,000</p>
+                    </td>
+                    <td class="td_1">
+                        <p>4</p>
+                    </td>
+                    <td class="td_2">
+                        <p>4GB</p>
+                    </td>
+                </tr>
+                <tr class="tr_1">
+                    <td class="td_1">
+                        <p>&lt; 30,000</p>
+                    </td>
+                    <td class="td_1">
+                        <p>4</p>
+                    </td>
+                    <td class="td_2">
+                        <p>5GB</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="note" MadCap:autonum="&lt;b&gt;NOTE:&lt;/b&gt; &#160;">The storage space required to host your data can be calculated with the assistance of the <MadCap:variable name="Variables.CompanyName" /> Storage Capacity Calculator. For more information, refer to the <MadCap:variable name="Variables.CompanyName" /> Storage Space Calculator available online: <br /><a href="http://support.rfcode.com/customer/portal/articles/760679">support.rfcode.com/customer/portal/articles/760679</a></p>
+        <MadCap:snippetBlock src="../../Resources/Snippets/Web Browsers Supported.flsnp" />
+    </body>
+</html>

@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="1090" MadCap:lastWidth="1070">
+    <head>
+        <title>
+        </title>
+    </head>
+    <body>
+        <h1>Adding Sensors as <MadCap:annotation MadCap:createDate="2015-05-21T12:54:14.7758906-05:00" MadCap:creator="DSFoxx" MadCap:initials="DSF" MadCap:comment="For personal reference, this includes what I'd consider &quot;affixing tags&quot;--see notes from Wilfred and include links or brief descriptions of barcode scanner as well as import-by-spreadsheet options for full deployment." MadCap:editor="DSFoxx" MadCap:editDate="2015-05-21T12:54:15.8039494-05:00">Assets</MadCap:annotation></h1>
+        <p>In order to view data from a sensor in <MadCap:variable name="General.ProductName" />, the sensor tag must be assigned to an asset or as an asset assigned with a location.</p>
+        <p>To add a new sensor tag as an asset:</p>
+        <ol>
+            <li>Navigate to <b>User Console &gt; Tag Management &gt; Manage <MadCap:annotation MadCap:createDate="2015-06-16T14:28:05.7523269-05:00" MadCap:creator="Pappillon" MadCap:initials="PA" MadCap:comment="Franks says: \r\nAn example CSV file that can be downloaded from the support site would go a long way here.\r\n--062215, exported configuration for a template.  Q: can I delete everything that isn't relevant to tags, add, them import?  Testing!" MadCap:editor="Pappillon" MadCap:editDate="2015-06-22T16:23:08.0621287-05:00">Tags</MadCap:annotation></b> and right-click to select a tag from the far right column, Unassigned Tags.</li>
+            <li>Click <span class="Strong">New Asset</span>.</li>
+            <li>Select the appropriate Asset Template or Asset Type. (Use the <span class="Strong">+</span> to expand selections if required.)</li>
+        </ol>
+        <ol MadCap:continue="true">
+            <li>Complete all required and any desired additional fields.<br /><br /></li>
+        </ol>
+        <MadCap:snippetBlock src="../../Resources/Snippets/required fields note.flsnp" />
+        <ul>
+            <li>
+                <span class="Strong">Name</span>: Assign a name to the sensor. The name is used on all forms to prompt for the data, so it is advised to use a clear, concise and intuitive name for the new attribute.Typically pre-pending a type designator (TempHum), then a location descriptor will suffice. </li>
+            <li>
+                <span class="Strong">Asset Tag</span>: Depending on the method used to get to this screen, this field may be pre-populated. If not, simply start typing the Tag ID of the tag and select the appropriate Tag ID from the dynamic list presented.</li>
+            <li>
+                <span class="Strong">Assigned To</span>: This field is used to tell <MadCap:variable name="General.ProductName" /> whether the sensor tag is affixed to a summary location such as a rack. </li>
+            <li>
+                <span class="strong">Description</span>: If desired, input a detailed comment describing the sensor tag asset.This can be any information that is helpful to you when monitoring the environment. For example, you could note that a temperature tag is installed on a rack door or on the cabinet itself.</li>
+            <li>
+                <span class="Strong">Assigned Location</span>: This field is used to tell <MadCap:variable name="General.ProductName" /> where the tag will reside physically, and is designated using the Location hierarchy. </li>
+            <li MadCap:conditions="Default.AM only">Expected Location (s): This is where an asset should be and is also designated using the Location Hierarchy that you have already configured. However, this field—Expected Location—is intended to be used with mobile assets (hospital equipment, shipping trucks, etc.), that should be one place but that are detected in another; it is very rarely used with sensor tag assets.</li>
+            <li MadCap:conditions="Default.AM only">
+                <span class="strong">Lock Location</span>: For non-mobile assets, such as environmental sensors, selecting this checkbox is important, as sensor tags should not be physically moved after deployment.</li>
+            <li>
+                <span class="Strong">Temperature Sensor Application</span>: This pull-down menu designates an intended use for the sensor tag asset, for example, on an IT Rack, and enables other fields, depending on the application selected, for example, the Airflow Position and the Rack Position menu fields will appear when the “application” selected is an IT Rack Sensor.</li>
+            <li>
+                <span class="Strong">Airflow Position</span>: This field designates if the sensor is in the front or the back of the cabinet or rack. Rack Intake Temperature corresponds to the front and Rack Exhaust Temperature corresponds to the back of the rack.</li>
+            <li>
+                <span class="Strong">Rack Position</span>: This field designates whether the sensor tag is at the Top, the Middle, or the Bottom of the rack door.</li>
+        </ul>
+        <ol MadCap:continue="true">
+            <li>Click <span class="Strong">Save</span>.</li>
+        </ol>
+    </body>
+</html>

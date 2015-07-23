@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultFileLinkSet
+  FileTitle=""
+  FileSearchable="true"
+  FileTimeEstimate="0"
+  FilePriority="0">
+  <Links>
+    <Link
+      Url="Content/D_Images/UserManual for reference/03000019.png" />
+    <Link
+      Url="Content/Topics/Asset Manager Administration and Usage Manual/RF Code Tag Group Codes IDs.htm" />
+    <Link
+      Url="http://support.rfcode.com/customer/portal/articles/723973" />
+    <Link
+      Url="Content/D_Images/UserManual for reference/0300001A.png" />
+    <Link
+      Url="Content/D_Images/UserManual for reference/0300001B.png" />
+    <Link
+      Url="Content/Topics/Asset Manager Administration and Usage Manual/Appendix.htm" />
+    <Link
+      Url="Project/ConditionTagSets/Default.flcts" />
+    <Link
+      Url="Project/VariableSets/Variables.flvar" />
+    <Link
+      Url="Project/VariableSets/General.flvar" />
+  </Links>
+  <LongLinks>
+    <Link
+      Url="Content/D_Images/UserManual for reference/03000019.png" />
+    <Link
+      Url="Content/Topics/Asset Manager Administration and Usage Manual/RF Code Tag Group Codes IDs.htm#_RF_Code_Tag_1" />
+    <Link
+      Url="http://support.rfcode.com/customer/portal/articles/723973" />
+    <Link
+      Url="Content/D_Images/UserManual for reference/0300001A.png" />
+    <Link
+      Url="Content/D_Images/UserManual for reference/0300001B.png" />
+    <Link
+      Url="Content/Topics/Asset Manager Administration and Usage Manual/Appendix.htm#_RF_Code_Tag" />
+    <Link
+      Url="Project/ConditionTagSets/Default.flcts" />
+    <Link
+      Url="Project/VariableSets/Variables.flvar" />
+    <Link
+      Url="Project/VariableSets/General.flvar" />
+  </LongLinks>
+  <Anchors>
+    <Anchor
+      Name="__RefHeading___Toc414541336" />
+    <Anchor
+      Name="_Adding_Tag_Groups" />
+  </Anchors>
+  <Keywords />
+  <Concepts />
+  <ConceptControlNames />
+  <IndexControlNames />
+  <Variables>
+    <Variable
+      Name="Variables.CompanyName" />
+    <Variable
+      Name="General.ProductName" />
+    <Variable
+      Name="Variables.ProductName" />
+  </Variables>
+  <FileConditions />
+  <FileTags />
+  <AllConditions>
+    <Condition
+      Tag="Default.SourceText" />
+  </AllConditions>
+  <Stylesheets />
+</CatapultFileLinkSet>

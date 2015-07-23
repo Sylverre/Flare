@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <title>
+        </title>
+    </head>
+    <body>
+        <h3 class="Heading3">
+            <a name="__RefHeading___Toc414541451">
+            </a>Asset Links</h3>
+        <p>Asset Links simplify and streamline the asset navigation and browsing process.&#160; Asset Links are system administrator defined objects that auto-apply filters to views which are available in the Assets pane. In contrast, Asset Manager bookmarks, which are similar in function, are user-specific in scope. Asset Links can be made available to all users so can be thought of as administrator-controlled “global bookmarks”.&#160; Users may have multiple Asset Links associated to them. Asset Manager will merge and organize those links for concise presentation in the User Console.&#160; </p>
+        <p>Asset Links are defined and managed in the Admin Console under the “User Access -&gt; Asset Links” task pane.&#160; By default there are three Asset Links which in previous versions of Asset Manager were not able to be modified or deleted.&#160; Defining new Asset Links is done by selecting the “New” button.</p>
+        <p>
+            <img src="../../../../RFC-AM Comprehensive/Content/Resources/Images/UserManual for reference/030000D5.png" style="width: 624px;height: 374px;" />
+        </p>
+        <p>The Asset Link configuration screen is organized into four sections.&#160; The first section, “Basic Information”, is simply where the “Name” of the Asset Link is defined and where the filters configured in the Asset Link can be locked so that users who are able to view the respective Asset Link can not dynamically modify the filters for the link.&#160; </p>
+        <p>
+            <img src="../../../../RFC-AM Comprehensive/Content/Resources/Images/UserManual for reference/030000D6.png" style="width: 389px;height: 82px;" />
+        </p>
+        <p>The second section, “Navigation Tree”, is used to define very high level filter information for the Asset Link being created.&#160; The “Navigate By:” option is used to define the class of object that the filter will be based on.&#160; In the example below, “IBM Servers” will be our target filter, so our “Navigate By:” option is most appropriately based on an “Asset Type” filter.&#160; The “Navigation Root:” defines where in the respective hierarchy our filter/search will begin.&#160; In this example, “Computer” is the most appropriate designation. </p>
+        <p>
+            <img src="../../../../RFC-AM Comprehensive/Content/Resources/Images/UserManual for reference/030000D7.png" style="width: 386px;height: 81px;" />
+        </p>
+        <p>The “Asset Link Filter” section is where the specific filtering parameters for the Asset Link are defined and specified.&#160; Specifically, “Link Type:” defines the type of Asset being filtered on.&#160; In this case, similar to the “Navigation Root”, we will choose “Computer” since an “IBM Server” could be a Blade, a Blade Chassis, or other form factor of IBM computing technology.&#160; The “Link Location:” filter allows for location-specific filtering if it’s desired to view assets in a specific location or hierarchy.&#160; Both the Link Type and Link Location are top-down in their functionality, where anything from the designated level on down will be included.&#160; In this example, every asset that resides in or under “North America” would be included. </p>
+        <p>The “Link Attribute:” fields are an additional step of filtering whereby a specific attribute can be compared against.&#160; If the comparison matches, the resulting assets will be displayed.&#160; In this example we are looking specifically for “IBM” equipment, so we are comparing against the “Manufacturer” attribute and requiring it to be “IBM”.&#160; </p>
+        <p>
+            <img src="../../../../RFC-AM Comprehensive/Content/Resources/Images/UserManual for reference/030000D8.png" style="width: 387px;height: 165px;" />
+        </p>
+        <p>All of the “Asset Link Filter” selections are optional, and with none specified users will have access/visibility to all assets.&#160; They are simply filtering options to restrict/limit the assets returned.&#160; </p>
+        <p>Finally, the “Asset Link View(s)” is simply a display designation that allows for specific custom views to be applied/restricted/allowed for the Asset Link.&#160; “Views” are defined and managed in the “User Console” under “Customization -&gt; Views”:</p>
+        <p>
+            <img src="../../../../RFC-AM Comprehensive/Content/Resources/Images/UserManual for reference/030000D9.png" style="width: 624px;height: 361px;" />
+        </p>
+        <p>Once the Asset Link is configured and saved, rights to use this Asset Link can be specified for respective users and/or groups of users in the Admin Console under the “User Access” section.&#160; For locally defined users, the Asset Link(s) are defined under the “Users” section:</p>
+        <p>
+            <img src="../../../../RFC-AM Comprehensive/Content/Resources/Images/UserManual for reference/030000DA.png" style="width: 624px;height: 393px;" />
+        </p>
+        <p>For LDAP/externally defined users, modifying the respective user under the “LDAP Server” section:</p>
+        <p>
+            <img src="../../../../RFC-AM Comprehensive/Content/Resources/Images/UserManual for reference/030000DB.png" style="width: 623px;height: 554px;" />
+        </p>
+        <p>Once the Asset Links are defined, users can use and leverage the Links in the User Console under the “Assets” section:</p>
+        <p>
+            <img src="../../../../RFC-AM Comprehensive/Content/Resources/Images/UserManual for reference/030000DC.png" style="width: 623px;height: 299px;" />
+        </p>
+    </body>
+</html>

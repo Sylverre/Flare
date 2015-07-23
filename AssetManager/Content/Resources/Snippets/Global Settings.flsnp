@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="683" MadCap:lastWidth="1096">
+    <body>
+        <h2>Global Settings</h2>
+        <p>From anywhere in the Map Configuration task, click the <span class="strong">Global Settings</span> button to set Hot Spot default display settings. </p>
+        <p>
+            <img src="../../D_Images/CS Map Global Settings dialog.bmp" />
+        </p>
+        <ul>
+            <li>
+                <span class="strong">Fill Color</span>: Choose a fill color for the hot spot shape that has been drawn. If you do not specify a fill color this setting will default to the Fill Color setting specified in the map settings. If the map settings do not have a fill color specified then the fill color will default to the Fill Color setting found in Global Settings.</li>
+            <li>
+                <span class="strong">Fill Opacity</span>: Specify an opacity percentage that you would like for the fill area. The lower the percentage the more transparent the fill area will appear. For example a specification of 100% for this field will make the fill area completely opaque. If you choose not to specify a percentage for this field, this setting will default to the Fill Opacity setting specified in the map settings. If the map settings do not have a fill opacity specified then this setting will default to the Fill Opacity setting found in Global Settings.</li>
+        </ul>
+    </body>
+</html>

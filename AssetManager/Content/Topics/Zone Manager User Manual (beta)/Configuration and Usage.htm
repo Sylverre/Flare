@@ -1,0 +1,403 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="14743" MadCap:lastWidth="875">
+    <head>
+    </head>
+    <body>
+        <h1>Configuration and Usage</h1>
+        <p>The Zone Manager software utilizes a telnet style network connection that utilizes a command-response mode.</p>
+        <p>In addition, Zone Manager 1.0.0 also can be used with a web interface that outputs in XML and JSON formats.</p>
+        <p>Instructions for connecting to an R200 Reader and using the Zone Manager software to retrieve tag data are outlined below:</p>
+        <h2>Getting Started</h2>
+        <ol>
+            <li>Utilize the <MadCap:variable name="Variables.CompanyName" /> Reader Utility Configuration to configure the reader’s IP address information and to set the administrative login for the reader (Please refer to RFCodeReaderUtilitiesSDK_UserManual.pdf for instructions).</li>
+            <li>Record in a spreadsheet or text file the reader location (rack number &amp; row number) and reader IP address for later use with the Zone Manager configuration.</li>
+            <li>Install the Zone Manager software.</li>
+            <li>Access the command interface with a telnet terminal through port 6501 (that is telnet localhost 6501), or via the web API:</li>
+        </ol>
+        <p>http://hostname:6580/rfcode_zonemgr/zonemgr/api/&lt;command&gt;?&lt;parameters&gt;</p>
+        <p>In the following command samples the web interfaces will appear as follows:</p>
+        <p>The shorthand http://&lt;baseurl&gt; will be referred to in place of http://hostname:6580/rfcode_ranger/ranger/api</p>
+        <p>All commands support an optional XML-formatted output, in additon to the command-response output format. This optional format can be accessed by issuing the command with a “.xml” appended to the command name (that is readerlist.xml).</p>
+        <p>EXAMPLE</p>
+        <p>http://&lt;base-url&gt;/taglistbylocation.xml</p>
+        <p>All commands support an optional JSON-formatted output, in addition to the command-response output format. This optional format can be accessed by issuing the command with a “.json” appended to the command name (that is readerlist.json)</p>
+        <p>EXAMPLE</p>
+        <p>http://&lt;base-url&gt;/taglistbylocation.json</p>
+        <p>All commands support an optional CSV-formatted output, in addition to the command-response output format. This optional format can be accessed by issuing the command with a “.csv” appended to the command name (that is readerlist.csv)</p>
+        <p>EXAMPLE</p>
+        <p>http://&lt;base-url&gt;/taglistbylocation.csv</p>
+        <ol MadCap:continue="true">
+            <li>Setup and Configure R200 Readers</li>
+        </ol>
+        <h2>Setup of Readers</h2>
+        <p>The following are a list of commands to perform the configuration of R200 Readers as part of the <MadCap:variable name="Variables.CompanyName" /> Data Center Solution:</p>
+        <p>When creating names for readers, tags, or locations, etc., keep in mind that it is a good practice to use leading zeros in your alphanumeric naming conventions. Zone Manager sorts by using the first instance of a numeral therefore not using leading zeros can lead to incorrect sorting order.</p>
+        <p MadCap:conditions="Default.Notes for authors" style="font-weight: bold;text-decoration: underline;font-style: italic;">Naming Conventions Best Practice text above! Use wherever appropriate.</p>
+        <p>Example: Using Reader_6 and Reader_10 will sort and display as:</p>
+        <p>Reader_10</p>
+        <p>Reader_6</p>
+        <p>VS.</p>
+        <p>Using Reader_006 and Reader_010 will sort and display as:</p>
+        <p>Reader_006</p>
+        <p>Reader_010</p>
+        <ol>
+            <li>Create a Reader</li>
+        </ol>
+        <p>readercreate &lt;reader-id&gt; &lt;reader-type&gt;</p>
+        <p>http://&lt;baseurl&gt;/readercreate?id=&lt;reader-id&gt;&amp;type=&lt;reader-type&gt;</p>
+        <p>where &lt;reader-id&gt; is an alphanumeric ID, unique to the newly defined reader</p>
+        <p>&lt;reader-type&gt; is the model of reader.</p>
+        <p>This function creates a new reader instance, with default attribute values and initially disabled.</p>
+        <p>EXAMPLE COMMAND</p>
+        <p>readercreate R55 R200</p>
+        <p>OR</p>
+        <p>http://10.1.20.90:6580/rfcode_zonemgr/zonemgr/api/</p>
+        <p>readercreate?id=R55&amp;type=R200</p>
+        <p>EXAMPLE&#160;RESPONSE</p>
+        <p>R55: &lt;created&gt;</p>
+        <p>OR</p>
+        <p>R55: &lt;created&gt;</p>
+        <p>&#160;</p>
+        <ol MadCap:continue="true">
+            <li>Set The Hostname</li>
+        </ol>
+        <p>readerset &lt;reader-id&gt; &lt;reader-attributeid&gt;=&lt;attribute-value&gt; ...</p>
+        <p>http://&lt;baseurl&gt;/readerset?id=&lt;reader-id&gt;&amp;&lt;attrib-id&gt;=&lt;new-value&gt;&amp;...</p>
+        <p>where &lt;reader-id&gt; is the alphanumeric ID for the reader to be set</p>
+        <p>&lt;reader-attributeid&gt; is the ID of the attribute to be set (model specific).</p>
+        <p>This function sets one or more reader attribute values using the &lt;reader-attributeid&gt; command which is</p>
+        <p>the ID of the attribute to be set (model specific). The current <MadCap:variable name="Variables.CompanyName" /> readers support the following attributes:</p>
+        <p>&#160;</p>
+        <ul>
+            <li>
+                <i>*hostname: </i> host name or dotted-decimal IP address of reader</li>
+            <li>
+                <i>port:</i>  port number for reader (6500 by default)</li>
+            <li>
+                <i>userid:</i>  login user ID, if any (default is “” (none))</li>
+            <li>
+                <i>password:</i>  login password, if any (default is “” (none))</li>
+            <li>
+                <i>tagtimeout:</i>  number of seconds before reader declares tag missing (240 default)</li>
+            <li>
+                <i>ageincount:</i>  number of messages needed before a new tag is to be reported (default 0)</li>
+            <li>• ssideltathresh:  number of dBm of SSI value change before new SSI should be reported (default is 3)</li>
+            <li>• offlineageouttime:  number of seconds after connection lost to reader before tag links are dropped unless</li>
+            <li>re-established (default 60)</li>
+            <li>• ssicutoffA: Minimum SSI strentgh to be reported by channel A (default is 0 (no cutoff))</li>
+            <li>• ssicutoffB: Minimum SSI strentgh to be reported by channel B (default is 0 (no cutoff))</li>
+            <li>• ageouttimeA: Number of seconds where tag is NOT seen on channel A (but seen on B) before reported lost on channel A (default 30)</li>
+            <li>• ageouttimeB: Number of seconds where tag NOT seen on channel B (but seen on A) before reported lost on channel B (default 30)</li>
+        </ul>
+        <p>EXAMPLE COMMAND</p>
+        <p>readerset R55 hostname=10.1.20.55 (fixed IP)</p>
+        <p>readerset R55 hostname=rfcode123456 (DHCP)</p>
+        <p>OR</p>
+        <p>http://10.1.20.90:6580/rfcode_zonemgr/zonemgr/api/readerset?id=R55&amp;hostname=1</p>
+        <p>0.1.20.55</p>
+        <p>EXAMPLE RESPONSE</p>
+        <p>#</p>
+        <p>OR</p>
+        <p>&lt;done&gt;</p>
+        <ol start="3">
+            <li>Configure Group Codes</li>
+        </ol>
+        <p>groupcreate &lt;group-id&gt; &lt;tag-type&gt; groupcode=&lt;groupcode&gt;</p>
+        <p>http://&lt;baseurl&gt;/groupcreate?id=&lt;groupid&gt;&amp;type=&lt;tagtype&gt;&amp;&lt;grouparg&gt;=&lt;argval&gt;&amp;...</p>
+        <p>where &lt;group-id&gt; is alphanumeric ID for a specific group of tags</p>
+        <p>&lt;tag-type&gt; is the type of tag - currently defined are mantis00A, mantis00B, mantis01A, mantis01B,</p>
+        <p>mantis02A, mantis02B, mantis02C, mantis02D, mantis02E, mantis04A, mantis04B</p>
+        <p>&lt;groupcode&gt; is the group code attribute for the tag group (upper case)</p>
+        <p>This function creates a tag group, based on a tag type and the needed attribute.</p>
+        <p>EXAMPLE COMMAND</p>
+        <p>groupcreate rfcrck mantis04A groupcode=RFCRCK</p>
+        <p>OR</p>
+        <p>http://10.1.20.90:6580/rfcode_zonemgr/zonemgr/api/groupcreate?id=rfcrck&amp;type=ma</p>
+        <p>ntis04A&amp;groupcode=RFCRCK</p>
+        <p>EXAMPLE RESPONSE</p>
+        <p>#</p>
+        <p>OR</p>
+        <p>&lt;done&gt;</p>
+        <ol MadCap:continue="true">
+            <li>Assign a Groupcode to the Reader</li>
+        </ol>
+        <p>readeraddgroup &lt;reader-id&gt; &lt;group-id&gt;</p>
+        <p>http://&lt;baseurl&gt;/readeraddgroup?id=&lt;reader-id&gt;&amp;groupid0=&lt;group-id&gt;&amp;groupid1=&lt;group-id&gt;&amp;...</p>
+        <p>where &lt;reader-id&gt; is the alphanumeric ID for the reader to associate with the group</p>
+        <p>&lt;group-id&gt; is the alphanumeric ID of the tag group to be monitored by the reader</p>
+        <p>This function adds a tag group to a reader, so that the reader will monitor tags from the group.</p>
+        <p>EXAMPLE&#160;COMMAND</p>
+        <p>readeraddgrou R5 rfcrck</p>
+        <p>OR</p>
+        <p>http://10.1.20.90:6580/rfcode_zonemgr/zonemgr/api/readeraddgroup?id=R55&amp;groupid0=rfcrck</p>
+        <p>EXAMPLE&#160;RESPONSE</p>
+        <p>#</p>
+        <p>OR</p>
+        <p>&lt;done&gt;</p>
+        <ol MadCap:continue="true">
+            <li>Verify the Reader Settings</li>
+        </ol>
+        <p>readerget &lt;reader-id&gt;</p>
+        <p>http://&lt;baseurl&gt;/readerget?id=&lt;reader-id&gt;</p>
+        <p>where &lt;reader-id&gt; is the alphanumeric ID for the reader to be queried</p>
+        <p>This function prints all the reader’s attribute values.</p>
+        <p>EXAMPLE COMMAND</p>
+        <p>readerget R55</p>
+        <p>OR</p>
+        <p>http://10.1.20.90:6580/rfcode_zonemgr/zonemgr/api/readerget?id=R55</p>
+        <p>EXAMPLE RESPONSE</p>
+        <p>R55: hostname=”10.1.20.55”, port=6500, userid=””, password=””, tagtimeout=60,</p>
+        <p>ageincount=0, ssideltathresh=3, offlinelinkageout=60, ssicutoffA=0, ssicutoffB=0,</p>
+        <p>ageouttimeA=30, ageouttimeB=30</p>
+        <p>#</p>
+        <p>OR</p>
+        <p>- &lt;reader id=”R55”&gt;</p>
+        <p>&lt;attrib id=”hostname”&gt;10.1.20.55&lt;/attrib&gt;</p>
+        <p>&lt;attrib id=”port”&gt;6500&lt;/attrib&gt;</p>
+        <p>&lt;attrib id=”userid” /&gt;</p>
+        <p>&lt;attrib id=”password” /&gt;</p>
+        <p>&lt;attrib id=”tagtimeout”&gt;60&lt;/attrib&gt;</p>
+        <p>&lt;attrib id=”ageincount”&gt;0&lt;/attrib&gt;</p>
+        <p>&lt;attrib id=”ssideltathresh”&gt;3&lt;/attrib&gt;</p>
+        <p>&lt;attrib id=”offlinelinkageout”&gt;60&lt;/attrib&gt;</p>
+        <p>&lt;attrib id=”ssicutoffA”&gt;0&lt;/attrib&gt;</p>
+        <p>&lt;attrib id=”ssicutoffB”&gt;0&lt;/attrib&gt;</p>
+        <p>&lt;attrib id=”ageouttimeA”&gt;30&lt;/attrib&gt;</p>
+        <p>&lt;attrib id=”ageouttimeB”&gt;30&lt;/attrib&gt;&lt;/reader&gt;</p>
+        <ol MadCap:continue="true">
+            <li>Start the Reader</li>
+        </ol>
+        <p>readeractivate &lt;reader-id&gt;</p>
+        <p>http://&lt;baseurl&gt;/readeractivate?id=&lt;reader-id&gt;</p>
+        <p>where &lt;reader-id&gt; is the alphanumeric ID for the reader to be enabled</p>
+        <p>This function enables a reader (persistent - will still be enabled when the server is restarted).</p>
+        <p>EXAMPLE&#160;COMMAND</p>
+        <p>readeractivate 55</p>
+        <p>OR</p>
+        <p>http://10.1.20.90:6580/rfcode_zonemgr/zonemgr/api/readeractivate?id=R55</p>
+        <p>http://10.1.20.90:6580/rfcode_zonemgr/zonemgr/api/readeractivate.xml?id=R55</p>
+        <p>EXAMPLE&#160;RESPONSE</p>
+        <p>(2007-11-27 11:02:41-0600) ReaderStatus: readerid=R55, status="CONNECTING" R55: &lt;activated&gt;</p>
+        <p>#(2007-11-27 11:02:41-0600) ReaderStatus: readerid=R55, status="INITIALIZING" </p>
+        <p>(2007-11-27 11:02:41-0600) ReaderStatus: readerid=R55, status="ACTIVE"</p>
+        <p>OR</p>
+        <p>R55: &lt;activated&gt;</p>
+        <p>&lt;done&gt;Reader activated&lt;/done&gt;</p>
+        <p>NOTE:&#160;Repeat steps 1, 2, and 4-6 for all of the readers that will be part of the system. Step 3 does NOT need to be repeated.</p>
+        <p>Setup of Locations and Rules</p>
+        <p>The following are a list of commands to perform the setup of locations and rules in the Zone Manager software:</p>
+        <ol MadCap:continue="true">
+            <li>Verify All Reader Settings</li>
+        </ol>
+        <p>readerlist</p>
+        <p>http://&lt;baseurl&gt;/readerlist</p>
+        <p>This function prints a list of all defined readers, and their attributes and status.</p>
+        <p>EXAMPLE COMMAND</p>
+        <p>readerlist</p>
+        <p>OR</p>
+        <p>http://10.1.20.90:6580/rfcode_zonemgr/zonemgr/api/readerlist</p>
+        <p>EXAMPLE RESPONSE</p>
+        <p>R55: hostname=”10.1.20.55”, port=6500, userid=””, password=””, tagtimeout=60,</p>
+        <p>ageincount=0, ssideltathresh=3, offlinelinkageout=60, ssicutoffA=0, ssicutoffB=0,</p>
+        <p>ageouttimeA=30, ageouttimeB=30, enabled=true, state=ACTIVE, groups={“rfcrck”}</p>
+        <p>#</p>
+        <p>OR</p>
+        <p>- &lt;reader-list&gt;</p>
+        <p>- &lt;reader id=”R55”&gt;</p>
+        <p>&lt;attrib id=”hostname”&gt;10.1.20.55&lt;/attrib&gt;</p>
+        <p>&lt;attrib id=”port”&gt;6500&lt;/attrib&gt;</p>
+        <p>&lt;attrib id=”userid” /&gt;</p>
+        <p>&lt;attrib id=”password” /&gt;</p>
+        <p>&lt;attrib id=”tagtimeout”&gt;60&lt;/attrib&gt;</p>
+        <p>&lt;attrib id=”ageincount”&gt;0&lt;/attrib&gt;</p>
+        <p>&lt;attrib id=”ssideltathresh”&gt;3&lt;/attrib&gt;</p>
+        <p>&lt;attrib id=”offlinelinkageout”&gt;60&lt;/attrib&gt;</p>
+        <p>&lt;attrib id=”ssicutoffA”&gt;0&lt;/attrib&gt;</p>
+        <p>&lt;attrib id=”ssicutoffB”&gt;0&lt;/attrib&gt;</p>
+        <p>&lt;attrib id=”ageouttimeA”&gt;30&lt;/attrib&gt;</p>
+        <p>&lt;attrib id=”ageouttimeB”&gt;30&lt;/attrib&gt;</p>
+        <p>&lt;attrib id=”enabled”&gt;true&lt;/attrib&gt;</p>
+        <p>&lt;attrib id=”state”&gt;ACTIVE&lt;/attrib&gt;</p>
+        <p>- &lt;attrib id=”groups”&gt;</p>
+        <p>- &lt;set&gt;</p>
+        <p>&lt;element&gt;rfcrck&lt;/element&gt;</p>
+        <p>&lt;/set&gt;</p>
+        <p>&lt;/attrib&gt;</p>
+        <p>&lt;/reader&gt;</p>
+        <p>&lt;/reader-list&gt;</p>
+        <ol MadCap:continue="true">
+            <li>Configure Locations in preparation to Create Rules</li>
+        </ol>
+        <p>loccreate &lt;loc-id&gt; {parent=&lt;parent-zone-id&gt;} {parameters}</p>
+        <p>http://&lt;baseurl&gt;/loccreate?id=&lt;loc-id&gt;&amp;parent=&lt;parent-id&gt;&amp;&lt;attribid&gt;=&lt;attribval&gt;&amp;...</p>
+        <p>where &lt;loc-id&gt; is alphanumeric ID for a specific location</p>
+        <p>&lt;parent-zone-id&gt; is the (optional) ID of the parent zone of the zone being created</p>
+        <p>{parameters} are a list of one or more attribute=value settings for containing user-defined attribute</p>
+        <p>strings. Attributes not set of a location will be inherited from their parent, if defined.</p>
+        <p>This function creates a new location (zone) instance.</p>
+        <p>EXAMPLE COMMAND</p>
+        <p>loccreate RFC_DC</p>
+        <p>OR</p>
+        <p>http://10.1.20.90:6580/rfcode_zonemgr/zonemgr/api/loccreate?id=RFC_</p>
+        <p>DC&amp;country=USA</p>
+        <p>EXAMPLE COMMAND</p>
+        <p>loccreate ADC parent=RFC_DC city=Austin state=Texas country=USA</p>
+        <p>OR</p>
+        <p>http://10.1.20.90:6580/rfcode_zonemgr/zonemgr/api/</p>
+        <p>loccreate?id=ADC&amp;parent=RFC_DC&amp;city=Austin&amp;state=Texas</p>
+        <p>EXAMPLE COMMAND</p>
+        <p>loccreate BLDG5 parent=ADC addr=9229Waterford suite=500</p>
+        <p>OR</p>
+        <p>http://10.1.20.90:6580/rfcode_zonemgr/zonemgr/api/loccreate?id=BLDG5&amp;parent=A</p>
+        <p>DC&amp;addr=9229Waterford&amp;suite=500</p>
+        <p>EXAMPLE COMMAND</p>
+        <p>loccreate Row1 parent=BLDG5</p>
+        <p>OR</p>
+        <p>http://10.1.20.90:6580/rfcode_zonemgr/zonemgr/api/</p>
+        <p>loccreate?id=Row1&amp;parent=BLDG5</p>
+        <p>EXAMPLE COMMAND</p>
+        <p>loccreate Rack1 parent=Row1</p>
+        <p>OR</p>
+        <p>http://10.1.20.90:6580/rfcode_zonemgr/zonemgr/api/</p>
+        <p>loccreate?id=Rack1&amp;parent=Row1</p>
+        <p>EXAMPLE COMMAND</p>
+        <p>loccreate Rack2 parent=Row1</p>
+        <p>OR</p>
+        <p>http://10.1.20.90:6580/rfcode_zonemgr/zonemgr/api/</p>
+        <p>loccreate?id=Rack2&amp;parent=Row1</p>
+        <ol MadCap:continue="true">
+            <li>Display Location Tree</li>
+        </ol>
+        <p>loctree</p>
+        <p>http://&lt;baseurl&gt;/loctree</p>
+        <p>This function shows a tree, with one location per line, showing the location hierarchy. Each location shows</p>
+        <p>all its attributes (both defined and inherited).</p>
+        <p>EXAMPLE COMMAND</p>
+        <p>loctree</p>
+        <p>OR</p>
+        <p>http://10.1.20.90:6580/rfcode_zonemgr/zonemgr/api/loctree</p>
+        <p>EXAMPLE RESPONSE</p>
+        <p>RFC_DC:</p>
+        <p>ADC: state=”Texas”, city=”Austin”, country=”USA”</p>
+        <p>BLDG5: state=”Texas”, addr=”9229Waterford”, suite=”500”, city=”Austin”,</p>
+        <p>country=”USA”</p>
+        <p>Row1: state=”Texas”, addr=”9229Waterford”, suite=”500”, city=”Austin”,</p>
+        <p>country=”USA”</p>
+        <p>Rack1: state=”Texas”, addr=”9229Waterford”, suite=”500”, city=”Austin”,</p>
+        <p>country=”USA”</p>
+        <p>Rack2: state=”Texas”, addr=”9229Waterford”, suite=”500”, city=”Austin”,</p>
+        <p>country=”USA”</p>
+        <p>#</p>
+        <p>OR</p>
+        <p>RFC_DC:</p>
+        <p>ADC: state=”Texas”, city=”Austin”, country=”USA”</p>
+        <p>BLDG5: state=”Texas”, addr=”9229Waterford”, suite=”500”, city=”Austin”,</p>
+        <p>country=”USA”</p>
+        <p>Row1: state=”Texas”, addr=”9229Waterford”, suite=”500”, city=”Austin”,</p>
+        <p>country=”USA”</p>
+        <p>Rack1: state=”Texas”, addr=”9229Waterford”, suite=”500”, city=”Austin”,</p>
+        <p>country=”USA”</p>
+        <p>Rack2: state=”Texas”, addr=”9229Waterford”, suite=”500”, city=”Austin”,</p>
+        <p>country=”USA”</p>
+        <p>EXAMPLE COMMAND</p>
+        <p>http://10.1.20.90:6580/rfcode_zonemgr/zonemgr/api/loctree.xml</p>
+        <p>EXAMPLE RESPONSE</p>
+        <p>- &lt;location-list&gt;</p>
+        <p>- &lt;location id=”RFC_DC”&gt;</p>
+        <p>- &lt;location-list&gt;</p>
+        <p>- &lt;location id=”ADC”&gt;</p>
+        <p>&lt;attrib id=”state”&gt;Texas&lt;/attrib&gt;</p>
+        <p>&lt;attrib id=”city”&gt;Austin&lt;/attrib&gt;</p>
+        <p>&lt;attrib id=”country”&gt;USA&lt;/attrib&gt;</p>
+        <p>- &lt;location-list&gt;</p>
+        <p>- &lt;location id=”BLDG5”&gt;</p>
+        <p>&lt;attrib id=”state”&gt;Texas&lt;/attrib&gt;</p>
+        <p>&lt;attrib id=”addr”&gt;9229Waterford&lt;/attrib&gt;</p>
+        <p>&lt;attrib id=”suite”&gt;500&lt;/attrib&gt;</p>
+        <p>&lt;attrib id=”city”&gt;Austin&lt;/attrib&gt;</p>
+        <p>&lt;attrib id=”country”&gt;USA&lt;/attrib&gt;</p>
+        <p>- &lt;location-list&gt;</p>
+        <p>- &lt;location id=”Row1”&gt;</p>
+        <p>&lt;attrib id=”state”&gt;Texas&lt;/attrib&gt;</p>
+        <p>&lt;attrib id=”addr”&gt;9229Waterford&lt;/attrib&gt;</p>
+        <p>&lt;attrib id=”suite”&gt;500&lt;/attrib&gt;</p>
+        <p>&lt;attrib id=”city”&gt;Austin&lt;/attrib&gt;</p>
+        <p>&lt;attrib id=”country”&gt;USA&lt;/attrib&gt;</p>
+        <p>- &lt;location-list&gt;</p>
+        <p>- &lt;location id=”Rack1”&gt;</p>
+        <p>&lt;attrib id=”state”&gt;Texas&lt;/attrib&gt;</p>
+        <p>&lt;attrib id=”addr”&gt;9229Waterford&lt;/attrib&gt;</p>
+        <p>&lt;attrib id=”suite”&gt;500&lt;/attrib&gt;</p>
+        <p>&lt;attrib id=”city”&gt;Austin&lt;/attrib&gt;</p>
+        <p>&lt;attrib id=”country”&gt;USA&lt;/attrib&gt;</p>
+        <p>&lt;location-list /&gt;</p>
+        <p>&lt;/location&gt;</p>
+        <p>- &lt;location id=”Rack2”&gt;</p>
+        <p>&lt;attrib id=”state”&gt;Texas&lt;/attrib&gt;</p>
+        <p>&lt;attrib id=”addr”&gt;9229Waterford&lt;/attrib&gt;</p>
+        <p>&lt;attrib id=”suite”&gt;500&lt;/attrib&gt;</p>
+        <p>&lt;attrib id=”city”&gt;Austin&lt;/attrib&gt;</p>
+        <p>&lt;attrib id=”country”&gt;USA&lt;/attrib&gt;</p>
+        <p>&lt;location-list /&gt;</p>
+        <p>&lt;/location&gt;</p>
+        <p>&lt;/location-list&gt;</p>
+        <p>&lt;/location&gt;</p>
+        <p>&lt;/location-list&gt;</p>
+        <p>&lt;/location&gt;</p>
+        <p>&lt;/location-list&gt;</p>
+        <p>&lt;/location&gt;</p>
+        <p>&lt;/location-list&gt;</p>
+        <p>&lt;/location&gt;</p>
+        <p>&lt;/location-list&gt;</p>
+        <ol MadCap:continue="true">
+            <li>Display Location Tree</li>
+        </ol>
+        <p>rulecreate &lt;rule-id&gt; &lt;rule-type&gt; &lt;zone-id&gt; {type-specific-parameters}</p>
+        <p>http://&lt;baseurl&gt;/rulecreate?id=&lt;rule-id&gt;&amp;type=&lt;rule-type&gt;&amp;locid=&lt;locationid&gt;&amp;&lt;</p>
+        <p>attribid&gt;=&lt;attribval&gt;&amp;...</p>
+        <p>where &lt;rule-id&gt; is alphanumeric ID for a specific location rule</p>
+        <p>&lt;rule-type&gt; is the type of location rule - currently defined include SimpleSSIRule, AverageSSIRule,</p>
+        <p>IRLocatorRule</p>
+        <p>&lt;zone-id&gt; is the value the ‘locationzone’ attribute for a tag matching the rule</p>
+        <p>{type-specific-parameters} are a list of one or more attribute=value settings specific to the rule type.</p>
+        <p>For SimpleSSIRule (which thresholds on the strongest SSI reported from a set of one or more radio channels associated with the rule):</p>
+        <p>ssiminimum=&lt;minimum-dbm-for-possible-match&gt;</p>
+        <p>ssihighconf=&lt;dbm-for-high-confidence-match&gt;</p>
+        <p>channellist=&lt;comma-separated-list-of-reader-channel-IDs&gt;</p>
+        <p>For AverageSSIRule (which thresholds on the average SSI reported from a set of one or more radio</p>
+        <p>channels associated with the rule, and requires ALL listed channels to be able to read the tag):</p>
+        <p>ssiminimum=&lt;minimum-average-dbm-for-possible-match&gt;</p>
+        <p>ssichanminimum=&lt;per-channel-minimum-dbm-for-possible-match&gt;</p>
+        <p>ssihighconf=&lt;average-dbm-for-high-confidence-match&gt;</p>
+        <p>channellist=&lt;comma-separated-list-of-reader-channel-IDs&gt;</p>
+        <p>For IRLocatorRule (which compares the ‘irlocator’ attribute of tags supporting it with a specific value, and can optionally require that one of a set of channels be able to read the tag):</p>
+        <p>irlocatorcode=&lt;irlocator-code-matching-rule&gt;</p>
+        <p>channellist=&lt;comma-separated-list-of-reader-channel-IDs&gt; (empty=any channel)</p>
+        <p>irnotfoundtimeout=&lt;seconds-of-ir-not-found-before-location-miss&gt;</p>
+        <p>This function creates a new location rule instance (initially disabled).</p>
+        <p>EXAMPLE COMMAND</p>
+        <p>rulecreate rule1 AverageSSIRule Rack1 channellist=R55_channel_A,R55_</p>
+        <p>channel_B,ssiminimum=-100</p>
+        <p>OR</p>
+        <p>http://10.1.20.90:6580/rfcode_zonemgr/zonemgr/api/rulecreate?id=rule1</p>
+        <p>&amp;type=AverageSSIRule&amp;locid=Rack1&amp;channellist=R55_channel_A,R55_</p>
+        <p>channel_B&amp;ssiminimum=-100</p>
+        <ol MadCap:continue="true">
+            <li>Activate the Rule</li>
+        </ol>
+        <p>ruleactivate &lt;rule-id&gt;</p>
+        <p>http://&lt;baseurl&gt;/ruleactivate?id=&lt;rule-id&gt;</p>
+        <p>where &lt;rule-id&gt; is alphanumeric ID for a specific location rule</p>
+        <p>This function activates a specific location rule - this will also cause the rule to be immediately evaluated against any tags that may match it.</p>
+        <p>EXAMPLE COMMAND</p>
+        <p>ruleactivate rule1</p>
+        <p>OR</p>
+        <p>http://10.1.20.90:6580/rfcode_zonemgr/zonemgr/api/ruleactivate?id=rule1</p>
+        <p>EXAMPLE RESPONSE</p>
+        <p>rule1: &lt;activated&gt;</p>
+        <p>#</p>
+        <p>OR</p>
+        <p>rule1: &lt;activated&gt;</p>
+        <p MadCap:conditions="Default.Notes for authors">source:&#160;unreleased doc Zone Manager User Manual (beta)</p>
+    </body>
+</html>

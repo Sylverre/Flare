@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="2129" MadCap:lastWidth="236">
+    <head>
+        <title>
+        </title>
+    </head>
+    <body>
+        <h2>Adding Assets during full deployment</h2>
+        <p>After successfully installing and configuring a base collection of tags and a single reader and configuring <MadCap:variable name="General.ProductName" /> to display and report on RCI metrics for a couple of racks in a row, follow the instructions in this section to export a template based on the sensors with attributes that you have already configured.</p>
+        <p>NOTE: If you are still doing installations and configurations for the pilot, skip this section of the document.</p>
+        <p>You will use the exported template, a CSV file, and augment it with the rest of your tags. To export a template, follow these instructions.</p>
+        <p>1. Go to User Console &gt; Assets &gt; Manage Assets. NOTE: Refer to Step #5 below for a list of the 12 fields that should be populated prior to an export.</p>
+        <p>2. Click the Export button.</p>
+        <p>3. Dot the radio button next to Export all asset attributes and then click the Export CSV button.</p>
+        <p>4. Save the File or open it with a spreadsheet program that reads CSV files, e.g., Microsoft Office (as seen below).</p>
+        <p>The spreadsheet will look similar to the following:</p>
+        <p>5. Highlight all of the cells and then double-click the line between the first two columns to expand all the columns wide enough to read all of the cell values.</p>
+        <p>NOTE: A vast majority of the columns will not be required for our purposes, so after deleting those columns, the remaining spreadsheet columns “A” through “M” will result.</p>
+        <p>Below are screenshots and descriptions of the columns you’ll use.</p>
+        <p>NOTE: The screenshot has been cut in half and enlarged</p>
+        <p>A (class): This will be “entity” in almost all cases.</p>
+        <p>B (type): This is the type of sensor/asset, in this case a “TEMPERATURE_HUMIDITY” sensor.</p>
+        <p>C (guid): This is the unique identifier for this object in the system. If you are editing an existing asset, leave this field intact with the exact data from the export. If a new instance of the sensor is being created for import, then delete the contents of the cell.</p>
+        <p>D (retired): This is almost always “false” as the asset will not be retired.</p>
+        <p>E (deletable): This is almost always “true”, in the event the asset needs to be removed in the future.</p>
+        <p>F (RACK_POSITION): This is the place in the cabinet, vertically, where the asset will be physically deployed. Options are “Top”, “Middle”, or “Bottom”. Column G = “TEMP_PROFILE” is the designation of the type of application for the sensor. A sensor in a rack/cabinet would be “IT_RACK_SENSOR”, conversely, a “ROOM_SENSOR” can also be specified for an application outside of a cabinet, or for more general temperature/humidity deployments Column H = “$aLocation” is the physical “Location” where the sensor is to be deployed. In rack environments it will be the Rack itself, for rooms, it would be the room.</p>
+        <p>NOTE: To find the exact location id, consult the “Admin Console -&gt; Locations/Rules/Maps -&gt; Locations &amp; Rules” and navigate to the respective, desired location. The “ID:” of that location (highlighted in yellow below) is the exact string that will be used in this column</p>
+        <p>Column I = “AIRFLOW_POSITION” is the designation of whether the sensor is in the front (“RACK_INTAKE_TEMPERATURE”) or rear (“RACK_EXHAUST_TEMPERATURE”) of the cabinet/rack Column J = “$aLockLocation” In environmental monitoring solutions, this is almost always set to “TRUE” as environmental sensors are stationary Column K = “$aName” is the field that designates how the asset/sensor will be seen in the software. In the graphic above it corresponds to the “Name:” field Column L = “$aDescription” is a generic string used to provide descriptive commentary about the sensor, it is not required Column M = “$aAssetTag” is the 6 digit Group Code and 8 digit ID of the Tag, also known as the “Asset Tag” or “Tag ID”</p>
+        <p>6. Add the rest of your tags and their attributes to the spreadsheet and then click Save. NOTE: If you are warned by Excel about CSV incompatibilities, click Yes and continue.</p>
+        <p>7. Import the populated spreadsheet by going in the User Console to Assets &gt; Import Assets.</p>
+        <p>8. Browse to the CSV file you created.</p>
+        <p>9. Click the Upload button.</p>
+    </body>
+</html>

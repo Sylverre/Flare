@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <title>
+        </title>
+        <link href="../../../RFC-AM Comprehensive/Content/Resources/Stylesheets/UserManual for reference.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h3 class="Heading3">
+            <a name="__RefHeading___Toc414541475">
+            </a>Modbus Slave Devices</h3>
+        <p class="p_54">To configure the Modbus Slave Devices, perform the following steps:</p>
+        <ol start="2" class="ol_1">
+            <li class="li_23">
+                <span class="span_2">Go to </span>
+                <span class="span_5">Admin Console &gt; Integration &gt; Modbus Slave Devices</span>
+                <span class="span_2">. <br /><br /></span>
+                <span class="span_2">
+                    <img src="../../../RFC-AM Comprehensive/Content/Resources/Images/UserManual for reference/03000104.png" style="height: 302px;width: 419px;" class="img_2" />
+                </span>
+                <span class="span_2">
+                    <br />
+                </span>
+            </li>
+            <li class="li_4">Choose the sensors/locations/details to monitor.<br /></li>
+            <li class="li_14">
+                <span class="span_2">Select the </span>
+                <span class="span_5">Attributes</span>
+                <span class="span_2"> that you want to be exposed via Modbus (e.g., temperature). <br /><br /></span>
+                <span class="span_2">
+                    <img src="../../../RFC-AM Comprehensive/Content/Resources/Images/UserManual for reference/03000105.png" style="height: 290px;width: 445px;" class="img_2" />
+                </span>
+                <span class="span_2">
+                    <br />
+                    <br />
+                </span>
+                <span class="Strong">Attributes</span>: The Attributes parameter allows the administrator to determine which attributes to publish via Modbus. Attributes are categorized as one of two different types:</li>
+        </ol>
+        <ul class="ul_2">
+            <li class="MediumGrid21_9">
+                <span class="span_14">Numeric</span>
+                <span class="span_12"> (Float, Integer, and Enum) – published using two 16-bit registers </span>
+            </li>
+            <li class="MediumGrid21_9">
+                <span class="span_14">Boolean</span>
+                <span class="span_12"> (Boolean) – published using one 16-bit register</span>
+            </li>
+        </ul>
+        <p class="MediumGrid21">&#160;</p>
+        <p class="MediumGrid21_12">
+            <span class="span_14">NOTE</span>
+            <span class="span_12">:&#160; The attribute values reported by a Modbus Slave Device are published using the Holding Registers (40000-49999), which are 5-digit addresses.&#160; <br /><br /></span>
+            <span class="span_14">NOTE</span>
+            <span class="span_12">:&#160; To determine data-type of an Attribute, go to </span>
+            <span class="span_14">Data Schema</span>
+            <span class="span_12"> &gt; {</span>
+            <span class="span_33">Asset Attributes, Status Attributes, </span>
+            <span class="span_12">or</span>
+            <span class="span_33"> Calculated Asset Attributes</span>
+            <span class="span_12">}.<br /><br /></span>
+            <span class="span_14">Attribute Defaults:</span>
+            <span class="span_12">&#160; Attribute Defaults is an optional setting that allows the administrator to specify a value a Modbus Slave will report if it does not currently have a value for an attribute. For example, if an administrator has decided to publish the asset temperature value for a collection of assets, one or more of those assets could be offline and not have a current temperature value to report. In this case, a default value well out of the range of legitimate temperature values could be returned so a Modbus client can use this value as an indicator that the current value is not available and therefore unreliable. When a Modbus client requests a value for an attribute for which no value is available and there is no default value specified, the Modbus Slave device will return the default register value of 0</span>.</p>
+        <p class="p_1">&#160;</p>
+        <p class="MediumGrid21_12">
+            <span class="Strong">NOTE:</span>&#160; <span class="span_12">If you choose to provide a default value for a Boolean attribute, you should specify a value which is not used to indicate an alerting condition for the attribute.</span></p>
+        <ol start="5" class="ol_1">
+            <li class="li_29">
+                <span class="span_2">Define a </span>
+                <span class="span_2">Slave ID</span>
+                <span class="span_2"> for this set of sensors to expose.&#160; </span>
+            </li>
+        </ol>
+        <p class="p_94">
+            <span class="span_5">NOTE</span>
+            <span class="span_2">: A valid range for the Slave ID is 1-</span>247. <br /><br /><img src="../../../RFC-AM Comprehensive/Content/Resources/Images/UserManual for reference/03000106.png" style="height: 149px;width: 448px;" class="img_2" /><br /><br /><span class="span_5">NOTE</span><span class="span_2">:&#160; The number of assets which can report values is determined by the number of attributes configured for a Modbus Slave Device. For example, if the administrator chooses to publish temperature and humidity values for a Modbus Slave Device, there are a total of 2500 unique assets which can publish values for a given Slave ID (There are 10,000 Holding Registers. Each attribute (temperature and humidity) requires 2 registers to publish a value for a total of 4 registers per asset. 10,000 registers per Slave ID/4 registers per asset = 2,500 assets per Slave ID). If the number of assets which match the configured Modbus Asset Filter is expected to exceed the total number of assets which can be published for single Slave Device, additional Slaves can be configured.</span></p>
+        <p class="p_94">
+            <span class="span_5">NOTE</span>
+            <span class="span_2">:&#160; Asset Manager Modbus Slaves are flexible. Slave IDs can support a single attribute type or multiple attribute types per Modbus Slave ID.</span>
+        </p>
+        <ol start="6" class="ol_1">
+            <li class="li_30">Set any Asset Filters you want to use when publishing the Modbus Device Sensor Attributes.</li>
+        </ol>
+        <p class="p_95">
+            <span class="span_5">NOTE</span>
+            <span class="span_2">:&#160; The Asset Filter is used to define the criteria for selecting which assets and their corresponding attributes will be published by the Modbus server and therefore made available to Modbus clients.&#160; The available filters are: Asset Type, Location, and then the First and/or Second Attribute, Attribute Value Operator, and Attribute Value.<br /><br /></span>
+            <span class="span_2">
+                <img src="../../../RFC-AM Comprehensive/Content/Resources/Images/UserManual for reference/03000107.png" style="height: 229px;width: 443px;" class="img_2" />
+            </span>
+            <span class="span_2">
+                <br />
+                <br />
+            </span>
+            <span class="span_5">NOTE</span>
+            <span class="span_2">:&#160; The Filter Asset Type is the top level “type” of the asset on which you want to filter. <br /><br /></span>
+            <span class="span_5">NOTE</span>
+            <span class="span_2">: Filtering, in general is used to limit or reduce the amount of sensors/assets being monitored, so the more focused, the less data. In general, for environmental-type sensors (e.g. Temp/Humidity), “Environmental Sensor” can be used. <br /><br /></span>
+            <span class="span_5">NOTE</span>
+            <span class="span_2">: The “Location” for which this selection is made is determined in the “Filter Location” section.&#160; Again, the more specific the location, the more restricted the data becomes. </span>
+        </p>
+    </body>
+</html>

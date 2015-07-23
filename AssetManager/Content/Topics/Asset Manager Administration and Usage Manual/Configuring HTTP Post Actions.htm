@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="1380" MadCap:lastWidth="1070">
+    <head><title></title>
+    </head>
+    <body>
+        <h1><a name="__RefHeading___Toc414541435"></a>&#160;Configure HTTP Post Actions for Reports and Graphs</h1>
+        <p><MadCap:variable name="General.ProductName"></MadCap:variable> can be set up to post Reports and Graphs automatically to a website through an Action.</p>
+        <h2>Create a New HTTP&#160;Post&#160;Action</h2>
+        <ol>
+            <li>Navigate to <span class="strong">Reports/Graphs &gt; Actions</span>.</li>
+            <li>From the System Report/Graph Action drop-down, select <span class="strong">HTTP&#160;Post Report/Graph Action</span>.</li>
+            <li>Complete all required and any desired additional fields.</li>
+        </ol>
+        <p>
+            <img src="../../Images/UserManual for reference/030000BA.png" />
+        </p>
+        <MadCap:snippetBlock src="../../Resources/Snippets/required fields note.flsnp" />
+        <ul>
+            <li><span class="Strong">Name:</span> The name of the FTP action</li>
+            <li><span class="Strong">Enabled:</span> Check this box to enable the FTP Action. Temporarily disable an action without deleting it by unchecking this box.</li>
+            <li><span class="Strong">Primary HTTP URL: </span>The primary URL of the HTTP server</li>
+            <li><span class="Strong">Secondary HTTP URL: </span>A URL to use if <MadCap:variable name="Variables.ProductName" /> fails to connect to the Primary HTTP URL
+            </li>
+            <li><span class="Strong">SSL: </span>&#160;There are three SSL modes you can select from:<ul style="list-style-type: circle;"><li><span class="strong">Do not use SSL</span>: No encryption or verification.</li><li><span class="strong">SSL – No Verification</span>:&#160; Selecting this option indicates that the HTTPS protocol should be used but errors in the destination host᾽s digital certificate, such as expiration, untrusted signing authority, and host verification should be ignored.</li><li><span class="strong">SSL – Verify Certificate and Hostname</span>:&#160; Selecting this option requires that the HTTPS protocol be used, the communication to and from the host will be encrypted, and will require that the digital certificate of the destination host be valid.</li></ul></li>
+        </ul>
+        <ul>
+            <li><span class="Strong">HTTP Username: </span>The user name you need to access the HTTP URL (For HTTP Basic Authentication)</li>
+            <li><span class="Strong">HTTP Password: </span>The password your user needs to access the HTTP URL(For HTTP Basic Authentication)</li>
+            <li><span class="Strong">Confirm Password:&#160; </span>The same password as above<br /></li>
+        </ul>
+        <ol start="4">
+            <li><span class="strong">Save Changes</span>.<br /><br /></li>
+        </ol>
+        <p>All Actions created in the system are available in the Report/Graph&#160;Actions dialog, and can be assigned to new or existing reports. </p>
+    </body>
+</html>

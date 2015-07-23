@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="1129" MadCap:lastWidth="1070">
+    <head><title></title>
+    </head>
+    <body>
+        <h1><a name="__RefHeading___Toc414541500"></a>Configuring <MadCap:variable name="Variables.ProductName" /> to Accept SSL Configurations</h1>
+        <p>After configuring SSL for a reader with the reader web interface, perform the following steps in <MadCap:variable name="Variables.ProductName" />:</p>
+        <ol>
+            <li>In the <span class="strong">Admin Console</span>, navigate to <span class="strong">Configuration &gt; Readers</span>. <br />The Reader configuration screen will appear. <br /><br />In the center column is the tree of installed readers and in the right column are the fields you can configure for any reader you highlight in the center column. </li>
+        </ol>
+        <p>&#160;</p>
+        <p>
+            <img src="../../Images/UserManual for reference/03000120.png" style="height: 296px;width: 622px;" class="img_2" />
+        </p>
+        <p>&#160;</p>
+        <p class="note" MadCap:autonum="&lt;b&gt;NOTE:&lt;/b&gt; &#160;">If you need to add a new reader or want more information about the other configuration fields available for a reader, refer to the <a href="Advanced Reader Configuration.htm#_Advanced_Reader_Configuration">Advanced Reader Configuration</a> section.&#160; If you do add another reader, then it will also appear in the middle column. &#160;</p>
+        <p class="note" MadCap:autonum="&lt;b&gt;NOTE:&lt;/b&gt; &#160;">If you have more than one Zone Manager configured, you must select the appropriate Zone Manager to which the Reader will be associated and you must ensure that the reader is properly configured in each Zone Manager. &#160;If you have only a single Local Zone Manager configured, then all readers will be associated with that one Local Zone Manager.
+        </p>
+        <ol MadCap:continue="true">
+            <li>Set the SSL Mode and then click the <span class="strong">Save Changes</span> button.
+            </li>
+        </ol>
+        <ul>
+            <li><span class="strong">OFF</span> : to turn SSL mode OFF on the reader
+            </li>
+            <li><span class="strong">IFAVAIL</span> : to use SSL on the reader, if it is available
+            </li>
+            <li><span class="strong">REQUIRED</span> : to require the use of SSL
+            </li>
+            <li><span class="strong">STRICT</span> : to authenticate the matching hostname
+            </li>
+        </ul>
+        <p class="note" MadCap:autonum="&lt;b&gt;NOTE:&lt;/b&gt; &#160;">If the SSL Mode is set to STRICT and the hostnames do not match, then the reader will not connect.
+        </p>
+        <p class="note" MadCap:autonum="&lt;b&gt;NOTE:&lt;/b&gt; &#160;"><MadCap:variable name="Variables.ProductName" /> needs to have the third-party Root CA Certificate to verify the CA certificate installed on the web servers. The Java library that comes with <MadCap:variable name="Variables.ProductName" /> by default includes well-known third-party Root CA Authorities. If the SSL certificate of the target web server is included in Java library, this step does not apply. In the case where an SSL certificate installed on the target web server is not issued by any authorities in Java library, you may manually import Root CA certificate for that authority to keystore of <MadCap:variable name="Variables.ProductName" />.
+        </p>
+        <p>&#160; <span class="codefont">jre\bin\keytool -importcert -file &lt;Root CA certificate file&gt; -keystore conf\</span><span MadCap:createDate="2015-05-01T11:07:20.2944294-05:00" MadCap:creator="DSFoxx" MadCap:initials="DSF" MadCap:comment="format?" MadCap:editor="DSFoxx" MadCap:editDate="2015-05-01T11:07:29.9539819-05:00" class="codefont">keystore</span></p>
+        <p class="note" MadCap:autonum="&lt;b&gt;NOTE:&lt;/b&gt; &#160;">The command to import a Root CA will always prompt for the password to <MadCap:variable name="Variables.ProductName" />'s keystore. The default password for <MadCap:variable name="Variables.ProductName" />'s keystore is "rfcode".&#160; Re-importing a Root CA certificate is NOT required if <MadCap:variable name="Variables.ProductName" /> is upgraded to the next version.
+</p>
+    </body>
+</html>

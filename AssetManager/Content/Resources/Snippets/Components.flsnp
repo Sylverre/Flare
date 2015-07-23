@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="218" MadCap:lastWidth="776">
+    <body>
+        <p>The major components of the <MadCap:variable name="Variables.ProductName" /> system are:</p>
+        <ul style="margin-bottom: 12pt;">
+            <li>Active RFID tags</li>
+            <li>RFID tag readers</li>
+            <li>IR&#160;locators if desired</li>
+            <li>The <MadCap:variable name="Variables.ProductName" /> server</li>
+            <li>The <MadCap:variable name="Variables.ProductName" /> web interface</li>
+            <li>Zone Manager(s)</li>
+        </ul>
+    </body>
+</html>

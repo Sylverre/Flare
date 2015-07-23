@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="1301" MadCap:lastWidth="776">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>Configure a Production Database</h1>
+        <p>You can configure a production database following one of the two methods described below, depending on your needs.</p>
+        <h2>Configure Microsoft SQL or PostgreSQL Server with Mixed Mode Authentication Turned On</h2>
+        <ol>
+            <li>In your Database Management Application, create a New Database and create or authorize a User with full access to the new database.</li>
+            <li>Install <MadCap:variable name="Variables.ProductName" />.</li>
+        </ol>
+        <p class="note" MadCap:autonum="&lt;b&gt;NOTE:&lt;/b&gt; &#160;"> Do not check the “Install SQL Express” box.</p>
+        <ol MadCap:continue="true">
+            <li>Click the <MadCap:variable name="Variables.ProductName" /> icon after the installation is complete and then log in as <span class="Strong">admin/admin.</span></li>
+            <li>Select the database type.</li>
+            <li>Enter the correct <span class="Strong">hostname</span>, <span class="Strong">database name</span>, <span class="Strong">user ID</span> and <span class="Strong">password</span>.</li>
+            <li>Click<span class="Strong"> Test</span>.</li>
+            <li>Click<span class="Strong"> OK</span>.<br /><br /></li>
+        </ol>
+        <p class="note" MadCap:autonum="&lt;b&gt;NOTE:&lt;/b&gt; &#160;">The <MadCap:variable name="Variables.ProductName" /> service will restart. After 5-7 minutes, the database will be populated with the minimal amount of data and the <MadCap:variable name="Variables.ProductName" /> system will be up and running.</p>
+        <h2>Configure Microsoft SQL&#160;Server Using SQL&#160;Service Windows Authentication</h2>
+        <ol>
+            <li>In your Database Management Application, create a New Database in SQL server and from the DOMAIN accounts, select a user and grant that user access to the new database.</li>
+            <li>On a computer that is a member of the domain, install <MadCap:variable name="Variables.ProductName" />.</li>
+        </ol>
+        <p class="note" MadCap:autonum="&lt;b&gt;NOTE:&lt;/b&gt; &#160;">Do <span class="emphasis">not</span> check the “Install SQL Express” box.</p>
+        <ol MadCap:continue="true">
+            <li>After <MadCap:variable name="Variables.ProductName" /> is installed, shut down the <MadCap:variable name="Variables.ProductName" /> service.</li>
+            <li>Then, under the “Log On” tab, change the “Log on as” entry from “Local System Account” to “This account” and select the domain user that was granted full rights on the new database. </li>
+            <li>Enter the user’s password and click<span class="Strong"> OK.&#160; <br /></span>The user will be granted login as a service <MadCap:annotation MadCap:createDate="2015-04-28T10:32:02.6488976-05:00" MadCap:creator="DSFoxx" MadCap:initials="DSF" MadCap:comment="verify phrasing!" MadCap:editor="DSFoxx" MadCap:editDate="2015-04-28T10:32:06.7701333-05:00">rights.</MadCap:annotation></li>
+            <li>Start the service and log in as <span class="Strong">admin/admin</span>.</li>
+            <li>Enter the database type and hostname of the database server and check the <span class="Strong">Use Windows Authentication</span> box.</li>
+        </ol>
+        <p class="note" MadCap:autonum="&lt;b&gt;NOTE:&lt;/b&gt; &#160;">Do not enter a username or password.</p>
+        <ol MadCap:continue="true">
+            <li>Test the connection and make sure that it passes.</li>
+            <li>Click<span class="Strong"> OK</span>.<br /></li>
+        </ol>
+        <p>The software will reboot and after 5-7 minutes, the database will be populated and the software will be back online.&#160; To check this, go to the <MadCap:variable name="Variables.ProductName" /> web interface and log in.</p>
+    </body>
+</html>

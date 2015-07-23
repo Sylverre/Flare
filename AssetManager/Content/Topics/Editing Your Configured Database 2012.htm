@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="1518" MadCap:lastWidth="321">
+    <head>
+        <title>
+        </title>
+    </head>
+    <body>
+        <h1>Editing Your Configured Database </h1>
+        <p>
+            <MadCap:variable name="General.ProductName" /> requires a database to function. All configuration and information is stored in this database. <MadCap:variable name="General.ProductName" /> requires access to a database with full read/write privileges. If you are using a remote database, then the database administrator must create the database and create a userid/password that has full access to the database. If you are using a local copy of Microsoft SQL Server Express, the steps mentioned below should have automatically been configured at installation time.</p>
+        <h3>Editing Your Configured Database</h3>
+        <ol>
+            <li>Navigate to the Configuration&gt;Database to access the database configuration that you created in the Getting Started steps.</li>
+        </ol>
+        <p>Figure 48: Database Sub-Task</p>
+        <ol MadCap:continue="true">
+            <li>Edit your Database Configuration Setting fields. These fields include the following:</li>
+        </ol>
+        <ul>
+            <li>
+                <span class="Strong">Database Type:</span> Type of database that you will be using with <MadCap:variable name="General.ProductName" />. You have a choice of either Microsoft SQL Server, PostgreSQL, Oracle 11g Server, or IBM DB2 Server.</li>
+            <li>
+                <span class="Strong">Hostname:</span> Enter your valid hostname or IP address of the database server.</li>
+            <li>
+                <span class="Strong">Port:</span> The port number you will use to connect to your database. In most cases the default value for connecting to Microsfot SQL Server will be port number 1433 (PostgreSQL = 5432, Oracle 11g = 1521, IBM DB2 = 50000). If you are unsure of your port number, contact your database administrator.</li>
+            <li>
+                <span class="Strong">Database Name:</span> The name that was assigned to your database.</li>
+            <li>
+                <span class="Strong">Windows Authentication Mode Checkbox:</span> Checked if your database requires Windows authentication. Please see your database administrator to determine this.</li>
+            <li>
+                <span class="Strong">Username:</span> Fill in the username that allows for full read/write privileges. If you have checked the Windows Authentication Mode Check box, you will not see this field because your database will require your Windows password and username.</li>
+            <li>
+                <span class="Strong">Password:</span> Enter the password associated with the username mentioned above.</li>
+            <li>
+                <span class="Strong">Email Address</span>: In addition to editing these fields, you can also enter/edit an email addresses to send the database alerts in the “Contact When Connection to Database Fails” section of the task pane.</li>
+        </ul>
+        <ol start="3">
+            <li>Once you have completed the form, click the <span class="Strong">Test</span> button. If you have entered the information correctly and <MadCap:variable name="General.ProductName" /> is able to connect to your database, you will receive a message indicating that the test was successful.</li>
+        </ol>
+        <ol MadCap:continue="true">
+            <li>Click the <span class="Strong">Save Changes</span> button to save your edits for the configuration.</li>
+        </ol>
+    </body>
+</html>

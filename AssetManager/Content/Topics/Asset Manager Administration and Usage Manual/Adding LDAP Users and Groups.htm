@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="2093" MadCap:lastWidth="1096">
+    <head><title></title>
+        <link href="../../Resources/Stylesheets/Styles.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1><a name="__RefHeading___Toc414541455"></a>Adding LDAP Users and Groups </h1>
+        <p>To add LDAP Users, perform the following steps:</p>
+        <ol>
+            <li>Go to <span class="Strong">Security &gt; LDAP Server &gt; Permissions</span>.<br /><br /><img src="../../Images/UserManual for reference/030000E7.png" /><br /></li>
+            <li>Click <span class="Strong">Add User</span>.<br /></li>
+            <li>Complete the <span class="Strong">Create: Ldap User</span> configuration fields.<br /><br /><img src="../../Images/UserManual for reference/030000E8.png" /></li>
+        </ol>
+        <ul>
+            <li><span class="Strong">LDAP User</span>: Choose the name of the LDAP User.</li>
+            <li><span class="Strong">Roles</span>: Assign a Role to the User.</li>
+            <li><span class="Strong">User Group Membership</span>: Assign one or more Groups to the User.</li>
+            <li><span class="Strong">User Groups For New Assets</span>: Chose either to use the same Group as the User Group or choose one or more different Groups.</li>
+        </ul>
+        <ol start="4">
+            <li>Click <span class="Strong">OK</span>.<br /><br /></li>
+        </ol>
+        <p>To add LDAP Groups, perform the following steps:</p>
+        <ol>
+            <li>Go to <span class="Strong">Security &gt; LDAP Server &gt; Permissions</span>.<br /><br /><img src="../../Images/UserManual for reference/030000E7.png" /><br /></li>
+            <li>Click <span class="Strong">Add Group</span>.</li>
+            <li>Complete the <span class="Strong">Create: Ldap Group</span> configuration fields.<br /><br /><img src="../../Images/UserManual for reference/030000E9.png" /></li>
+        </ol>
+        <ul>
+            <li><span class="Strong">LDAP Group</span>: Choose the name of the LDAP User.</li>
+            <li><span class="Strong">Roles</span>: Assign a Role to the User.</li>
+            <li><span class="Strong">User Group Membership</span>: Assign a Group to the User.</li>
+            <li><span class="Strong">User Groups For New Assets</span>: Chose either to use the same Group as the User Group or choose one or more different Groups.</li>
+        </ul>
+        <ol start="4">
+            <li>Click <span class="Strong">OK</span>.<br /><br /></li>
+        </ol>
+        <p class="note" MadCap:autonum="&lt;b&gt;NOTE:&lt;/b&gt; &#160;"> When a User logs in for the first time based on group LDAP membership, a new user will be created on the user list.&#160; This user will have limited configuration options and is used to store preferences such as unit of measurement.&#160; The account can be deleted from the system, but will be recreated the next time a user logs in if LDAP group membership continues to allow access.</p>
+    </body>
+</html>

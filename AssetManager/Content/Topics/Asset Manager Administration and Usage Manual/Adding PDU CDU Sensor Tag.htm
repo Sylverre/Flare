@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="1841" MadCap:lastWidth="750">
+    <head><title></title>
+    </head>
+    <body>
+        <h1><a name="__RefHeading___Toc414541463"></a>Adding PDU/CDU Sensor Tag Assets</h1>
+        <p>To add an R170 Sensor Tag and its associated PDU/CDU asset, perform the following steps:<br /></p>
+        <ol>
+            <li>In the <span class="strong">Admin Console</span>, navigate to <span class="strong">Configuration &gt; Tag Groups</span> and add the Tag Group.<br /></li>
+        </ol>
+        <p class="note" MadCap:autonum="&lt;b&gt;NOTE:&lt;/b&gt; &#160;"> Below are the Treatment Codes and Tag Groups for specific R170 Sensor Tags:<br /></p>
+        <table class="TableNormal" style="margin-left: 0;margin-right: auto;">
+            <col style="width: 99pt;" />
+            <col style="width: 112pt;" />
+            <col style="width: 95pt;" />
+            <thead>
+                <tr>
+                    <th>PDU Manufacturer</th>
+                    <th>Treatment Code</th>
+                    <th>Group Code</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr style="height: 14pt;" class="tr_6">
+                    <td class="td_1">
+                        <p>&#160;</p>
+                    </td>
+                    <td class="td_19">
+                        <p>Treatment Code</p>
+                    </td>
+                    <td class="td_2">
+                        <p>Group Code</p>
+                    </td>
+                </tr>
+                <tr style="height: 14pt;" class="tr_6">
+                    <td class="td_1">
+                        <p>ServerTech (STI)</p>
+                    </td>
+                    <td class="td_19">
+                        <p>04M</p>
+                    </td>
+                    <td class="td_2">
+                        <p>STIRCK</p>
+                    </td>
+                </tr>
+                <tr style="height: 14pt;" class="tr_6">
+                    <td class="td_1">
+                        <p>Geist</p>
+                    </td>
+                    <td class="td_19">
+                        <p>04N</p>
+                    </td>
+                    <td class="td_2">
+                        <p>GSTRCK</p>
+                    </td>
+                </tr>
+                <tr style="height: 14pt;" class="tr_6">
+                    <td class="td_1">
+                        <p>Emerson</p>
+                    </td>
+                    <td class="td_19">
+                        <p>04O</p>
+                    </td>
+                    <td class="td_2">
+                        <p>EMRRCK</p>
+                    </td>
+                </tr>
+                <tr style="height: 14pt;" class="tr_6">
+                    <td class="td_1">
+                        <p>APC</p>
+                    </td>
+                    <td class="td_19">
+                        <p>04Q</p>
+                    </td>
+                    <td class="td_2">
+                        <p>APCRCK</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <ol MadCap:continue="true">
+            <li>On the <span class="strong">User Console</span>, navigate to <span class="strong">Manage Assets</span> and create <span class="strong">new</span> PDU sensor assets using a <span class="strong">PDU Asset Type</span>.<br /><br /><img src="../../Images/AM Manage Tags - new Asset - PDU.bmp" class="imgfullwidth" /><br /></li>
+            <li>Complete the PDU configuration fields and save the new asset.<br /><br />The new asset will appear in your list of assets:<br /><img src="../../Images/UserManual for reference/030000F1.png" /><br /><br /></li>
+            <li>To view further details for any specific parent PDU device, double-click the row for it from the Asset list.<br /><br /></li>
+        </ol>
+        <p class="note" MadCap:autonum="&lt;b&gt;NOTE:&lt;/b&gt; &#160;">&#160; The PDU Attributes and values are found within various tabs.<br /><br /><img src="../../Images/UserManual for reference/030000F2.png" /></p>
+        <p class="note" MadCap:autonum="&lt;b&gt;NOTE:&lt;/b&gt; &#160;">Data collection from PDUs happens in 10-minute intervals.&#160; On data reported on a 10-minute period, the PDU will take a “<MadCap:annotation MadCap:createDate="2015-06-21T17:34:50.0823204-05:00" MadCap:creator="Pappillon" MadCap:initials="PA" MadCap:comment="quotes?! Also, this is a really long note.  Any way I can revise for brevity?" MadCap:editor="Pappillon" MadCap:editDate="2015-06-21T17:35:06.8840856-05:00">snapshot”</MadCap:annotation> of the data for the most recent 10-minute period and depending on the PDU implementation and the specific data being requested and sent, this may represent the data as of the end of the period, or it may reflect the average of the data accumulated during the given period.&#160; In the latter case (which applies to most data collected about power usage), where the data reflects the average of the 10-minute period, this can cause a delay in the data being presented or reported of up to 10 minutes, that is, it may take 10 minutes to see any change in the power usage being display (for example, a stair-step jump on power draw) and up to 20 minutes before the change actually represents the full “snapshot” period. Again, this can happen because it takes up to 10 minutes for the PDU to transmit the data that was collected in the preceding 10-minute interval and Zone Manager waits until it has received all the data before any of it is presented.&#160; Essentially, averaging helps to prevent artificial errors and inconsistencies that would occur as the result of time aliasing and the brief delay in displaying data helps to ensure that it is as accurate as possible.
+        </p>
+    </body>
+</html>

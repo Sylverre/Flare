@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="1781" MadCap:lastWidth="1096">
+    <head><title></title>
+    </head>
+    <body>
+        <h1><a name="__RefHeading___Toc414541458"></a>Adaptive <MadCap:annotation MadCap:createDate="2015-05-29T13:14:31.0923355-05:00" MadCap:creator="Pappillon" MadCap:initials="PA" MadCap:comment="Adaptive Alert Thresholds--because they are set under User/Alert Management/Threshold.  Only...why _are_ they set there?  Alerts that the user will be using should be user-controllable, I can se that--but it means that this topic should have an end-user version as well as a Workflow/SysAdm one." MadCap:editor="Pappillon" MadCap:editDate="2015-06-05T16:40:37.4859400-05:00">Alert Thresholds</MadCap:annotation></h1>
+        <p>
+            Adaptive Alert Thresholds are a powerful feature enabled by license key. Adaptive thresholds enable mathematical comparatives using values and variables as part of the evaluation logic for thresholds. Adaptive thresholds are user-configurable allowing simple and complex logic to be expressed. For example, Adaptive Thresholds can compare an attribute to another attribute or compare an attribute to a mathematical formula involving additional attributes (variable) and constants (values). &#160;Furthermore, Adaptive Thresholds can leverage any type of attribute in the system including calculated attributes and statistical attributes. Some examples include:</p>
+        <ul>
+            <li>An attribute compared to a constant, such as “Daily Average Temperature &gt; 80 degrees F.” This example threshold allows you to receive a warning of temperature trends before they become an issue.</li>
+            <li>An attribute compared to the addition of another attribute and a constant such as “Temperature &gt; Monthly Average Temperature + 15 degrees F.”&#160; The monthly average temperature of a facility may change depending on seasonal factors and still be within acceptable operating limits. This threshold allows you to look for outliers of longer-term trends. </li>
+            <li>An attribute compared to the addition of two other attributes such as “Temperature &gt; Weekly Average Temperature + Weekly Standard Deviation. </li>
+        </ul>
+        <p>Adaptive Thresholds are set in the <b>User Console &gt;Alerts &gt;</b>Thresholds task. As an example, we will set a threshold that monitors for temperatures that are outside of the weekly average temperature.&#160; </p>
+        <ul>
+            <li>Click on the <b>New</b> button</li>
+            <li>Select <b>Adaptive Alert Threshold</b></li>
+            <li>Enter a Name. In this example, it will be called “Weekly Temp – outliers in Austin”</li>
+            <li>Filter by Asset Type. In this example, we selected Temperature-Humidity</li>
+            <li>Optionally, other attributes can be selected to filter the results. In this example, we chose to filter by location (Austin Data Center)</li>
+            <li>In the Adaptive Attribute section, we choose Temperature for the Adaptive Attribute. </li>
+            <li>For the operator, we choose “&gt;”</li>
+            <li>For the Adaptive Attribute Expression, we choose “Weekly Temperature Average + 10 + Weekly Temperature Standard Deviation”</li>
+            <li>Click <b>Save Changes</b></li>
+        </ul>
+        <p>
+            <img src="../../Images/UserManual for reference/030000EF.png" />
+        </p>
+        <p> For more information about Adaptive Alert Thresholds, refer to this article on the <MadCap:variable name="Variables.CompanyName" /> support site: <a href="http://support.rfcode.com/customer/portal/articles/1656565">support.rfcode.com/customer/portal/articles/1656565</a></p>
+    </body>
+</html>

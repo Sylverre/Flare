@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="1992" MadCap:lastWidth="750">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>Configuration Task Pane</h1>
+        <p>Configuration tasks are available from the <span class="strong">Administrator Console &gt; Configuration</span> task pane. </p>
+        <p>&#160;</p>
+        <p>The five basic components listed in System Configuration must be configured before <MadCap:variable name="General.ProductName" /> can be used to manage assets and monitor environmental conditions. Other configuration subtasks can be completed at any time.</p>
+        <table style="margin-left: 0;margin-right: auto;" class="TableNormal">
+            <col style="width: 223px;" />
+            <col />
+            <thead>
+                <tr>
+                    <th>Configuration Subtask</th>
+                    <th>Purpose</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Database</td>
+                    <td><MadCap:variable name="General.ProductName" /> requires a database to function. All configuration and information is stored in this database. </td>
+                </tr>
+                <tr>
+                    <td><a href="License Key Configuration 2012.htm">License Keys</a>
+                    </td>
+                    <td>A basic license key is included with your purchase. Extra license keys are available to expand your system to incorporate more <MadCap:annotation MadCap:createDate="2015-07-07T14:47:17.7223454-05:00" MadCap:creator="Pappillon" MadCap:initials="PA" MadCap:comment="FH: licensing is per rack, though SW still references assets.  Will be corrected in point release." MadCap:editor="Pappillon" MadCap:editDate="2015-07-07T14:47:40.8456679-05:00">racks</MadCap:annotation> or for software integration module entitlement. Contact your <MadCap:variable name="General.CompanyName" /> Representative or reseller for more information. </td>
+                </tr>
+                <tr>
+                    <td>SMTP Server</td>
+                    <td>An SMTP
+server must be configured for <MadCap:variable name="General.ProductName" /> to email alerts and reports.</td>
+                </tr>
+                <tr>
+                    <td>Import <MadCap:annotation MadCap:createDate="2015-05-29T09:33:40.3234349-05:00" MadCap:creator="Pappillon" MadCap:initials="PA" MadCap:comment="should be a bookmark, here and the next" MadCap:editor="Pappillon" MadCap:editDate="2015-05-29T09:33:46.8648090-05:00">Configuration</MadCap:annotation></td>
+                    <td>Importing tag group, reader, location, rule or system configuration allows administrators to populate or restore a system without manual entry. This sub-task allows administrators to import previously saved configurations from an existing external Zone Manager
+or <MadCap:variable name="General.ProductName" />.  </td>
+                </tr>
+                <tr>
+                    <td>Export Configuration</td>
+                    <td>This sub-task allows administrators to export <MadCap:variable name="General.ProductName" /> configuration information. The main purpose of
+this feature is to modify multiple attributes at the same time, rather than using the web interface. Exported configurations can also be used to replicate a <MadCap:variable name="General.ProductName" /> configuration on an alternate system.  </td>
+                </tr>
+                <tr>
+                    <td>Tag Groups</td>
+                    <td>Tag Groups must be set up before tag data can be interpreted.</td>
+                </tr>
+                <tr>
+                    <td>Sensor Definitions</td>
+                    <td>If using Current Loop or Voltage Sensors, set mA or V readings.</td>
+                </tr>
+                <tr>
+                    <td><a href="Remote Zone Managers.htm">Zone Managers</a>
+                    </td>
+                    <td>
+                        <p> A Local Zone Manager is automatically installed with <MadCap:variable name="General.ProductName" />. 
+Depending on your deployment scenario, you may require additional Zone Managers. From the Configuration task, you can add or delete Zone Managers.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Zone Manager Status</td>
+                    <td>This sub-task provides a read-only summary view of your current Zone Manager(s) status.</td>
+                </tr>
+                <tr>
+                    <td><a href="Reader Configuration 2012.htm">Readers</a>
+                    </td>
+                    <td>Allows administrators to configure readers for use with <MadCap:variable name="General.ProductName" />. There are two task panes. On
+the left is the tree of installed readers and on the right is the task pane where reader configuration information is
+entered.</td>
+                </tr>
+                <tr>
+                    <td>Reader Firmware</td>
+                    <td><MadCap:variable name="General.ProductName" /> has a Reader Firmware upgrade feature available that will allow for upgrading individual or multiple
+RF Code Readers at once. To upgrade an RF Code Reader’s firmware using <MadCap:variable name="General.ProductName" />, navigate to <span class="strong">Configuration
+&gt; Reader Firmware</span>. The most up-to-date version of reader firmware is bundled with the <MadCap:variable name="General.ProductName" />
+software at the time of release.</td>
+                </tr>
+                <tr>
+                    <td>Reader Status</td>
+                    <td>Provides a read-only summary view of your current reader(s) status.</td>
+                </tr>
+                <tr>
+                    <td>
+                        <MadCap:annotation MadCap:createDate="2015-05-27T17:41:57.0106890-05:00" MadCap:creator="Pappillon" MadCap:initials="PA" MadCap:comment="beginner question, not yet answered: why would I-the-user want/not want to do this?" MadCap:editor="Pappillon" MadCap:editDate="2015-05-27T17:42:15.3667389-05:00">GPS</MadCap:annotation>
+                    </td>
+                    <td>Enables adjustment of the global GPS settings for all GPS devices that are connected to the
+<MadCap:variable name="General.ProductName" /> system.</td>
+                </tr>
+                <tr>
+                    <td>Serial Devices</td>
+                    <td>Allows administrators to configure connected serial devices to receive alert actions from an <MadCap:variable name="General.CompanyName" /> Reader for open
+and resolved threshold conditions. </td>
+                </tr>
+                <tr>
+                    <td>Server</td>
+                    <td>Allows administrators to set the units of measurement that will record to the database when various calculated
+attributes are performed, and to adjust the job schedule.</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

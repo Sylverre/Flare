@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultFileLinkSet
+  FileSearchable="false"
+  FileTimeEstimate="0"
+  FilePriority="0">
+  <Links>
+    <Link
+      Url="Content/Resources/PageLayouts/Chapter8X11.flpgl" />
+    <Link
+      Url="Content/Topics/Deployment/DCM Deploy Intro.htm" />
+    <Link
+      Url="Content/Topics/Deployment/DCM Deploy Overview.htm" />
+    <Link
+      Url="Content/Topics/Deployment/The Steps to Deployment.htm" />
+    <Link
+      Url="Content/Topics/Deployment/Planning and Deployment.htm" />
+    <Link
+      Url="Content/Topics/Deployment/Discovery.htm" />
+    <Link
+      Url="Content/Topics/Deployment/Data Center Requirements.htm" />
+    <Link
+      Url="Content/Topics/Deployment Configuration.htm" />
+    <Link
+      Url="Content/Topics/Asset Manager Administration and Usage Manual/System Requirements.htm" />
+    <Link
+      Url="Content/Topics/Deployment/Install and Configure IR Locator.htm" />
+    <Link
+      Url="Content/Topics/Deployment/Configuring the M250 Reader.htm" />
+    <Link
+      Url="Content/Topics/Deployment/Installation and Deployment of Readers.htm" />
+    <Link
+      Url="Content/Topics/Deployment/Tag Positioning.htm" />
+    <Link
+      Url="Content/Topics/Deployment/DCM Installation.htm" />
+    <Link
+      Url="Content/Topics/Asset Manager Administration and Usage Manual/Linux Installation Instructions.htm" />
+    <Link
+      Url="Content/Topics/Asset Manager Administration and Usage Manual/Installing in Linux with a.htm" />
+    <Link
+      Url="Content/Topics/Deployment/DCM Initial Configuration - Consoles.htm" />
+    <Link
+      Url="Content/Topics/Asset Manager Administration and Usage Manual/Locations and the Location.htm" />
+    <Link
+      Url="Content/Topics/Asset Manager Administration and Usage Manual/Adding Tag Groups.htm" />
+    <Link
+      Url="Content/Topics/License Key Configuration 2012.htm" />
+    <Link
+      Url="Content/Assets-Workflow.htm" />
+    <Link
+      Url="Content/Topics/Deployment/Adding Sensors as Assets1.htm" />
+    <Link
+      Url="Content/Topics/Deployment/Viewing Assets.htm" />
+    <Link
+      Url="Content/Topics/Reader Configuration 2012.htm" />
+    <Link
+      Url="Content/Topics/Roll-Out.htm" />
+    <Link
+      Url="Content/Topics/Logan Default Schema.htm" />
+    <Link
+      Url="Content/Topics/Appendix-Inventory Spreadsheet.htm" />
+  </Links>
+  <LongLinks />
+  <Anchors />
+  <Keywords />
+  <Concepts />
+  <ConceptControlNames />
+  <IndexControlNames />
+  <Variables />
+  <FileConditions />
+  <FileTags />
+  <AllConditions />
+  <Stylesheets />
+</CatapultFileLinkSet>

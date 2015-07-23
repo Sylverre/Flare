@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="1020" MadCap:lastWidth="1096">
+    <head>
+        <title>
+        </title>
+    </head>
+    <body>
+        <h1>
+            <a name="__RefHeading___Toc414541385">
+            </a>Configuring SMTP</h1>
+        <p>In order to send email notifications, you must configure SMTP settings for Asset Manager.</p>
+        <p>To configure an SMTP Server, perform the following steps:</p>
+        <ol start="1">
+            <li>From the <span class="Strong">Admin Console</span>, go to <span class="Strong">Configuration &gt; SMTP Server</span>.<br /><br /><img src="../../../RFC-AM Comprehensive/Content/Resources/Images/UserManual for reference/0300005B.png" style="height: 213px;width: 560px;" class="img_2" /></li>
+            <li>Under <span class="Strong">Basic Information</span>, give a <span class="Strong">Name</span> to the SMTP server configuration.</li>
+            <li>Complete the <span class="Strong">Network Settings</span> fields. <br /><br /><img src="../../../RFC-AM Comprehensive/Content/Resources/Images/UserManual for reference/0300005C.png" style="height: 222px;width: 336px;" class="img_2" /><br /><MadCap:snippetText src="../Resources/Snippets/required fields note.flsnp" /></li>
+        </ol>
+        <ul class="nonbulleted">
+            <li>
+                <br />
+                <span class="Strong">Hostname</span>: The name of the mail server.<br /><span class="Strong">Port</span>: The port of the mail server.<br /><span class="Strong">Connection Security</span>: Set a secure connection protocol of STARTTLS, SSL/TLS, or None.&#160; STARTTLS upgrades an unsecure channel to a secure one, so no additional configuration is necessary to send notifications with TLS. However, if you choose the SSL/TLS Connection Security option, you will need to ensure your mail server is correctly configured for this communication protocol.<br /><span class="Strong">SMTP Username</span>: The username for an account with admin permissions for the SMTP mail server.<br /><span class="Strong">SMTP Password</span>: The password for an SMTP server admin account.<br /><span class="Strong">Confirm Password</span>: The same as above.<br /><span class="Strong">From Address</span>: The email address of the admin for notifications about the SMTP server/configuration.<br /><br /></li>
+        </ul>
+        <ol start="4" class="nonbulleted">
+            <li>Click the <span class="Strong">Test</span> button to ensure that the configuration works.</li>
+            <li>Click the <span class="Strong">Save</span> button if the test succeeds; if not, troubleshoot the configuration.</li>
+        </ol>
+    </body>
+</html>

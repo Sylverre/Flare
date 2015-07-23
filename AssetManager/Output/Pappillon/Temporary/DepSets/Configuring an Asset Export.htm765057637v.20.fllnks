@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultFileLinkSet
+  FileTitle=""
+  FileSearchable="true"
+  FileTimeEstimate="0"
+  FilePriority="0">
+  <Links>
+    <Link
+      Url="Content/D_Images/UserManual for reference/02000024.jpg" />
+    <Link
+      Url="Content/D_Images/UserManual for reference/02000025.jpg" />
+    <Link
+      Url="Content/D_Images/UserManual for reference/03000026.png" />
+    <Link
+      Url="Project/VariableSets/Variables.flvar" />
+    <Link
+      Url="Project/VariableSets/General.flvar" />
+  </Links>
+  <LongLinks>
+    <Link
+      Url="Content/D_Images/UserManual for reference/02000024.jpg" />
+    <Link
+      Url="Content/D_Images/UserManual for reference/02000025.jpg" />
+    <Link
+      Url="Content/D_Images/UserManual for reference/03000026.png" />
+    <Link
+      Url="Project/VariableSets/Variables.flvar" />
+    <Link
+      Url="Project/VariableSets/General.flvar" />
+  </LongLinks>
+  <Anchors>
+    <Anchor
+      Name="_Configuring_an_Asset" />
+    <Anchor
+      Name="__RefHeading___Toc414541344" />
+  </Anchors>
+  <Keywords />
+  <Concepts />
+  <ConceptControlNames />
+  <IndexControlNames />
+  <Variables>
+    <Variable
+      Name="Variables.ProductName" />
+    <Variable
+      Name="General.ProductName" />
+  </Variables>
+  <FileConditions />
+  <FileTags />
+  <AllConditions />
+  <Stylesheets />
+</CatapultFileLinkSet>

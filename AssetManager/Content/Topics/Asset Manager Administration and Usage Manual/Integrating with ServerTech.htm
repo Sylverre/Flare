@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="1899" MadCap:lastWidth="1070">
+    <head><title></title>
+    </head>
+    <body>
+        <h1><a name="__RefHeading___Toc414541465"></a>Integrating with ServerTech’s Sentry Power Manager (<MadCap:annotation MadCap:createDate="2015-05-13T13:59:18.0326200-05:00" MadCap:creator="DSFoxx" MadCap:initials="DSF" MadCap:comment="see StatPack PPT slides 18-19 for benefits to user and description of process." MadCap:editor="DSFoxx" MadCap:editDate="2015-05-13T14:01:27.5820298-05:00">SPM)</MadCap:annotation></h1>
+        <p><MadCap:variable name="Variables.ProductName" /> <MadCap:annotation MadCap:createDate="2015-05-13T13:57:30.4784682-05:00" MadCap:creator="DSFoxx" MadCap:initials="DSF" MadCap:comment="approach?  Feels a little distant..." MadCap:editor="DSFoxx" MadCap:editDate="2015-05-13T13:57:52.4907272-05:00">is</MadCap:annotation> tightly integrated with ServerTech’s SPM to enable PDU/CDU  power and sensor data from SPM to flow to <MadCap:variable name="Variables.ProductName" />. SPM integration functionality is enabled by entering a valid license key into <MadCap:variable name="Variables.ProductName" /> and does not require any additional software to be installed. License keys can be purchased from your <MadCap:variable name="Variables.CompanyName" /> representative.</p>
+        <p>Sentry Power Manager and <MadCap:variable name="Variables.ProductName" /> are installed separately and then configured. After a license key has been added in <MadCap:variable name="General.ProductName" />, ensure each of the following steps is completed.</p>
+        <ol>
+            <li>Install and configure Sentry Power Manager. PDUs must be added to SPM using the standard SPM capabilities. &#160;For support on configuring SPM and adding PDUs, please contact Server Technology at <a href="http://www.servertech.com/">www.servertech.com</a>.
+            </li>
+            <li>Add the Sentry Power Manager to <MadCap:variable name="Variables.ProductName" /> as a data <MadCap:annotation MadCap:createDate="2015-06-25T11:10:03.4209286-05:00" MadCap:creator="Pappillon" MadCap:initials="PA" MadCap:comment="missing instructions here" MadCap:editor="Pappillon" MadCap:editDate="2015-06-25T11:10:13.7295182-05:00">source.</MadCap:annotation></li>
+            <li>Add the SPM Server as a Reader in <MadCap:variable name="General.ProductName" />. <ol><li>Navigate to <span class="strong">Admin Console &gt; Configuration &gt;&#160;Readers</span> and click <span class="strong">New</span>.</li><li>Complete all required and any desired additional fields.<br /></li></ol></li>
+        </ol>
+        <ul>
+            <li><span class="Strong">Name:</span> Enter a Name for the SPM server</li>
+            <li><span class="Strong">Zone Manager:</span> choose “Local Zone Manager”</li>
+            <li><span class="Strong">Enabled</span>: check this box to allow <MadCap:variable name="General.ProductName" /> to begin communicating with the SPM&#160;server</li>
+            <li><span class="Strong">Hostname:</span> enter the hostname or IP address of the SPM server</li>
+            <li><span class="Strong">Port:</span> select port “80” </li>
+            <li><span class="Strong">Authentication:</span> enter the User ID and Password for the SPM server</li>
+            <li><span class="strong">Data Refresh Rates:</span> select the CDU Refresh Period and CDU List Refresh Period</li>
+        </ul>
+        <p>
+            <img src="../../Images/UserManual for reference/030000F9.png" style="width: 624px;height: 415px;" />
+        </p>
+        <ol MadCap:continue="true">
+            <li>Save Changes.</li>
+            <li>Add the SPMCDU tag group to the <MadCap:variable name="Variables.ProductName" /> configuration Tag Group configuration.<ol MadCap:continue="true"><li>Navigate to <span class="strong">Admin Console &gt; </span><span class="Strong">Configuration &gt; Tag Groups</span> and click <span class="strong">New</span>.</li><li>Select the <span class="strong">SPMCDU</span> tag group from the drop-down.</li><li>In the PDU&#160;Sensor Asset Type field, select <span class="strong">Sensor &gt;&#160;RPDU</span> from the dropdown.</li><li><span class="strong">Save Changes</span>.</li></ol></li>
+        </ol>
+        <p>Once these steps are completed, <MadCap:variable name="Variables.ProductName" /> connects with the SPM system and creates unassigned tags for each PDU. The tag ID for the PDUs from SPM utilize a naming convention of “SPMCDU” concatenated with the eight-digit object ID from Sentry Power Manager (for example, “SPMCDU00000001”). &#160;If a PDU has an external temperature or humidity sensor, additional unassigned tag objects will be created for those sensors as well. &#160;The tag ID for the PDU sensors from SPM utilize a naming convention of PDU tag ID concatenated with “ - sensorA1” or “ - sensorA2” (for example, “SPMCDU000000001 – sensorA1”). &#160; If the PDU to which an external sensor is attached is daisy-chained to a parent PDU, then the naming convention will be&#160;PDU tag ID concatenated with “- sensorB1” or “- sensorB2” to indicate the secondary PDU unit. &#160;These unassigned tags can be associated to assets. </p>
+        <p>
+            <img src="../../Images/UserManual for reference/030000FA.png" style="width: 542px;height: 321px;" />
+        </p>
+    </body>
+</html>

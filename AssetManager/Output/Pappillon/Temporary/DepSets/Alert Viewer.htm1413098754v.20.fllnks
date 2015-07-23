@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultFileLinkSet
+  FileTitle=""
+  FileSearchable="true"
+  FileTimeEstimate="0"
+  FilePriority="0">
+  <Links>
+    <Link
+      Url="../RFC-AM Comprehensive/Content/Resources/Images/UserManual for reference/0300006E.png" />
+    <Link
+      Url="../RFC-AM Comprehensive/Content/Resources/Images/UserManual for reference/0300006F.png" />
+    <Link
+      Url="../RFC-AM Comprehensive/Content/Resources/Images/UserManual for reference/03000070.png" />
+    <Link
+      Url="../RFC-AM Comprehensive/Content/Resources/Images/UserManual for reference/03000071.png" />
+  </Links>
+  <LongLinks>
+    <Link
+      Url="../RFC-AM Comprehensive/Content/Resources/Images/UserManual for reference/0300006E.png" />
+    <Link
+      Url="../RFC-AM Comprehensive/Content/Resources/Images/UserManual for reference/0300006F.png" />
+    <Link
+      Url="../RFC-AM Comprehensive/Content/Resources/Images/UserManual for reference/03000070.png" />
+    <Link
+      Url="../RFC-AM Comprehensive/Content/Resources/Images/UserManual for reference/03000071.png" />
+  </LongLinks>
+  <Anchors>
+    <Anchor
+      Name="__RefHeading___Toc414541399" />
+  </Anchors>
+  <Keywords />
+  <Concepts />
+  <ConceptControlNames />
+  <IndexControlNames />
+  <Variables />
+  <FileConditions />
+  <FileTags />
+  <AllConditions />
+  <Stylesheets />
+</CatapultFileLinkSet>

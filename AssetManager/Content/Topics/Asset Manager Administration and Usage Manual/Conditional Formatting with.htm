@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="4499" MadCap:lastWidth="750">
+    <head><title></title>
+    </head>
+    <body>
+        <h1><a name="__RefHeading___Toc414541381"></a>Conditional Formatting with Attributes</h1>
+        <p>Formatting for Asset Attributes, Status Attributes, and Calculated Attributes can be configured to conditionally change the foreground and background color of a map item, the text displayed in an asset list, and in Dashboards,a cell in Asset View panels and in Asset <MadCap:annotation MadCap:createDate="2015-06-30T14:07:10.2381662-05:00" MadCap:creator="Pappillon" MadCap:initials="PA" MadCap:comment="&quot;asset grids&quot; aren't defined anywhere that I've yet seen (063015!), but there's a dashboard Widget by that name..." MadCap:editor="Pappillon" MadCap:editDate="2015-06-30T14:07:31.5723864-05:00">grids</MadCap:annotation> in the Administrator or User Dashboards, depending on the attribute value.&#160; </p>
+        <p>For example, a numerical attribute can be configured so that the cell background turns red when its value exceeds 100.&#160; </p>
+        <p>
+            <img src="../../Images/UserManual for reference/03000053.png" />
+        </p>
+        <h2>Configure Conditional Formatting for Attributes</h2>
+        <ol>
+            <li>Navigate to <span class="strong">Admin Console &gt;&#160;Data Schema</span>. &#160;</li>
+            <li>Select the appropriate Attribute category, and within that category select an attribute.</li>
+            <li>In the formatting pane, click <span class="strong">Add</span>.</li>
+            <li>Add the desired conditions.</li>
+            <li><span class="strong">Save Changes</span>.</li>
+        </ol>
+        <p>To configure conditional formatting for an Attribute, perform the following steps:<br /></p>
+        <ol>
+            <li>In the <span class="strong">Admin Console,</span> go to<span class="strong"> Data Schema &gt; Status Attributes</span>.<br /><br /><img src="../../Images/UserManual for reference/03000055.png" /><br /></li>
+            <li>Next, choose an Attribute to reformat, for example, Temperature (highlighted in the screenshot below).<br /><br /><img src="../../Images/UserManual for reference/03000056.png" /><br /></li>
+            <li>Under the <span class="strong">Formatting</span> heading, click the <span class="strong">Add</span> button:<br /><br /><img src="../../Images/UserManual for reference/03000057.png" /><br /><br />The <span class="strong">Add Formatting</span> dialog box will appear:<br /><br /><img src="../../Images/UserManual for reference/03000058.png" style="height: 219px;width: 366px;" class="img_2" /></li>
+        </ol>
+        <p>&#160;</p>
+        <p>The Add Formatting box has four fields:</p>
+        <ul>
+            <li><span class="strong">Foreground Color</span>: The color of the text itself.
+            </li>
+            <li><span class="strong">Background Color</span>: The color of the background of the cell.
+            </li>
+            <li><span class="strong">Operator</span>: Certain mathematical, conditional, or Boolean operands used to define (along with the Value) the scope of the desired formatting.&#160; The possible operands (depending on the Attribute) are:
+                <ul style="list-style-type: circle;"><li MadCap:conditions=""><span class="strong">=</span>&#160; (Equal to)
+                    </li></ul><ul style="list-style-type: circle;"><li MadCap:conditions=""><span class="strong">!=</span>&#160; (NOT Equal to)
+                    </li></ul><ul style="list-style-type: circle;"><li MadCap:conditions=""><span class="strong">&gt; </span> (Greater than)
+                    </li></ul><ul style="list-style-type: circle;"><li MadCap:conditions=""><span class="strong">&lt;</span>&#160; (Less than)
+                    </li></ul><ul style="list-style-type: circle;"><li MadCap:conditions=""><span class="strong">&gt;=</span>&#160; (Greater than OR Equal to)
+                    </li></ul><ul style="list-style-type: circle;"><li MadCap:conditions=""><span class="strong">&lt;=&#160; </span>(Less than OR Equal to)
+                    </li></ul><ul style="list-style-type: circle;"><li MadCap:conditions="">Contains</li></ul><ul style="list-style-type: circle;"><li MadCap:conditions="">Does Not Contain</li></ul><ul style="list-style-type: circle;"><li MadCap:conditions="">Starts With</li></ul></li>
+            <li><span class="strong">Value</span>: Depending on the Attribute, this can be a mathematical, conditional or Boolean <MadCap:annotation MadCap:createDate="2015-06-13T23:48:16.0303358-05:00" MadCap:creator="Pappillon" MadCap:initials="PA" MadCap:comment="Boolean quantity?" MadCap:editor="Pappillon" MadCap:editDate="2015-06-13T23:48:20.8826133-05:00">quantity.</MadCap:annotation><br /><![CDATA[            ]]></li>
+        </ul>
+        <p>When you click on the drop-down menu for the foreground and background colors, you will get a dialog box with a color palette for you to choose, like in the below screenshot:</p>
+        <p>
+            <img src="../../Images/AM Status Attribute - Conditional Formatting settings.bmp" class="imgfullwidth" />
+        </p>
+        <p>For the example “Temperature” attribute, we chose:</p>
+        <ul>
+            <li>
+                <MadCap:annotation MadCap:createDate="2015-04-28T13:26:13.2817648-05:00" MadCap:creator="DSFoxx" MadCap:initials="DSF" MadCap:comment="format should match above!" MadCap:editor="DSFoxx" MadCap:editDate="2015-04-28T13:26:22.3702846-05:00">A</MadCap:annotation> <span style="color: #ff0000;">Red</span> <span class="strong">Foreground Color</span> when Temperature is <span class="strong">Greater-Than-Or-Equal-To </span>80.1 degrees F.<br /></li>
+        </ul>
+        <ul>
+            <li MadCap:conditions="">A <span style="color: #4169e1;">Blue</span> <span class="strong">Foreground Color</span> when Temperature is <span class="strong">Greater-Than-Or-Equal-To</span> 70 degrees F.</li>
+            <li MadCap:conditions="">
+                <MadCap:annotation MadCap:createDate="2015-04-28T13:26:13.2817648-05:00" MadCap:creator="DSFoxx" MadCap:initials="DSF" MadCap:comment="format should match above!" MadCap:editor="DSFoxx" MadCap:editDate="2015-04-28T13:26:22.3702846-05:00">A</MadCap:annotation><span style="color: #ff0000;">Red</span><span class="strong">Foreground Color</span> when Temperature is <span class="strong">Less-Than </span>70 degrees F.</li>
+        </ul>
+        <p MadCap:conditions="">That example configuration for the <span class="strong">Temperature</span> Attribute would look like this in the <span class="strong">Formatting</span> section of the Status Attributes configuration options as seen in the screenshot below:
+        </p>
+        <p>
+            <img src="../../Images/AM Status Attribute - Conditional Formatting applied.bmp" class="imgfullwidth" />
+        </p>
+        <p>In the Manage Assets task, the conditional formatting is applied and visible:</p>
+        <p>
+            <img src="../../Images/UserManual for reference/03000054.png" class="imgfullwidth" />
+        </p>
+        <p>Multiple attributes associated with an asset can be formatted conditionally. Multiple rules can be applied to formatting and the value of an attribute is evaluated against rules from the top down.&#160; The first rule matched determines the formatting.</p>
+    </body>
+</html>

@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultFileLinkSet
+  FileTitle=""
+  FileSearchable="true"
+  FileTimeEstimate="0"
+  FilePriority="0">
+  <Links>
+    <Link
+      Url="Content/D_Images/UserManual for reference/03000033.png" />
+    <Link
+      Url="Content/D_Images/UserManual for reference/06000034.png" />
+    <Link
+      Url="Content/D_Images/UserManual for reference/06000035.png" />
+    <Link
+      Url="Project/VariableSets/Variables.flvar" />
+  </Links>
+  <LongLinks>
+    <Link
+      Url="Content/D_Images/UserManual for reference/03000033.png" />
+    <Link
+      Url="Content/D_Images/UserManual for reference/06000034.png" />
+    <Link
+      Url="Content/D_Images/UserManual for reference/06000035.png" />
+    <Link
+      Url="Project/VariableSets/Variables.flvar" />
+  </LongLinks>
+  <Anchors>
+    <Anchor
+      Name="_Creating_Folders_for" />
+    <Anchor
+      Name="__RefHeading___Toc414541354" />
+  </Anchors>
+  <Keywords />
+  <Concepts />
+  <ConceptControlNames />
+  <IndexControlNames />
+  <Variables>
+    <Variable
+      Name="Variables.ProductName" />
+  </Variables>
+  <FileConditions />
+  <FileTags />
+  <AllConditions />
+  <Stylesheets />
+</CatapultFileLinkSet>

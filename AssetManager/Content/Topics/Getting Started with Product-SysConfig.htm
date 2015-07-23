@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="8" MadCap:lastHeight="2914" MadCap:lastWidth="663">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>
+            <MadCap:annotation MadCap:createDate="2015-05-22T16:19:22.2819077-05:00" MadCap:creator="DSFoxx" MadCap:initials="DSF" MadCap:comment="can't go in the front in the Chaptered version, but I still like it." MadCap:editor="DSFoxx" MadCap:editDate="2015-05-22T16:19:40.4369461-05:00">Getting</MadCap:annotation> Started with <MadCap:variable name="General.ProductName" />:&#160;System <MadCap:annotation MadCap:createDate="2015-05-14T09:25:03.5446368-05:00" MadCap:creator="DSFoxx" MadCap:initials="DSF" MadCap:comment="quick-start poster text, formatting stripped and text updated for Product.  If retaining, need to reformat as poster-ish virtual tearout or something." MadCap:editor="Pappillon" MadCap:editDate="2015-05-27T10:17:50.9946241-05:00">Configuration</MadCap:annotation></h1>
+        <p>This guide provides an overview of the installation and configuration steps necessary for a deployment of <MadCap:variable name="General.ProductName" /></p>
+        <h2>Basic Installation Requirements</h2>
+        <MadCap:snippetBlock src="../Resources/Snippets/Minimum Hardware.flsnp" />
+        <MadCap:snippetBlock src="../Resources/Snippets/Operating Systems Supported.flsnp" />
+        <MadCap:snippetBlock src="../Resources/Snippets/Databases Supported.flsnp" />
+        <MadCap:snippetBlock src="../Resources/Snippets/Web Browsers Supported.flsnp" />
+        <MadCap:snippetBlock src="../Resources/Snippets/Firmware Versions.flsnp" />
+        <p>For the most current release and requirement information, refer to the system requirements KB article in the RF Code Support website: <a href="http://www.support.rfcode.com/">Support.RFCode.com</a></p>
+        <ol>
+            <li>In your Database Management Application, create a New Database and create or authorize a User with full access to the new database.</li>
+            <li>
+                <p>Install <MadCap:variable name="General.ProductName" />. <span class="emphasis">Do not</span> select the “Install SQL Express” checkbox.</p>
+            </li>
+            <li>
+                <p>Associate Database with <MadCap:variable name="General.ProductName" /></p>
+                <ol>
+                    <li>Click the <MadCap:variable name="General.ProductName" /> icon after the installation is complete and then log in as admin/admin.</li>
+                    <li>
+                        <p>Select the database type.</p>
+                    </li>
+                    <li>
+                        <p>Enter the correct hostname, database name, user ID and password.</p>
+                    </li>
+                    <li>
+                        <p>Click <span class="Strong">Test.</span></p>
+                    </li>
+                    <li>
+                        <p>Click <span class="Strong">OK</span>. <MadCap:variable name="General.ProductName" /> will restart. After five to seven minutes, the database will be populated with the minimal amount of data and the system will be up and <MadCap:annotation MadCap:createDate="2015-05-13T16:33:21.3483074-05:00" MadCap:creator="DSFoxx" MadCap:initials="DSF" MadCap:comment="or use SQL Service Windows Authentication; steps are similar enough they could be glossed here." MadCap:editor="DSFoxx" MadCap:editDate="2015-05-13T16:33:52.8661101-05:00">running.</MadCap:annotation></p>
+                    </li>
+                </ol>
+            </li>
+            <li>Configure Readers<ol><li>Verify that Readers have been configured using <MadCap:annotation MadCap:createDate="2015-05-21T13:09:45.6181318-05:00" MadCap:creator="DSFoxx" MadCap:initials="DSF" MadCap:comment="It's that word--configure and then configure?  Ack!" MadCap:editor="DSFoxx" MadCap:editDate="2015-05-21T13:10:10.1885371-05:00">RCU</MadCap:annotation> prior to mounting.</li><li>Navigate to <span class="Strong">Configuration &gt; Readers</span>.</li><li>Click <span class="Strong">New</span> and select the reader type from the drop-down list.<ul><li>Name: create a name for the reader</li><li>Hostname: enter the IP&#160;address of the reader</li><li>UserID/password:&#160;if you have enabled user access on the reader, enter the user ID&#160;and password</li></ul></li><li><span class="Strong">Save Changes</span>.</li></ol><p class="note" MadCap:autonum="&lt;b&gt;NOTE:&lt;/b&gt; &#160;">If configuring an Up Connection Reader, you must specify the reader Up Connection ID that was assigned to that reader and also if specified, the optional password from the Reader Configuration Utility. For more information, see The Reader Configuration Utility User Manual available at <a href="http://www.support.rfcode.com/">support.rfcode.com </a></p></li>
+            <li>Configure IR&#160;Locators [similar to Readers <MadCap:annotation MadCap:createDate="2015-05-13T16:29:02.3764950-05:00" MadCap:creator="DSFoxx" MadCap:initials="DSF" MadCap:comment="placeholder, as I haven't drafted this yet" MadCap:editor="DSFoxx" MadCap:editDate="2015-05-13T16:29:14.9142121-05:00">above]</MadCap:annotation></li>
+            <li>Configure Tag Groups<p>A Reader can receive information from up to eight different groups (types) of tags. You will need to configure a tag group for each type of tag you have deployed.</p><ol><li><p>1. Navigate to <span class="Strong">Configuration &gt; Tag Groups</span></p></li><li><p>Click <span class="Strong">New</span> and select a treatment <MadCap:annotation MadCap:createDate="2015-05-12T12:34:29.8393462-05:00" MadCap:creator="DSFoxx" MadCap:initials="DSF" MadCap:comment=" This would be so much cleaner as &quot;Group ID&quot;!  But you've got a Group Code and a Tag ID, I can see why you didn't go that route.  Still, treatment code?  Not intuitive." MadCap:editor="DSFoxx" MadCap:editDate="2015-05-13T16:51:54.5349780-05:00">code.</MadCap:annotation>  Treatment codes are printed on the tag labels.</p></li><li><p>Enter a name for the tag group.</p></li><li><p> <span class="Strong">Save Changes</span>.</p></li></ol></li>
+            <li>Add Licenses<ol><li><p>Navigate to <span class="Strong">Configuration &gt; License Keys</span></p></li><li><p>Click the <span class="Strong">Add License Key</span> button and add your 16-digit license key code(s) from the <MadCap:variable name="General.ProductName" /> License Card</p></li></ol><p>The System Configuration pane indicates that the System Configuration has been completed.</p></li>
+            <li>Add Location <MadCap:annotation MadCap:createDate="2015-05-13T16:29:27.4409286-05:00" MadCap:creator="DSFoxx" MadCap:initials="DSF" MadCap:comment="placeholder, but will probably just say &quot;see XXX&quot;.  I have a rough best-practice that might work better as an annotated spreadsheet..." MadCap:editor="DSFoxx" MadCap:editDate="2015-05-13T16:30:03.4439879-05:00">Hierarchy</MadCap:annotation></li>
+            <li>Add Assets to the System<ol><li><p>Navigate to <span class="Strong">User Console &gt; Assets &gt; Manage Assets</span></p></li><li><p>Click <span class="Strong">New</span> and select an asset type from the drop-down list</p></li><li><p>Type a name for the asset and complete the tag field and description if desired.</p></li></ol><p class="note" MadCap:autonum="&lt;b&gt;NOTE:&lt;/b&gt; &#160;"> in a pilot deployment, the location drop-down list may not be populated.  In that case, leave the field blank.  Do not type in a location <MadCap:annotation MadCap:createDate="2015-05-12T13:16:38.4969772-05:00" MadCap:creator="DSFoxx" MadCap:initials="DSF" MadCap:comment="Still wish that field didn't allow entry-by-keyboard!\r\n" MadCap:editor="DSFoxx" MadCap:editDate="2015-05-13T16:25:45.1952169-05:00">name.</MadCap:annotation></p><ol MadCap:continue="true"><li><p>Click <span class="Strong">Save</span>.</p></li></ol></li>
+        </ol>
+        <p>At this point you have completed the required configuration steps to begin using <MadCap:variable name="General.ProductName" /><MadCap:annotation MadCap:createDate="2015-05-13T16:34:59.3759142-05:00" MadCap:creator="DSFoxx" MadCap:initials="DSF" MadCap:comment="Odd ordering in the original, that puts Add Assets in the numbered steps above this text.  Still, I rather like the idea of adding some assets manually as part of the initial set-up, before anyone so much as thinks of using the system. " MadCap:editor="DSFoxx" MadCap:editDate="2015-05-13T16:36:01.1404470-05:00">.</MadCap:annotation></p>
+        <p>For more information on using the <MadCap:variable name="General.ProductName" /> software please refer to the <MadCap:variable name="General.ProductName" /> Administrator Manual and <MadCap:variable name="General.ProductName" /> User Manual that are provided on the <MadCap:variable name="General.ProductName" /> software CD or available online.</p>
+    </body>
+</html>

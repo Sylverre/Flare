@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="2814" MadCap:lastWidth="776">
+    <head><title></title>
+    </head>
+    <body>
+        <h1><a name="__RefHeading___Toc414541340"></a>Adding Assets Individually</h1>
+        <p>For <MadCap:variable name="General.ProductName" /> to manage your assets, those assets must be added to the system. Assets may be added with or without tag assignments; however, it is recommended that you assign assets to tags during the initial creation of your asset record. </p>
+        <p>At least one asset must be added manually. After the first asset record is created, you can use the Export/Import feature and a spreadsheet program to upload records of assets and their associated attributes, or continue to input data by hand.</p>
+        <p>To add a new asset to <MadCap:variable name="Variables.ProductName" />, perform the following steps:</p>
+        <ol>
+            <li>In <span class="Strong">User Console </span>browse to<span class="Strong"> Tag Management &gt; Manage Tags</span>.</li>
+            <li>Select the tag(s) under the<span class="Strong"> Import Detected Tags </span>column and click the<span class="Strong"> Add Selected Tag(s) </span>button, or click <span class="Strong">Add All Tags</span>.&#160; <br />This will move the tags to the<span class="Strong"> Unassigned Tags column</span>.</li>
+            <li>In the <span class="Strong">Unassigned Tags</span> column, right-click on the tag to be assigned in the far right column and then select <span class="Strong">New Asset</span>.<br /><img src="../../Images/UserManual for reference/0300001.bmp" alt="" title="" /><br /><br /></li>
+            <li>Select the appropriate <span class="Strong">Asset Type</span> to assign to the tag.<br /></li>
+        </ol>
+        <p class="note" MadCap:autonum="&lt;b&gt;NOTE:&lt;/b&gt; &#160;">In this example, a server asset is being added; therefore, <span class="Strong">Server</span> is chosen as the <span class="Strong">Asset Type</span>.<br /><br />As mentioned <MadCap:annotation MadCap:createDate="2015-07-02T12:02:46.5921156-05:00" MadCap:creator="Pappillon" MadCap:initials="PA" MadCap:comment="awk" MadCap:editor="Pappillon" MadCap:editDate="2015-07-02T12:02:48.6442329-05:00">previously</MadCap:annotation>, Server and the other Inventory Assets seen in the Location Hierarchy below are only available after they have been manually created or after one of the Default Schemas has been imported.<br /></p>
+        <p>
+            <img src="../../Images/UserManual for reference/0300001E.png" />
+            <br />
+        </p>
+        <ol MadCap:continue="true">
+            <li>Configure at minimum the following asset fields:<br /></li>
+        </ol>
+        <ul>
+            <li><span class="Strong">Name:&#160; </span>This is a common description of the Asset and it must be unique.&#160; One common practice for naming sensors is to pre-pend a sensor tag type designator, for example, TempHum (or TH) to a description of that asset’s physical and/or logical location, for example, AustinDataCenterRow1Rack1-Top, such that the name reflects both, for example, <span class="span_6">TH-AustinDataCenterRow1Rack1-Top</span>.</li>
+            <li><span class="Strong">Asset Tag:&#160; </span>Depending on how you navigated to this screen, this field may already be pre-populated.&#160; If is not, start typing the unique ID of the tag and you will be able to select the specific Tag ID from the list that is presented to you dynamically.&#160;</li>
+            <li><span class="Strong">Asset Location:&#160; </span>This field is used to tell <MadCap:variable name="Variables.ProductName" /> where the tag will reside physically. Choose the appropriate location of the tag from the Location Hierarchy, for example, the specific rack where a temperature sensor asset is physically installed.</li>
+            <li><span class="Strong">Lock Location</span>:&#160; Check this box if the asset is not a mobile asset, for example, an environmental sensor that should not be moved once it has been deployed.</li>
+        </ul>
+        <p class="note" MadCap:autonum="&lt;b&gt;NOTE:&lt;/b&gt; &#160;">The rest of the fields are optional, but when you are <MadCap:annotation MadCap:createDate="2015-07-02T12:03:26.9924263-05:00" MadCap:creator="Pappillon" MadCap:initials="PA" MadCap:comment="awk" MadCap:editor="Pappillon" MadCap:editDate="2015-07-02T12:03:28.5885176-05:00">comfortable</MadCap:annotation> with <MadCap:variable name="Variables.ProductName" />, you can configure them to monitor a great deal about your assets and your environment.</p>
+        <p>
+            <br />
+            <img src="../../Images/AM Manage Tags -- new asset -- edit-server.bmp" class="imgfullwidth" />
+        </p>
+    </body>
+</html>

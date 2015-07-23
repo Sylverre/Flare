@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="2" MadCap:lastHeight="520" MadCap:lastWidth="347">
+    <head><title></title>
+    </head>
+    <body>
+        <h2>Changing Web Server Ports</h2>
+        <p><MadCap:variable name="General.ProductName" /> will utilize port 6580 for HTTP traffic and port 6581 for SSL traffic on a new installs. Most web servers run HTTP on port 80 and SSL on port 443, but <MadCap:variable name="General.ProductName" /> uses different ports to avoid potential conflicts with existing web server installs. If the server that <MadCap:variable name="General.ProductName" /> is running on does not have a web server already using these ports, then <MadCap:variable name="General.ProductName" /> can be told to run on these ports instead of the default ones. To do this, the service must be shutdown and the system.properties file modified. The port parameters are then set to 80 and 433 (or whatever port is wished) and the service restarted.</p>
+        <p>http.port=80</p>
+        <p>https.port=443</p>
+        <p>Once the service is restarted <MadCap:variable name="General.ProductName" /> will run on the new port settings, however on localhost, port 6580 will continue to be available to configure the server. This will allow the desktop and start menu icons to continue working.</p>
+    </body>
+</html>

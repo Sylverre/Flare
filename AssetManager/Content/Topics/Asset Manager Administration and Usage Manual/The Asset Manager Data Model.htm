@@ -1,0 +1,400 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="8" MadCap:lastHeight="4264" MadCap:lastWidth="1044">
+    <head>
+        <title>
+        </title>
+    </head>
+    <body>
+        <h1>
+            <a name="__RefHeading___Toc414541504">
+            </a>
+            <a name="_The_Asset_Manager">
+            </a>The <MadCap:variable name="Variables.ProductName" /> Data Model</h1>
+        <p MadCap:conditions="Default.NewText">
+            <MadCap:variable name="General.ProductName" /> uses an object-oriented programming paradigm. It includes <span class="ital">objects</span>, structures that contain both data and procedures, and <span class="ital">classes</span>, which are definitions of the data and procedures. </p>
+        <h2>Object Types</h2>
+        <p MadCap:conditions="Default.NewText">An <span class="ital">object</span> is a location in the <MadCap:variable name="General.ProductName" /> system. Variables, assets, and functions are all objects. An <span class="ital">object type</span> is a composite datatype made up of all the attributes you assign to an asset and all the functions and procedures required to perform defined management and monitoring procedures.</p>
+        <p>The <MadCap:variable name="Variables.ProductName" /> data model centers around the definition of and interaction with a family of core object types. Each of these object types plays a role in supporting and defining the behavior and features of the <MadCap:variable name="Variables.ProductName" /> system, and many of the object types interact with one another to bring this about. Most of the object types require instances to have a globally unique object ID (“GUID”) – an alphanumeric, case-sensitive identifier string that must be unique and cannot be changed during an object's life cycle.</p>
+        <h2>Entity</h2>
+        <p>An <span class="ital">Entity</span> object represents a single instance of an asset or tag with one or more associated properties or attributes. Each Entity object has a single well-known attribute named “type” which represents the base type of the Entity. The type of the Entity corresponds to an existing Entity Type object. Each Entity must have a unique object ID. Entity objects provide the main interface for interacting with the <MadCap:variable name="Variables.ProductName" />. </p>
+        <p>An Entity object may have associated Attribute objects. Each Attribute corresponds to a single property of the Entity. The available attributes of the entity are defined by the entity's Entity Type objects.</p>
+        <p>A <MadCap:variable name="Variables.ProductName" /> user may choose to either retire or purge an Entity. A retired Entity no longer records history but its previous history is still available to view. A purged Entity and any associated historical values are completely removed from the <MadCap:variable name="Variables.ProductName" /> as if it never existed.</p>
+        <h2>Attribute</h2>
+        <p>An Attribute represents a single property of an Entity. Each Attribute has an associated value. The data type of the Attribute's value is described within the Attribute's associated Attribute Class object. Each attribute may store history depending on the “History Recorded” property of the Attribute Class.</p>
+        <h2>Attribute Class</h2>
+        <p>An Attribute Class represents the definition of an Attribute. Each Attribute Class must have a unique object ID. </p>
+        <p>An Attribute Class has the following properties.</p>
+        <table style="margin-left: 0;margin-right: auto;">
+            <col style="width: 107pt;" />
+            <col style="width: 347pt;" />
+            <thead>
+                <tr>
+                    <th colspan="2">Attribute Class Properties</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr style="height: 20pt;">
+                    <td class="td_9">
+                        <p class="p_70">Name</p>
+                    </td>
+                    <td class="td_10">
+                        <p class="p_73">Presentation Label</p>
+                    </td>
+                </tr>
+                <tr style="height: 18pt;">
+                    <td class="td_9">
+                        <p class="p_70">Description</p>
+                    </td>
+                    <td class="td_10">
+                        <p class="p_73">Describes the attribute class in detail.</p>
+                    </td>
+                </tr>
+                <tr style="height: 45pt;">
+                    <td class="td_9">
+                        <p class="p_70">Deletable</p>
+                    </td>
+                    <td class="td_10">
+                        <p class="p_75">Describes whether or not a user can delete this attribute class. Attribute Class objects defined by <MadCap:variable name="Variables.ProductName" /> and not a user are marked as non-deletable.</p>
+                    </td>
+                </tr>
+                <tr style="height: 36pt;">
+                    <td class="td_9">
+                        <p class="p_70">Retired</p>
+                    </td>
+                    <td class="td_10">
+                        <p class="p_147">If true, this attribute class is no longer accessible for editing. History can still be viewed. Updates to attributes of this class no longer occur.</p>
+                    </td>
+                </tr>
+                <tr style="height: 36pt;">
+                    <td class="td_9">
+                        <p class="p_70">History Recorded</p>
+                    </td>
+                    <td class="td_10">
+                        <p class="p_148">If true, all changes to an attribute of this class are recorded in the history. If false, only the current value is stored.</p>
+                    </td>
+                </tr>
+                <tr style="height: 36pt;">
+                    <td class="td_9">
+                        <p class="p_70">Values</p>
+                    </td>
+                    <td class="td_10">
+                        <p class="p_82">Used only by an enum Attribute Class. This is the list of strings in which each value corresponds to a specific enumerated value.</p>
+                    </td>
+                </tr>
+                <tr style="height: 36pt;">
+                    <td class="td_9">
+                        <p class="p_70">Inherit Attributes</p>
+                    </td>
+                    <td class="td_10">
+                        <p class="p_149">If this attribute class's type is type-ref, then entities will inherit the value of the attribute defined on the entity type.</p>
+                    </td>
+                </tr>
+                <tr style="height: 100pt;">
+                    <td class="td_9">
+                        <p class="p_70">Constraint</p>
+                    </td>
+                    <td class="td_10">
+                        <p class="p_78">One or more constraints on the value of attributes of this class. Double and long data types can be constrained by a minimum or maximum value. A string, password, or string-list can be constrained using a regular expression. A typeref, typeref-list, entityref and entityref-list values can be constrained by an Entity Type. For example, a user may constrain a location attribute to only values within the “Texas” Entity Type hierarchy.</p>
+                    </td>
+                </tr>
+                <tr style="height: 32pt;">
+                    <td class="td_9">
+                        <p class="p_70">Encoding</p>
+                    </td>
+                    <td class="td_10">
+                        <p class="p_77">The type of encoding for a password attribute class. Blowfish and SHA-512 are supported.</p>
+                    </td>
+                </tr>
+                <tr style="height: 32pt;">
+                    <td class="td_9">
+                        <p class="p_70">Type</p>
+                    </td>
+                    <td class="td_10">
+                        <p class="p_75">The data type for values of this attribute class. See the table below for the list of data types.</p>
+                    </td>
+                </tr>
+                <tr style="height: 32pt;">
+                    <td class="td_9">Use</td>
+                    <td class="td_10">
+                        <p class="p_73">One of the following strings:</p>
+                        <ul class="ul_18">
+                            <li class="ColorfulListAccent11_54">
+                                <span class="span_19">info</span>
+                                <span class="span_27">: Set by <MadCap:variable name="Variables.ProductName" /> and not a user. Used for informational values, such as the version of an application, which are visible to a user<br /></span>
+                            </li>
+                            <li class="ColorfulListAccent11_55">
+                                <span class="span_19">hidden</span>
+                                <span class="span_27">: Set by <MadCap:variable name="Variables.ProductName" /> and not a user. These values are not shown to a user. <MadCap:variable name="Variables.ProductName" /> uses “hidden” values to associated metadata required to interact with an entity. For example, associating the tag type of a tag with a tag entity.<br /></span>
+                            </li>
+                            <li class="ColorfulListAccent11_56">
+                                <span class="span_19">config</span>
+                                <span class="span_27">: <MadCap:variable name="Variables.ProductName" /> or a user may modify this attribute. All user created attributes are set to “config”.<br /></span>
+                            </li>
+                            <li class="ColorfulListAccent11_57">
+                                <span class="span_19">status</span>
+                                <span class="span_27">: Set by <MadCap:variable name="Variables.ProductName" /> and not a user. Used for status values set by <MadCap:variable name="Variables.ProductName" /> which are visible to a user. For example, the motion value of a tag is determined by the <MadCap:variable name="Variables.ProductName" /> and not a user.</span>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr style="height: 32pt;">
+                    <td class="td_9">ZName</td>
+                    <td class="td_10">Used only by Zone Manager. The ZName is an alias which points to Zone Manager's name for this attribute. For example, in <MadCap:variable name="Variables.ProductName" /> the attribute may have the GUID of “$aHost” while in Zone Manager the attribute is called “host”. In this case, the ZName value is “host”.</td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="p_51">&#160;</p>
+        <table class="TableNormal" style="margin-left: 0;margin-right: auto;">
+            <col style="width: 108pt;" />
+            <col style="width: 347pt;" />
+            <thead>
+                <tr>
+                    <th colspan="2">Attribute Class Data Types</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr style="height: 27pt;">
+                    <td class="td_9">
+                        <p class="p_70">boolean</p>
+                    </td>
+                    <td class="td_10">
+                        <p class="p_73">true/false</p>
+                    </td>
+                </tr>
+                <tr style="height: 19pt;">
+                    <td class="td_9">
+                        <p class="p_70">date</p>
+                    </td>
+                    <td class="td_10">
+                        <p class="p_73">a single date such as December 22, 2011</p>
+                    </td>
+                </tr>
+                <tr style="height: 32pt;">
+                    <td class="td_9">
+                        <p class="p_70">double</p>
+                    </td>
+                    <td class="td_10">
+                        <p class="p_73">8 bytes IEEE 754. Covers a range from 4.94065645841246544e-324d to</p>
+                        <p class="p_73">1.79769313486231570e+308d</p>
+                    </td>
+                </tr>
+                <tr style="height: 32pt;">
+                    <td class="td_9">
+                        <p class="p_70">entityref</p>
+                    </td>
+                    <td class="td_10">
+                        <p class="p_75">A reference to an entity object. This is a simple association. The entity with this attribute does not inherit its entity referenced attributes.</p>
+                    </td>
+                </tr>
+                <tr style="height: 31pt;">
+                    <td class="td_9">
+                        <p class="p_70">entityref-list</p>
+                    </td>
+                    <td class="td_10">
+                        <p class="p_75">A list of references to entity objects. This is a simple association. The entity with this attribute does not inherit its entity referenced attributes.</p>
+                    </td>
+                </tr>
+                <tr style="height: 37pt;">
+                    <td class="td_9">
+                        <p class="p_70">enum</p>
+                    </td>
+                    <td class="td_10">
+                        <p class="p_153">An enumeration. The value of an attribute of this type is one of the values listed in the attribute class' “values” property.</p>
+                    </td>
+                </tr>
+                <tr style="height: 36pt;">
+                    <td class="td_9">
+                        <p class="p_70">long</p>
+                    </td>
+                    <td class="td_10">
+                        <p class="p_73">8 bytes signed (two's complement). Ranges from -9,223,372,036,854,775,808 to</p>
+                        <p class="p_73">+9,223,372,036,854,775,807.</p>
+                    </td>
+                </tr>
+                <tr style="height: 54pt;">
+                    <td class="td_9">
+                        <p class="p_70">map</p>
+                    </td>
+                    <td class="td_10">
+                        <p class="p_71">
+                            <span class="span_27">A hash table of values. A map must contain a “</span>
+                            <span class="span_34">&#160; </span>
+                            <span class="span_27"> mapkeytype” and “</span>
+                            <span class="span_34">&#160; </span>
+                            <span class="span_27"> mapvaluetype” entries which contain the data type of the hash table key and value. Currently map values may only be defined by the <MadCap:variable name="Variables.ProductName" /> and not a user.</span>
+                        </p>
+                    </td>
+                </tr>
+                <tr style="height: 31pt;">
+                    <td class="td_9">
+                        <p class="p_70">password</p>
+                    </td>
+                    <td class="td_10">
+                        <p class="p_80">Holds a password value. The encoding used is specified by the attribute class' “encoding” property.</p>
+                    </td>
+                </tr>
+                <tr style="height: 22pt;">
+                    <td class="td_9">
+                        <p class="p_70">string</p>
+                    </td>
+                    <td class="td_10">
+                        <p class="p_73">a string</p>
+                    </td>
+                </tr>
+                <tr style="height: 18pt;">
+                    <td class="td_9">
+                        <p class="p_70">string-list</p>
+                    </td>
+                    <td class="td_10">
+                        <p class="p_73">a list of strings</p>
+                    </td>
+                </tr>
+                <tr style="height: 22pt;">
+                    <td class="td_9">
+                        <p class="p_70">timestamp</p>
+                    </td>
+                    <td class="td_10">
+                        <p class="p_73">a single date/time accurate to seconds</p>
+                    </td>
+                </tr>
+                <tr style="height: 18pt;">
+                    <td class="td_9">
+                        <p class="p_70">tyepref</p>
+                    </td>
+                    <td class="td_10">
+                        <p class="p_73">A reference to an entity type object.</p>
+                    </td>
+                </tr>
+                <tr style="height: 22pt;">
+                    <td class="td_9">
+                        <p class="p_70">typeref-list</p>
+                    </td>
+                    <td class="td_10">
+                        <p class="p_73">A list of references to entity type objects.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Entity Type</h2>
+        <p>Entity Types are objects representing the different types of Entity objects defined within the <MadCap:variable name="Variables.ProductName" />. Entity Types define the population of attributes that may be present on Entity objects. Each Entity Type must have a unique object ID.</p>
+        <p>Entity Types can be arranged in a hierarchy, by allowing one Entity Type to be specified as the “parent” of other Entity Types. Entity Type attributes also inherit from parent to child, so setting the “city” attribute of a parent Entity Type will cause that attribute to be “shown” on all of its children (and any descendants), unless those Entity Types provide their own value for the “city” attribute. A child Entity Type may override any of its parent Entity Type Attribute objects. A child may not however remove an Entity Type Attribute if its parent defines.</p>
+        <p>In most cases an Entity Type defines the attributes which make up an Entity unless the Attribute Class object has set the “Inherit Attributes” value to false. Setting “Inherit Attributes” can be useful for attributes of type “typeref-list”. For example, an expected location attribute may contain more than one location. In this case the Entity object should not inherit the attributes of the expected location. The Entity should only inherit attributes of its actual location.</p>
+        <table class="TableNormal" style="margin-left: 0;margin-right: auto;">
+            <col style="width: 108pt;" />
+            <col style="width: 347pt;" />
+            <thead>
+                <tr>
+                    <th colspan="2">Entity Type Properties</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr style="height: 25pt;">
+                    <td class="td_9">
+                        <p>
+                            <span class="Strong">Name</span>
+                        </p>
+                    </td>
+                    <td class="td_10">
+                        <p>Presentation label</p>
+                    </td>
+                </tr>
+                <tr style="height: 25pt;">
+                    <td class="td_9">
+                        <p>
+                            <span class="Strong">Description</span>
+                        </p>
+                    </td>
+                    <td class="td_10">
+                        <p>Describes this entity type in detail.</p>
+                    </td>
+                </tr>
+                <tr style="height: 37pt;">
+                    <td class="td_9">
+                        <p>
+                            <span class="Strong">Deletable</span>
+                        </p>
+                    </td>
+                    <td class="td_10">
+                        <p>Describes whether or not a user can delete this attribute class. Attribute Class objects defined by <MadCap:variable name="Variables.ProductName" /> and not a user are marked as non-deletable.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Entity Type Attribute</h2>
+        <p>Entity Type Attributes are objects representing user-defined attributes of an Entity Type.</p>
+        <table class="TableNormal" style="margin-left: 0;margin-right: auto;">
+            <col style="width: 108pt;" />
+            <col style="width: 347pt;" />
+            <thead>
+                <tr>
+                    <th colspan="2">
+                        <span class="Strong">Entity Type Attribute Properties</span>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr style="height: 21pt;">
+                    <td class="td_24">
+                        <p>
+                            <span class="Strong">Required</span>
+                        </p>
+                    </td>
+                    <td class="td_25">
+                        <p>If true, upon creation of an Entity a user must provide a value for this attribute.</p>
+                    </td>
+                </tr>
+                <tr style="height: 150pt;">
+                    <td class="td_24">
+                        <p>
+                            <span class="Strong">Static</span>
+                        </p>
+                    </td>
+                    <td class="td_25">
+                        <p>A static entity type attribute is an attribute which is an instance of the Entity Type and not the Entity. In this case, the Entity Type stores the current value and the history of the attribute. For example, a location Entity Type defines a static attribute named “city” with the value “Austin”. All Entities which have a typeref attribute whose value is “location” then will also have an attribute named “city” with the value “Austin”.</p>
+                        <p>A non-static entity type attribute makes an attribute available for the Entity to define. For example, a “Server” Entity Type may have the attribute “RAM”. In this case different servers have different amounts of RAM therefore the “RAM” attribute should be non-static.</p>
+                    </td>
+                </tr>
+                <tr style="height: 45pt;">
+                    <td class="td_24">
+                        <p>
+                            <span class="Strong">Deletable</span>
+                        </p>
+                    </td>
+                    <td class="td_25">
+                        <p>Describes whether or not a user can delete this attribute class. Attribute Class objects defined by the <MadCap:variable name="Variables.ProductName" /> and not a user are marked as non-deletable.</p>
+                    </td>
+                </tr>
+                <tr style="height: 54pt;">
+                    <td class="td_24">
+                        <p>
+                            <span class="Strong">Value</span>
+                        </p>
+                    </td>
+                    <td class="td_25">
+                        <p class="p_164">For static attributes this defines the value of the attribute. For non-static attributes this defines a default value. When a user creates an Entity the non-static attribute is populated with the default value which the user may change.</p>
+                    </td>
+                </tr>
+                <tr style="height: 40pt;">
+                    <td class="td_24">
+                        <p>
+                            <span class="Strong">Sort Priority</span>
+                        </p>
+                    </td>
+                    <td class="td_25">
+                        <p>Defines the sort order for attributes on the Entity user interface (UI). Attributes with a lower sort priority are displayed first.</p>
+                    </td>
+                </tr>
+                <tr style="height: 117pt;">
+                    <td class="td_24">
+                        <p>
+                            <span class="Strong">Category</span>
+                        </p>
+                    </td>
+                    <td class="td_25">
+                        <p>Attributes with the same category are shown on the Entity UI grouped together within a titled box. Category has a lower precedence than sort priority as a result attributes with the same category may appear in two different titled boxes. For example, suppose an entity type contains attributes “city” with sort priority 100 and “state” with sort priority 300 both in the “location” category and a third attribute “host” with sort priority 200 and category “network”. In this example, the UI will have three titled boxes, “location”, “network” and “location”.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

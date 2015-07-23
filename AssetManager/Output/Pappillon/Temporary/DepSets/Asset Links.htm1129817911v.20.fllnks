@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultFileLinkSet
+  FileTitle=""
+  FileSearchable="true"
+  FileTimeEstimate="0"
+  FilePriority="0">
+  <Links>
+    <Link
+      Url="../RFC-AM Comprehensive/Content/Resources/Images/UserManual for reference/030000D5.png" />
+    <Link
+      Url="../RFC-AM Comprehensive/Content/Resources/Images/UserManual for reference/030000D6.png" />
+    <Link
+      Url="../RFC-AM Comprehensive/Content/Resources/Images/UserManual for reference/030000D7.png" />
+    <Link
+      Url="../RFC-AM Comprehensive/Content/Resources/Images/UserManual for reference/030000D8.png" />
+    <Link
+      Url="../RFC-AM Comprehensive/Content/Resources/Images/UserManual for reference/030000D9.png" />
+    <Link
+      Url="../RFC-AM Comprehensive/Content/Resources/Images/UserManual for reference/030000DA.png" />
+    <Link
+      Url="../RFC-AM Comprehensive/Content/Resources/Images/UserManual for reference/030000DB.png" />
+    <Link
+      Url="../RFC-AM Comprehensive/Content/Resources/Images/UserManual for reference/030000DC.png" />
+  </Links>
+  <LongLinks>
+    <Link
+      Url="../RFC-AM Comprehensive/Content/Resources/Images/UserManual for reference/030000D5.png" />
+    <Link
+      Url="../RFC-AM Comprehensive/Content/Resources/Images/UserManual for reference/030000D6.png" />
+    <Link
+      Url="../RFC-AM Comprehensive/Content/Resources/Images/UserManual for reference/030000D7.png" />
+    <Link
+      Url="../RFC-AM Comprehensive/Content/Resources/Images/UserManual for reference/030000D8.png" />
+    <Link
+      Url="../RFC-AM Comprehensive/Content/Resources/Images/UserManual for reference/030000D9.png" />
+    <Link
+      Url="../RFC-AM Comprehensive/Content/Resources/Images/UserManual for reference/030000DA.png" />
+    <Link
+      Url="../RFC-AM Comprehensive/Content/Resources/Images/UserManual for reference/030000DB.png" />
+    <Link
+      Url="../RFC-AM Comprehensive/Content/Resources/Images/UserManual for reference/030000DC.png" />
+  </LongLinks>
+  <Anchors>
+    <Anchor
+      Name="__RefHeading___Toc414541451" />
+  </Anchors>
+  <Keywords />
+  <Concepts />
+  <ConceptControlNames />
+  <IndexControlNames />
+  <Variables />
+  <FileConditions />
+  <FileTags />
+  <AllConditions />
+  <Stylesheets />
+</CatapultFileLinkSet>

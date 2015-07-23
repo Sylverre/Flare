@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="882" MadCap:lastWidth="814">
+    <head>
+        <title>
+        </title>
+    </head>
+    <body>
+        <h1>Configuring SNMP V3 Alert Actions<br /></h1>
+        <ul class="ul_1">
+            <li class="ColorfulListAccent11">
+                <span class="Strong">Transport Protocol:</span> Select UDP or TCP.<br /></li>
+            <li class="ColorfulListAccent11">
+                <span class="Strong">Hostname:</span>  Input the IP address of your server.<br /></li>
+            <li class="ColorfulListAccent11">
+                <span class="Strong">Port:</span>  Select the Port over which to communicate with the server (by default this is 162).<br /></li>
+            <li class="ColorfulListAccent11">
+                <span class="Strong">Type of Notification:</span>  Select TRAP or INFORM.<br /></li>
+            <li class="ColorfulListAccent11">
+                <span class="Strong">Authentication User ID/Password/Confirm:</span>  Enter the user ID and password for your server if you have one and confirm it.<br /></li>
+            <li class="ColorfulListAccent11"> <span class="Strong">Authentication Protocol:</span>  Select None, SHA-1, or MD5 (by default this is set to SHA-1).<br /></li>
+            <li class="ColorfulListAccent11">
+                <span class="Strong">Additional Attributes:</span>  Select the additional attributes you would like to publish for the event.<br /></li>
+            <li class="ColorfulListAccent11">
+                <span class="Strong">Engine ID:</span>  Within an administrative domain, an SNMP Engine ID is the unique and unambiguous identifier of an SNMP engine. Since there is a one-to-one association between SNMP engines and SNMP entities, it also uniquely and unambiguously identifies the SNMP entity. Enter the SNMP Engine ID (if applicable).<br /></li>
+            <li class="ColorfulListAccent11">
+                <span class="Strong">Context Engine ID:</span>  Within an administrative domain, a contextEngineID uniquely identifies an SNMP entity that may realize an instance of a context with a particular contextName. Enter the SNMP Context Engine ID (if applicable).<br /></li>
+            <li class="ColorfulListAccent11">
+                <span class="Strong">Context Name:</span> A contextName is used to name a context. Each contextName MUST be unique within an SNMP entity. Enter a Context Name (if applicable).<br /></li>
+            <li class="ColorfulListAccent11">
+                <span class="Strong">Encryption Protocol:</span>  Select None, DES, or AES-128 as encryption protocol.</li>
+        </ul>
+        <p class="p_44">
+            <span class="Strong">Encryption Password/Confirm:</span>  Enter the encryption password and confirm it.</p>
+        <p class="note" MadCap:autonum="&lt;b&gt;NOTE:&lt;/b&gt; &#160;">
+            <span class="Strong">NOTE</span>:&#160; For more about SNMP trap formatting, refer to the <a href="../../../../RFC-AM Comprehensive/Content/Asset Manager Administration and Usage Manual/SNMP V1 and V3 Trap Formatting.htm#_SNMP_V1_or_1">SNMP Trap Formatting</a> section.</p>
+        <p class="note" MadCap:autonum="&lt;b&gt;NOTE:&lt;/b&gt; &#160;">
+            <span class="Strong">NOTE</span>:&#160; The RF Code MIB file can be found in the “mib” directory under Asset Manager’s installation directory.</p>
+    </body>
+</html>

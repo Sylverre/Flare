@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="2572" MadCap:lastWidth="1096">
+    <head><title></title>
+    </head>
+    <body>
+        <h1><a name="__RefHeading___Toc414541487"></a><a name="_Reader_Configuration_with"></a>
+            <MadCap:annotation MadCap:createDate="2015-07-02T15:27:42.3063902-05:00" MadCap:creator="Pappillon" MadCap:initials="PA" MadCap:comment="install RCU and update screenshots!" MadCap:editor="Pappillon" MadCap:editDate="2015-07-02T15:27:53.8120483-05:00">Reader</MadCap:annotation> Configuration with the Reader Web Interface</h1>
+        <p>To see <MadCap:variable name="Variables.CompanyName" /> tags within range of the reader and to help determine proper placement and functioning of readers and/or tags, perform the following steps:</p>
+        <p class="note" MadCap:autonum="&lt;b&gt;NOTE:&lt;/b&gt; &#160;">&#160; The Reader Web Interface can be useful when troubleshooting reader and tag issues after full deployment when you are in “maintenance” or “sustaining” mode.
+        </p>
+        <ol>
+            <li>Physically connect your LAN to your <MadCap:variable name="Variables.CompanyName" /> reader.<br /></li>
+            <li>Find the unique hostname of the reader, which can be found on a white label on the underside of the reader labeled "DEFAULT HOST NAME."<br /></li>
+        </ol>
+        <p class="note" MadCap:autonum="&lt;b&gt;NOTE:&lt;/b&gt; &#160;">&#160; You should have the IP address of the reader after configuring it with the RCU, but you can also ping the hostname of the reader from a Command Prompt to get its IP address.<br /></p>
+        <ol MadCap:continue="true">
+            <li>Take the hostname of the device and prepend it to the LAN domain to which the reader is connected. The URL follows the pattern of [DEFAULT HOST NAME + LAN Domain].&#160;The following is an example: </li>
+        </ol>
+        <p>
+            <MadCap:annotation MadCap:createDate="2015-04-29T10:06:39.4559071-05:00" MadCap:creator="DSFoxx" MadCap:initials="DSF" MadCap:comment="format" MadCap:editor="DSFoxx" MadCap:editDate="2015-04-29T10:06:41.0639991-05:00">DEFAULT</MadCap:annotation> HOST NAME: &#160;&#160;<span class="strong">rfcodeab1cd2</span></p>
+        <p>LAN Domain: &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; &#160; <span class="strong">domain.com</span></p>
+        <p class="note" MadCap:autonum="&lt;b&gt;NOTE:&lt;/b&gt; &#160;"> &#160;In the example above, the full URL would be&#160;<a href="http://rfcodeab1ab2.domain.com/">http://rfcodeab1ab2.domain.com</a></p>
+        <ol MadCap:continue="true">
+            <li>After physically connecting the reader to the LAN and determining the IP address and/or URL, browse to it and open the reader web interface (the browser GUI).<br /><br /><img src="../../Images/UserManual for reference/03000112.png" style="height: 267px;width: 536px;" class="img_2" /><br /></li>
+            <li>Click <span class="strong">Tags</span> in the left-hand column. &#160;<br /></li>
+            <li>Under the <span class="strong">Tag Groups</span> heading in the next column to the right, click the <span class="strong">Add</span> button and you will see the <span class="strong">Tag Group</span> dialog box appear on your screen:<br /><br /><img src="../../Images/UserManual for reference/03000113.png" style="height: 224px;width: 379px;" class="img_2" /><br /></li>
+            <li>In the Group Code field of the Tag Group dialog box, type the <span class="strong">Group Code</span> of any of your tags. The Group Code is a 6-character code found on the bottom left of a tag, right below the barcode. <br /></li>
+        </ol>
+        <p class="note" MadCap:autonum="&lt;b&gt;NOTE:&lt;/b&gt; &#160;">&#160; For more information about tags, Group Codes, Tag IDs, and Treatment Codes, refer to the <a href="RF Code Tag Group Codes IDs.htm#_RF_Code_Tag_1"><MadCap:variable name="Variables.CompanyName" /> Tags</a> section in the Appendix.
+        </p>
+        <ol MadCap:continue="true">
+            <li>After entering a Group Code, click the <span class="strong">OK</span> button.<br />In the sample below, the Group Code THSRCK is in the Group Code field:<br /><br /><img src="../../Images/UserManual for reference/03000114.png" style="height: 299px;width: 496px;" class="img_2" /><br /></li>
+        </ol>
+        <p class="note" MadCap:autonum="&lt;b&gt;NOTE:&lt;/b&gt; &#160;"> &#160;This part of the reader configuration is simply a quick test.&#160; You will need to add all of the Group Codes for all of your tags in the <MadCap:variable name="Variables.ProductName" /> web interface.
+        </p>
+        <p>After adding the Group Code, the reader will see all of the tags in range with that Group Code and will begin to report information about the beacons they are transmitting in the far right window pane, listing each tag by Tag ID.&#160;<br /><br /><img src="../../Images/UserManual for reference/03000115.png" style="height: 214px;width: 622px;" class="img_2" /><br /><br />You can see that under the middle column (labeled “Tag Groups”), the Group Code of “THSRCK" is displayed (the one that was just added in the example above), and&#160;tags with that Group Code that the reader sees will begin to appear in the right column. For each unique tag, the basic attributes of the tag beacons (payload and signal strength indicator (SSI) values) are shown.
+        </p>
+        <p>
+            <img src="../../Images/UserManual for reference/03000116.png" style="height: 82px;width: 554px;" class="img_2" />
+        </p>
+        <p>The signal strength indicator provides a measure of how strong a reader is reading tag signals.&#160; It can be an important indicator in deployment areas with a large degree of noise in the environment.&#160; However, if you do need to address environmental noise and are considering making changes to SSI configuration of any reader, please contact <MadCap:variable name="Variables.CompanyName" /> Support first.&#160; Misconfiguring SSI can cause a reader to miss some tag beacons at best and at worst prevent a reader from being able to detect any tag beacons or tags. </p>
+        <p>In general you want tag SSI to be 10 dB higher than the noise floor. If you need to configure SSI to limit zones, the Simple SSI rule is the easiest to use.</p>
+        <p class="note" MadCap:autonum="&lt;b&gt;NOTE:&lt;/b&gt; &#160;">Adding Tag Groups in the Reader Web Interface is only a way to validate that the reader is functioning properly. These settings are not saved after the web interface session is ended. The reader and tag groups must be configured within <MadCap:variable name="Variables.ProductName" /> (in a similar way) in order for them all to work together within <MadCap:variable name="Variables.ProductName" />.
+        </p>
+    </body>
+</html>

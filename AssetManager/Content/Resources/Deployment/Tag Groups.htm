@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="910" MadCap:lastWidth="639">
+    <head>
+    </head>
+    <body>
+        <h1>Tag Groups</h1>
+        <p>Tag Groups are groups of <MadCap:variable name="General.CompanyName" /> Tag models that look and behave similarly in terms of form factor and the technology embedded within the tag. Adding Tag Groups to<MadCap:variable name="General.ProductName" /> also adds them to Zone Manager and allows Zone Manager to “see” individual <MadCap:variable name="General.CompanyName" /> Tags within the set Tag Group, which then lets <MadCap:variable name="General.ProductName" /> display and record <MadCap:annotation MadCap:createDate="2015-04-21T13:14:03.3745692-05:00" MadCap:creator="DSFoxx" MadCap:initials="DS" MadCap:comment="Ack!  &quot;Add to AM, which adds to ZM, which then lets AM...&quot;  Really? " MadCap:editor="DSFoxx" MadCap:editDate="2015-04-21T13:14:04.9326583-05:00">data</MadCap:annotation> that those tags transmit to readers in range, e.g., temperature and humidity readings sent from HUMRCK tags. <MadCap:variable name="General.CompanyName" /> tags have uniform labels with the following anatomy.</p>
+        <p>Group Code: The Group Code is a 6-letter code. Examples of Group Codes are HUMRCK, IRCODE, LOCATE, RFCRCK, and THSRCK.</p>
+        <p>Tag ID: The Tag ID is a unique 8-digit numeric identifier. You might have 50 HUMRCK tags in your environment, but you can only have one with the Tag ID of 00005111.</p>
+        <p>Treatment Code: The Treatment Code is used together with the Group Code to tell <MadCap:variable name="General.CompanyName" /> software how to interpret the data that each tag sends in beacons to <MadCap:variable name="General.CompanyName" /> readers. A Treatment Code can be associated with multiple Group Codes, so it is important to match them exactly when adding them to a specific environment of <MadCap:variable name="General.CompanyName" /> readers and tags. Note that all tags sold by <MadCap:variable name="General.CompanyName" /> since November 2012 are assigned to and use Treatment Code 04.</p>
+        <p>All <MadCap:variable name="General.CompanyName" /> tags are defined as being members of a specific group, and have a unique tag ID number within that group. When an <MadCap:variable name="General.CompanyName" /> reader is configured, it can be supplied with up to eight (8) group code IDs and a corresponding treatment code for each group code. The treatment code instructs the reader how to interpret the payload data for each tag event within that group code. <MadCap:variable name="General.CompanyName" /> tags are smart and have the ability to transmit various types of data within its radio frequency beacon such as indicators for motion, panic, tamper, infrared location, and low battery.</p>
+        <p>NOTE: For more information about Tags and Groups, refer to the following <MadCap:variable name="General.CompanyName" /> KB article: <a href="http://support.rfcode.com/customer/portal/articles/843080">http://support.rfcode.com/customer/portal/articles/843080</a></p>
+        <h2>To add Tag Groups:</h2>
+        <ol>
+            <li>Go to <b>Admin Console &gt; Configuration &gt; Tag Groups</b>.</li>
+        </ol>
+        <ol MadCap:continue="true">
+            <li>Click the <b>New</b> button at the top of the second pane.</li>
+        </ol>
+        <ol MadCap:continue="true">
+            <li>Select the appropriate Treatment Code for the tag being added.</li>
+        </ol>
+        <p>NOTE: The Treatment Code is found in the very lower right-hand corner of the tag and general begins with the prefix 04, such as 04F, 04V, etc.</p>
+        <ol MadCap:continue="true">
+            <li>Choose the appropriate Group Code, which is a six (6) digit alpha-numeric code, found in the lower left corner of the tag, e.g. HUMRCK as seen in the photo diagram of the R155 Temperature-Humidity tag above.</li>
+        </ol>
+        <p>NOTE: After selecting a Treatment Code, the Group Code field will be pre-populated, but if the code does not match the code on your tag, change it so that it reflects the Group Code on the tag label.</p>
+        <ol MadCap:continue="true">
+            <li>Enter a Name for the Tag Group.</li>
+        </ol>
+        <p>NOTE: A common practice is to use the Group Code as the name so that it is easy to identify when you later add assets and associate them with tags. However, the Name field is not restricted, so you can give the Tag Group any name you want if there is ever a reason to use alternative nomenclature.</p>
+        <p MadCap:conditions="General.notes for reviewers" style="font-weight: normal;text-decoration: underline;font-style: normal;">I&#160;need someone to explain to me why I shouldn't, just by default, rename every tag group to something like "Temperature-Humidity" or even "Temp-Hum HUMR" instead of the code. Because I-the-user don't want to deal with codes, so I-the-writer should address <MadCap:annotation MadCap:createDate="2015-04-27T17:47:20.0030557-05:00" MadCap:creator="DSFoxx" MadCap:initials="DSF" MadCap:comment="Frank says: Agree. I would want to do that too." MadCap:editor="DSFoxx" MadCap:editDate="2015-04-27T17:47:23.2302403-05:00">that</MadCap:annotation>. </p>
+        <p MadCap:conditions="General.New text">Once Tag Groups have been created, <MadCap:variable name="General.ProductName" /> will create unassigned tag objects. Assigning tags to assets is part of the Tag Management process. <u MadCap:conditions="General.notes for reviewers">[xref]</u></p>
+    </body>
+</html>

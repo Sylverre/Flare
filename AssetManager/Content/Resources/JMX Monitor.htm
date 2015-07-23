@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <title>
+        </title>
+        <link href="../../../RFC-AM Comprehensive/Content/Resources/Stylesheets/UserManual for reference.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h3 class="Heading3">
+            <a name="__RefHeading___Toc414541468">
+            </a>JMX Monitor</h3>
+        <p>This sub-task lets you publish Asset Manager data using Java Management Extensions (JMX).&#160; To use this feature, you will need a separate license to enable the functionality. Once the license key has been installed, JMX publishing is done through the configuration of the sub-tasks JMX Monitor and JMX Domains.</p>
+        <p>When configuring the JMX Monitor you will need to specify the hostname and port of the computer where the JMX software is installed. Asset Manager defaults to the local host. The local host should be used if the software is installed and running on the same computer as Asset Manager.</p>
+        <p class="p_10">To configure Asset Manager to use JMX, perform the following steps:</p>
+        <ol start="1" class="ol_4">
+            <li class="ColorfulListAccent11_26">Install the JMX License Key using the same steps as outlined in the <span class="Strong">License Key Configuration</span> sub-task. <br />The JMX License Key is a separate key that must be installed in addition to the Asset Manager license key. Once the key has been properly installed, it will appear in the license key list. <br /></li>
+            <li class="ColorfulListAccent11">After you install the JMX key, restart the RF Code Asset Manager service via the Microsoft Windows Service Manager or reboot the Asset Manager application server.<br /></li>
+        </ol>
+        <p class="ColorfulListAccent11">
+            <span class="span_5">NOTE</span>
+            <span class="span_2">: If you are running Asset Manager in a Linux environment and need more information about how to restart the service, refer to Linux Installation section of this document.<br /></span>
+        </p>
+        <ol start="3" class="ol_4">
+            <li class="ColorfulListAccent11">Next, go to <span class="Strong">Integration</span> &gt; <span class="Strong">JMX Monitor</span>.<br /><br /><img src="../../../RFC-AM Comprehensive/Content/Resources/Images/UserManual for reference/030000FC.png" style="height: 213px;width: 514px;" class="img_2" /><br /></li>
+            <li class="ColorfulListAccent11">Check the <span class="Strong">Enabled</span> checkbox.<br /></li>
+            <li class="ColorfulListAccent11">Enter the <span class="Strong">Hostname</span> of the server running the JMX software.<br /></li>
+            <li class="ColorfulListAccent11">Enter the <span class="Strong">Port</span> (TCP/IP) that Asset Manager will use to communicate with the JMX software.<br /></li>
+            <li class="ColorfulListAccent11">Click <span class="Strong">Save Changes</span>.</li>
+        </ol>
+    </body>
+</html>

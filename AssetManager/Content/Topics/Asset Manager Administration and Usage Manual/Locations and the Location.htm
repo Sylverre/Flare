@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="2234" MadCap:lastWidth="776">
+    <head><title></title>
+    </head>
+    <body>
+        <h1><a name="__RefHeading___Toc414541355"></a><a name="_Locations_and_the"></a>Locations and the Location Hierarchy</h1>
+        <p>Locations in <MadCap:variable name="Variables.ProductName" /> are organized in a hierarchy and represent the physical locations in your organization or area of deployment.&#160;<MadCap:snippetText src="../../Resources/Snippets/location hierarchy.flsnp" /></p>
+        <p>
+            <img src="../../Images/UserManual for reference/03000036.png" style="height: 36px;width: 139px;" class="img_2" />
+        </p>
+        <p MadCap:conditions="Default.NewText" class="note" MadCap:autonum="&lt;b&gt;NOTE:&lt;/b&gt; &#160;">The hierarchical structure works best when items are created from the top down. </p>
+        <p MadCap:conditions="Default.NewText" class="note" MadCap:autonum="&lt;b&gt;NOTE:&lt;/b&gt; &#160;"><![CDATA[  ]]><MadCap:variable name="General.CompanyName" /> recommends that you create your Location Hierarchy and import a Location Configuration before adding any assets to <MadCap:variable name="General.ProductName" />. Files can be imported at any time after <MadCap:variable name="General.ProductName" /> has been configured.</p>
+        <h2 MadCap:conditions="Default.NewText">Best Practice for Location Hierarchies</h2>
+        <ol>
+            <li MadCap:conditions="Default.NewText">Create your location hierarchy during your needs assessment or from the information collected during that process.  Where are the areas you need to monitor and the assets you intend to manage? Include all locations, and consider possible expansion. </li>
+            <li MadCap:conditions="Default.NewText">Format Locations to fit within <MadCap:variable name="General.ProductName" />᾽s data schema. The schema᾽s expected groups are:</li>
+        </ol>
+        <ul>
+            <li MadCap:conditions="Default.NewText">Country</li>
+            <li MadCap:conditions="Default.NewText">State</li>
+            <li MadCap:conditions="Default.NewText">City</li>
+            <li MadCap:conditions="Default.NewText">Campus</li>
+            <li MadCap:conditions="Default.NewText">Building </li>
+            <li MadCap:conditions="Default.NewText">Floor</li>
+            <li MadCap:conditions="Default.NewText">Zone</li>
+            <li MadCap:conditions="Default.NewText">Room<br /><br /></li>
+        </ul>
+        <p MadCap:conditions="Default.NewText">Use as many of these groups as appropriate, beginning at the highest practical level. As a best practice, create logical levels even if you have only a single item in that level; that is, even if you have sites only within one City, it is a good idea to include a level named for your city, in case of expansion or integration later on. Each of your location᾽s names must be unique, and all should have meaning to the system᾽s users. </p>
+        <p MadCap:conditions="Default.NewText" class="note" MadCap:autonum="&lt;b&gt;NOTE:&lt;/b&gt; &#160;">If you are integrating with third-party products, location hierarchies must match across systems.</p>
+        <ol start="3">
+            <li MadCap:conditions="Default.NewText">Manually create or <a href="../../Import Location Hierarchy Using Spreadsheet.htm" MadCap:conditions="Default.SysManual">import your Location Hierarchy</a> <MadCap:conditionalText MadCap:conditions="Default.workflow">import your hierarchy </MadCap:conditionalText>to <MadCap:variable name="General.ProductName" /> before beginning to add assets.<br /></li>
+        </ol>
+        <p class="note" MadCap:autonum="&lt;b&gt;NOTE:&lt;/b&gt; &#160;"> Location names must be unique. It is common practice to string Location-level names together in order to uniquely identify each Location, especially at the most granular layers.&#160; For example, in a data center with multiple rows of server racks, the racks might be named with a row number preceding the rack number, as <span class="ital">Rack 01-01, Rack 01-<MadCap:annotation MadCap:createDate="2015-06-02T16:16:06.7393147-05:00" MadCap:creator="Pappillon" MadCap:initials="PA" MadCap:comment="think I need a better example--one that doesn't include the admittedly rather mobile racks!" MadCap:editor="Pappillon" MadCap:editDate="2015-06-02T16:16:23.4562709-05:00">02</MadCap:annotation></span>.        </p>
+        <h2>Add New Location</h2>
+        <p>
+            <img src="../../Images/AM Locations, new location.bmp" class="imgfullwidth" />
+        </p>
+        <ol>
+            <li>To add a new location manually, navigate to <span class="Strong">Admin Console &gt; Locations/Rules/Maps &gt; Locations &amp;&#160;Rules</span>.  </li>
+            <li>Click the Location level beneath which your new location will reside. For your first top-level location, this is <span class="Strong">Location</span>. With the location level selected, click the <span class="Strong">New Location</span> button.</li>
+            <li>Enter the name and description you would like for this location and click <span class="Strong">OK</span>.</li>
+        </ol>
+        <h2>Add Attribute to Location</h2>
+        <p>Attributes can be assigned to locations as they can to assets. </p>
+        <ol>
+            <li>To add an attribute to a location, select the location you would like to add the attribute to from the tree on the left. In the task pane to the right, there are three categories (Name and Description, Attribute and Inherited Attributes). Under the Attributes category, click the <span class="Strong">Add</span> button.</li>
+            <li>Choose an attribute from the list, choose a category and field order for this attribute, select or deselect the value required box and enter a default value for the attribute. Click <span class="Strong">OK</span> to continue.</li>
+        </ol>
+    </body>
+</html>

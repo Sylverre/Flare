@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="1102" MadCap:lastWidth="639">
+    <head>
+        <title>
+        </title>
+    </head>
+    <body>
+        <h1>
+            <a name="__RefHeading___Toc414541502">
+            </a>
+            <a name="_SNMP_V1_or_1">
+            </a>SNMP V1 and V3 Trap <MadCap:annotation MadCap:createDate="2015-05-22T14:00:52.2526012-05:00" MadCap:creator="DSFoxx" MadCap:initials="DSF" MadCap:comment="alert-specific link; perhaps the appendix might be re-ordered?" MadCap:editor="DSFoxx" MadCap:editDate="2015-05-22T14:01:07.5184743-05:00">Formatting</MadCap:annotation></h1>
+        <p>In order to integrate with NMS systems, you must use the following trap format and trap functions.</p>
+        <p>Traps coming from <MadCap:variable name="Variables.ProductName" /> have a base OID of: 1.3.6.1.4.1.32410. </p>
+        <p>The following trap-specific content is available:</p>
+        <ul class="nonbulleted">
+            <li> 1.3.6.1.4.1.32410.100.1.0: The name of the alert which caused the trap (Octet String).</li>
+            <li>1.3.6.1.4.1.32410.100.2.0: The GUID of the alert which caused the trap (Octet String).</li>
+            <li>1.3.6.1.4.1.32410.100.3.0: The type of the alert which caused the trap (Octet String).</li>
+            <li>1.3.6.1.4.1.32410.100.4.0: The current state of the alert which caused the trap (Integer 32).</li>
+            <li>1.3.6.1.4.1.32410.100.5.0: The configured alert message from the alert threshold (Octet String).</li>
+            <li>1.3.6.1.4.1.32410.100.6.0: The attribute guid which is the alerting condition from the alert threshold (Octet String).</li>
+            <li>1.3.6.1.4.1.32410.100.7.0: The attribute value which is the alerting condition from the alert threshold (Octet String).</li>
+            <li>1.3.6.1.4.1.32410.100.8.0: The severity of the alert (Integer32).</li>
+            <li>1.3.6.1.4.1.32410.100.9.0: The alert start time (Octet String).</li>
+            <li>1.3.6.1.4.1.32410.100.10.0: The alert resolve time if resolved (Octet String).</li>
+            <li>1.3.6.1.4.1.32410.100.11.0: The alert asset GUID (Octet String).</li>
+            <li>1.3.6.1.4.1.32410.100.12.0: The number of attributes contained in the attribute table (Unsigned Integer 32).</li>
+            <li>1.3.6.1.4.1.32410.100.200.1.x.x: This is the table (ID range) containing additional alert attribute values.<br /></li>
+            <li>1.3.6.1.4.1.32410.100.200.1.1.1: The first attribute value index (Unsigned Integer 32).</li>
+            <li>1.3.6.1.4.1.32410.100.200.1.1.2: The first attribute value GUID (Octet String).</li>
+            <li>1.3.6.1.4.1.32410.100.200.1.1.3: The first attribute value (Octet String).</li>
+            <li>1.3.6.1.4.1.32410.100.200.1.1.4: The second attribute value index.</li>
+            <li>1.3.6.1.4.1.32410.100.200.1.1.5: The second attribute value GUID.</li>
+            <li>1.3.6.1.4.1.32410.100.200.1.1.6: The second attribute value.</li>
+            <li>1.3.6.1.4.1.32410.100.200.1.1.7: The third attribute value index.</li>
+            <li>1.3.6.1.4.1.32410.100.200.1.1.8: The third attribute value GUID.</li>
+            <li>1.3.6.1.4.1.32410.100.200.1.1.9: The third attribute value.</li>
+        </ul>
+    </body>
+</html>

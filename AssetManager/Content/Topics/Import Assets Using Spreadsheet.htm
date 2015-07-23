@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="1672" MadCap:lastWidth="1070">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>Import Assets Using Spreadsheet</h1>
+        <p>All of your assets and sensors can be manually added to the <MadCap:variable name="General.ProductName" /> database, but it is more efficient to upload this information from a populated spreadsheet. </p>
+        <ul>
+            <li><MadCap:variable name="General.ProductName" /> must be configured before Assets can be imported.  </li>
+            <li>At least one Asset must be created within <MadCap:variable name="General.ProductName" />..</li>
+            <li>File must be created in and exported from <MadCap:variable name="General.ProductName" />, then populated and imported into system.</li>
+            <li>Every asset must have a unique name. Duplicate assets will not be imported.</li>
+            <li>There is no limit on the number of asset types that can be created within <MadCap:variable name="General.ProductName" />.  </li>
+            <li>Assets can be imported all at once or in smaller sets. </li>
+        </ul>
+        <ol>
+            <li>Navigate to <span class="Strong">User Console &gt; Assets &gt; Manage Assets</span>.  <MadCap:annotation MadCap:createDate="2015-06-08T11:49:43.9552605-05:00" MadCap:creator="Pappillon" MadCap:initials="PA" MadCap:comment="06/04/15 -- Barry's got default asset templates, so the preferred instruction might well be Asset Template rather than Asset Type for all the manual entry bits." MadCap:editor="Pappillon" MadCap:editDate="2015-06-08T11:50:58.7105363-05:00">If</MadCap:annotation> no assets have been created, click <span class="Strong">New</span> to create at least one asset manually in system.</li>
+        </ol>
+        <p>&#160;</p>
+        <p class="note" MadCap:autonum="&lt;b&gt;NOTE:&lt;/b&gt; &#160;">If importing a set of assets all of a single type, create an asset of that type.   </p>
+        <ol MadCap:continue="true">
+            <li>Click <span class="Strong">Export</span>. Select Advanced Export and CSV.</li>
+            <li>Open file in spreadsheet program.</li>
+            <li>Highlight all cells (<span class="strong">Ctrl-A</span>) and then double-click the line between the first two columns to expand all the columns wide enough to read all of the cell values.</li>
+        </ol>
+        <p>
+            <img src="../Images/placeholder logan spreadsheet 1.bmp" style="width: 1078px;height: 397px;" />
+        </p>
+        <ol MadCap:continue="true">
+            <li>To create a general template that can be used for multiple asset types, delete all data leaving only the header row. To create a template for a single asset type, delete the contents of all those columns except the attributes common to the asset.</li>
+            <li>&#160;Populate the spreadsheet.<ol MadCap:continue="true"><li>Do not enter any text into the <span class="Emphasis">guid</span> column; the contents of the <span class="Emphasis">guid</span> column must be blank.</li><li>Enter a unique value for each asset in the <span class="Emphasis">$aName</span> column. </li><li>For sensors and tagged assets, enter the Tag ID in <span class="Emphasis">$aAssetTag</span>. The Tag ID is the six-character Group Code followed by the eight-digit Tag ID, with no spaces. </li><li>All other columns are optional.</li></ol></li>
+        </ol>
+        <ol MadCap:continue="true">
+            <li><span class="Strong">Save</span> as CSV.</li>
+            <li>Navigate to <span class="Strong">User Console &gt; Assets &gt; Import Assets</span>.</li>
+            <li><span class="Strong">Browse</span> to and <span class="Strong">Upload</span> file.</li>
+        </ol>
+    </body>
+</html>

@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <title>
+        </title>
+    </head>
+    <body>
+        <h5 class="Heading5">Configuring Email Alert Actions<br /></h5>
+        <ul class="ul_1">
+            <li class="ColorfulListAccent11">
+                <span class="Strong">Email Address(es)</span> – Specify a valid Email address.<br /></li>
+            <li class="ColorfulListAccent11">
+                <span class="Strong">Alert Action Message</span> - Define the message to be delivered in the alert. <br /><br /><span class="Strong">NOTE</span>:&#160; Macros can be used when configuring Alert Actions.&#160; For more information about Macros, refer to the <a href="../../../../RFC-AM Comprehensive/Content/Asset Manager Administration and Usage Manual/Using Macros.htm#_Using_Macros">Using Macros</a>&#160; section in the Appendix.<br /><br /><span class="Strong">NOTE</span>:&#160; For FTP, HTTP, and Logging actions, the information that will be transmitted will be a combination of the following:</li>
+        </ul>
+        <ul class="ul_10">
+            <li class="ColorfulListAccent11_27">The replaced values for all macros available to the action (see table above), with the exception of the following macros,&#160; which only output a partial date or time: DATE, YEAR, MONTH, DAY, TIME, HOUR, MINUTE, SECOND, MILLISECOND, TIMEZONE_OFFSET.</li>
+            <li class="ColorfulListAccent11_27">Additional source attributes specified in the definition of the source alert.</li>
+            <li class="ColorfulListAccent11_27">Other values for backwards compatibility of alert actions. All alert action name/value pairs from previous versions of HTTP and FTP alert actions are included and supported. Since some names do not match the macro name for the same value, the value is duplicated.</li>
+        </ul>
+    </body>
+</html>

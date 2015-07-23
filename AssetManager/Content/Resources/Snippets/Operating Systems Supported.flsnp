@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="200" MadCap:lastWidth="1096">
+    <body>
+        <h4>Operating Systems Supported</h4>
+        <ul>
+            <li MadCap:conditions="Default.AM only">64-bit Windows <MadCap:annotation MadCap:createDate="2015-05-15T13:41:24.4332589-05:00" MadCap:creator="DSFoxx" MadCap:initials="DSF" MadCap:comment="is windows 8 supported?" MadCap:editor="DSFoxx" MadCap:editDate="2015-05-15T13:41:29.6175554-05:00">7</MadCap:annotation></li>
+            <li MadCap:conditions="Default.AM only">64-bit Windows 2008 Server</li>
+            <li MadCap:conditions="Default.AM only">64-bit Windows 2012 Server</li>
+            <li MadCap:conditions="Default.AM only">64-bit Red Hat Enterprise Linux (RHEL) 5.5 – 6.4</li>
+            <li MadCap:conditions="Default.AM only">64-bit CentOS Linux 5.5 – 6.6</li>
+            <li MadCap:conditions="Default.AM only">64-bit Oracle Linux 5.5 – 6.5</li>
+            <li MadCap:conditions="Default.Logan">Windows: Microsoft Windows 64-bit Versions</li>
+            <li MadCap:conditions="Default.Logan">Linux: RedHat or CentOS 64-bit Versions</li>
+        </ul>
+    </body>
+</html>

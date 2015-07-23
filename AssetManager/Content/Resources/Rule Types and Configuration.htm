@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <title>
+        </title>
+        <link href="../../../RFC-AM Comprehensive/Content/Resources/Stylesheets/UserManual for reference.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h4 class="Heading4">Rule Types and Configuration Options</h4>
+        <p>The following table contains the names and descriptions of the Rule available for assignment to different Locations in the Location Hierarchy.</p>
+        <p>
+            <span class="Strong">NOTE</span>: Almost without exception, you will choose one of the first two Rules, either <span class="Strong">Match by Simple SSI</span> or <span class="Strong">Match by IR Locator</span>.&#160; If neither of these Rules seems to be working for whatever reason, please contact RF Code Support for assistance before adding one of the other Rules to the Location Hierarchy.</p>
+        <table class="TableNormal_2">
+            <col style="width: 121pt;" />
+            <col style="width: 366pt;" />
+            <tr style="height: 15pt;" class="tr_3">
+                <td class="td_7">
+                    <p class="Strong">&#160; Rule Type</p>
+                </td>
+                <td class="td_8">
+                    <p class="Strong">&#160; Description</p>
+                </td>
+            </tr>
+            <tr style="height: 27pt;" class="tr_3">
+                <td class="td_9">
+                    <p class="Strong">&#160; Match by Simple SSI</p>
+                </td>
+                <td class="td_10">
+                    <p class="p_1">&#160; Location based on threshold SSI values for one or more reader channels (at least one must be above the threshold).</p>
+                </td>
+            </tr>
+            <tr style="height: 27pt;" class="tr_3">
+                <td class="td_9">
+                    <p class="Strong">&#160; Match by IR Locator</p>
+                </td>
+                <td class="td_10">
+                    <p class="p_1">&#160; Location based on received values for the <span class="span_13">irlocator</span> attribute (on tags with IR sensors), with optional restriction on reporting reader channels.</p>
+                </td>
+            </tr>
+            <tr style="height: 19pt;" class="tr_3">
+                <td class="td_9">
+                    <p class="p_45">Match by Average SSI</p>
+                </td>
+                <td class="td_10">
+                    <p class="p_45">Location based on threshold average of SSI values for one or more reader channels.</p>
+                </td>
+            </tr>
+            <tr style="height: 27pt;" class="tr_3">
+                <td class="td_9">
+                    <p class="p_45">Match by strongest SSI, relative to reference tags</p>
+                </td>
+                <td class="td_10">
+                    <p class="p_45">Location based on tag SSI, as in Match by Simple SSI Rule, except that at least one reference tag must also be present, and above a minimum SSI.</p>
+                </td>
+            </tr>
+            <tr style="height: 33pt;" class="tr_3">
+                <td class="td_9">
+                    <p class="p_45">Match by SSI when near to reference tag</p>
+                </td>
+                <td class="td_10">
+                    <p class="p_45">Location based on reader’s proximity to a reference tag, thus causing all tag trans- missions received by the reader to conform to the reference tag’s SSI values or Zone.</p>
+                </td>
+            </tr>
+            <tr style="height: 39pt;" class="tr_3">
+                <td class="td_9">
+                    <p class="p_45">Match by Portal Entry/Exit SSI</p>
+                </td>
+                <td class="td_10">
+                    <p class="p_45">Location based on threshold SSI values for one or more reader channels, divided into “inside” and “outside” sets, and matching the location if the current or most recent best match was a channel in the “inside” set.</p>
+                </td>
+            </tr>
+            <tr style="height: 27pt;" class="tr_3">
+                <td class="td_9">
+                    <p class="p_45">Match if near GPS matching coordinates</p>
+                </td>
+                <td class="td_10">
+                    <p class="p_45">Location based on the tags matching with a reader that is providing a geophysical position matching a given set of constraints.</p>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="1578" MadCap:lastWidth="750">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>
+            <MadCap:conditionalText MadCap:conditions="Default.SysManual">Configuring Readers in <MadCap:variable name="General.ProductName" /></MadCap:conditionalText>
+            <MadCap:conditionalText MadCap:conditions="Default.workflow">Readers</MadCap:conditionalText>
+        </h1>
+        <p MadCap:conditions="Default.NewText">Reader Configuration through the Reader Configuration Utility includes IP&#160;address assignment and optional security settings, and must be completed before readers are physically deployed. Configuring Readers in <MadCap:variable name="General.ProductName" /> defines the equipment and channels from which <MadCap:variable name="General.ProductName" /> will accept data. Both reader configuration steps are required.</p>
+        <p MadCap:conditions="Default.NewText" class="note" MadCap:autonum="&lt;b&gt;NOTE:&lt;/b&gt; &#160;">Configuring Readers in <MadCap:variable name="General.ProductName" /> can be done manually through the web interface, or a reader configuration file can be imported.</p>
+        <p MadCap:conditions="Default.NewText" style="page-break-after: avoid;">To configure a reader in the <MadCap:variable name="General.ProductName" /> web interface:</p>
+        <p MadCap:conditions="Default.NewText">&#160;</p>
+        <ol>
+            <li>Navigate to <span class="Strong">Admin Console &gt; Configuration &gt;&#160;Readers</span>.  </li>
+            <li>In the Readers configuration screen, click the <span class="strong">New </span>button and select the reader type from the drop-down list.</li>
+        </ol>
+        <ol MadCap:continue="true">
+            <li>Set the Basic and Network configuration settings for the reader:</li>
+        </ol>
+        <ul>
+            <li><span class="strong">Reader: </span>Choose the type of reader you wish to configure from the drop-down list. 
+            </li>
+            <li><span class="strong">Name: </span>Create a name for the reader. 
+            </li>
+            <li><span class="strong">Zone Manager: </span>Choose the Zone Manager that you would like to assign your reader to (by default this is your local Zone Manager). 
+            </li>
+            <li><span class="strong">Description: </span>Enter a description for this Reader. 
+            </li>
+            <li><span class="strong">Enabled: </span>If you would like your reader to go active and receive and transmit tag data after saving your configuration, check this <MadCap:annotation MadCap:createDate="2015-06-23T14:46:24.5704874-05:00" MadCap:creator="Pappillon" MadCap:initials="PA" MadCap:comment="otherwise?" MadCap:editor="Pappillon" MadCap:editDate="2015-06-23T14:46:28.0536867-05:00">box.</MadCap:annotation><![CDATA[ 
+            ]]></li>
+            <li><span class="strong">Hostname: </span> Enter the IP address of your reader in this field. 
+            </li>
+            <li><span class="strong">Port: </span>Enter the port number over which to communicate with your reader (by default this is 6500). 
+            </li>
+            <li><span class="strong">SSL Mode: </span>Select the desired SSL&#160;mode:<ul><li><span class="strong">OFF:</span> turns SSL mode off on the reader</li><li><span class="strong">IFAVAIL:</span> uses SSL on the reader if available</li><li><span class="strong">REQUIRED:</span> requires use of SSL </li><li><span class="strong">STRICT:</span> will authenticate the matching hostname and only connect if the hostname matches the reader</li></ul></li>
+        </ul>
+        <p class="note" MadCap:autonum="&lt;b&gt;NOTE:&lt;/b&gt; &#160;"> Accept the default entries where possible. If you are planning to use multiple Zone Managers, it may be simpler to complete the initial configuration using the single Local Zone Manager and then changing reader associations once the other Zone Managers have been installed. Refer to the Advanced Reader Configuration page of this document for more information.</p>
+        <ol start="4">
+            <li>Click the <span class="strong">Save Changes</span> button.<br />The reader you have just configured appears in the middle pane to the left of the configuration pane. </li>
+        </ol>
+        <p class="note" MadCap:autonum="&lt;b&gt;NOTE:&lt;/b&gt; &#160;"> If configuring an Up Connection Reader, you must specify the reader Up Connection ID that was assigned to that reader and also, if specified, the optional password from the Reader Configuration Utility. Please refer to the <a href="http://support.rfcode.com/customer/portal/articles/716055-reader-utilities-downloads">Reader Configuration Utility User Manual</a> for more information.</p>
+    </body>
+</html>

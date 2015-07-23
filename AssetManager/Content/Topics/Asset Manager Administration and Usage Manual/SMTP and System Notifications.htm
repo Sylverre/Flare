@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="463" MadCap:lastWidth="639">
+    <head>
+        <title>
+        </title>
+    </head>
+    <body>
+        <h1>
+            <a name="__RefHeading___Toc414541384">
+            </a>
+            <a name="_Configuring_SMTP">
+            </a>SMTP and System Notifications</h1>
+        <p>
+            <MadCap:variable name="Variables.ProductName" /> sends notifications from the system about assets, environmental conditions, events, etc. as well as notifications about the status of various system components, for example, reader states, Zone Manager states using an SMTP server.&#160; The SMTP server configuration settings are simple, but provide for several mail transfer security options as described in the Configuring SMTP section below.</p>
+        <p>When <MadCap:variable name="Variables.ProductName" /> issues an SMTP send and the message delivery fails, it aggressively retries the SMTP send (to deliver the message) in the following way:</p>
+        <ol>
+            <li>
+                <span class="Strong">First Attempt</span>: Wait 1 second</li>
+            <li>
+                <span class="Strong">Second Attempt</span>: Wait 15 seconds </li>
+            <li>
+                <span class="Strong">Third Attempt</span>: Wait 30 seconds </li>
+            <li>
+                <span class="Strong">Fourth Attempt</span>: Abort </li>
+        </ol>
+    </body>
+</html>

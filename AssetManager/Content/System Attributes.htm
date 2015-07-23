@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="1398" MadCap:lastWidth="1070" MadCap:conditions="Default.Logan">
+    <head>
+        <title>
+        </title>
+    </head>
+    <body>
+        <h1>
+            <a name="__RefHeading___Toc414541376">
+            </a>System Attributes</h1>
+        <p>System Attributes are attributes (that is, information about assets and environments) defined by the <MadCap:variable name="General.ProductName" />system. System Attributes cannot be edited or deleted as they are integral to <MadCap:variable name="General.ProductName" />.   The System Administrator can restrict permission to view System Attributes, apply formatting to alter the way each System Attribute is displayed, set whether historical values are recorded, and create additional statistical attributes for select System <MadCap:annotation MadCap:createDate="2015-06-12T14:35:53.0414815-05:00" MadCap:creator="Pappillon" MadCap:initials="PA" MadCap:comment="user plaint: why can't I read the whole description for a system attribute?" MadCap:editor="Pappillon" MadCap:editDate="2015-06-12T14:36:08.3963598-05:00">Attributes.</MadCap:annotation></p>
+        <h2>View System Attributes and Change <MadCap:annotation MadCap:createDate="2015-06-05T11:30:30.7796973-05:00" MadCap:creator="Pappillon" MadCap:initials="PA" MadCap:comment="awkwardly phrased, but best I can do right now." MadCap:editor="Pappillon" MadCap:editDate="2015-06-05T11:30:42.6683773-05:00">Selections</MadCap:annotation></h2>
+        <ol>
+            <li>Navigate to <span class="strong">Admin Console &gt; Data Schema &gt; System Attributes.</span></li>
+            <li>Select a System Attribute from the list.</li>
+            <li>If desired, update selections</li>
+        </ol>
+        <ul>
+            <li>
+                <span class="Strong">Record Value Changes:</span> Check this box if this attribute is required for historical reporting.  If unchecked, <MadCap:variable name="General.ProductName" /> retains only the current value of the attribute; no previous information is available.  If checked, all value changes for this attribute for the life of the asset will be recorded for historical reporting and life cycle management.<br /></li>
+            <li>
+                <span class="Strong">Restrictable:</span> Check this box if you would like this attribute to be one that can be limited to certain Groups<br /> </li>
+        </ul>
+        <p class="note" MadCap:autonum="&lt;b&gt;NOTE:&lt;/b&gt; &#160;">Group-based restrictions must be completed in User Access.<br /></p>
+        <ol start="4">
+            <li>If desired, apply Formatting changes to the Attribute that are triggered by specific values or ranges.<ol start="4"><li style="text-align: left;">Click <span class="strong">Add</span> to add a formatting change.<br /><img src="D_Images/placeholder logan system attributes add formatting dialog 060515.bmp" /><br /><br /></li><li>In the Add Formatting dialog that appears, select foreground <MadCap:annotation MadCap:createDate="2015-06-05T11:21:11.6147149-05:00" MadCap:creator="Pappillon" MadCap:initials="PA" MadCap:comment="bug or feature?  Cannot select a color from the bar, have to click within the color grid for RGB to populate, else set color shows as black (0000)." MadCap:editor="Pappillon" MadCap:editDate="2015-06-05T11:21:47.6837779-05:00">color,</MadCap:annotation> background color, operator, and value if appropriate. Click <span class="strong">OK</span> to return to the Formatting pane. Multiple conditions can be set for a single System Attribute. </li></ol></li>
+            <li>Click <span class="strong">Save Changes</span> when <MadCap:annotation MadCap:createDate="2015-06-05T11:24:05.1126384-05:00" MadCap:creator="Pappillon" MadCap:initials="PA" MadCap:comment="where do these format changes appear?  Presumably User Console someplace... Dashboards!  Saw a reference to Views and grids in dashboards. " MadCap:editor="Pappillon" MadCap:editDate="2015-06-08T15:39:38.3852568-05:00">finished.</MadCap:annotation></li>
+        </ol>
+        <h2> Create a New Statistical Attribute from a System <a name="create_statistical_attribute_from_system"></a>Attribute</h2>
+        <ol>
+            <li>Navigate to <span class="strong">Admin Console &gt; Data Schema &gt; System Attributes</span> and select an attribute to which you will apply a statistical view. </li>
+            <li>Click the <span class="strong">New Statistic</span> button.<br /> </li>
+        </ol>
+        <p class="note" MadCap:autonum="&lt;b&gt;NOTE:&lt;/b&gt; &#160;">The selected attribute must generate numerical data. The New Statistic button is grayed out if statistical measurements are not relevant for the selected System Attribute. </p>
+        <ol>
+            <li>Complete all required and any desired additional fields for the new statistical attribute. Some fields are pre-populated with data inherited from the parent System Attribute. </li>
+            <li>Apply Formatting if desired.</li>
+            <li>Click <span class="strong">Save Changes</span><MadCap:annotation MadCap:createDate="2015-06-05T12:50:26.4789956-05:00" MadCap:creator="Pappillon" MadCap:initials="PA" MadCap:comment="relationship between these Statistical Attributes and Stat Packs?  Barry says default stat packs are a thing, or will be by release.\r\n\r\nMight be worth a separate Create a Stat Pack topic with step-by-step examples?" MadCap:editor="Pappillon" MadCap:editDate="2015-06-17T14:11:25.2289209-05:00">.</MadCap:annotation></li>
+        </ol>
+    </body>
+</html>

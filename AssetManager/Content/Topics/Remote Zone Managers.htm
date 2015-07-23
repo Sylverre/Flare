@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="9" MadCap:lastHeight="2561" MadCap:lastWidth="1031">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>
+            <MadCap:conditionalText MadCap:conditions="Default.SysManual">Remote Zone Managers </MadCap:conditionalText>
+            <MadCap:conditionalText MadCap:conditions="Default.workflow">Zone Managers</MadCap:conditionalText>
+        </h1>
+        <p>A local Zone Manager is installed as part of <MadCap:variable name="General.ProductName" />᾽s initial installation. This Zone Manager can handle 1,000 <MadCap:annotation MadCap:createDate="2015-06-08T10:55:39.3456795-05:00" MadCap:creator="Pappillon" MadCap:initials="PA" MadCap:comment="verify" MadCap:editor="Pappillon" MadCap:editDate="2015-06-08T10:55:53.9235133-05:00">readers</MadCap:annotation> and 100,000s of tags if installed on a powerful server system. The number of tag events has a far larger impact on the resource requirements of the Zone Manager system(s) than the number of readers. The need for additional remote Zone Managers can be driven by two factors:</p>
+        <ul>
+            <li><span class="Strong">Scalability:</span> The need to handle more tags and readers and spread the load over additional systems.</li>
+            <li><span class="Strong">Network Architecture and Connectivity:</span> The need to distribute Zone Managers to remote locations in a distributed environment.</li>
+        </ul>
+        <p>To set up <MadCap:variable name="General.ProductName" /> with additional Zone Managers, first install those Zone Managers on the desired servers by running the <MadCap:variable name="General.ProductName" /> installer EXE, selecting the option to install only the Zone Manager component. Then log in to <MadCap:variable name="General.ProductName" />.</p>
+        <ol>
+            <li>Navigate to <span class="Strong">Configuration &gt; Zone Managers</span> and click<span class="Strong"> New.</span></li>
+        </ol>
+        <p>&#160;</p>
+        <ol MadCap:continue="true">
+            <li>Complete all required and any desired additional fields.<br /></li>
+        </ol>
+        <p>
+            <MadCap:snippetText src="../Resources/Snippets/required fields note.flsnp" /> </p>
+        <h2>Basic Information</h2>
+        <ul>
+            <li><span class="strong">Name:</span> Input a unique ID for this new Zone Manager.</li>
+            <li><span class="strong">Description:</span> If desired, add a detailed comment describing the new Zone Manager.</li>
+            <li><span class="strong">Enabled:</span> Check this box to allow the new Zone Manager to go online once saved.</li>
+        </ul>
+        <h2>Direct Network Settings</h2>
+        <ul>
+            <li><span class="strong">Hostname:</span> Enter the IP address of your new Zone Manager in this field. </li>
+            <li><span class="strong">Port:</span> Enter the port number over which to communicate with your new Zone Manager. </li>
+            <li><span class="strong">SSL:</span> Select the desired SSL&#160;mode:<ul><li><span class="strong">OFF:</span> turns SSL&#160;mode off on the Zone Manager</li><li><span class="strong">IFAVAIL:</span> uses SSL on the Zone Manager if available</li><li><span class="strong">REQUIRED:</span> requires use of SSL </li><li><span class="strong">STRICT:</span> will authenticate the matching hostname and only connect if the hostname matches the Zone Manager</li></ul></li>
+        </ul>
+        <h2>Up Connect Settings</h2>
+        <p>When this option is configured, the Zone Manager initiates the contact with the <MadCap:variable name="General.ProductName" /> rather than requiring that access be granted to allow <MadCap:variable name="General.ProductName" /> to connect to Zone Managers behind a firewall. Up Connection settings must be specified in the configuration of your remote Zone Manager prior to configuring this Zone Manager for use with <MadCap:variable name="General.ProductName" />. The Up Connection Zone Manager ID and password are obtained in the configuration of the remote Zone Manager.</p>
+        <ul>
+            <li><span class="strong">Up Connection Zone Manager ID:</span> Enter the ID that was assigned when you configured your Zone Manager for Up Connection.</li>
+            <li><span class="strong">Up Connection&#160;User ID:</span> Enter the User ID that was assigned when you configured your Zone Manager for Up Connection.</li>
+            <li><span class="strong">Up Connection Password:</span> If you assigned a password to your Zone Manager when you configured it for Up Connection, enter the same password here.</li>
+            <li><span class="strong">Confirm Password:</span> Enter the password again to confirm it.</li>
+        </ul>
+        <h2>User Account</h2>
+        <p>
+                Set up a user account if desired by entering a username and password to allow for administrator or view-only access of the Zone Manager.</p>
+        <ul>
+            <li><span class="strong">Administrator Username:</span> Create an administrator ID.</li>
+            <li><span class="strong">Administrator Password:</span> Enter a password for the administrator ID.</li>
+            <li><span class="strong">Confirm Password:</span> Enter the password again to confirm it.</li>
+            <li><span class="strong">Read-only Username:</span> Create a user ID&#160;with read-only access to the Zone Manager.</li>
+        </ul>
+        <h2>Advanced</h2>
+        <ul>
+            <li><span class="strong">Offline Timeout:</span> The number of seconds since the last successful message before readers are reported as <MadCap:annotation MadCap:createDate="2015-06-23T16:25:58.6251838-05:00" MadCap:creator="Pappillon" MadCap:initials="PA" MadCap:comment="verify!" MadCap:editor="Pappillon" MadCap:editDate="2015-06-23T16:26:00.3292813-05:00">offline.</MadCap:annotation> <![CDATA[ ]]></li>
+            <li><span class="strong">Expected Location <MadCap:annotation MadCap:createDate="2015-06-23T16:26:41.4156313-05:00" MadCap:creator="Pappillon" MadCap:initials="PA" MadCap:comment="Frank/Barry: approve or edit?" MadCap:editor="Pappillon" MadCap:editDate="2015-07-08T09:58:11.6324983-05:00">Bias:</MadCap:annotation></span> Increases the confidence level of a location assertion; required in order to tune reader zones but not otherwise used.</li>
+            <li><span class="strong">Initialization Delay:</span> Set a period to delay initialization of the new Zone Manager to prevent conflicts with other items competing for the same resources.</li>
+        </ul>
+        <h2>IBM® WebSphere® Sensor <MadCap:annotation MadCap:createDate="2015-06-23T16:18:46.4264635-05:00" MadCap:creator="Pappillon" MadCap:initials="PA" MadCap:comment="information, please?" MadCap:editor="Pappillon" MadCap:editDate="2015-06-23T16:18:53.6088743-05:00">Events</MadCap:annotation></h2>
+        <p>These fields are used specifically for configuring Zone Manager for use with IBM WebSphere. This configuration section is optional and not required for basic configuration of a Zone Manager for use with <MadCap:variable name="General.ProductName" /><MadCap:annotation MadCap:createDate="2015-06-23T16:37:47.0477033-05:00" MadCap:creator="Pappillon" MadCap:initials="PA" MadCap:comment="is there a current PDF for this?  " MadCap:editor="Pappillon" MadCap:editDate="2015-06-23T16:37:58.3453495-05:00">.</MadCap:annotation></p>
+        <ul MadCap:conditions="Default.future release">
+            <li><span class="strong">Sensor Events Integration Enabled:</span> check this box to enable <MadCap:variable name="General.ProductName" /> to send events from this Zone Manager to the third-party receiver. </li>
+            <li><span class="strong">Sensor Events Server Hostname:</span>
+            </li>
+            <li><span class="strong">Sensor Events Server Port:</span>
+            </li>
+            <li><span class="strong">Sensor Events Source ID:</span>
+            </li>
+            <li><span class="strong">Sensor Events API&#160;Version:</span>
+            </li>
+            <li><span class="strong">Send Location As Source ID:</span>
+            </li>
+            <li><span class="strong">Send Tag Events As Notification:</span>
+            </li>
+            <li><span class="strong">Maximum Location Report Interval</span>:</li>
+        </ul>
+        <ol start="3">
+            <li>Click <span class="strong">Save Changes</span>. The newly configured Zone Manager appears in the Zone Manager list.</li>
+        </ol>
+        <p>To configure <MadCap:variable name="General.ProductName" /> to interact with more than one Zone Manager, repeat these steps for each Zone Manager.</p>
+    </body>
+</html>

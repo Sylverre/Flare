@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <title>
+        </title>
+        <link href="../../../RFC-AM Comprehensive/Content/Resources/Stylesheets/UserManual for reference.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h4 class="Heading4">Graph Filter and Post-Condition</h4>
+        <p>Filter and Post-Condition sections define the criteria that must be met in order for a data point to be included in a graph. If left blank, all data points related to the type and time specified in the graph configuration will be included.</p>
+        <p>Both the filter and the post-condition are configured by selecting an attribute, an operator, and a value as follows: </p>
+        <p class="p_44">Attribute = “Online Status”<br />Condition = “Has Value”<br />Value = “√”</p>
+        <p>If this example is used in the filter section of the graph definition then points on the graph will only be produced for Zone Manager attribute changes that happen while the online status has a value.</p>
+        <p>If this example was used in the post-condition section of the graph definition then report rows will be produced for all attribute value changes for any zone manager that had a value for online status at least once during the graph's time period.&#160; In other words, the graph may produce data points for attribute changes that happen when the online status did not have a value, but ONLY if at least one point of data in the graph for that Zone Manager has an online status value.</p>
+    </body>
+</html>

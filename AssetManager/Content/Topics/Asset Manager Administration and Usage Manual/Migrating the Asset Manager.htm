@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="1205" MadCap:lastWidth="776">
+    <head><title></title>
+    </head>
+    <body>
+        <h1><a name="__RefHeading___Toc414541510"></a>Migrating the <MadCap:variable name="Variables.ProductName" /> Server Application</h1>
+        <p>If you need to replace the hardware on which your <MadCap:variable name="General.ProductName" /> instance is running, use this procedure to migrate your data. Server migration, the process in which data is moved from one server to another, may be required for security reasons or because hardware is being upgraded, replaced or repaired.</p>
+        <p class="note" MadCap:autonum="&lt;b&gt;NOTE:&lt;/b&gt; &#160;">This procedure presumes the database resides on a separate server. If the database and <MadCap:variable name="General.ProductName" /> reside on a single server, as is the case when SQL&#160;Express is ued, back up the local database and restore to the the new hardware using the vendor᾽s database tools before completing this procedure.</p>
+        <ol>
+            <li>If the old <MadCap:variable name="Variables.ProductName" /> system is still running, allow it to continue running until step 6. This may also be a good opportunity to execute a backup of the database prior to switching over.<br /></li>
+            <li>Make sure database credentials are handy or copy the system.properties file for use on the new system.<br /></li>
+            <li>Install <MadCap:variable name="Variables.ProductName" /> on the new hardware but do not check on the “Install SQL Express” box.<br /></li>
+            <li>When the installation is complete log into the new <MadCap:variable name="Variables.ProductName" />. The database configuration dialog should come up first.<br /></li>
+            <li>Enter the credentials into the various fields but <span class="Strong">DO NOT click OK</span>. Use the Test function to verify that the database connection will work. When it returns with a successful connect proceed to the next step. If there are problems connecting, troubleshooting should begin at this time.<br /></li>
+            <li>On the old system still running <MadCap:variable name="Variables.ProductName" />, stop the service and disable it in the services menu. You may also want to uninstall the software as well so that there is no possibility of the system ever connecting to the database again. It is <span class="emphasis">critical</span> that the database must not be used by two instances of <MadCap:variable name="Variables.ProductName" /> at the same time. Doing to will cause irreparable corruption to the data and configuration settings.</li>
+            <li>Backup the database.<br /></li>
+            <li>On the new system, if you are not copying over the system.properties file, click<span class="Strong"> OK </span>on the database dialog. If you are using the previous system.properties file, then stop the <MadCap:variable name="Variables.ProductName" /> Server and place the file in c:\program Files\<MadCap:variable name="Variables.CompanyName" />\<MadCap:variable name="Variables.ProductName" />\conf\ (or whatever similar path your installation might be) and start the service again. In either case, after 5-7 minutes log into the software.<br /></li>
+            <li>Check the Zone Manager status in the Administration Menu. Due to a credential mismatch, the Zone Manager may be shown in an offline condition with the error “Access Denied”.&#160; If this happens, then the service must be shutdown and the contents of the folder c:\Program Files\<MadCap:variable name="Variables.CompanyName" />\<MadCap:variable name="Variables.ProductName" />\zonemgr. datadir\* deleted. Restart the service and the local Zone Manager should be online again.</li>
+        </ol>
+        <p><a name="_Import_Jobs"></a>
+        </p>
+    </body>
+</html>

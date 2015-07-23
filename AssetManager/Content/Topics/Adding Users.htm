@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="1997" MadCap:lastWidth="321">
+    <head>
+        <title>
+        </title>
+    </head>
+    <body>
+        <h3 class="Heading3">
+            <a name="__RefHeading___Toc414541446">
+            </a>Adding Users</h3>
+        <p>The first step to managing Users and setting levels of access for them is to create them.&#160; </p>
+        <p>To add a User, perform the following steps:</p>
+        <ol start="1" class="ol_4">
+            <li class="ColorfulListAccent11">Access the <span class="Strong">Admin Console.</span></li>
+            <li class="ColorfulListAccent11">Click <span class="Strong">Security</span> &gt; <span class="Strong">Users</span>.</li>
+            <li class="ColorfulListAccent11">Click the <span class="Strong">New</span> button.<br /><br /><img src="../../../RFC-AM Comprehensive/Content/Resources/Images/UserManual for reference/030000CC.png" style="height: 149px;width: 186px;" class="img_2" /><br /><br />For each User account, there are several mandatory fields and others that are optional.&#160; At a minimum, provide each User with a Name (which is the username), a Password (unless you are integrating with Active Directory), a Full Name (which is a description or the real name of the user), and a Role.<br /><br /><img src="../../../RFC-AM Comprehensive/Content/Resources/Images/UserManual for reference/030000CD.png" style="height: 452px;width: 311px;" class="img_2" /></li>
+        </ol>
+        <p class="p_22">Other settings that can be configured for each User account include:&#160; </p>
+        <ul class="ul_2">
+            <li class="ColorfulListAccent11_36">
+                <span class="Strong">Password</span>: Use this for Users created and managed within <MadCap:variable name="General.ProductName" /> that are not authenticated by LDAP.</li>
+            <li class="ColorfulListAccent11_36">
+                <span class="Strong">Email Address(es)</span>: Enter the User’s email address.</li>
+            <li class="ColorfulListAccent11_36">
+                <span class="Strong">Expiration Date</span>: Set this to make a User account inactive on some future date.</li>
+            <li class="ColorfulListAccent11_36">
+                <span class="Strong">Units Display</span>: Choose an option in this drop-down menu to define how the user will see units of measurement and time:</li>
+        </ul>
+        <ul class="ul_7">
+            <li class="ColorfulListAccent11_22">
+                <span class="Strong">Browser/OS Locale</span>: The user’s settings will be inherited from their local web browser settings.</li>
+            <li class="ColorfulListAccent11_22">
+                <span class="Strong">English</span> – Asset and Sensor Attributes will appear as those of the imperial or English (USA) systems of measurement, i.e., ounces, feet, temperature expressed in Fahrenheit, etc.</li>
+            <li class="ColorfulListAccent11_36">
+                <span class="Strong">Metric</span>: Asset and Sensor Attributes will be displayed in the metric system, i.e., grams, meters, temperature expressed in Celsius, etc.</li>
+        </ul>
+        <ul class="ul_2">
+            <li class="ColorfulListAccent11_1">
+                <span class="Strong">Time Zone</span>: Use this to set the time zone for the User.&#160; By default, this is set to Browser/OS Locale, but you can manually change it to hard code the time zone by choosing a time zone from the drop-down menu.</li>
+            <li class="ColorfulListAccent11_1">
+                <span class="Strong">User Groups</span>: After these have been created, you can assign one or more Groups to each User account in order to allow the User to inherit traits assigned to the Group(s).</li>
+        </ul>
+        <p class="p_44">
+            <span class="Strong">NOTE</span>:&#160; A User can be assigned to a User Group even if Advanced Security is not enabled on the <MadCap:variable name="General.ProductName" /> server; however, the assignment of Users to Groups enables advanced functionality only if Advanced Security is enabled.&#160; To configure Advanced Security settings, go to: <span class="Strong">Configuration</span> &gt; <span class="Strong">Server</span> &gt; <span class="Strong">Asset Security</span>.&#160; For more information about Advanced Security, refer to the <a href="../../../RFC-AM Comprehensive/Content/Asset Manager Administration and Usage Manual/User Accounts and Security.htm#_Advanced_Security">Advanced Security</a> section.&#160; Do not change the Advanced Security settings without first consulting RF Code Support.</p>
+    </body>
+</html>

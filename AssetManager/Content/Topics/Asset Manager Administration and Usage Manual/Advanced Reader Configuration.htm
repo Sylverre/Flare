@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="3764" MadCap:lastWidth="1070">
+    <head><title></title>
+    </head>
+    <body>
+        <h1><a name="__RefHeading___Toc414541489"></a><a name="_Advanced_Reader_Configuration"></a>Advanced Reader <MadCap:annotation MadCap:createDate="2015-06-23T16:58:11.2777252-05:00" MadCap:creator="Pappillon" MadCap:initials="PA" MadCap:comment="I had a note in here instructing me to reformat to match basic instructions, but this really isn't instructional, it's just informational." MadCap:editor="Pappillon" MadCap:editDate="2015-06-25T11:17:28.7323989-05:00">Configuration</MadCap:annotation></h1>
+        <p>Advanced Reader Configuration fields are available to you when configuring <MadCap:variable name="Variables.CompanyName" /> readers. Authentication allows an ID&#160;and password to be set for additional security. Up Connect is used if firewalls prevent <MadCap:variable name="General.ProductName" /> from initiating contact with <MadCap:variable name="General.CompanyName" /> Readers.  Other settings are rarely changed; contact Support for guidance if required. </p>
+        <p>
+            <img src="../../Images/UserManual for reference/03000118.png" /><![CDATA[  ]]></p>
+        <h2>Authentication</h2>
+        <ul>
+            <li><span class="strong">User ID: </span>Your user name or user ID
+            </li>
+            <li><span class="strong">Password: </span>A user-defined password. 
+            </li>
+            <li><span class="strong">Confirm Password:</span> The same password again entered to confirm.
+            </li>
+        </ul>
+        <h2>Up Connect Settings <br /></h2>
+        <ul>
+            <li><span class="strong">Up Connection Enabled: </span>If you are configuring an Up-Connection Reader that you would like to go active and receive and transmit tag data once you configure it within <MadCap:variable name="Variables.ProductName" />, this box should be checked.&#160; </li>
+        </ul>
+        <p>Please refer to the <a href="http://support.rfcode.com/customer/portal/articles/716055-reader-utilities-downloads">Reader Configuration Utility User Manual</a> for more information.</p>
+        <ul>
+            <li><span class="strong">Up Connection Reader ID:</span> The ID that was assigned when you configured your reader as an up-connection reader should be entered in this field.<br /></li>
+            <li><span class="strong">Up Connection Password: </span>If you assigned a password when you configured your Up-Connection reader with the Reader Configuration Utility, you will need to enter and confirm the password for use with <MadCap:variable name="Variables.ProductName" />. <br /></li>
+            <li><span class="strong">Confirm Password:</span> Enter the same password again.
+            </li>
+        </ul>
+        <p class="note" MadCap:autonum="&lt;b&gt;NOTE:&lt;/b&gt; &#160;">The following sections are generally not used, and should be done with caution and <MadCap:annotation MadCap:createDate="2015-04-27T10:04:55.1475776-05:00" MadCap:creator="DSFoxx" MadCap:initials="DS" MadCap:comment="awk" MadCap:editor="DSFoxx" MadCap:editDate="2015-04-27T10:04:56.3876485-05:00">planning.</MadCap:annotation></p>
+        <h2>Position Settings <br /></h2>
+        <ul>
+            <li><span class="strong">Position Source: </span>
+                <br />
+                <ul style="list-style-type: circle;">
+                    <li>If your reader is not going to use a GPS location, then leave the default setting of <span class="strong">None</span>.&#160; <br /></li>
+                </ul>
+                <ul style="list-style-type: circle;">
+                    <li>If you are going to connect the reader to a GPS device, select <span class="strong">Reader GPS</span> to enable it to report its GPS coordinates and to filter GPS data. Doing so will present you with additional fields related to configuring GPS settings.<br /></li>
+                </ul>
+                <ul style="list-style-type: square;">
+                    <li><span class="strong">Minimum Tag SSI for Position Match: </span>Input the minimum SSI value required that will indicate that the tagged asset will match the position of the reader to indicate the GPS location. 
+                    </li>
+                    <li><span class="strong">GPS Data Reporting: </span>For this field, choose which GPS data you want reported in the <MadCap:variable name="Variables.ProductName" /> system. 
+                    </li>
+                    <li><span class="strong">Minimum GPS Update Period:</span> Select this checkbox to use global settings or enter a value. 
+                    </li>
+                    <li><span class="strong">Minimum Horizontal Change:</span> Select this checkbox to use global settings or enter a value. 
+                    </li>
+                    <li><span class="strong">Minimum Vertical Change:</span> Select this checkbox to use global settings or enter a value. 
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <ul style="list-style-type: circle;">
+            <li>If you would like to set a static GPS location for the reader, select <span class="strong">Static Position</span>, enter the <span class="strong">Minimum Tag SSI for Position Match</span> (described above), and then manually enter its GPS coordinates in <span class="strong">Reader Position</span> field that becomes visible.&#160; <br /></li>
+        </ul>
+        <h2>Advanced Settings</h2>
+        <p>
+            <img src="../../Images/UserManual for reference/03000119.png" />
+            <br />
+        </p>
+        <ul>
+            <li><span class="strong">SSI Change Threshold: </span>&lt;min-ssi-change&gt; is a parameter that allows messages that report small Signal Strength Indicator (SSI) value changes to be treated as unchanged. Any message where all the SSI values reported are &lt;min-ssi-change&gt; or less dBm different from the previously reported message will be considered to have not changed.&#160; The default value is 3. <br /></li>
+            <li><span class="strong">SSI Cutoff (Channel A, B): </span>sets the channel SSI threshold to the respective dBm (fixed threshold value).&#160; <MadCap:variable name="Variables.CompanyName" /> reader limitation is 41 to 115 dB.&#160; This feature is used to reduce the effective read range of a reader.&#160; For example, entering a value of 68 for channel A and B will cause tags that are read at -68dB or less to not be reported. In general, tags that are further away from a reader have lower SSI values. <br /></li>
+            <li><span class="strong">Tag Age-Out Time: </span>is the number of seconds since the last successful message read from a tag before the tag is considered lost. The allowed values range from 10 to 32767. The default value is 60 seconds. If the value is set to 0, the tag timeout is infinite. A tag that has not been seen by a reader for “n” seconds will be reported as not present. <br /></li>
+            <li><span class="strong">Tag Age-Out Time (Channel A, B): </span>functions the same as Tag Age-Out Time, but is channel-specific. <br /></li>
+            <li><span class="strong">Tag Age-Out Time (Reader Offline): </span>is the length of time to keep tags in the system if a reader goes offline. “n” seconds after a reader goes offline the tags that had been reported by this reader will be reported as offline. <br /></li>
+            <li><span class="strong">Tag Age-In Count: </span>is an optional parameter used to tell the reader to not report messages from a tag until “n” messages have been received from that tag. This allows the option of ignoring tags that may appear for a short period of time (for example, due to a tag isolation box being opened for a few seconds). <br /></li>
+            <li><span class="strong">Channel Bias (Channel A, B): </span>allows for a compensation offset value to be added when different gain antennae are used. <br /></li>
+            <li><span class="strong">Report Tag Controller Events Checkbox: </span>enables a reader to report events that occur when using the <MadCap:variable name="Variables.CompanyName" /> Tag Controller. <br /></li>
+            <li><span class="strong">Join Reader Channels Checkbox: </span>combines a reader’s channel A and B into a single channel, by evaluating the raw samples and reporting the strongest single sample stream. <br /></li>
+            <li><span class="strong">Merge Reader Channels Checkbox: </span>enables a reader’s channel A and B to be merged into a single channel, by combining the raw samples into an average single sample stream. </li>
+            <li><span class="strong">Ignore Low Confidence Initial Beacons:</span> enables a reader to ignore the first payload if subsequent beacons more closely meet parameters.<br /></li>
+            <li><span class="strong">Fault In Mask:</span>is the first tag payload filter and limiting function that is set in octal values.<br /></li>
+            <li><span class="strong">Fault In Value</span> is the second tag payload filter and limiting function that is set in octal values.<br /></li>
+            <li><span class="strong">Change Ignore Mask: </span>is the third tag payload filter and limiting function that is set in octal values.
+            </li>
+        </ul>
+        <p>
+            <img src="../../Images/UserManual for reference/0300011A.png" />
+        </p>
+        <h2>Reader Partitioning <br /></h2>
+        <ul>
+            <li><span class="strong">Reader Partition Count: </span>This indicates the number of portions the tag ID range will be divided into. The value must be from 1 to 32, and must be greater than the Reader Partition Index. The default is 1.<br /></li>
+            <li><span class="strong">Reader Partition Index: </span>This indicates which portion of the range of tag IDs the reader will observe (specifically, what the remainder must be when the tag ID is divided by the Reader Partition Count). The value must be from 0 to 31, and must be less than the Reader Partition Count. The default is 0. <br /></li>
+            <li><span class="strong">Reader Partition Rotation Time: </span>This specifies the amount of time that the reader is reset to observe tag IDs of the next partition index. The default is 0, which will not reset the reader to observe tag IDs of the next partition index. <br />For additional in-depth information about Reader Partitioning, consult the following <MadCap:variable name="Variables.CompanyName" /> Support KB article: <a href="http://support.rfcode.com/customer/portal/articles/846730">http://support.rfcode.com/customer/portal/articles/846730</a></li>
+        </ul>
+        <h2>Diagnostics </h2>
+        <ul>
+            <li><span class="strong">Noise Threshold: </span>This is the threshold for <MadCap:variable name="Variables.ProductName" /> to send an alert for excessive RF noise in the system, as detected by the reader (“D” command for noise level). If the noise is excessive, the reader performance is compromised. 
+            </li>
+        </ul>
+        <ul>
+            <li><span class="strong">Tag Event Rate Threshold: </span>This is the threshold that will determine high reader event activity. 
+            </li>
+        </ul>
+        <h2>Serial Port </h2>
+        <ul>
+            <li><span class="strong">Serial Driver: </span>Choose the serial driver parameters used to communicate with the serial device. This should be indicated with the literature that came with the device.&#160; 
+            </li>
+        </ul>
+        <p>For additional information, consult the following KB article: <a href="http://support.rfcode.com/customer/portal/articles/728501">support.rfcode.com/customer/portal/articles/728501</a></p>
+    </body>
+</html>

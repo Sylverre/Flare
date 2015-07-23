@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="2597" MadCap:lastWidth="1070">
+    <head>
+    </head>
+    <body>
+        <h1>Statistical Packs and Policies</h1>
+        <p>Statistical Packs are groups of Statistical Attributes configured to work together to mine historical data and compute at specified times. Statistical Attributes must be created from Asset Attributes or System Attributes before Statistical Packs and Statistical Policies can be configured. </p>
+        <h2>To Create a Statistical Attribute for inclusion in a Statistical Pack</h2>
+        <ol>
+            <li>Navigate to <span class="strong">Admin Console &gt; Asset Attributes</span> or <span class="strong">Admin Console &gt; System Attributes</span>.</li>
+        </ol>
+        <p>
+            <img src="D_Images/CS System Attributes, New Statistic button enabled.bmp" class="imgfullwidth" />
+        </p>
+        <ol MadCap:continue="true">
+            <li>Select an Attribute.<br /><br /> </li>
+        </ol>
+        <p class="note" MadCap:autonum="&lt;b&gt;NOTE:&lt;/b&gt; &#160;">If the selected attribute is one for which a Statistical Attribute cannot be created, the New Statistic button will appear grayed out. Statistical attributes can be used with any attribute that produces a numeric value, regardless of the asset type.</p>
+        <ol MadCap:continue="true">
+            <li>Click <span class="strong">New Statistic</span> to create a statistical attribute from the selected attribute. The statistical computations supported for Statistical Packs are Maximum, Minimum, Median, Average, and Standard Deviation. For most Statistical Packs, all five Statistical Attributes will be created.</li>
+        </ol>
+        <p>
+            <img src="D_Images/CS System Attributes, New Statistic 1.bmp" class="imgfullwidth" />
+        </p>
+        <ol MadCap:continue="true">
+            <li>Assign a name and optional description. Select the Statistic from the drop-down. Click <span class="strong">Save Changes</span>. The new Statistical Attribute appears in the Attributes tree.</li>
+            <li>Click to select the parent Attribute again and click <span class="strong">New Statistic</span>. Repeat for the other desired statistics. </li>
+        </ol>
+        <p>
+            <img src="D_Images/CS System Attributes, New Statistic 3.bmp" class="imgfullwidth" />
+        </p>
+        <p>Statistical Attributes can be used as other Attributes. </p>
+        <h2>To Create a Stat Pack </h2>
+        <ol>
+            <li>Navigate to <span class="strong">Admin Console &gt; Data Schema &gt;&#160;Statistical Pack</span> and click <span class="strong">New</span>. </li>
+            <li>From the drop-down menu, select the Source Attribute under which you created the Statistical Attributes to be grouped into a Pack.</li>
+            <li>From the drop-down menus, select the statistical attributes you <MadCap:annotation MadCap:createDate="2015-06-17T14:52:43.4486670-05:00" MadCap:creator="Pappillon" MadCap:initials="PA" MadCap:comment="should just be one each, right?  When/why would more than that appear?" MadCap:editor="Pappillon" MadCap:editDate="2015-06-17T14:53:00.8816641-05:00">created.</MadCap:annotation> <![CDATA[ ]]></li>
+        </ol>
+        <p>
+            <img src="D_Images/CS Statistical Pack, New 2.bmp" class="imgfullwidth" />
+        </p>
+        <ol MadCap:continue="true">
+            <li>Set the historical record <MadCap:annotation MadCap:createDate="2015-06-17T14:55:05.4267876-05:00" MadCap:creator="Pappillon" MadCap:initials="PA" MadCap:comment="is there an upper limit other than from install?  Menu accepted five digits..." MadCap:editor="Pappillon" MadCap:editDate="2015-06-17T14:55:56.2426941-05:00">data window</MadCap:annotation> and update frequency.</li>
+        </ol>
+        <ul>
+            <li>
+            Daily calculates at midnight local time</li>
+            <li>Weekly Sundays at midnight</li>
+            <li>Monthly on the first of the month at midnight<br /><br /></li>
+        </ul>
+        <ol MadCap:continue="true">
+            <li>
+                <span class="strong">Save Changes.</span> <![CDATA[ ]]></li>
+            <li>Navigate to <span class="strong">Admin Console &gt; Data Schema &gt; Statistical Policy</span> and click&#160;<span class="strong">New</span>.</li>
+            <li>Complete all required and any desired additional fields.</li>
+        </ol>
+        <ul>
+            <li>
+                <span class="Strong">Name:</span> Assign a name to the asset attribute. The name is used on all forms to prompt for the asset attribute data, so it is advised to use a clear, concise and intuitive name for the new attribute.</li>
+            <li>
+                <span class="Strong">Description:</span> If desired, input a detailed comment describing purpose or meaning of the asset attribute.</li>
+            <li>
+                <span class="strong">Filter Asset Type:</span> Select an Asset Type to which this Policy applies. Policies apply to all sub-levels beneath the selected level.</li>
+            <li>
+                <span class="strong">Filter Location:</span>Select a Location to which this Policy applies. Policies apply to all sub-levels beneath the selected level.</li>
+            <li># <span class="strong">Attribute:</span> Select Attributes to restrict the Policy to only those attributes. All Attributes created in the system appear in the drop-down.</li>
+            <li># <span class="strong">Attribute Value:</span> Select Attribute Values or Value Operators to restrict the Policy only to those values or operators. </li>
+            <li>
+                <span class="strong">Statistical Packs:</span> Click the Ellipsis <span class="strong">...</span> button to access the selection dialog. Move Statistical Packs from Available to Selected and click <span class="strong">OK</span> when finished. <br /><br /></li>
+        </ul>
+        <ol start="7">
+            <li>Click <span class="strong">Save Changes</span>.<br /><br /></li>
+        </ol>
+        <p>Statistical Packs can be used as other Attributes<MadCap:annotation MadCap:createDate="2015-06-17T16:07:56.3827920-05:00" MadCap:creator="Pappillon" MadCap:initials="PA" MadCap:comment="?!  Created Pack, Created Policy.  And then...?  Parent Attribute is assigned to an Asset Type--is that assignment inherited, or must I assign them all?" MadCap:editor="Pappillon" MadCap:editDate="2015-06-17T16:12:10.9423520-05:00">.</MadCap:annotation> <![CDATA[ ]]></p>
+    </body>
+</html>

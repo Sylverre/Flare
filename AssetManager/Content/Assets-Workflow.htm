@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="2790" MadCap:lastWidth="807">
+    <head>
+        <link href="Resources/Stylesheets/Styles.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Add Assets to <MadCap:variable name="General.ProductName" /></h1>
+        <p>Assets are the physical objects that are managed and/or monitored with <MadCap:variable name="General.ProductName" />. You may choose to add assets that will not be tagged as well as those with tags not yet assigned. Assigning tags to assets can be done as part of, or separately from, the process of adding assets to <MadCap:variable name="General.ProductName" />. To manage assets that may be moved, assign a tag to an asset; to collect data from sensors, assign the sensors as assets.</p>
+        <h2>Add a Single Asset</h2>
+        <ol>
+            <li>From <span class="strong">User Console &gt; Assets</span> click <span class="strong">New</span> to add an asset manually.  </li>
+            <li style="page-break-after: avoid;">Select the Asset Template or Asset Type from the drop-down and complete the <span class="strong">Create: <span class="emphasis">Asset</span></span> dialog. </li>
+        </ol>
+        <p style="page-break-before: avoid;">
+            <img src="Images/AM Asset, create new asset.bmp" class="imgfullwidth" /> </p>
+        <MadCap:snippetBlock src="Resources/Snippets/required fields note.flsnp" />
+        <ol MadCap:continue="true">
+            <li>When completed, click one of the buttons at the bottom of the dialog:  <span class="strong">Edit Group</span> to restrict access to the asset type, <span class="strong">Save &amp; Add Another</span>, or <span class="strong">Save</span>.  <span class="strong">Cancel</span> closes the window without saving.</li>
+        </ol>
+        <h2>Assign Tag and Add Single Asset</h2>
+        <ol>
+            <li>In User Console, navigate to <span class="strong">Tag Management &gt; Manage Tags</span>.</li>
+            <li>Select the tag(s) under the Import Detected Tags column and click the <span class="strong">Add Selected Tag(s)</span> button, or click <span class="strong">Add All Tags</span>. This will move the tags to the Unassigned Tags column.</li>
+            <li>In the Unassigned Tags column, right-click on the tag to be assigned in the far right column and then select <span class="strong">New Asset</span>.</li>
+            <li>Complete the <span class="strong">Create: <span class="emphasis">Asset</span></span> dialog.</li>
+            <li>When completed, click one of the buttons at the bottom of the dialog:  <span class="strong">Edit Group</span> to restrict access to the asset type, <span class="strong">Save &amp; Add Another</span>, or <span class="strong">Save</span>.  <span class="strong">Cancel</span> closes the window without saving.</li>
+        </ol>
+        <h2>Import <MadCap:annotation MadCap:createDate="2015-05-29T16:58:10.0268547-05:00" MadCap:creator="Pappillon" MadCap:initials="PA" MadCap:comment="is there a way to add multiple assets other than importing via spreadsheet?" MadCap:editor="Pappillon" MadCap:editDate="2015-05-29T16:58:30.5190268-05:00">Assets</MadCap:annotation></h2>
+        <p><MadCap:variable name="General.CompanyName" /> recommends that you use the Asset Template to create one representative asset manually, then export and modify the CSV to import assets. After you have created a representative asset:</p>
+        <ol>
+            <li>Navigate to <span class="strong">User Console &gt;&#160;Assets &gt;&#160;Manage Assets</span>. Click <span class="strong">Export</span> to export a CSV file from <MadCap:variable name="General.ProductName" /> to use as a template. </li>
+            <li>Select the <span class="strong">Advanced Export</span> option and <span class="strong">Export all asset attributes</span>.  </li>
+            <li>Export CSV.</li>
+            <li>Open the CSV file in a spreadsheet program.</li>
+            <li>Remove all columns other than: </li>
+            <table style="width: 100%;border-top-left-radius: 1px;border-top-right-radius: 1px;border-bottom-right-radius: 1px;border-bottom-left-radius: 1px;border-left-style: solid;border-left-width: 1px;border-right-style: solid;border-right-width: 1px;border-top-style: solid;border-top-width: 1px;border-bottom-style: solid;border-bottom-width: 1px;margin-left: 0;margin-right: auto;" class="TableNormal">
+                <col style="width: 14%;" />
+                <col style="width: 14%;" />
+                <col style="width: 14%;" />
+                <col style="width: 14%;" />
+                <col style="width: 14%;" />
+                <col style="width: 14%;" />
+                <col style="width: 14%;" />
+                <thead>
+                    <tr>
+                        <th>Class</th>
+                        <th>Type</th>
+                        <th>guid</th>
+                        <th>Retired</th>
+                        <th>Deletable</th>
+                        <th>$aName</th>
+                        <th>$aAsset Tag</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="border-left-style: solid;border-left-color: #878787;border-right-style: solid;border-right-color: #878787;border-top-style: solid;border-top-color: #878787;border-bottom-style: solid;border-bottom-color: #878787;">typically Entity. </td>
+                        <td>Asset Type</td>
+                        <td>leave this field empty. <MadCap:variable name="General.ProductName" /> will assign a guid on import.</td>
+                        <td>For new assets, False.</td>
+                        <td>This field describes whether or not a user can delete this asset. Typically True.</td>
+                        <td>Assign a unique name for each asset.</td>
+                        <td>Enter the unique Tag ID for each tagged asset.</td>
+                    </tr>
+                </tbody>
+            </table>
+            <li>Add information for each new asset in a new row.</li>
+        </ol>
+        <ol MadCap:continue="true">
+            <li><span class="strong">Save</span> file as CSV.</li>
+            <li>Navigate to <span class="strong">User Console &gt;&#160;Assets &gt; Import Assets</span>. &#160;</li>
+            <li><span class="strong">Browse</span> to and <span class="strong">Upload</span> CSV.<br /></li>
+        </ol>
+        <h2>Add Asset <MadCap:annotation MadCap:createDate="2015-06-08T16:17:49.9773284-05:00" MadCap:creator="Pappillon" MadCap:initials="PA" MadCap:comment="default templates per Barry 06/04/15." MadCap:editor="Pappillon" MadCap:editDate="2015-06-08T16:18:06.4792722-05:00">Template</MadCap:annotation></h2>
+        <p>Create templates to pre-populate common asset attributes for asset types. Asset Templates minimize the need for data entry, in some cases leaving only Name and Tag to be completed by the user. </p>
+        <ol>
+            <li>Navigate to <span class="strong">User Console &gt; Customization &gt;&#160;Asset Templates</span> and click <span class="strong">New</span>.</li>
+            <li>Complete the <span class="strong">Template ID</span> and <span class="strong">Description</span> fields, and select the desired asset type. </li>
+            <li>Complete the asset type information fields that appear. <span class="strong">Save Changes</span> when finished. The template is now available in the User Console. To view or use, navigate to <span class="strong">User Console &gt; Assets &gt;&#160;New</span> and click the drop-down arrow for Asset Template. </li>
+        </ol>
+    </body>
+</html>

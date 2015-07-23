@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="2" MadCap:lastHeight="3601" MadCap:lastWidth="802">
+    <head><title></title>
+    </head>
+    <body>
+        <h1><a name="__RefHeading___Toc414541439"></a>Creating and Using Map Hot Spots</h1>
+        <p>After an image has been uploaded, the image appears in the right pane with the <span class="Strong">Hot Spot Tools</span> control panel above it. Hot Spot Tools allow you to configure interactive elements for your map. From left to right, these tools enable you to:</p>
+        <p>
+            <img src="../../Images/UserManual for reference/030000BE.png" style="height: 60px;width: 491px;" class="img_2" />
+        </p>
+        <h3>Select &amp;&#160;Edit</h3>
+        <p>To select an element that has been added to your map image, click the pointer tool and then the object. The outline of the shape is highlighted and drawing points visible at corners. </p>
+        <h3>Draw Polygon or Rectangle</h3>
+        <p>To create a new shaped Hot Spot element on the map image, click the shape tool and then click-and-drag the desired shape placement. Use the second icon from the left to create a rectangular hot spot.&#160;If you want to create a polygonal hot spot (that is, one that is not rectangular), then click the third icon from the left (the one immediately to the right of the square/rectangle).&#160; </p>
+        <h3>Place a Reference Point</h3>
+        <p>To create a hot spot reference without creating a hot spot shape, click this tool and then click the map to place.</p>
+        <h3>Duplicate a Shape</h3>
+        <p>The Duplicate Shape tool allows you to copy and paste a shape from one you have previously drawn. To duplicate a shape, select the shape and click the button.</p>
+        <h3>Draw the Map Attributes Box</h3>
+        <p>A Map Attributes box displays various attributes about the map, and will resize in proportion with the image when being viewed.</p>
+        <h3>Move Forward, Backward, to Front, or to Back</h3>
+        <p>Move selected items in front of or behind the preceding item, or before or behind all other items.</p>
+        <h3>List Hot Spots</h3>
+        <p>The List Hot Spots tool prompts box that lists all of the hot spots you have created. To view the List of Hot spots, select the List Hot Spots tool.</p>
+        <h3>Show Hot Spot Info</h3>
+        <p>The Show Hot Spot Info tool turns on a rollover function that allows hot spot info to be seen in the Map Editor pane when you rollover the hot spot. The function can be turned on by licking on the button and turned-off by again clicking on the button.</p>
+        <h3>Delete a Shape</h3>
+        <p>To delete a shape, click the Select &amp; Edit tool from the Hot Spot tool palette, then click on the shape that you would like to delete. Click the Delete Shape tool.</p>
+        <h2>Hot Spot Settings Task Pane: Configuration</h2>
+        <p>• <span class="strong">Hot Spot Target:</span> Choose the type of target for the hot spot drawn (location, asset, text or URL). The hot spot attributes that will display in the reference box will relate to the target that is chosen and will also link to that location, asset or URL when the hot spot region is clicked upon in the map in the User Console. This will not be the case for the text target type. The text target type cannot hold attributes or be a hot link.</p>
+        <p>• <span class="strong">Location/Asset/Text/URL:</span> Depending on the type of hot spot target that is chosen this field will vary. If a location target is chosen this field will require you to select a location to scope to from within the tree and will optionally allow you to choose a different map family than the map family currently being viewed. If an asset target is chosen this field will require you to select an asset from your assets list. If text is chosen, this field allows you to add any text to the map, but will not hold any attributes or be a hot spot. If a URL target is chosen, this field will require you to input a URL to connect to and optionally will allow you to apply a label to this URL.</p>
+        <p>• <span class="strong">Data Box:</span> Choose between None, Visible or Include Hover. If Include Hover is chosen, the text that would normally display only when the user hovers the mouse over the hot spot will instead display on the map.</p>
+        <h2>Hot Spot Settings Task Pane: Display</h2>
+        <p>• <span class="strong">Fill Color:</span>  Choose a fill color for the hot spot shape that has been drawn. If you do not specify a fill color this setting will default to the Fill Color setting specified in your mapʼs settings. If your mapʼs settings do not have a fill color specified then the fill color will default to the Fill Color setting found in “Global Settings.”</p>
+        <p>• <span class="strong">Fill Opacity:</span> Specify an opacity percentage that you would like for the fill area. The lower the percentage the more transparent the fill area will appear. For example a specification of 100% for this field will make the fill area completely opaque. If you choose not to specify a percentage for this field, this setting will default to the Fill Opacity setting specified in your mapʼs settings. If your mapʼs settings do not have a fill opacity specified then this setting will default to the Fill Opacity setting found in “Global Settings.”</p>
+        <p class="tip" MadCap:autonum="&lt;b&gt;&lt;i&gt;TIP:&lt;/i&gt;&lt;/b&gt; &#160;"> The width of the hot spot data box will change relative to the scale and/or contents when viewing the map. The size of the data box shown when editing is the “Max width” when viewing the map image at 100%, meaning that depending on what text is being displayed, the data box may appear smaller than the width specified, but it will not grow wider than the width specified.</p>
+        <h2>Using Multiple Hot Spot Types on a Map</h2>
+        <p>Although maps are generally separated by function, that is one map might show showing sensor readings/summaries and another might show a geographical click-through based on larger to smaller geographical area, you can include both types on the same map.&#160; </p>
+        <p>In the example below, one hot spot points to a Rack Location (one specific rack in a row of racks), which then drills down to another map that show individual temperature sensors, each of which represented by its own hot spot on the destination map.&#160; Notice the hot spot overlay on the map, andthe Hot Spot Settings pane in the lower middle frame.&#160; <br /><br /><img src="../../Images/AM Map Configuration new Hot Spot reference point.bmp" class="imgfullwidth" /></p>
+        <p>In this next example, a Hot Spot has been created for a different rack, but instead of allowing a click-through to the individual rack location, this Hot Spot shows the average intake temperature of the rack as a whole.&#160; This is done by pointing to the Summary Asset for the rack because, by default, the Summary Asset provides an aggregate of all sensor readings associated with the rack.&#160; </p>
+        <p>
+            <img src="../../Images/AM Map Configuration hot spot average intake temperature.bmp" class="imgfullwidth" />
+        </p>
+        <p>After the map is saved, switch over to the <span class="Strong">User Console</span> and navigate to <span class="Strong">Maps</span>.</p>
+        <p>Navigate to the desired map using the <span class="Strong">Location</span> drop-down menu.&#160; Within that location, you can choose a specific map from the <span class="Strong">Map</span> drop-down menu.&#160; The other options available to you allow you to change the View, Attribute, and/or Attribute Formatting. For more information about conditional formatting based on Attributes, refer to the Attribute Formatting section.</p>
+        <p>Hovering over the respective hot spots in the map view will reveal additional information about the hot spot target (for example, environmental conditions for a rack).&#160; This can be turned off and/or modified in the “View” configuration of the map.&#160; </p>
+    </body>
+</html>

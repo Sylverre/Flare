@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="1298" MadCap:lastWidth="554">
+    <head>
+    </head>
+    <body>
+        <h1>Zone Manager Terminology</h1>
+        <p>Listed below are a list of Zone Manager terminology and concepts that are used in the Zone Manager software:</p>
+        <p>Reader:</p>
+        <ul>
+            <li>
+                <MadCap:variable name="Variables.CompanyName" />reader such as the M200, D200, R200.</li>
+            <li>Zone Manager only supports IP connections to readers.</li>
+            <li>Each reader must be defined (created), then setup (IP address, plus additional parameters)</li>
+        </ul>
+        <p>Tag:</p>
+        <ul>
+            <li>
+                <MadCap:variable name="Variables.CompanyName" /> active tag such as the M series, D series or R series tags. Each tag has a unique ID and a group code.</li>
+        </ul>
+        <p>Tag Groups:</p>
+        <ul>
+            <li>Are the list of tag group codes and corresponding tag treatment codes needed by Zone Manager to interpret tag events correctly.</li>
+        </ul>
+        <ul>
+            <li>All unique tag group codes must be properly configured in Zone Manager</li>
+        </ul>
+        <p>Locations:</p>
+        <ul>
+            <li>Define “places” or “areas” inside Zone Manager.</li>
+            <li>In its most basic form, a Location is merely a label name.</li>
+        </ul>
+        <p>Location Hierarchies:</p>
+        <p>• Define which Location children parent relationships</p>
+        <p>• This allows Zone Manager to have a Location path such as “Tag 1 is in Rack 5 which is in Row 13 in Data</p>
+        <p>Center A”.</p>
+        <p>Location Attributes:</p>
+        <ul>
+            <li>Locations can also be defined with additional user defined attributes such as a city name, or a rack type, etc..</li>
+            <li>Location Attributes can be defined at any level in the location hierarchy. All children inherit the attributes of their parents.</li>
+        </ul>
+        <p>Example:</p>
+        <p>◊ A location called “Data Center A” is created as the top level location (no parent) with a user defined attribute of “city=Austin”</p>
+        <p>◊ A location called “Row 1” is created with “Data Center A” as its parent with a user defined attribute of “racktype=IBM”</p>
+        <p>◊ A location called “Rack 3” is created with “Row 1” as its parent with no user defined attributes</p>
+        <p>◊ A query of all tags in location “Rack 3” would return a list of those tags and all attributes of those tags.</p>
+        <p>The response would look like the following:</p>
+        <p>RFCRCK00000012 locationzone=Rack 3, city=Austin, racktype=IBM</p>
+        <p>Rule Types:</p>
+        <ul>
+            <li>Rule algorithms that are available for use to build location rules</li>
+            <li>Currently there are three types of rules included with Zone Manager:</li>
+        </ul>
+        <p>◊ SimpleSSIRule - which thresholds on the strongest SSI reported from a set of one or more radio channels associated with the rule):</p>
+        <p>◊ AverageSSIRule - which thresholds on the average SSI reported from a set of one or more radio channels associated with the rule, and requires ALL listed channels to be able to read the tag):</p>
+        <p>◊ IRLocatorRule - which compares the ‘irlocator’ attribute of tags supporting it with a specific value, and can optionally require that one of a set of channels be able to read the tag):</p>
+        <p>Rules:</p>
+        <ul>
+            <li>Logic used by Zone Manager that when parameters are met, determines which location (zone) a tag is located in.</li>
+            <li>If no rules match, then the tag location is considered “unknown”</li>
+        </ul>
+        <p MadCap:conditions="Default.Notes for authors">source:&#160;unreleased doc Zone Manager User Manual (beta)</p>
+    </body>
+</html>

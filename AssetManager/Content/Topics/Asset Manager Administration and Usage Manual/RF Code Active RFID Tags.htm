@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="601" MadCap:lastWidth="776">
+    <head><title></title>
+    </head>
+    <body>
+        <h1><MadCap:variable name="Variables.CompanyName" /> Active RFID Tags</h1>
+        <p>RFC systems operate at 433.92 MHz; the tags are one-way, transmit-only communicators. RFC holds numerous FCC grants for transmitters (tags). RFC’s patented communication protocols were designed to provide reasonable protection against harmful interference. Tags typically broadcast their status every 10 seconds, but because each message is so short, each tag has an actual transmission time of less than 10 seconds per day.</p>
+        <ul>
+            <li>Tags operate with a very low duty cycle and long battery life (typically 5 years with a 10-second beacon rate).</li>
+            <li>To conserve battery power, tags remain in sleep mode 99.99% of the time; every 10 seconds, the tag will wake up and broadcast an extremely short status message before going back to sleep.</li>
+            <li>Each tag’s RF message includes its unique ID number and a short status indication (for example<MadCap:annotation MadCap:createDate="2015-04-24T17:48:31.4292209-05:00" MadCap:creator="DSFoxx" MadCap:initials="DS" MadCap:comment="Is this the correct usage?  That is, are there other conditions possible or is this the full list?" MadCap:editor="DSFoxx" MadCap:editDate="2015-04-24T17:48:37.9745953-05:00">,</MadCap:annotation> normal, location, sensor status and/or low battery condition).</li>
+            <li>The RF message is a sequence of up to 40 short pulses, where each pulse lasts only ~27 micro-seconds. Over a 24-hour period, a 10-second beacon tag will broadcast its status message 8,640 times.</li>
+            <li>8,640 messages equals approximately 346,000 individual pulses per day. Therefore, total transmission “on” time equals: 27 micro-seconds x 346,000 = 9.34 seconds per day.</li>
+        </ul>
+    </body>
+</html>

@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="5" MadCap:lastHeight="1674" MadCap:lastWidth="763">
+    <head><title></title>
+    </head>
+    <body>
+        <h1><a name="_Configuring_an_Asset"></a><a name="__RefHeading___Toc414541344"></a>Configuring an Asset Export File to Populate and then Import</h1>
+        <p>An Asset Export file is a comma-separated values (CSV) file that can be read by any spreadsheet program. <br /><br /><img src="../../Images/UserManual for reference/02000024.jpg" style="height: 211px;width: 598px;" class="img_2" /></p>
+        <p>To configure the file in order to import Assets in bulk, perform the following steps:<br /></p>
+        <ol>
+            <li>Highlight all of the cells and then double-click the line between the first two columns to expand all the columns wide enough to read all of the cell values.<br /><br /><img src="../../Images/UserManual for reference/02000025.jpg" style="height: 159px;width: 603px;" class="img_2" /><br /></li>
+            <li>Remove all the columns other than Class, Type, guid, Retired, Deletable, $aName, $aAsset Tag:</li>
+        </ol>
+        <table style="width: 100%; margin-left: 0; margin-right: auto;">
+            <col style="width: 14%;" />
+            <col style="width: 14%;" />
+            <col style="width: 14%;" />
+            <col style="width: 14%;" />
+            <col style="width: 14%;" />
+            <col style="width: 14%;" />
+            <col style="width: 14%;" />
+            <thead>
+                <tr>
+                    <th>Class</th>
+                    <th>Type</th>
+                    <th>guid</th>
+                    <th>Retired</th>
+                    <th>Deletable</th>
+                    <th>$aName</th>
+                    <th>$aAsset Tag</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>typically Entity. </td>
+                    <td>Asset Type</td>
+                    <td>leave this field empty. <MadCap:variable name="General.ProductName" /> will assign a guid on import.</td>
+                    <td>For new assets, False.</td>
+                    <td>This field describes whether or not a user can delete this asset. Typically True.</td>
+                    <td>Assign a unique name for each asset.</td>
+                    <td>Enter the unique Tag ID for each tagged asset.</td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="note" MadCap:autonum="&lt;b&gt;NOTE:&lt;/b&gt; &#160;">The example below shows the fields required for importing new tags and attributes and presumes a blank template; that is, nothing has been exported in the screenshot below so the guid field is blank.&#160; However, all of the other attribute fields must have values or the import will present errors.<br />&#160;<br /><img src="../../Images/UserManual for reference/03000026.png" style="width: 629px;height: 280px;" /></p>
+        <ol start="3">
+            <li>Add your assets with attributes and tags to the spreadsheet.<br /></li>
+        </ol>
+        <p class="note" MadCap:autonum="&lt;b&gt;NOTE:&lt;/b&gt; &#160;">You must leave the <span class="Strong">guid</span> field blank (empty) when adding new tags and their attributes.&#160; The guid is a unique asset/sensor identifier that is automatically assigned by <MadCap:variable name="Variables.ProductName" /> to each asset or sensor.&#160;</p>
+        <p class="note" MadCap:autonum="&lt;b&gt;NOTE:&lt;/b&gt; &#160;">The values you assign to both the <span class="Strong">$aName</span> and the <span class="Strong">$aAssetTag</span> attributes must be unique for each asset or sensor.</p>
+    </body>
+</html>

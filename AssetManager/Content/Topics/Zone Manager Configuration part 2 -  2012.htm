@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="1805" MadCap:lastWidth="639">
+    <head>
+        <title>
+        </title>
+    </head>
+    <body>
+        <h1>Zone Manager Configuration part 2 -  2012</h1>
+        <p> Zone Managers may have been installed separately from <MadCap:variable name="General.ProductName" />, or as part of the <MadCap:variable name="General.ProductName" />installation.</p>
+        <ul>
+            <li>
+                <span class="Strong">Existing Remote Zone Manager:</span> Zone Manager that you may have already utilized to connect with RF Code hardware prior to the release of the <MadCap:variable name="General.ProductName" />.</li>
+            <li>
+                <span class="Strong">Local Zone Manager:</span> Local Zone Manager that is automatically installed with the installation of Asset Manager (no configuration necessary).</li>
+            <li>
+                <span class="Strong">New Remote Zone Manager:</span> If you have a larger deployment scenario, you may be installing remote Zone Managers to interact with your <MadCap:variable name="General.ProductName" />.</li>
+        </ul>
+        <p>To configure <MadCap:variable name="General.ProductName" /> to interact with a newly installed remote Zone Manager, follow the steps outlined below. To “integrate previously installed and running Zone Managers, please refer to the Remote Zone Manager Integration section of this document.</p>
+        <p>Navigate to <span class="Strong">Configuration &gt; Zone Managers</span>. The Zone Manager configuration screen will appear.</p>
+        <p>Input the information for the Zone Manager(s) you want to connect with. To do this, click the <span class="Strong">New</span> button and input the required information (see below). Click <MadCap:variable name="General.ProductName" />. The Zone Manager you have just configured will appear in the panel to the left.</p>
+        <p>Figure 58: Configuration of Zone Manager</p>
+        <h5>Zone Manager Information Input Task Pane: Basic Information</h5>
+        <ul>
+            <li>
+                <span class="Strong">Name:</span> Create a name for the Zone Manager.</li>
+            <li>
+                <span class="Strong">Description:</span> Enter a description for this Zone Manager.</li>
+            <li>
+                <span class="Strong">Enabled:</span> If you would like your Zone Manager to go active and receive and transmit tag data once you configure it within <MadCap:variable name="General.ProductName" /> this box should be checked. Zone Manager Information Input Task Pane: Network Settings</li>
+            <li>
+                <span class="Strong">Hostname:</span> Enter the IP address of your Zone Manager in this field.</li>
+            <li>
+                <span class="Strong">Port:</span> Enter the port number over which to communicate with your Zone Manager (by default this is 6580).</li>
+            <li>
+                <span class="Strong">SSL:</span> If you would like to use SSL settings with your Zone Manager, select one of the options from the drop down list (Do not use SSL, SSL - No Verification, SSL Verify Certificate &amp; Hostname). (Please refer to the Configuring SSL for Asset Manager and Zone Manager section of this manual for more information).</li>
+        </ul>
+        <h5>Zone Manager Information Input Task Pane: Up Connect Settings</h5>
+        <ul>
+            <li>
+                <span class="Strong">Up Connection Zone Manager ID:</span> This ID uniquely identifies the Zone Manager to the <MadCap:variable name="General.ProductName" /> (defaults to RFCodeZoneMgr).</li>
+            <li>
+                <span class="Strong">Up Connection User ID:</span> This ID is the user ID used to authenticate with the remote Asset Manager.</li>
+            <li>
+                <span class="Strong">Up Connection Password/Confirmation:</span> If you assigned a password when you configured your Up-Connection Zone Manager, you will need to enter and confirm the password for use with <MadCap:variable name="General.ProductName" />.</li>
+        </ul>
+        <p class="note" MadCap:autonum="&lt;b&gt;NOTE:&lt;/b&gt; ">The feature allows for Zone Manager communication with Asset Managers to be more “firewall friendly”. When this option is configured the Zone Manager to initiates the contact with the Asset Manager rather than requiring that access be granted to allow the Asset Manager to connect to Zone Managers behind a firewall. Up Connection settings must be specified in the configuration of your remote Zone Manager prior to configuring this Zone Manager for use with Asset Manager. The Up Connection Zone Manager ID and password are obtained in the configuration of the remote Zone Manager. This feature is only available for Zone Managers that have been upgraded to version 1.4 or higher.</p>
+        <h5>Zone Manager Information Input Task Pane: User Account</h5>
+        <ul>
+            <li>
+                <span class="Strong">Adminstrator Username/Password:</span> This ID and password is assigned automatically by Asset Manager. The default ID is admin and the password is a randomly assigned password known only to the <MadCap:variable name="General.ProductName" />. If you would like to change this setting, type in an administrator username and password of your choosing. This will then be used to access your Zone Manager or Remote Zone Manager for configuration purposes.</li>
+            <li>
+                <span class="Strong">Read-only Username/Password</span> Input the username and password if you have one configured for use with your Zone Manager that limits the Zone Manager to read-only access restriction.</li>
+        </ul>
+        <h5>Zone Manager Information Input Task Pane: Event Store &amp; Forward</h5>
+        <ul>
+            <li>
+                <span class="Strong">Maximum Event Storage:</span> Input the amount of historical data to be stored in hours in the event that the connection to the <MadCap:variable name="General.ProductName" /> is interrupted.</li>
+        </ul>
+        <p class="note" MadCap:autonum="&lt;b&gt;NOTE:&lt;/b&gt; ">Remote Zone Managers have the capability to store (on a local hard drive) tag events if the connection to the Asset Manager is interrupted and then forward the stored events when the connection is restored. This capability is only limited by the amount of hard drive space.</p>
+        <h5>Zone Manager Information Input Task Pane: Advanced Zone Manager Settings</h5>
+        <ul>
+            <li>
+                <span class="Strong">Offline Timeout:</span> Specify the amount of time that you want to pass before an offline Zone Manager is reported as offline by <MadCap:variable name="General.ProductName" />.</li>
+            <li>
+                <span class="Strong">Expected Location Bias:</span> Specify the confidence factor that you would like added to the expected locations rule.</li>
+        </ul>
+        <h5>Zone Manager Information Input Task Pane: IBM Premises Settings</h5>
+        <ul>
+            <li>
+                <span class="Strong">IBM Premises Enabled:</span> If you would like to enable <MadCap:variable name="General.ProductName" /> to interact with an IBM Premises server, this box should be checked.</li>
+            <li>
+                <span class="Strong">IBM Premises Hostname:</span> Enter the IP address of your IBM Premises server.</li>
+            <li>
+                <span class="Strong">IBM Premises Port:</span> Enter the port number over which to communicate with your Premises server.</li>
+            <li>
+                <span class="Strong">IBM Premises Source ID:</span> Assign an alphanumeric ID for <MadCap:variable name="General.ProductName" />.</li>
+        </ul>
+    </body>
+</html>

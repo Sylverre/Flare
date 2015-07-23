@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="1683" MadCap:lastWidth="554">
+    <head>
+    </head>
+    <body>
+        <h1>Mass Configuration Import</h1>
+        <p>In order to simplify configuration of large numbers of readers, a Mass Configuration Import tool has been designed.</p>
+        <p>This tool is designed particularly for the common pattern of one reader per location (that is rack), with one rule associating tags seen by that reader with that location. The http:&lt;base-url&gt;/rfcode zonemgr/cfgimport URL has been implemented for this tool. This URL provides a simple form, usable by any standard browser, for importing a CSV-formatted spreadsheet defining one or more readers, locations, and rules binding them. The import is performed by the form through posting to the same URL, with the contents of the CSV file provided via the “cvsfile” parameter (ideally in “multi-part/formdata” format). The column names in the first line of the CSV file are used to control the requested operations, and must be formatted as follows:</p>
+        <ul>
+            <li>reader.id - Defines the ID of the reader object. This will be created if it is not defined.</li>
+            <li>reader.type - Defines the type of reader object (only used if created). The default is “R200”.</li>
+            <li>reader.enabled - Defines the activation state to set for reader (default is true (active)).</li>
+            <li>reader.&lt;attrib&gt; - Provides a value for the field &lt;attrib&gt; of the indicated reader:</li>
+            <li>reader.id - Must be defined in order for this to work.</li>
+            <li>location.&lt;N&gt;.id - Defines the ID of the Nth object in the location path for the given position. N=1 is the location corresponding to reader, N=2 is that location’s parent, etc.</li>
+            <li>location.&lt;N&gt;.&lt;attrib&gt; - Provides a value for the field &lt;attrib&gt; in the location identified by location.&lt;N&gt;.id (which must be defined).</li>
+            <li>rule.id - Defines the ID of a location rule relating the reader’s channels to the location.1.id location (by default, given reader.id and location.1.id are defined). If not provided, but reader.id and location.1.id are defined, rule.id is asssumed to be “&lt;reader.id&gt;_&lt;location.1.id&gt;_rule”.</li>
+            <li>rule.type - Defines the rule type. If undefined, “AverageSSIRule” is assumed.</li>
+            <li>rule.enabled - Defines the rule activation state. The default is “true” (active).</li>
+            <li>rule.&lt;attrib&gt; - Defines the value of the field &lt;attrib&gt; in the rule.</li>
+        </ul>
+        <p>If the value of a given field is blank for a given row, the field is ignored for that row (versus being used to set an attribute to blank, for example). To delete an attribute, the value must be set to the string “&lt;null&gt;”. To set it to a blank string, use the value “&lt;blank&gt;”.</p>
+        <p>The general flow of execution for each line is as follows:</p>
+        <ol>
+            <li>If reader.id is provided, a reader with that ID is created, if it is needed, the reader.type value (or “R200” for example) is used.</li>
+            <li>If any reader.&lt;attrib&gt; values are defined, they are set for the reader.</li>
+            <li>If the reader was newly created, it is activated (unless reader.enabled is defined and set to false). If reader.enabled is defined, the reader’s activation state is updated accordingly.</li>
+            <li>For each location.&lt;N&gt;.id defined, starting at the highest value of &lt;N&gt;, a location with the given ID is created, if needed, and set to have the location.&lt;N+1&gt;.id as its parent (if defined). Any location.&lt;N&gt;.&lt;attrib&gt; values are set for each location.</li>
+            <li>If reader.id is defined AND location.1.id is defined, a location rule is created (if needed). If rule.id is defined, the value is used as the ID. If not, the ID is assumed to be “&lt;reader.id&gt;_&lt;location.1.id&gt;_rule”. If created, the rule type is “AverageSSIRule”, unless rule.type was provided. The channellist for the rule is assumed to be “&lt;reader.id&gt;_channel_A,&lt;reader.id&gt;_channel_B”, unless rule.channellist is set. Other rule.&lt;attrib&gt; values are used to set rule settings. If created, the rule is activated (unless rule.enabled is defined and false). If rule.enabled is set, the rule activation is updated appropriately.</li>
+        </ol>
+        <ul>
+            <li>The minimal CSV file columns to define a reader, an associated location, and a default AverageSSIRule rule tying the two would include the following columns: “reader.id”,”reader.hostname”,”location.1.id”</li>
+            <li>A simple two-tier location hierarchy, with each reader’s location having a parent location (that is a room containing each of the racks), can be defined by simply adding another location level column: “reader.id”,”reader.hostname”,”location.1.id”,”location.2.id”</li>
+            <li>The imported CSV can be updated and imported again to update the created objects (or to create new ones).</li>
+            <li>Column names ARE case sensitive, but can have the first letter capitalized (as some spreadsheet tools insist on capitalizing column names). So, “reader.id” and “Reader.id” are acceptable, but not “READER.id”.</li>
+            <li>Using spaces in the column titles will cause an error, therefore they must be named Rack_1 as opposed to Rack 1</li>
+            <li>Having 2 attributes with the same name will also cause an error.</li>
+        </ul>
+        <h2>Introduction</h2>
+        <p>Figure 1 Sample Mass Configuration Import File</p>
+        <p>Please refer to the Zone_Mgr_Import_Template sample files that are provided with your CD as an example for your configuration.</p>
+        <p MadCap:conditions="Default.Notes for authors">source:&#160;unreleased doc Zone Manager User Manual (beta)</p>
+    </body>
+</html>

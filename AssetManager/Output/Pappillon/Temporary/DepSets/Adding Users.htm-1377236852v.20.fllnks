@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultFileLinkSet
+  FileTitle=""
+  FileSearchable="true"
+  FileTimeEstimate="0"
+  FilePriority="0">
+  <Links>
+    <Link
+      Url="../RFC-AM Comprehensive/Content/Resources/Images/UserManual for reference/030000CC.png" />
+    <Link
+      Url="../RFC-AM Comprehensive/Content/Resources/Images/UserManual for reference/030000CD.png" />
+    <Link
+      Url="../RFC-AM Comprehensive/Content/Asset Manager Administration and Usage Manual/User Accounts and Security.htm" />
+    <Link
+      Url="Project/VariableSets/General.flvar" />
+  </Links>
+  <LongLinks>
+    <Link
+      Url="../RFC-AM Comprehensive/Content/Resources/Images/UserManual for reference/030000CC.png" />
+    <Link
+      Url="../RFC-AM Comprehensive/Content/Resources/Images/UserManual for reference/030000CD.png" />
+    <Link
+      Url="../RFC-AM Comprehensive/Content/Asset Manager Administration and Usage Manual/User Accounts and Security.htm#_Advanced_Security" />
+    <Link
+      Url="Project/VariableSets/General.flvar" />
+  </LongLinks>
+  <Anchors>
+    <Anchor
+      Name="__RefHeading___Toc414541446" />
+  </Anchors>
+  <Keywords />
+  <Concepts />
+  <ConceptControlNames />
+  <IndexControlNames />
+  <Variables>
+    <Variable
+      Name="General.ProductName" />
+  </Variables>
+  <FileConditions />
+  <FileTags />
+  <AllConditions />
+  <Stylesheets />
+</CatapultFileLinkSet>

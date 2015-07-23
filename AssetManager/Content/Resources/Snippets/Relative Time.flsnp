@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="2" MadCap:lastHeight="569" MadCap:lastWidth="1122">
+    <head>
+    </head>
+    <body>
+        <h3>Relative Time</h3>
+        <p>You can configure Time to show conditions for Now, 6 Hours Ago, 12 Hours Ago, 1 day ago, 7 days ago, 30 days ago, 60 days ago, or 90 days ago.</p>
+        <h3>Specific Time</h3>
+        <p>An example of a specific time for a report is: <br />1:00pm on 11/14/2008</p>
+        <h3>Relative Time Range</h3>
+        <p>An example of a relative time range is: Last Hour, Last 6 Hours, Last 12 Hours, Last Day, Last 7 Days, Last 30 Days, Last 60 Days, or Last 90 Days.</p>
+        <h3>Specific Time Range </h3>
+        <p>An example of a specific time range for a report is<br></br>1:00pm on 11/14/2008 to 8:00pm on 11/14/2008</p>
+        <h3>Calendar Time Range</h3>
+        <p>You can configure Time to show conditions for This Day, This Week, or This Month. </p>
+        <h3>Lead In Timestamps:</h3>
+        <p>Include attribute state changes if they occurred before the specified report time. For example, if you are generating a report to show offline assets during a specific week, and some of the assets went from online to offline before the report start time, then that information will be included in the report. If you leave this box unchecked, the report will only show the state of the attribute at the specified start time.</p>
+    </body>
+</html>

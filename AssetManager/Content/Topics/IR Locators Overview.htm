@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="1472" MadCap:lastWidth="639">
+    <head>
+        <title>
+        </title>
+    </head>
+    <body>
+        <h1>IR Locators Overview</h1>
+        <h3 MadCap:conditions="Default.NewText">IR&#160;Locators</h3>
+        <p MadCap:conditions="Default.NewText">An IR&#160;Locator is an identity <MadCap:annotation MadCap:createDate="2015-05-11T11:48:33.7832411-05:00" MadCap:creator="DSFoxx" MadCap:initials="DSF" MadCap:comment="new text, and I'm not sure RFC will be okay with &quot;identity beacon,&quot; but I can't help it--I don't want to say Room Locator&quot; any more than I have to." MadCap:editor="DSFoxx" MadCap:editDate="2015-05-11T11:48:59.4537094-05:00">beacon,</MadCap:annotation> transmitting a unique code. IR-enabled tags receiving this beacon transmit that information to <MadCap:variable name="General.ProductName" />, thus signaling the tagged asset's proximity to the Locator.</p>
+        <p MadCap:conditions="Default.NewText">Data centers commonly use the A740 Rack Locator and A750 Room Locator. </p>
+        <h4>A740 Rack Locator</h4>
+        <p>The A740 Rack Locator is an infrared (IR) transmitting device designed specifically for use in IT data centers for both open and closed rack environments. When deployed in concert with IR-enabled tags, the system provides a method of locating tagged assets with rack-level precision. Each Rack Locator transmits an infrared pulse pattern containing a unique 4-digit location code. The intensity of the IR transmissions can be adjusted to achieve complete coverage for open or closed racks with minimal bleed-over to adjacent racks.</p>
+        <p>IR-enabled tags will detect incoming IR signals and periodically transmit the tag’s unique ID and a current IR location code. Tag transmissions are processed in real-time to quickly locate and identify tagged assets with rack-level accuracy.</p>
+        <p>The RF Code product set also includes A750 Room Locators which are used to cover larger areas or rooms such as receiving and staging areas. In a typical installation that utilizes both RF Code Room and Rack Locators, assets can be tracked during their complete life cycle from room to rack locations. The A750 Room Locators have a typical transmission radius of 35 feet or more. The IR transmissions occur within line-of-sight and by reflection effectively flooding the coverage zone with the room location code. It is important that A750 Room Locators are not installed directly in areas where the Rack Locators are being used since they will overpower the A740’s IR transmissions. IR coverage zones are limited by solid structures so Room Locators should be used only when there are physical walls between the Room and Rack Locators.</p>
+        <h5>A740 Features</h5>
+        <ul>
+            <li>99% location accuracy and instantaneous tag reporting for 4-post racks with closed doors</li>
+            <li>95% location accuracy and instantaneous tag reporting for 4-post open racks</li>
+            <li>Software-configurable IR emissions control settings</li>
+            <li>Rack-level location reporting</li>
+            <li>Field upgradable firmware</li>
+            <li>Easy mounting configuration requires no dedicated U-space</li>
+        </ul>
+        <h4> A750 Room Locator</h4>
+        <p>The A750 Room Locator is an IR (infrared) transmitting unit used with IR-enabled active tags and RF readers to provide a method of locating and tracking tagged assets within a specified coverage area. Each Room Locator transmits an IR pulse pattern containing a unique location code. The strength of the IR transmissions can be manually adjusted, with typical coverage perimeters measuring up to 10 meters.</p>
+        <p>The A750 has a discrete dome form factor that is 4.46 inches in diameter by 1.36 inches in depth. The A750 has a back plate that is used to mount the Locator unit to a ceiling or wall. Once the back plate is mounted, the Locator unit snaps onto the back plate. Similar to visible light, IR transmits within line-of-site. Additionally IR signals can bounce off of walls and ceilings, effectively flooding an entire room with the IR location code transmission. IR-enabled tags receive incoming IR signals and periodically report their unique ID and current IR location code. Tag transmissions can be processed in real-time to quickly locate and identify tagged assets or personnel with room-level accuracy. Large populations of tags can be monitored using a single reader.</p>
+        <h5>A750 Features</h5>
+        <ul>
+            <li>Ability to easily adjust the IR intensity and region coverage</li>
+            <li>Flexible deployment options for wall mount and ceiling mount</li>
+            <li>Field upgradable firmware</li>
+            <li>Enhanced power attachment options</li>
+            <li>Modern and visually pleasing enclosure</li>
+            <li>Designed to embed an IR Tag for system monitoring</li>
+            <li>Enhanced surge protection</li>
+            <li>Team Mode option for coordinating multiple A750 Locators operating in same location</li>
+        </ul>
+        <p>Locators are installed during <MadCap:variable name="General.ProductName" />deployment, and locations are assigned during <MadCap:variable name="General.ProductName" /> configuration.</p>
+        <p>
+            <MadCap:annotation MadCap:createDate="2015-05-11T11:36:09.6486791-05:00" MadCap:creator="DSFoxx" MadCap:initials="DSF" MadCap:comment="text from knowledgebase article http://support.rfcode.com/customer/portal/articles/966328-deploying-a-rack-locator-or-room-locator-for-the-first-time \r\n\r\nWould need xrefs here if retaining. It's not a bad idea to keep, except that it's pretty much a (less wordy) duplicate of the text in Integrating with IR Locators." MadCap:editor="DSFoxx" MadCap:editDate="2015-05-11T11:38:30.8267540-05:00">To</MadCap:annotation> deploy an A740 Rack Locator or A750 Room Locator for the first time:</p>
+        <ol>
+            <li>Add at least one RF Code reader.</li>
+            <li>Add Tag Groups to <MadCap:variable name="General.ProductName" />.</li>
+            <li>Install and configure the IR Locator.</li>
+            <li>Associate an IR Rule to a Location.</li>
+        </ol>
+    </body>
+</html>

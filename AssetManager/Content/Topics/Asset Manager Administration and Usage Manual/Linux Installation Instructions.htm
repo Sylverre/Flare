@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="2523" MadCap:lastWidth="750">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>Install <MadCap:variable name="General.ProductName" /> in Linux</h1>
+        <h2>Files Required</h2>
+        <p>The <MadCap:variable name="Variables.ProductName" /> install for the supported Linux platforms consists of two RPM files that are only compatible with 64-bit distributions of Linux.&#160; </p>
+        <p>These rpm files are:</p>
+        <ul>
+            <li><span class="Strong">rfcode-am-zonemanager-</span>{version}<span class="Strong">.x86_64.rpm</span></li>
+            <li><span class="Strong">rfcode-assetmanager-</span>{version}<span class="Strong">.x86_64.rpm</span></li>
+        </ul>
+        <p>The Zone Manager RPM contains the Zone Manager component and may be installed on systems that will only run a Zone Manager instance.&#160; The <MadCap:variable name="Variables.ProductName" /> RPM will install the <MadCap:variable name="Variables.ProductName" /> software and an embedded version of Zone Manager reserved only for <MadCap:variable name="Variables.ProductName" />.&#160; Both RPMs may not be installed on the same system at the same time.<br />&#160;<br /></p>
+        <h2>Linux Installation Notes</h2>
+        <p>Both RPM installers will install their respective rfcode applications in /usr/share/rfcode.&#160; <MadCap:variable name="Variables.CompanyName" /> recommends 5GB of disk space be available for /usr/share/rfcode for most installations unless either the Zone Manager “event caching” feature or the Zone Manager “tag event logging” feature will be used.&#160; In these cases, additional storage will be needed on a case by case basis depending on the application desired.&#160; All logging, system configuration and temporary files will reside in /usr/share/rfcode.&#160; Logs are automatically rotated and there is no unbounded growth of the file system.</p>
+        <p>Installation of the Zone Manager RPM will install one file outside of /usr/share/rfcode&#160;called /etc/init.d/rfc<MadCap:variable name="General.ProductName" />.&#160; This is the startup script for the service.&#160; By default the service will be started upon RPM install and when the operating system is at init 3, init 4 and init 5 and also features a clean shutdown script on init 0, init 1, init 6 and init 2.&#160; The rpm file will also add an unprivileged user and group called rfcode that will be used as credentials to run the service.&#160; This account will not be interactive and its shell will be set to /sbin/nologin for security purposes.&#160; Root or sudo access is only needed in order to install or upgrade the RPM, as is typical of RPM-based installs; this level of access is not necessary for day to day operation.&#160; No <MadCap:variable name="Variables.ProductName" /> process will ever run as root.</p>
+        <h2>Installing in a different directory</h2>
+        <p>If /usr/share/rfcode is not an acceptable location, then create a symbolic link for /usr/share/rfcode that links to the directory (location) that you prefer.&#160; For example, to install the software in /opt/rfcode, first create the /opt/rfcode directory and type the following: <span class="ital">ln –s /opt/rfcode /usr/share/rfcode</span></p>
+        <p>When the RPM is installed, the files will physically reside at the alternate location you prefer.&#160; It is possible to move the files and modify the startup script manually, but you will encounter issues when you upgrade <MadCap:variable name="Variables.ProductName" /> because the installation is scripted to use the /usr/share/rfcode directory.</p>
+        <h2>Executing under a Different Account</h2>
+        <p>Neither the rfcode user nor the group that the Zone Manager rpm installs has a password or an interactive shell.&#160; The account is exclusively used to execute the application at a lower level of permission than the superuser account. If the execution account needs to be changed, this can be done by editing the startup script and modifying the execution user to be the preferred account.&#160; However, if you do this, you will also have to change the file system permissions to be owned by the appropriate user and group.&#160; If you must run <MadCap:variable name="Variables.ProductName" /> on ports lower than 1024, then you will need to use a special procedure in order to run the application as a non-root user.</p>
+        <h2>Executing the install</h2>
+        <p>In order to install the software, use the rpm –i&#160;command and then supply the file name for the rpm to be installed.&#160; The install must be executed at a root privilege level either by being root or by using sudo.</p>
+        <p><span class="ital">rpm –i&#160;rfcode-am-zonemanager-{version}.x86_64.rpm</span>
+            <br />&#160;OR
+            <br /><span class="ital">rpm –i rfcode-assetmanager-{version}.x86_64.rpm</span></p>
+        <h3>Service Notes</h3>
+        <p>Once the service has been installed, it is managed through common operating system tools.&#160; &#160;When the system restarts there is no need to interactively start or stop the service manually.&#160; If however, starting or stopping the service is desired the following commands are useful.</p>
+        <p><span class="codefont">service stop rfcassetmanager</span>
+            <br style="mc-tag-and-class: span;" /><span class="codefont">service start rfcassetmanager</span>
+        </p>
+        <h3>Configuring Linux Firewall Settings</h3>
+        <p>The following ports will need to be allowed through the firewall if their use is desired. The installer will not create these exceptions so if the operating system firewall is turned on this will need to be manually accomplished.&#160;<br />&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;</p>
+        <table class="TableNormal" style="margin-left: 0;margin-right: auto;">
+            <col style="width: 108pt;" />
+            <col style="width: 131pt;" />
+            <col style="width: 279pt;" />
+            <thead>
+                <tr>
+                    <th>Port Number</th>
+                    <th>Description</th>
+                    <th>Notes</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="tr_2">
+                    <td class="td_5">
+                        <p><span class="Strong">6580</span>
+                        </p>
+                    </td>
+                    <td class="td_5">
+                        <p>HTTP interface</p>
+                    </td>
+                    <td class="td_6">
+                        <p>HTTP or HTTPS access is needed</p>
+                    </td>
+                </tr>
+                <tr class="tr_2">
+                    <td class="td_5">
+                        <p><span class="Strong">6581</span>
+                        </p>
+                    </td>
+                    <td class="td_5">
+                        <p>HTTPS interface</p>
+                    </td>
+                    <td class="td_6">
+                        <p>HTTP or HTTPS access is needed</p>
+                    </td>
+                </tr>
+                <tr class="tr_2">
+                    <td class="td_5">
+                        <p><span class="Strong">6503</span>
+                        </p>
+                    </td>
+                    <td class="td_5">
+                        <p>Reader Up Connect Port</p>
+                    </td>
+                    <td class="td_6">
+                        <p>Needed when using reader up connect feature</p>
+                    </td>
+                </tr>
+                <tr class="tr_2">
+                    <td class="td_5">
+                        <p><span class="Strong">6502</span>
+                        </p>
+                    </td>
+                    <td class="td_5">
+                        <p>ZM Updates Channel</p>
+                    </td>
+                    <td class="td_6">
+                        <p>Optional integration interface</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>To set up the Linux iptables firewall to allow these ports through, the following commands need to be issued with root privileges.</p>
+        <p><span class="codefont">iptables –I INPUT –p tcp --dport 6580 –j ACCEPT</span>
+            <br style="mc-tag-and-class: span;" /><span class="codefont">iptables –I INPUT –p tcp --dport 6581 –j ACCEPT</span>
+            <br style="mc-tag-and-class: span;" /><span class="codefont">iptables –I INPUT –p tcp –-dport 6503 –j ACCEPT</span>
+            <br style="mc-tag-and-class: span;" /><span class="codefont">iptables –I INPUT –p tcp –-dport 6502 –j ACCEPT</span>
+            <br style="mc-tag-and-class: span;" /><span class="codefont">service iptables save</span>
+        </p>
+        <p>These commands will create the rules and save them so that they are persistent after rebooting.</p>
+    </body>
+</html>

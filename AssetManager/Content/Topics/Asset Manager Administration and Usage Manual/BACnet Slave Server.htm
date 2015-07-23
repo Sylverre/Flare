@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="977" MadCap:lastWidth="776">
+    <head><title></title>
+    </head>
+    <body>
+        <h1><a name="__RefHeading___Toc414541471"></a>BACnet Slave Server</h1>
+        <p>The BACnet Slave Server configuration panel is used to specify the network settings to allow BACnet clients to query attribute values published via the BACnet IP protocol.&#160; To configure <MadCap:variable name="Variables.ProductName" /> to publish attribute values via BACnet, you will need to install a BACnet license key on the License Key configuration panel using the <span class="Strong">Configuration &gt; License Key</span> sub-task. Once a BACnet license key is installed, the server should be restarted. After the server has restarted, you will be able to configure BACnet settings.</p>
+        <p>The BACnet Slave Server panel is used to configure the parameters BACnet clients will use to connect to <MadCap:variable name="Variables.ProductName" />’s BACnet server. </p>
+        <ol>
+            <li>Navigate to <span class="Strong">Integration</span> &gt; <span class="Strong">BACnet Slave Server</span>. <br /><br /><img src="../../Images/UserManual for reference/030000FF.png" style="width: 478px;height: 181px;" /><br /></li>
+            <li>Select the <span class="Strong">Enabled</span> checkbox.<br /></li>
+            <li>Assign a Port.<br /></li>
+        </ol>
+        <p class="note" MadCap:autonum="&lt;b&gt;NOTE:&lt;/b&gt; &#160;">The Port attribute allows the administrator to configure the UDP port on which the <MadCap:variable name="Variables.ProductName" /> BACnet server is listening for BACnet client requests. The default value is 47808 which is the default UDP port for BACnet UDP. Enter the Port number of the BACnet slave server.</p>
+        <ol MadCap:continue="true">
+            <li>Assign a BACnet Device ID.<br /></li>
+        </ol>
+        <p class="note" MadCap:autonum="&lt;b&gt;NOTE:&lt;/b&gt; &#160;">The BACnet Device ID allows the administrator to configure the unique ID used by the BACnet protocol to identify a device. The device ID should not duplicate any other BACnet device ID used in a BACnet network. The BACnet Device ID should be in the range of 0 to 4194303. Enter the BACnet Device ID. This can be set to any arbitrarily chosen number.</p>
+        <ol MadCap:continue="true">
+            <li>Click the <span class="Strong">Save Changes</span> button.<br /></li>
+        </ol>
+    </body>
+</html>

@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="8" MadCap:lastHeight="1212" MadCap:lastWidth="1044">
+    <head>
+        <title>
+        </title>
+    </head>
+    <body>
+        <h1>
+            <MadCap:variable name="General.ProductName" /> Hardware, Software, and Database Requirements</h1>
+        <p MadCap:conditions="Default.NewText" style="font-weight: normal;font-style: normal;">
+            <MadCap:variable name="General.ProductName" /> must be installed on a physical or virtual server. Once installed and configured, <MadCap:variable name="General.ProductName" /> can be accessed over the network.  While the <MadCap:variable name="General.ProductName" /> server application does not need a dedicated server, it is a common practice to dedicate a separate server for the <MadCap:variable name="General.ProductName" /> database.</p>
+        <h2>Hardware, Operating System, and Networking Requirements</h2>
+        <p>The following are hardware, OS, and networking requirements for installing <MadCap:variable name="General.ProductName" />:</p>
+        <ul>
+            <MadCap:snippetBlock src="../../Resources/Snippets/Minimum Hardware.flsnp" />
+            <MadCap:snippetBlock src="../../Resources/Snippets/Operating Systems Supported.flsnp" />
+        </ul>
+        <h4>Network IP Address/Connectivity</h4>
+        <ul>
+            <li>Every reader you deploy needs its own IP address.</li>
+            <li>
+                <MadCap:variable name="General.ProductName" /> needs to be able to reach readers on the appropriate port (default port 6500) and readers need to be able to reach the <MadCap:variable name="General.ProductName" /> server.</li>
+        </ul>
+        <h4>Database Requirements</h4>
+        <p>In addition to the <MadCap:variable name="General.ProductName" /> server, a database is required for storing sensor tag data and configuration data that is gathered and managed by <MadCap:variable name="General.ProductName" />. If you have an existing database environment, create a new database and then connect it to <MadCap:variable name="General.ProductName" />. If you don’t have a database environment prepared or available or you want the quickest way to dive into your pilot installation, you can use Microsoft SQL Express 2008, which is bundled with <MadCap:variable name="General.ProductName" />. However, this “lite” database is not recommended for long-term or production use; therefore, if you do install <MadCap:variable name="General.ProductName" /> with SQL Express, then you will need to migrate to a production-quality database during the full roll-out by following standard database backup and restore procedures or by using the <MadCap:variable name="General.ProductName" /> export and import functions. For more information about exporting <MadCap:variable name="General.ProductName" /> configuration settings, refer to the Administrator’s Guide <MadCap:annotation MadCap:createDate="2015-05-20T17:40:37.7362893-05:00" MadCap:creator="DSFoxx" MadCap:initials="DSF" MadCap:comment="system's administrator guide hyperlink to go here" MadCap:editor="DSFoxx" MadCap:editDate="2015-05-20T17:40:49.1959448-05:00">online.</MadCap:annotation></p>
+        <p>The following are the database requirements for installing <MadCap:variable name="General.ProductName" />:</p>
+        <MadCap:snippetBlock src="../../Resources/Snippets/Databases Supported.flsnp" />
+        <p>Before installing <MadCap:variable name="General.ProductName" />, record the following database details:</p>
+        <ul>
+            <li>Database host name/IP address</li>
+            <li>Port Number (for example 1433 for SQL)</li>
+            <li>Database name</li>
+            <li>Credentials to authenticate with the database (read/write/create access)</li>
+        </ul>
+    </body>
+</html>

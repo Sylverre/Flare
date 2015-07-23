@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="2132" MadCap:lastWidth="776">
+    <head><title></title>
+    </head>
+    <body>
+        <h1 MadCap:conditions="Default.SourceText">Windows Installation <MadCap:annotation MadCap:createDate="2015-07-02T11:37:08.4701400-05:00" MadCap:creator="Pappillon" MadCap:initials="PA" MadCap:comment="verify or update--CS instructions are different, not sure whether AM's have changed!" MadCap:editor="Pappillon" MadCap:editDate="2015-07-02T11:37:28.1472655-05:00">Instructions</MadCap:annotation></h1>
+        <p><MadCap:variable name="General.ProductName" /> can be installed using Linux or Windows. </p>
+        <h2>Windows Installation Overview</h2>
+        <ol>
+            <li>Create a Microsoft SQL&#160;Server or PostgreSQL <a href="Installing with Microsoft.htm">database</a> and user account with full access (unless installing pilot, in which case you can use the bundled Microsoft SQL Server Express).</li>
+            <li>Run install EXE from download or CD.</li>
+            <li>In Select Components window, choose <span class="Strong">Install with database</span> (unless installing pilot, in which case Install with Microsoft SQL&#160;Server Express).</li>
+            <li>When web interface opens, log in with default account and password to configure <MadCap:variable name="General.ProductName" />.<br /></li>
+        </ol>
+        <p>Detailed instructions for installing <MadCap:variable name="General.ProductName" /> in Winows are presented <a href="#Win_Install">below</a>.</p>
+        <h2>Linux Installation Overview</h2>
+        <ol>
+            <li>Create a PostgreSQL database and user account with full access.</li>
+            <li>Log in to Linux as root.</li>
+            <li>Download the RPM.</li>
+            <li>Install the <MadCap:variable name="Variables.ProductName"></MadCap:variable> package:&#160; rpm –i rfcode-<MadCap:variable name="General.ProductName"></MadCap:variable>-{version}.x86_64.rpm</li>
+            <li>Open ports in the firewall: iptables –I INPUT –p tcp --dport {<span class="ital">Port #</span>} –j ACCEPT<br /></li>
+        </ol>
+        <p>Detailed instructions for installing <MadCap:variable name="General.ProductName" /> in Linux are presented <a href="Linux Installation Instructions.htm">below</a>.</p>
+        <h1><a name="Win_Install"></a>Install <MadCap:variable name="Variables.ProductName" /> in Windows</h1>
+        <ol>
+            <li>Run the installer’s executable file from the <MadCap:variable name="Variables.CompanyName" /> <MadCap:variable name="Variables.ProductName" /> from the <MadCap:variable name="Variables.ProductName" /> file that you downloaded from the link provided by <MadCap:variable name="General.CompanyName" /> Support or the provided CD.<br /></li>
+        </ol>
+        <ol MadCap:continue="true">
+            <li>When the <MadCap:variable name="Variables.ProductName" /> Setup Wizard starts, click <span class="Strong">Next</span> to continue.<br /></li>
+            <li>Read the License Agreement, select the radio button next to <span class="Strong">I accept the agreement</span>, and then click <span class="Strong">Next</span>.<br /></li>
+            <li>Accept the default location for the installation folders and files or choose an alternate path that you would prefer.<br /></li>
+        </ol>
+        <p class="note" MadCap:autonum="&lt;b&gt;NOTE:&lt;/b&gt; &#160;">If you choose an installation path other than the default, be sure to record this information, which will be required to backup and restore data, and for server migration, and may be helpful should you ever need to contact <MadCap:variable name="Variables.CompanyName" /> Support.</p>
+        <ol MadCap:continue="true">
+            <li>Click <span class="Strong">Next</span> and in the Select Components window, use the drop-down menu and choose the installation option you prefer. <br /></li>
+        </ol>
+        <p class="note" MadCap:autonum="&lt;b&gt;NOTE:&lt;/b&gt; &#160;">In most cases, choose the first option in the drop-down menu that installs both <MadCap:variable name="Variables.ProductName" /> and Zone Manager. Install only the Zone Manager component to add additional Zone Managers, if required, after you have installed <MadCap:variable name="Variables.ProductName" /> on a server.</p>
+        <ol MadCap:continue="true">
+            <li>On the next window, click <span class="Strong">Install</span>.</li>
+            <li>Select <span class="strong">Install with Database</span>, or, for a pilot deployment, click  <span class="Strong">OK</span> to install the default database, Microsoft SQL Server Express edition, which is  bundled with the <MadCap:variable name="Variables.ProductName" /> installation <MadCap:annotation MadCap:createDate="2015-05-27T10:30:01.2973950-05:00" MadCap:creator="Pappillon" MadCap:initials="PA" MadCap:comment="is there a screenshot that shows the actual phrasing for this?  &quot;Install with database&quot; may not be correct." MadCap:editor="Pappillon" MadCap:editDate="2015-06-18T18:14:43.6190469-05:00">package.<br /></MadCap:annotation><p class="note" MadCap:autonum="&lt;b&gt;NOTE:&lt;/b&gt; &#160;"> Choose to Install with Microsoft SQL&#160;Server Express option <span class="emphasis">only</span> if you are installing <MadCap:variable name="General.ProductName" /> as a pilot installation.&#160; SQL Server Express is not supported as a full production database for reasons such as scalability, configuration options, and performance.&#160; If you do choose to install the bundled version of SQL Server Express to use as a database initially, be prepared to use it only as a temporary store of data and as a proof of concept.&#160; You will want to start from scratch when you install <MadCap:variable name="Variables.ProductName" /> with a fully functional database when you deploy to a production environment.</p><p class="note" MadCap:autonum="&lt;b&gt;NOTE:&lt;/b&gt; &#160;"> If installing SQL&#160;Server Express, you must accept all defaults. Do not change the default Administrator (sa) password, default installation directories, or default database engine settings.&#160; Doing so will prevent <MadCap:variable name="General.ProductName" /> from being able to connect to the database for initial setup and initialization.</p></li>
+            <li>If installing for a production environment, click <span class="Strong">OK</span> to install the selected database. <br /></li>
+        </ol>
+        <ol MadCap:continue="true">
+            <li>If installing pilot, accept the Microsoft SQL Server Express license agreement and then click <b>Next</b>.<br /></li>
+            <li>Accept the default installation directories or specify desired directories.</li>
+        </ol>
+        <ol MadCap:continue="true">
+            <li>Accept the default Named Instance, Instance ID, and Instance root directory, or specify desired Instance, and then click <span class="Strong">Next</span>.<br /></li>
+            <li>Accept the default database engine settings or set as desired and then click <span class="Strong">Next</span>.<br /></li>
+            <li>Configure the error reporting settings and then click <span class="Strong">Next</span>.<br /></li>
+            <li>Specify the service <MadCap:annotation MadCap:createDate="2015-05-07T16:01:00.9786006-05:00" MadCap:creator="DSFoxx" MadCap:initials="DSF" MadCap:comment="2012 Admin adds Register your product here.  Link?" MadCap:editor="Pappillon" MadCap:editDate="2015-05-29T11:34:10.2679641-05:00">accounts.</MadCap:annotation></li>
+            <li>Register your product to receive updates.</li>
+        </ol>
+    </body>
+</html>

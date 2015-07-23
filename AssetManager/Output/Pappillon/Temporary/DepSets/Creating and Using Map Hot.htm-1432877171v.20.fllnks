@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultFileLinkSet
+  FileTitle=""
+  FileSearchable="true"
+  FileTimeEstimate="0"
+  FilePriority="0">
+  <Links>
+    <Link
+      Url="Content/D_Images/UserManual for reference/030000BE.png" />
+    <Link
+      Url="Content/D_Images/AM Map Configuration new Hot Spot reference point.bmp" />
+    <Link
+      Url="Content/D_Images/AM Map Configuration hot spot average intake temperature.bmp" />
+  </Links>
+  <LongLinks>
+    <Link
+      Url="Content/D_Images/UserManual for reference/030000BE.png" />
+    <Link
+      Url="Content/D_Images/AM Map Configuration new Hot Spot reference point.bmp" />
+    <Link
+      Url="Content/D_Images/AM Map Configuration hot spot average intake temperature.bmp" />
+  </LongLinks>
+  <Anchors>
+    <Anchor
+      Name="__RefHeading___Toc414541439" />
+  </Anchors>
+  <Keywords />
+  <Concepts />
+  <ConceptControlNames />
+  <IndexControlNames />
+  <Variables />
+  <FileConditions />
+  <FileTags />
+  <AllConditions />
+  <Stylesheets />
+</CatapultFileLinkSet>

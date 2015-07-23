@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="10" MadCap:lastHeight="1713" MadCap:lastWidth="1018">
+    <head>
+    </head>
+    <body>
+        <h1>The Steps to Deployment</h1>
+        <p>The necessary processes for completing a pilot deployment are summarized here. Click the links for more information and detailed instructions for each step.</p>
+        <ol>
+            <li>Install <MadCap:variable name="General.ProductName" /> Software <a href="DCM Installation.htm">in Windows</a> or <MadCap:annotation MadCap:createDate="2015-06-19T10:00:22.5529598-05:00" MadCap:creator="Pappillon" MadCap:initials="PA" MadCap:comment="Frank says the Linux directions are required even in the shorter version.  I haven't reviewed them, but here they are. " MadCap:editor="Pappillon" MadCap:editDate="2015-06-19T10:00:46.1673105-05:00"><a href="../Asset Manager Administration and Usage Manual/Linux Installation Instructions.htm">Linux.</a></MadCap:annotation><ol><li>Run the Installer Image EXE provided by <MadCap:variable name="General.CompanyName" /> or insert the CD-ROM.</li><li>Follow the prompts of the Install Wizard.</li><li>Choose the <span class="strong">Local Zone Manager</span> option.</li><li>Check the <span class="strong">Install and Configure Microsoft SQL Server Express</span> box.</li><li>The web interface launches automatically upon completion of installation. This can take a few minutes. <ul MadCap:continue="true"><li>If launch seems to be taking too long, navigate to <span class="Strong">Start &gt; Programs &gt; RF Code &gt; <MadCap:variable name="General.ProductName" /></span> or, in your browser, to http://&lt;server host name&gt;:6580</li></ul></li><li>Log in with the default Administrator user name and password (login is case sensitive):<ul><li>username: admin</li><li>password: admin</li></ul></li></ol></li>
+            <li>Configure and mount <a href="Install and Configure IR Locator.htm">IR&#160;Locators</a> and <a href="Configuring the M250 Reader.htm">Readers</a><ol><li>Install appropriate <a href="http://support.rfcode.com/customer/portal/articles/716055-reader-utilities-downloads">configuration utility</a> from <MadCap:variable name="General.CompanyName" /> or CD-ROM to a Windows computer.</li><li>Plug reader or locator in via USB 2.0 cable.</li><li>Follow Install Wizard prompts and directions to configure device(s).</li><li>Mount locators and readers in data center.<br></br></li></ol></li>
+            <li>
+                <a href="../Reader Configuration 2012.htm">Add Readers</a> to <MadCap:variable name="General.ProductName"></MadCap:variable><ol><li>Log in to <MadCap:variable name="General.ProductName" />.</li><li>Log in to <MadCap:variable name="General.ProductName" /> with the default Administrator user name and password (login is case sensitive):<ul><li>username: admin</li><li>password: admin</li></ul></li></ol><ol start="3"><li>Navigate to <span class="Strong">Configuration &gt; Readers</span>.</li><li>Click <span class="Strong">New</span> and select the reader type from the drop-down list.<ul><li><span class="strong">Name</span>: create a name for the reader.</li><li><span class="strong">Hostname</span>: enter the IP&#160;address of the reader.</li><li><span class="strong">UserID/password</span>:&#160;if you have enabled user access on the reader, enter the user ID&#160;and password.</li></ul></li><li><span class="Strong">Save Changes</span>.<br></br><br></br></li></ol><p class="note" MadCap:autonum="&lt;b&gt;NOTE:&lt;/b&gt; &#160;">If configuring an Up Connection Reader, you must specify the reader Up Connection ID that was assigned to that reader and also, if specified, the optional password from the Reader Configuration Utility. For more information, see <a href="http://support.rfcode.com/customer/portal/articles/722910-user-guides-manuals-docs">The Reader Configuration Utility User <MadCap:annotation MadCap:createDate="2015-06-19T10:19:07.6263103-05:00" MadCap:creator="Pappillon" MadCap:initials="PA" MadCap:comment="061815 review, Frank says: I think links need to go to our support page, not the actual hosted URL because it could change later if we go with a different hosting service. \r\nThis is probably sufficient:\r\nhttp://support.rfcode.com/customer/portal/articles/722910-user-guides-manuals-docs\r\n" MadCap:editor="Pappillon" MadCap:editDate="2015-06-19T10:19:16.7278309-05:00">Manual</MadCap:annotation></a></p></li>
+            <li>Configure <a href="../Asset Manager Administration and Usage Manual/Adding Tag Groups.htm">Tag Groups</a><p>To test reader and tag functionality, add one or more tag groups.</p><ol><li>Navigate to <span class="Strong">Configuration &gt; Tag Groups</span>.</li><li>Click <span class="Strong">New</span> and select a treatment <MadCap:annotation MadCap:createDate="2015-05-12T12:34:29.8393462-05:00" MadCap:creator="DSFoxx" MadCap:initials="DSF" MadCap:comment=" This would be so much cleaner as &quot;Group ID&quot;!" MadCap:editor="DSFoxx" MadCap:editDate="2015-05-12T12:34:48.8234320-05:00">code.</MadCap:annotation></li><li>Enter a name for the tag group. Update Group Code to match label if required.</li><li><span class="Strong">Save Changes</span>.<br></br></li></ol></li>
+            <li>
+                <a href="../License Key Configuration 2012.htm">Add Licenses</a>
+                <ol>
+                    <li>Navigate to <span class="Strong">Configuration &gt; License Keys</span>.</li>
+                    <li>Click <span class="Strong">Add License Key</span> and add your 16-digit license key code(s) from the <MadCap:variable name="General.ProductName"></MadCap:variable> License Card.</li>
+                    <li>The System Configuration pane indicates that the System Configuration has been completed.<br></br></li>
+                </ol>
+            </li>
+            <li>
+                <a href="../../Assets-Workflow.htm">Add Assets to the System</a>
+                <p>To confirm functionality, add a few sample assets.</p>
+                <ol>
+                    <li>Navigate to <span class="Strong">User Console &gt; Assets &gt; Manage Assets.</span></li>
+                    <li>Click <span class="Strong">New</span> and select an asset template or asset type from the drop-down list.</li>
+                    <li>Complete all required and any desired additional fields.<br></br></li>
+                </ol>
+                <p class="note" MadCap:autonum="&lt;b&gt;NOTE:&lt;/b&gt; &#160;"> In a pilot deployment, the location drop-down list may not be populated beyond the top-level Location.  In that case, select Location or leave the field blank.  Do not type in a location <MadCap:annotation MadCap:createDate="2015-05-12T13:16:38.4969772-05:00" MadCap:creator="DSFoxx" MadCap:initials="DSF" MadCap:comment="  [and, oh, how I wish that field didn't allow entry-by-keyboard!] Frank has issues with this direction, I know.  I tried simply using the top-level Location for testing, and that seems to work...\r\nOther input?  \r\n" MadCap:editor="Pappillon" MadCap:editDate="2015-06-17T09:30:59.4127549-05:00">name. A Location Hierarchy must be created for use in the production environment, and manual entry of locations can interfere with this process.</MadCap:annotation></p>
+                <ol MadCap:continue="true">
+                    <li>
+                        <p>Click <span class="Strong">Save</span>.</p>
+                    </li>
+                </ol>
+            </li>
+        </ol>
+    </body>
+</html>

@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultFileLinkSet
+  FileTitle=""
+  FileSearchable="true"
+  FileTimeEstimate="0"
+  FilePriority="0">
+  <Links>
+    <Link
+      Url="Content/Topics/Asset Manager Administration and Usage Manual/Maps.htm" />
+    <Link
+      Url="Content/D_Images/UserManual for reference/030000A1.png" />
+    <Link
+      Url="Content/D_Images/UserManual for reference/030000A2.png" />
+    <Link
+      Url="Content/D_Images/UserManual for reference/030000A3.png" />
+  </Links>
+  <LongLinks>
+    <Link
+      Url="Content/Topics/Asset Manager Administration and Usage Manual/Maps.htm#_Using_Actions_with" />
+    <Link
+      Url="Content/D_Images/UserManual for reference/030000A1.png" />
+    <Link
+      Url="Content/D_Images/UserManual for reference/030000A2.png" />
+    <Link
+      Url="Content/D_Images/UserManual for reference/030000A3.png" />
+  </LongLinks>
+  <Anchors />
+  <Keywords />
+  <Concepts />
+  <ConceptControlNames />
+  <IndexControlNames />
+  <Variables />
+  <FileConditions />
+  <FileTags />
+  <AllConditions />
+  <Stylesheets />
+</CatapultFileLinkSet>

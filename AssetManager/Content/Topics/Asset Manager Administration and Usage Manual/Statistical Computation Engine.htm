@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="2988" MadCap:lastWidth="1096">
+    <head><title></title>
+    </head>
+    <body>
+        <h1><a name="__RefHeading___Toc414541456"></a>Statistical Computation Engine</h1>
+        <h2><a name="__RefHeading___Toc414541457"></a>Licensing</h2>
+        <p MadCap:conditions="Default.SourceText">
+            The Statistical Computation Engine is license-key-enabled functionality that adds  the ability to produce statistical data on a scheduled basis utilizing a selectable data range. The statistical computations supported are Maximum, Minimum, Median, Average, and Standard Deviation. The outputs from the Statistical Computation Engine are stored as Asset Attributes that can be utilized throughout <MadCap:variable name="Variables.ProductName" /> (in live grid views, dashboards, graphs, reports, and so forth). </p>
+        <p MadCap:conditions="Default.NewText">A Statistical Pack is a grouping of statistical data from a selected data range that is computed on a scheduled basis. The statistical computations supported are Maximum, Minimum, Median, Average, and Standard Deviation. Outputs from this computation are handled as Asset Attributes, and can be utilized throughout <MadCap:variable name="General.ProductName" />; for example, added to graphs, reports, dashboards, and map views.</p>
+        <p MadCap:conditions="Default.NewText">Statistical Packs define source attributes, statistics to be computed, computation frequency, historical data window, and the target attribute that will store the computed statistic. Statistical Policies define the target asset types with which Statistical Packs can be associated or applied. </p>
+        <p MadCap:conditions="Default.future release"><MadCap:variable name="General.ProductName" /> includes several standard Statistical Packs. Additional Statistical Packs can be <MadCap:annotation MadCap:createDate="2015-06-17T13:12:41.4153703-05:00" MadCap:creator="Pappillon" MadCap:initials="PA" MadCap:comment="not yet as of 061515" MadCap:editor="Pappillon" MadCap:editDate="2015-06-17T13:12:49.1078103-05:00">created.</MadCap:annotation>  A Statistical <MadCap:annotation MadCap:createDate="2015-06-17T13:32:47.6773645-05:00" MadCap:creator="Pappillon" MadCap:initials="PA" MadCap:comment="Per Beau, new default Statistical Packs being considered: Statistical Packs:\r\n\r\nTemperature - Daily, Weekly, and Monthly for locations, not individual sensors\r\n\r\nHumidity - Daily, Weekly, and Monthly for locations, not individual sensors\r\n\r\nPower Usage - Daily, Weekly, and Monthly for locations, not individual sensors\r\n06/05/15 update: yes!  Beau and Barry say that at least temp-humidity should be build in.  (Wonder how they'd feel about a few others?!)  On the down-side, this means that my example for creation should be something else--a user should be able to follow the directions to get something useful!" MadCap:editor="Pappillon" MadCap:editDate="2015-06-17T13:32:48.8534318-05:00">Pack</MadCap:annotation> is a group of statistical attributes that will be used together. </p>
+        <p MadCap:conditions="Default.AM only">Once the Statistical Computation Engine is enabled, two additional menu entries will be available for use in the Administrator console under the Data Schema task: Statistical Pack and Statistical Policy. </p>
+        <p class="note" MadCap:autonum="&lt;b&gt;NOTE:&lt;/b&gt; &#160;">Statistical attributes must be created before Statistical Packs and Statistical Policies can be configured. <MadCap:annotation MadCap:createDate="2015-06-17T13:29:52.7333583-05:00" MadCap:creator="Pappillon" MadCap:initials="PA" MadCap:comment="need href to bookmarked &quot;create statistical attribute&quot; section in System Attributes." MadCap:editor="Pappillon" MadCap:editDate="2015-06-17T13:30:13.2615324-05:00">Create new statistical attributes</MadCap:annotation> from Asset Attributes or System Attributes. The new statistical attribute is created as a child attributes of the source attribute. </p>
+        <p>As an example, go to <b>Administrator Console &gt; Data Schema &gt; Status Attributes</b>:</p>
+        <ul>
+            <li>Select an <b>Attribute</b>, such as Temperature</li>
+            <li>Click on the <b>New Statistic</b> button</li>
+            <li>Enter a Name, in this case “Daily Maximum Temperature”</li>
+            <li>Choose <b>Maximum</b> from the Statistic drop-down menu</li>
+            <li>Click <b>Save Changes</b></li>
+        </ul>
+        <p>
+            <img src="../../Images/UserManual for reference/030000EC.png" style="width: 623px;height: 367px;" />
+        </p>
+        <p>Similarly, create other statistical attributes for Daily Minimum Temperature, Daily Average Temperature, Daily Median Temperature, and Daily Standard Deviation. These new attributes must then be associated with an asset type. Navigate to <span class="strong">Administrator console &gt; Asset Types</span> and choose the appropriate Asset Type. In this example, you would choose Asset &gt; Sensor &gt; Temperature-Humidity. Then you would click on the <span class="strong">Add</span> button to add the newly created attributes.</p>
+        <h2>Create a Statistical Pack</h2>
+        <ol>
+            <li>Navigate to <span class="strong">Administrator console &gt; Data Schema &gt; Statistical Pack</span> and click <span class="strong">New</span>.</li>
+            <li>Complete all required and any desired additional fields.</li>
+        </ol>
+        <ul>
+            <li><span class="Strong">Name:</span> Assign a name to the Statistical Pack. <br /></li>
+            <li><span class="Strong">Description:</span> If desired, input a detailed comment describing purpose or meaning of the Statistical Pack.</li>
+            <li><span class="strong">Source Attribute:</span> Select the Parent attribute under which you created the Statistical Attributes to be bundled into a pack.</li>
+            <li><span class="strong">Statistics:</span> Select the Statistical Attributes to bundle.</li>
+            <li><span class="strong">Data <MadCap:annotation MadCap:createDate="2015-06-18T16:37:56.8139167-05:00" MadCap:creator="Pappillon" MadCap:initials="PA" MadCap:comment="is there a limit here?  Field accepts five digits, but that must take a ton of processing power.  For now, older text remains." MadCap:editor="Pappillon" MadCap:editDate="2015-06-18T16:38:38.2892889-05:00">Window:</MadCap:annotation></span> For the Data Window, select 1 day (that is, daily). Note that the Data Window should generally match the Update Frequency.</li>
+            <li><span class="strong">Update Frequency:</span> Select Daily, Weekly, or Monthly. The Statistical Computation will be performed at midnight local time, Sunday for a weekly update, first day of the month for monthly.</li>
+        </ul>
+        <ol start="3">
+            <li><span class="strong">Save Changes</span>.</li>
+        </ol>
+        <p>A Statistical Policy must be created to associate a statistical pack with assets.<br /></p>
+        <h2>Create a Statistical Policy</h2>
+        <ol>
+            <li>Navigate to <span class="strong">Administrator console &gt; Data Schema &gt; Statistical Policy</span> and click <span class="strong">New</span>.</li>
+            <li>Complete all required and any desired additional fields.</li>
+        </ol>
+        <ul>
+            <li><span class="Strong">Name:</span> Assign a name to the Statistical Policy. <br></br></li>
+            <li><span class="Strong">Description:</span> If desired, input a detailed comment describing purpose or meaning of the Statistical Policy.</li>
+            <li><span class="strong">Filter Asset Type:</span> Select an asset type to filter by.</li>
+            <li><span class="strong">Location</span> Select a location to filter by.</li>
+            <li><span class="strong">Attribute:</span> Select an attribute to filter by.</li>
+            <li><span class="strong">Value Operator:</span> Select to filter by value equals, does not equal, in, attribute has value, or attribute has no value (is empty).</li>
+            <li><span class="strong">Value:</span> Select to filter by a specific value, either equals or does not equal.</li>
+            <li><span class="strong">Statistical Packs:</span> Click the Ellipsis <span class="strong">...</span> button to access the pack selection window. Move packs from available to selected as desired. Click <span class="strong">OK</span>&#160;when finished.</li>
+        </ul>
+        <ol start="3">
+            <li><span class="strong">Save Changes</span>.</li>
+        </ol>
+        <p>  <![CDATA[ ]]></p>
+        <p MadCap:conditions="Default.SourceText">Then select the Statistical Policy task to associate the Statistic Pack with Assets. In this example, the Assets are Temperature-Humidity sensors in a particular location.&#160; </p>
+        <ul>
+            <li MadCap:conditions="Default.SourceText">Click the <span class="strong">New</span> button</li>
+            <li MadCap:conditions="Default.SourceText">Enter a Name. In this example, it will be called “Temperature Stats Policy – Austin”</li>
+            <li MadCap:conditions="Default.SourceText">Filter by Asset Type. In this example, we selected Temperature-Humidity</li>
+            <li MadCap:conditions="Default.SourceText">Optionally, other attributes can be selected to filter the results. In this example, we chose to filter by location (Austin Data Center)</li>
+            <li MadCap:conditions="Default.SourceText">For the Statistical Pack, select the pack that we created in the steps above: Daily Temp Stat Pack</li>
+            <li MadCap:conditions="Default.SourceText">Click <b>Save Changes</b></li>
+        </ul>
+        <p MadCap:conditions="Default.SourceText">
+            <img src="../../Images/UserManual for reference/030000EE.png" style="width: 623px;height: 402px;" />
+        </p>
+        <p class="note" MadCap:conditions="Default.SourceText" MadCap:autonum="&lt;b&gt;NOTE:&lt;/b&gt; &#160;">   Daily calculations are performed at 12:00 AM each day.&#160; Weekly calculations are performed at 12:00 AM on Sundays. Monthly calculations are performed at 12:00 AM on the first day of each month. (All days and times are using the server day/time.) Computed statistical attributes will not be available until at least one update period has elapsed. </p>
+    </body>
+</html>

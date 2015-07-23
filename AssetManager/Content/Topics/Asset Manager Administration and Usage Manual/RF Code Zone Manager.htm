@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="2181" MadCap:lastWidth="776">
+    <head><title></title>
+    </head>
+    <body>
+        <h1><a name="__RefHeading___Toc414541322"></a><a name="_RF_Code_Reader"></a><MadCap:variable name="Variables.CompanyName" /> Zone Manager</h1>
+        <p>Zone Manager is a real-time location engine designed specifically for use with <MadCap:variable name="Variables.CompanyName" />’s asset management and wire-free environmental monitoring solutions. Zone Manager handles all of the direct hardware interfaces for <MadCap:variable name="Variables.CompanyName" /> readers and tags. Zone Manager is essentially the engine under the hood of <MadCap:variable name="Variables.ProductName" /> and was designed for easy integration with one or more business applications via its open application programming interface (API).&#160; </p>
+        <p>
+            <img src="../../Images/UserManual for reference/03000004.png" style="height: 403px;width: 356px;" class="img_2" />
+        </p>
+        <p>&#160;</p>
+        <p>Integration with the <MadCap:variable name="Variables.CompanyName" /> middleware / location engine known as Zone Manager involves utilizing the communications interfaces defined in the Zone Manager API Specification document: <a href="http://support.rfcode.com/customer/portal/articles/716011">http://support.rfcode.com/customer/portal/articles/716011</a></p>
+        <p>The Zone Manager interface is extremely flexible and powerful. It can be utilized in almost any development environment due to the following characteristics of the Zone Manager API Specification:</p>
+        <ul>
+            <li>Telnet or web API-based communications</li>
+            <li>Platform (operating system and hardware) independent</li>
+            <li>Programming language independent</li>
+        </ul>
+        <p>The Zone Manager software provides a great deal of value and functionality that can be easily leveraged such as:</p>
+        <ul>
+            <li>Reader communications channel management (for up to thousands of readers)</li>
+            <li>Reader initialization, modes, and configuration</li>
+            <li>Data buffering, filtering and interpretation</li>
+            <li>Reduction of duplicate data from multiple readers</li>
+        </ul>
+        <p>The Zone Manager middleware/location engine is not an end-user application, but was designed instead to be used in conjunction with an end-user application that can benefit from consuming the data and information produced by the Zone Manager system. It is important to note that the Zone Manager system is not designed to be a database of historical values or provide tag to asset association. Zone Manager is designed to collect and track (in real-time) the last known (latest) information about tag location, status and sensor readings. Since Zone Manager does not log historical data in a database, it is extremely scalable with the ability to service thousands of <MadCap:variable name="Variables.CompanyName" /> readers while operating on a single dual core server system.&#160; However, <MadCap:variable name="Variables.ProductName" /> stores data in a database and enables historical records of reader, tag, and asset data.</p>
+        <p>The Zone Manager middleware/location engine allows for communication via a web or URL style API as well as a telnet style TCP/IP connection. The communications can be interactive (command / response) as well as registration or subscription based to follow updates or changes. The Zone Manager specification provides an extensive list of commands to fully control the <MadCap:variable name="Variables.CompanyName" /> readers and Zone Manager such as:</p>
+        <ul>
+            <li>Defining tag groups (which tags to listen for)</li>
+            <li>Adding readers to the system as well as defining reader configuration parameters</li>
+            <li>Location and rule configuration</li>
+            <li>Tag and reader online/offline notifications</li>
+            <li>Query capabilities such as which tags are in a specific location</li>
+            <li>Multiple data output formats such as JSON, CSV, and XML</li>
+        </ul>
+        <p>Integration with <MadCap:variable name="Variables.CompanyName" />’s Zone Manager does not require RFID specific or <MadCap:variable name="Variables.CompanyName" /> hardware skills. It does require a fair amount of standard software programming skills to configure programmatically the system and utilize the data returned by the system. Ideally integration with Zone Manager would tie the system into an existing asset management or monitoring solution. <MadCap:variable name="Variables.CompanyName" /> highly recommends attending a training class to learn the details of the <MadCap:variable name="Variables.CompanyName" /> Zone Manager system. Contact <MadCap:variable name="Variables.CompanyName" /> support for information on training classes.</p>
+        <p>Zone Manager is bundled with <MadCap:variable name="Variables.ProductName" /> and accommodates a single Zone for reader and tag environment coverage. However, Zone Manager can be installed on one or more separate servers.&#160; The system requirements for Zone Manager installations when installed apart from the <MadCap:variable name="Variables.ProductName" /> installation are less stringent, as the Zone Manager application requires a smaller footprint and less computing resources to function.&#160; For alternate or expanded configurations, please refer to the Zone Manager User Guide and consult with <MadCap:variable name="Variables.CompanyName" /> Support for optimal deployment conditions and configuration.</p>
+    </body>
+</html>

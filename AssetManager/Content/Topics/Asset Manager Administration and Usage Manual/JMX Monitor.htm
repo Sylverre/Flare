@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html MadCap:lastBlockDepth="4" MadCap:lastHeight="951" MadCap:lastWidth="1096" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title></title>
+    </head>
+    <body>
+        <h1><a name="__RefHeading___Toc414541468"></a>JMX Monitor</h1>
+        <p>This sub-task lets you publish <MadCap:variable name="Variables.ProductName" /> data using Java Management Extensions (JMX).&#160; To use this feature, you will need a separate license to enable the functionality. Once the license key has been installed, JMX publishing is done through the configuration of the sub-tasks JMX Monitor and JMX Domains.</p>
+        <p>When configuring the JMX Monitor you will need to specify the hostname and port of the computer where the JMX software is installed. <MadCap:variable name="Variables.ProductName" /> defaults to the local host. The local host should be used if the software is installed and running on the same computer as <MadCap:variable name="Variables.ProductName" />.</p>
+        <p>To configure <MadCap:variable name="Variables.ProductName" /> to use JMX, perform the following steps:</p>
+        <ol>
+            <li>Install the JMX License Key using the same steps as outlined in the <span class="Strong">License Key Configuration</span> sub-task. <br />The JMX License Key is a separate key that must be installed in addition to the <MadCap:variable name="Variables.ProductName" /> license key. Once the key has been properly installed, it will appear in the license key list. <br /></li>
+            <li>After you install the JMX key, restart the <MadCap:variable name="Variables.CompanyName" /> <MadCap:variable name="Variables.ProductName" /> service via the Microsoft Windows Service Manager or reboot the <MadCap:variable name="Variables.ProductName" /> application server.<br /></li>
+        </ol>
+        <p class="note" MadCap:autonum="&lt;b&gt;NOTE:&lt;/b&gt; &#160;"> If you are running <MadCap:variable name="Variables.ProductName" /> in a Linux environment and need more information about how to restart the service, refer to Linux Installation section of this document.<br /></p>
+        <ol MadCap:continue="true">
+            <li>Next, go to <span class="Strong">Integration &gt; JMX Monitor</span>.<br /><br /><img src="../../Images/UserManual for reference/030000FC.png" style="height: 213px;width: 514px;" class="img_2" /><br /></li>
+            <li>Check the <span class="Strong">Enabled</span> checkbox.<br /></li>
+            <li>Enter the <span class="Strong">Hostname</span> of the server running the JMX software.<br /></li>
+            <li>Enter the <span class="Strong">Port</span> (TCP/IP) that <MadCap:variable name="Variables.ProductName" /> will use to communicate with the JMX software.<br /></li>
+            <li>Click <span class="Strong">Save Changes</span>.</li>
+        </ol>
+    </body>
+</html>

@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="4305" MadCap:lastWidth="1070">
+    <head><title></title>
+        <link href="../../Resources/Stylesheets/Styles.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1><a name="__RefHeading___Toc414541451"></a>Asset Links</h1>
+        <p MadCap:conditions="Default.NewText">Asset Links are filtered Views added to the Assets menu to simplify and streamline navigation. Created by the system administrator, Asset Links can be made available to all users, and can be used to restrict the data visible to specified user groups. Locking an Asset Link prevents users other than those with system administrator access from making changes to the link, though not to any assets reached by using that link. Asset Link View allow for specific custom views to be applied/restricted/allowed for the Asset Link. An Asset Link must be created before an Asset Link View can be customized.</p>
+        <p>
+            By default there are three Asset Links which in previous versions of <MadCap:variable name="Variables.ProductName" /> were not able to be modified or deleted.&#160; <MadCap:variable name="General.ProductName" /> also includes several <a href="#Enable">Standard Asset Link Views</a> that can be selected by a Systems Administrator and are then available to users with the appropriate permissions.</p>
+        <h2>To create a new Asset Link</h2>
+        <ol>
+            <li>Navigate to <span class="strong">Admin Console &gt; Customization &gt;&#160;Asset Links</span>. Click <span class="Strong">New</span>.</li>
+        </ol>
+        <p>
+            <img src="../../Images/UserManual for reference/030000D5.png" style="width: 676px;height: 405px;" />
+        </p>
+        <ol MadCap:continue="true">
+            <li>Complete the required and any desired additional fields. </li>
+        </ol>
+        <h3>Basic Information</h3>
+        <ul>
+            <li MadCap:conditions=""><span class="strong">Name:</span> Assign a unique name that users will understand.</li>
+            <li MadCap:conditions=""><span class="strong">Lock Link:</span> Check this box to prevent users from modifying the filters for the link.</li>
+        </ul>
+        <h3 MadCap:conditions="">Navigation Tree</h3>
+        <p MadCap:conditions="">Defines filter information for the new Asset Link.</p>
+        <ul>
+            <li MadCap:conditions=""><span class="strong">Navigate By:</span> Defines the class of object the filter will be based on.</li>
+            <li MadCap:conditions=""><span class="strong">Navigation Root:</span> Determines where in the hierarchy the filter will begin.</li>
+        </ul>
+        <h3 MadCap:conditions="">Asset Link Filter</h3>
+        <ul>
+            <li MadCap:conditions=""><span class="strong">Link Type:</span> Defines the type of Asset being filtered on.</li>
+            <li MadCap:conditions=""><span class="strong">Link Location:</span> Allows location-specific filtering if desired.</li>
+        </ul>
+        <p MadCap:conditions="" class="note" MadCap:autonum="&lt;b&gt;NOTE:&lt;/b&gt; &#160;">Both the Link Type and Link Location are top-down in their functionality, where anything from the designated level on down will be included. All of the Asset Link Filter selections are optional, and with none specified users will have access/visibility to all assets.&#160; They are simply filtering options to restrict/limit the assets returned.</p>
+        <ul>
+            <li MadCap:conditions=""><span class="strong">Link Attribute:</span> Select to filter by specific attribute.</li>
+            <li MadCap:conditions=""><span class="strong">Link Attribute Value Operator:</span> Select to filter by value equals, does not equal, in, attribute has value, or attribute has no value (is empty).Value: Select to filter by a specific value, either equals or does not equal.</li>
+            <li MadCap:conditions=""><span class="strong">Link Attribute Value:</span> Set to filter by a specific value.</li>
+        </ul>
+        <h3 MadCap:conditions="">Asset Link View(s)</h3>
+        <ul>
+            <li MadCap:conditions=""><span class="strong">Link View(s)</span>: Click the Ellipsis <span class="strong">...</span> button to access the list of available Asset Link Views. Move Views from Available to Selected as desired. &#160;Click <span class="strong">OK</span>&#160;when finished. </li>
+        </ul>
+        <ol start="3">
+            <li><span class="strong">Save Changes</span>. The Asset Link is available to all users until or unless the system administrator sets restrictions to manage access to Asset Links.</li>
+        </ol>
+        <h2><a name="Enable"></a>Enable a Standard Asset Link View</h2>
+        <ol>
+            <li>Navigate to <span class="strong">Admin Console &gt; Customization &gt;&#160;Asset Links</span>. Click <span class="Strong">New</span>.</li>
+            <li>In the right pane, click the Asset Link View(s) ellipsis <span class="strong">[...]</span> button.</li>
+            <li>Double-click items listed in the left side, Available, to move them to the right, Selected; or click to select and use arrows to move items into and out of Selected. When finished, click <span class="strong">OK</span>. The Asset Link Views selected are available to all users until or unless the system administrator sets restrictions.</li>
+        </ol>
+        <h2>Manage Access to Asset Links and Asset Link Views</h2>
+        <p>Access to Asset Links is set at the User or Group level. </p>
+        <ol>
+            <li>From the <span class="strong">Admin Console &gt; User Access</span> task, select the desired User or Group. </li>
+            <li>Click the Asset Links ellipsis <span class="strong">[...]</span> and move available Asset Links into or out of the Selected pane. </li>
+            <li>Click <span class="strong">OK</span> to save selection when finished.</li>
+            <li>Click <span class="strong">Save Changes</span> to update access for the User or Group.<br /></li>
+        </ol>
+        <p>Access to Views, including the Asset Links View, is set from the View Task, during or after creation of a View. </p>
+        <ol>
+            <li>Navigate to <span class="strong">Admin Console &gt; Views</span> and select a view to edit. </li>
+            <li>Click the Groups ellipsis <span class="strong">[...]</span> button and move available Groups into or out of the Selected Pane.</li>
+            <li>Click <span class="strong">OK</span>&#160;to save selection when finished.</li>
+            <li>Click <span class="strong">Save Changes</span> to update the Allowed User Groups for the view.</li>
+        </ol>
+        <p>The Asset Link View(s) is a display designation that allows for specific custom views to be applied/restricted/allowed for the Asset Link.&#160; Views are defined and managed in the User Console under <span class="Strong">Customization &gt; Views</span>:</p>
+        <p>
+            <img src="../../Images/UserManual for reference/030000D9.png" style="width: 689px;height: 398px;" />
+        </p>
+        <p>Once the Asset Link is configured and saved, rights to use this Asset Link can be specified for respective users and/or groups of users in the Admin Console under the User Access section.&#160; For locally defined users, the Asset Link(s) are defined under the Users section:</p>
+        <p>
+            <img src="../../Images/UserManual for reference/030000DA.png" style="width: 664px;height: 418px;" />
+        </p>
+        <p>For LDAP/externally defined users, modifying the respective user under the LDAP Server section:</p>
+        <p>
+            <img src="../../Images/UserManual for reference/030000DB.png" style="width: 691px;height: 614px;" />
+        </p>
+        <p>Once the Asset Links are defined, users can use and leverage the Links in the User Console under the Assets section. With any link selected, users can select Views to which they have access from the drop-down menu in the upper right portion of the screen, beneath the <MadCap:variable name="General.CompanyName" /> logo.</p>
+        <p>
+            <img src="../../Images/AM Manage Assets - all assets - view dropdown.bmp" style="width: 682px; height: 327px;" class="imgfullwidth" />
+        </p>
+    </body>
+</html>

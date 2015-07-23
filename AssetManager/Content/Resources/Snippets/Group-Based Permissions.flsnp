@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="2" MadCap:lastHeight="548" MadCap:lastWidth="802">
+    <body>
+        <h2>Group-Based Permissions</h2>
+        <p>
+            <img src="../../D_Images/CS Edit Group, Group Membership dialog.bmp" />
+        </p>
+        <p>If Group-based security is enabled via LDAP<MadCap:conditionalText MadCap:conditions="Default.AM only"> or Advanced Asset Security</MadCap:conditionalText>, select Groups to restrict permission only to those <MadCap:annotation MadCap:createDate="2015-06-10T10:13:17.9070063-05:00" MadCap:creator="Pappillon" MadCap:initials="PA" MadCap:comment="verify!" MadCap:editor="Pappillon" MadCap:editDate="2015-06-10T10:13:19.6771076-05:00">groups.</MadCap:annotation></p>
+    </body>
+</html>

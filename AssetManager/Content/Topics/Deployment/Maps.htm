@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="2" MadCap:lastHeight="1106" MadCap:lastWidth="665">
+    <head>
+        <title>
+        </title>
+    </head>
+    <body>
+        <h1>Maps</h1>
+        <p MadCap:conditions="General.notes for reviewers" style="text-decoration: underline;">For <MadCap:variable name="General.ProductName" />, <b>Rack Visualization</b> is a priority, but general map text should not be neglected. Per Wilfred, floor plans or images from pre-sales activity as base. Update text for clarity etc. (Will probably re-order for Reference Points to come above Hot Spots and drawing rectangles unless someone has a reason not <MadCap:annotation MadCap:createDate="2015-04-27T17:57:19.4833440-05:00" MadCap:creator="DSFoxx" MadCap:initials="DSF" MadCap:comment="Frank says: Yes, rack visualization is not a replacement for maps." MadCap:editor="DSFoxx" MadCap:editDate="2015-04-27T17:57:26.3357360-05:00">to.</MadCap:annotation>)</p>
+        <p>
+            <MadCap:variable name="General.ProductName" /> allows you to upload maps (graphics) of your data center in order to give you a visual display of your racks and rows and to view sensor temperature readings for each rack. To create this kind of map, perform the following steps:</p>
+        <h2>Create a New Map</h2>
+        <p>1. To create a new map, navigate to <b>Admin Console &gt; Location/Rules/Maps &gt; Map Configuration</b>, and from the list of locations select a location that you would like to be represented by a map, such as your data center as a whole.</p>
+        <p>2. Click the <b>New</b> button above the Location hierarchy.</p>
+        <p>3. Enter a Map Family name (e.g., Data Center Visual Layout). NOTE: The Name field will auto-populate.</p>
+        <p>4. Click the [+] button to the right of the Map Image field [Select file…] and use the file browser to select a graphic.</p>
+        <p>NOTE: This can be any bitmap format (png, jpg, bmp, gif, etc.) or SVG vector image that you would like to use, such as a visual representation of all of the rows and racks in your data center.</p>
+        <p>5. Click OK. You will see a new entry in the location hierarchy for the map (Data Center Visual Layout below) and the map image will appear in the map configuration pane to the right with the Hot Spot Tools toolbar above it.</p>
+        <h2>Create Hotspots</h2>
+        <p>After importing your graphic and creating your map, you can now create Hot Spots on it for each rack. To do this, perform the following steps:</p>
+        <p>NOTE: For more information about <MadCap:variable name="General.ProductName" />, refer to the documents and manuals on the <MadCap:variable name="General.CompanyName" /> Support website: <a href="http://support.rfcode.com/customer/portal/articles/715804">http://support.rfcode.com/customer/portal/articles/715804</a></p>
+        <p>1. Select the map image from the Locations tree on the left-hand side of the screen.</p>
+        <p>2. Click on the Draw Rectangle tool from the Hot Spot Tools toolbar. The pointer will change to a cross hair.</p>
+        <p>3. Place the cross-hair pointer over the area of the image where you would like to create the hotspot.</p>
+        <p>A rounded rectangle appears to mark the location of the hot spot.</p>
+        <p>4. Click and drag the rectangle to the desired size.</p>
+        <p>5. After you have placed your Hot Spot, the Hot Spot Settings menu will appear to the left of the map beneath the Location hierarchy.</p>
+        <p>6. Enter Asset for the Hot Spot Target type.</p>
+        <p>7. Choose the Row 1 - Rack 1 asset from hierarchy that appears in the pop-up window.</p>
+        <p>8. Leave Data Box set to Visible.</p>
+        <p>9. Ignore the Display Settings.</p>
+        <p>10. Click the Save Changes button.</p>
+        <p>11. Repeat this process for the rest of the racks in the row and then for all of the racks in the other rows.</p>
+        <h2>Placing a Reference Point</h2>
+        <p>A reference point has the same functionality as a hot spot that you draw, but it does not require that you draw a shape on the map. You can use these reference points to create “hot spots” for each of the 3 temperature sensors installed on each rack. These reference points will then display the temperature for each of these sensors when you view the map in the User Console.</p>
+        <p>1. From the Hot Spot Tools toolbar, click the Place Reference Point toolbar button.</p>
+        <p>2. Place your pointer where you would like to place the reference point on the map and click once. A reference point box will appear.</p>
+        <p>NOTE: You should create reference points for each of the 3 sensors on every rack. Note also that you will need to configure Hot Spot Settings for each reference point.</p>
+        <p>3. Select Asset as the type of Hot Spot Target.</p>
+        <p>4. Select the specific asset (e.g., the top temp sensor on Rack 1) from the hierarchy of your assets and then click the Save Changes button.</p>
+    </body>
+</html>

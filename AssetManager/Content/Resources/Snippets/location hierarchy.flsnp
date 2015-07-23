@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="1" MadCap:lastHeight="94" MadCap:lastWidth="1135">
+    <body>A location hierarchy is a top-down grouping of your locations, beginning with a large single category that contains all the others and then moving down, as from Country (US) to State (TX) to City (Austin, Dallas, Houston). Items within a level are peers; items one item up or down are said to be parents or children. The Location Hierarchy is unpopulated upon installation except for the top-level <span class="ital">Location</span> and an <span class="ital">Unknown Location</span>. </body>
+</html>

@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="3291" MadCap:lastWidth="1070">
+    <head><title></title>
+    </head>
+    <body>
+        <h1><a name="__RefHeading___Toc414541475"></a>Modbus Slave Devices</h1>
+        <p>To configure the Modbus Slave Devices, perform the following steps:</p>
+        <ol>
+            <li>Navigate to <span class="strong">Admin Console &gt; Integration &gt; Modbus Slave Devices</span>. <br /><br /><img src="../../Images/UserManual for reference/03000104.png" style="height: 302px;width: 419px;" class="img_2" /><br /></li>
+            <li>Choose the sensors/locations/details to monitor.<br /></li>
+            <li MadCap:conditions="Default.SourceText">
+                <MadCap:conditionalText MadCap:conditions="Default.SourceText">Select the <span class="strong">Attributes</span> that you want to be exposed via Modbus (for example, temperature). </MadCap:conditionalText>
+                <br />
+                <br />
+                <img src="../../Images/UserManual for reference/03000105.png" style="height: 290px;width: 445px;" class="img_2" />
+                <br />
+                <br /><span class="Strong">Attributes</span>: The Attributes parameter allows the administrator to determine which attributes to publish via Modbus. Attributes are categorized as one of two different types:</li>
+        </ol>
+        <ul>
+            <li MadCap:conditions="Default.SourceText"><span class="strong">Numeric:</span> (Float, Integer, and Enum)  published using two 16-bit registers 
+            </li>
+            <li MadCap:conditions="Default.SourceText"><span class="strong">Boolean:</span> (Boolean) published using one 16-bit register<br /><br /></li>
+        </ul>
+        <p class="note" MadCap:conditions="Default.SourceText" MadCap:autonum="&lt;b&gt;NOTE:&lt;/b&gt; &#160;">The attribute values reported by a Modbus Slave Device are published using the Holding Registers (40000-49999), which are five-digit addresses.&#160; <br /></p>
+        <p class="note" MadCap:conditions="Default.SourceText" MadCap:autonum="&lt;b&gt;NOTE:&lt;/b&gt; &#160;">To determine data-type of an Attribute, go to <span class="strong">Data Schema</span> &gt; {<span class="span_33">Asset Attributes, Status Attributes, </span>or<span class="span_33"> Calculated Asset Attributes</span>}.</p>
+        <p MadCap:conditions="Default.SourceText"><span class="strong">Attribute Defaults:</span>&#160; Attribute Defaults is an optional setting that allows the administrator to specify a value a Modbus Slave will report if it does not currently have a value for an attribute. For example, if an administrator has decided to publish the asset temperature value for a collection of assets, one or more of those assets could be offline and not have a current temperature value to report. In this case, a default value well out of the range of legitimate temperature values could be returned so a Modbus client can use this value as an indicator that the current value is not available and therefore unreliable. When a Modbus client requests a value for an attribute for which no value is available and there is no default value specified, the Modbus Slave device will return the default register value of 0.</p>
+        <p class="note" MadCap:conditions="Default.SourceText" MadCap:autonum="&lt;b&gt;NOTE:&lt;/b&gt; &#160;">If you choose to provide a default value for a Boolean attribute, you should specify a value which is not used to indicate an alerting condition for the attribute.</p>
+        <ol class="ul_2" start="4">
+            <li MadCap:conditions="Default.SourceText">Define a Slave ID for this set of sensors to expose.&#160; 
+            </li>
+        </ol>
+        <p class="note" MadCap:conditions="Default.SourceText" MadCap:autonum="&lt;b&gt;NOTE:&lt;/b&gt; &#160;"> A valid range for the Slave ID is 1-247. <br /><br /><img src="../../Images/UserManual for reference/03000106.png" style="height: 149px;width: 448px;" class="img_2" /><br /></p>
+        <p class="note" MadCap:conditions="Default.SourceText" MadCap:autonum="&lt;b&gt;NOTE:&lt;/b&gt; &#160;">The number of assets which can report values is determined by the number of attributes configured for a Modbus Slave Device. For example, if the administrator chooses to publish temperature and humidity values for a Modbus Slave Device, there are a total of 2500 unique assets which can publish values for a given Slave ID (There are 10,000 Holding Registers. Each attribute (temperature and humidity) requires 2 registers to publish a value for a total of 4 registers per asset. 10,000 registers per Slave ID/4 registers per asset = 2,500 assets per Slave ID). If the number of assets which match the configured Modbus Asset Filter is expected to exceed the total number of assets which can be published for single Slave Device, additional Slaves can be configured.
+        </p>
+        <p class="note" MadCap:conditions="Default.SourceText" MadCap:autonum="&lt;b&gt;NOTE:&lt;/b&gt; &#160;"><MadCap:variable name="Variables.ProductName" /> Modbus Slaves are flexible. Slave IDs can support a single attribute type or multiple attribute types per Modbus Slave ID.
+        </p>
+        <ol MadCap:continue="true" class="ul_2">
+            <li MadCap:conditions="Default.SourceText">Set any Asset Filters you want to use when publishing the Modbus Device Sensor Attributes.<br /><br /></li>
+        </ol>
+        <p class="note" MadCap:conditions="Default.SourceText" MadCap:autonum="&lt;b&gt;NOTE:&lt;/b&gt; &#160;">The Asset Filter is used to define the criteria for selecting which assets and their corresponding attributes will be published by the Modbus server and therefore made available to Modbus clients.&#160; The available filters are: Asset Type, Location, and then the First and/or Second Attribute, Attribute Value Operator, and Attribute Value.<br /><br /><img src="../../Images/UserManual for reference/03000107.png" style="height: 229px;width: 443px;" class="img_2" /><br /></p>
+        <p class="note" MadCap:conditions="Default.SourceText" MadCap:autonum="&lt;b&gt;NOTE:&lt;/b&gt; &#160;">The Filter Asset Type is the top level “<MadCap:annotation MadCap:createDate="2015-05-22T15:26:10.5203493-05:00" MadCap:creator="DSFoxx" MadCap:initials="DSF" MadCap:comment="quotes?" MadCap:editor="DSFoxx" MadCap:editDate="2015-05-22T15:26:14.0675522-05:00">type”</MadCap:annotation> of the asset on which you want to filter. </p>
+        <p class="note" MadCap:conditions="Default.SourceText" MadCap:autonum="&lt;b&gt;NOTE:&lt;/b&gt; &#160;"> Filtering, in general is used to limit or reduce the amount of sensors/assets being monitored, so the more focused, the less data. In general, for environmental-type sensors (for example Temp/Humidity), “Environmental Sensor” can be used. </p>
+        <p class="note" MadCap:conditions="Default.SourceText" MadCap:autonum="&lt;b&gt;NOTE:&lt;/b&gt; &#160;"> The “Location” for which this selection is made is determined in the “Filter Location” section.&#160; Again, the more specific the location, the more restricted the data becomes. </p>
+        <ol start="3">
+            <li>Complete all required and any desired additional fields.</li>
+        </ol>
+        <h2>Modbus Device Sensor Attributes</h2>
+        <ul>
+            <li><span class="strong">Attributes:</span> Select which attributes to publish via Modbus. The attribute values reported by a Modbus Slave Device are published using the Holding Registers (40000-49999), which are five-digit addresses. Attributes are categorized as one of two different types:<ul><li>Numeric: (Float, Integer, and Enum)  published using two 16-bit registers</li><li>Boolean: (Boolean) published using one 16-bit register</li></ul></li>
+        </ul>
+        <p class="note" MadCap:autonum="&lt;b&gt;NOTE:&lt;/b&gt; &#160;">To determine the data type of an attribute, navigate to <span class="strong">Admin Console &gt; Data Schema</span> and select the attribute to view its details.</p>
+        <ul>
+            <li><span class="strong">Attribute Defaults:</span> Specify the value a Modbus Slave will report if it does not currently have a value for an attribute. This optional setting is often set well out of the possible range of values for use as an alerting indicator. If not specified, the Modbus Slave device will return the default register value of 0.</li>
+        </ul>
+        <h2>Modbus Device Settings</h2>
+        <ul>
+            <li><span class="strong">Slave Device IDs:</span> Define a Slave ID for this set of sensors to expose. Multiple Slaves can be added. The number of assets reporting to a single slave device depends on the number and type of attributes configured for the device. (Numeric attributes require more Holding Registers than Boolean attributes.) The valid range for the Slave ID is 1-247.</li>
+        </ul>
+        <h2>Asset Filter For Publishing Modbus Device Sensor Attributes</h2>
+        <ul>
+            <li><span class="strong">Filter Asset Type:</span> Select an asset type to filter by.</li>
+            <li><span class="strong">Filter Location:</span> Select a location to filter by.</li>
+            <li><span class="strong">Attribute:</span> Select an attribute to filter by.</li>
+            <li><span class="strong">Value Operator:</span> Select to filter by value equals, does not equal, in, attribute has value, or attribute has no value (is empty).</li>
+            <li><span class="strong">Value:</span> Select to filter by a specific value, either equals or does not equal.</li>
+        </ul>
+        <p class="note" MadCap:autonum="&lt;b&gt;NOTE:&lt;/b&gt; &#160;"> Filtering, in general is used to limit or reduce the amount of sensors/assets being monitored, so the more focused, the less data. In general, Environmental Sensor can be used for environmental sensors such as Temperature-Humidity. </p>
+        <ol start="4">
+            <li>Save changes.
+        </li>
+        </ol>
+    </body>
+</html>

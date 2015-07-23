@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="988" MadCap:lastWidth="788">
+    <head>
+        <title>
+        </title>
+    </head>
+    <body>
+        <h1>Add Reader(s)</h1>
+        <p MadCap:conditions="General.notes for reviewers" style="font-weight: normal;text-decoration: underline;font-style: normal;">Moved Readers above Locations, reversing order from source, to match Overview. I note, just for future reference, that this order does not match UI and therefore should not be maintained for a general User manual, though it’s not a problem for Deployment per Wilfred; he says there are often separate teams working on software and hardware installations <MadCap:annotation MadCap:createDate="2015-04-27T17:45:26.9515895-05:00" MadCap:creator="DSFoxx" MadCap:initials="DSF" MadCap:comment="Frank says: This article is pretty good… http://support.rfcode.com/customer/portal/articles/1051502-how-to-configure-add-a-reader-in-asset-manager\r\nThe user can leave most settings alone.\r\n" MadCap:editor="DSFoxx" MadCap:editDate="2015-04-27T17:45:30.7968095-05:00">anyway</MadCap:annotation><![CDATA[  ]]></p>
+        <p>To add readers to<MadCap:variable name="General.ProductName" />, go to <b>Admin Console &gt; Configuration &gt; Readers</b>, click <b>New</b>, and then select the <b>M250</b> reader type.</p>
+        <p>Populate the following reader configuration fields seen and described below.</p>
+        <ul style="list-style-type: circle;">
+            <li>Basic Information<ul style="list-style-type: circle;"><li>Name: This is the identifier that will be seen in <MadCap:variable name="General.ProductName" />; it is a text field, and is not the hostname or IP of the Reader.</li><li>Zone Manager: By default it will use the embedded Zone Manager that is installed with <MadCap:variable name="General.ProductName" />. This will not need to be changed unless you have multiple data center sites where it is recommended that you setup a Zone Manager instance for each site.</li></ul></li>
+            <li>Network Settings<ul style="list-style-type: circle;"><li>Hostname: This is the Hostname/IP Address of the <MadCap:variable name="General.ProductName" />Server</li><li>Port: By default this is set to 6500, and will most likely not need to change. This is the TCP port on the <MadCap:variable name="General.ProductName" />/Zone Manager Server that will accept connections from the Reader(s)</li><li>SSL Mode: This defines the encryption level, SSL that is used between the Reader and <MadCap:variable name="General.ProductName" />/Zone Manager, again the default should suffice.</li></ul><p>Authentication: If you chose to set a username/password on the reader in the Reader Configuration earlier, these fields must match the Reader’s credentials.</p></li>
+            <li>Up Connect Settings: If you chose an alternate configuration for your reader(s), such as using DHCP and Up Connect, then enter the same information in these fields as well as they must match precisely in order to allow the reader to connect to the <MadCap:variable name="General.ProductName" /> and Zone Manager. </li>
+        </ul>
+        <p>NOTE: For more information about Up Connect, refer to the following KB article: <a href="http://support.rfcode.com/customer/portal/articles/744747">http://support.rfcode.com/customer/portal/articles/744747</a></p>
+    </body>
+</html>

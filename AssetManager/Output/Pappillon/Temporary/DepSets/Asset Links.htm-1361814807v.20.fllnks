@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultFileLinkSet
+  FileTitle=""
+  FileSearchable="true"
+  FileTimeEstimate="0"
+  FilePriority="0">
+  <Links>
+    <Link
+      Url="Content/Resources/Stylesheets/Styles.css" />
+    <Link
+      Url="Content/Topics/Asset Manager Administration and Usage Manual/Asset Links.htm" />
+    <Link
+      Url="Content/D_Images/UserManual for reference/030000D5.png" />
+    <Link
+      Url="Content/D_Images/UserManual for reference/030000D9.png" />
+    <Link
+      Url="Content/D_Images/UserManual for reference/030000DA.png" />
+    <Link
+      Url="Content/D_Images/UserManual for reference/030000DB.png" />
+    <Link
+      Url="Content/D_Images/AM Manage Assets - all assets - view dropdown.bmp" />
+    <Link
+      Url="Project/ConditionTagSets/Default.flcts" />
+    <Link
+      Url="Project/VariableSets/General.flvar" />
+    <Link
+      Url="Project/VariableSets/Variables.flvar" />
+  </Links>
+  <LongLinks>
+    <Link
+      Url="Content/Resources/Stylesheets/Styles.css" />
+    <Link
+      Url="Content/Topics/Asset Manager Administration and Usage Manual/Asset Links.htm#Enable" />
+    <Link
+      Url="Content/D_Images/UserManual for reference/030000D5.png" />
+    <Link
+      Url="Content/D_Images/UserManual for reference/030000D9.png" />
+    <Link
+      Url="Content/D_Images/UserManual for reference/030000DA.png" />
+    <Link
+      Url="Content/D_Images/UserManual for reference/030000DB.png" />
+    <Link
+      Url="Content/D_Images/AM Manage Assets - all assets - view dropdown.bmp" />
+    <Link
+      Url="Project/ConditionTagSets/Default.flcts" />
+    <Link
+      Url="Project/VariableSets/General.flvar" />
+    <Link
+      Url="Project/VariableSets/Variables.flvar" />
+  </LongLinks>
+  <Anchors>
+    <Anchor
+      Name="__RefHeading___Toc414541451" />
+    <Anchor
+      Name="Enable" />
+  </Anchors>
+  <Keywords />
+  <Concepts />
+  <ConceptControlNames />
+  <IndexControlNames />
+  <Variables>
+    <Variable
+      Name="General.CompanyName" />
+    <Variable
+      Name="General.ProductName" />
+    <Variable
+      Name="Variables.ProductName" />
+  </Variables>
+  <FileConditions />
+  <FileTags />
+  <AllConditions>
+    <Condition
+      Tag="Default.NewText" />
+  </AllConditions>
+  <Stylesheets>
+    <Url
+      Source="Content/Resources/Stylesheets/Styles.css" />
+  </Stylesheets>
+</CatapultFileLinkSet>

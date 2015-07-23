@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="2" MadCap:lastHeight="2717" MadCap:lastWidth="580">
+    <head>
+    </head>
+    <body>
+        <h1>Tag Lookup/Locating</h1>
+        <p>The following are a list of commands to use the Zone Manager software to lookup tag data:</p>
+        <h2>Tag Print</h2>
+        <p>tagprint &lt;tag-guid&gt; ...</p>
+        <p>http://&lt;baseurl&gt;/tagprint?tagid0=&lt;tag-id&gt;&amp;tagid1=&lt;tag-id&gt;&amp;...</p>
+        <p>where &lt;tag-guid&gt; is the GUID of a specific tag</p>
+        <p>This function prints details of one or more specific tags, including all tag attributes and all the tag’s active tag links (including SSI values).</p>
+        <p>EXAMPLE COMMAND</p>
+        <p>tagprint RFCRCK00000051</p>
+        <p>OR</p>
+        <p>http://10.1.20.90:6580/rfcode_zonemgr/zonemgr/api/</p>
+        <p>tagprint?tagid0=RFCRCK00000051</p>
+        <p>http://10.1.20.90:6580/rfcode_zonemgr/zonemgr/api/tagprint.</p>
+        <p>xml?tagid0=RFCRCK00000051</p>
+        <p>EXAMPLE RESPONSE</p>
+        <p>RFCRCK00000051: tagid=”00000051”, taggroupid=rfcrck, tagtype=mantis04A,</p>
+        <p>irlocator=null, motion=false, tamper=false, panic=false, lowbattery=false,</p>
+        <p>locationzone=”Rack1”, confidencebyrule={rule1=0.72,rule2=0.50625}</p>
+        <p>(R60_channel_A: reader=R60, channel=”A”, ssi=-73)</p>
+        <p>(R60_channel_B: reader=R60, channel=”B”, ssi=-63)</p>
+        <p>(R61_channel_A: reader=R61, channel=”A”, ssi=-77)</p>
+        <p>(R61_channel_B: reader=R61, channel=”B”, ssi=-78)</p>
+        <p>OR</p>
+        <p>RFCRCK00000051: tagid=”00000051”, taggroupid=rfcrck, tagtype=mantis04A,</p>
+        <p>irlocator=null, motion=false, tamper=false, panic=false, lowbattery=false,</p>
+        <p>locationzone=”Rack1”, confidencebyrule={rule71=0.2781818181818182,rule72=0.5645</p>
+        <p>454545454546,rule73=0.3109090909090909,rule04=0.162}</p>
+        <p>(R71_channel_A: reader=R71, channel=”A”, ssi=-104)</p>
+        <p>(R71_channel_B: reader=R71, channel=”B”, ssi=-92)</p>
+        <p>(R72_channel_A: reader=R72, channel=”A”, ssi=-83)</p>
+        <p>(R72_channel_B: reader=R72, channel=”B”, ssi=-78)</p>
+        <p>(R73_channel_A: reader=R73, channel=”A”, ssi=-100)</p>
+        <p>(R73_channel_B: reader=R73, channel=”B”, ssi=-92)</p>
+        <p>(m64_channel_A: reader=m64, channel=”A”, ssi=-107)</p>
+        <p>(m64_channel_B: reader=m64, channel=”B”, ssi=-95)</p>
+        <p>ORTag Lookup/Locating</p>
+        <p>- &lt;tag-list&gt;</p>
+        <p>- &lt;tag id=”RFCRCK00000051”&gt;</p>
+        <p>&lt;attrib id=”tagid”&gt;00000051&lt;/attrib&gt;</p>
+        <p>&lt;attrib id=”taggroupid”&gt;rfcrck&lt;/attrib&gt;</p>
+        <p>&lt;attrib id=”tagtype”&gt;mantis04A&lt;/attrib&gt;</p>
+        <p>- &lt;attrib id=”irlocator”&gt;</p>
+        <p>&lt;null /&gt;</p>
+        <p>&lt;/attrib&gt;</p>
+        <p>&lt;attrib id=”motion”&gt;false&lt;/attrib&gt;</p>
+        <p>&lt;attrib id=”tamper”&gt;false&lt;/attrib&gt;</p>
+        <p>&lt;attrib id=”panic”&gt;false&lt;/attrib&gt;</p>
+        <p>&lt;attrib id=”lowbattery”&gt;false&lt;/attrib&gt;</p>
+        <p>&lt;attrib id=”locationzone”&gt;Rack1&lt;/attrib&gt;</p>
+        <p>- &lt;attrib id=”confidencebyrule”&gt;</p>
+        <p>- &lt;map&gt;</p>
+        <p>&lt;entry id=”rule71”&gt;0.2781818181818182&lt;/entry&gt;</p>
+        <p>&lt;entry id=”rule72”&gt;0.5645454545454546&lt;/entry&gt;</p>
+        <p>&lt;entry id=”rule73”&gt;0.3109090909090909&lt;/entry&gt;</p>
+        <p>&lt;entry id=”rule04”&gt;0.162&lt;/entry&gt;</p>
+        <p>&lt;/map&gt;</p>
+        <p>&lt;/attrib&gt;</p>
+        <p>- &lt;tag-link-list&gt;</p>
+        <p>- &lt;tag-link id=”RFCRCK00000051_R71_channel_A”&gt;</p>
+        <p>&lt;attrib id=”tagid”&gt;RFCRCK00000051&lt;/attrib&gt;</p>
+        <p>&lt;attrib id=”channelid”&gt;R71_channel_A&lt;/attrib&gt;</p>
+        <p>&lt;attrib id=”ssi”&gt;-104&lt;/attrib&gt;</p>
+        <p>&lt;/tag-link&gt;</p>
+        <p>- &lt;tag-link id=”RFCRCK00000051_R71_channel_B”&gt;</p>
+        <p>&lt;attrib id=”tagid”&gt;RFCRCK00000051&lt;/attrib&gt;</p>
+        <p>&lt;attrib id=”channelid”&gt;R71_channel_B&lt;/attrib&gt;</p>
+        <p>&lt;attrib id=”ssi”&gt;-92&lt;/attrib&gt;</p>
+        <p>&lt;/tag-link&gt;</p>
+        <p>- &lt;tag-link id=”RFCRCK00000051_R72_channel_A”&gt;</p>
+        <p>&lt;attrib id=”tagid”&gt;RFCRCK00000051&lt;/attrib&gt;</p>
+        <p>&lt;attrib id=”channelid”&gt;R72_channel_A&lt;/attrib&gt;</p>
+        <p>&lt;attrib id=”ssi”&gt;-83&lt;/attrib&gt;</p>
+        <p>&lt;/tag-link&gt;</p>
+        <p>- &lt;tag-link id=”RFCRCK00000051_R72_channel_B”&gt;</p>
+        <p>&lt;attrib id=”tagid”&gt;RFCRCK00000051&lt;/attrib&gt;</p>
+        <p>&lt;attrib id=”channelid”&gt;R72_channel_B&lt;/attrib&gt;</p>
+        <p>&lt;attrib id=”ssi”&gt;-78&lt;/attrib&gt;</p>
+        <p>&lt;/tag-link&gt;</p>
+        <p>- &lt;tag-link id=”RFCRCK00000051_R73_channel_A”&gt;</p>
+        <p>&lt;attrib id=”tagid”&gt;RFCRCK00000051&lt;/attrib&gt;</p>
+        <p>&lt;attrib id=”channelid”&gt;R73_channel_A&lt;/attrib&gt;</p>
+        <p>&lt;attrib id=”ssi”&gt;-100&lt;/attrib&gt;</p>
+        <p>&lt;/tag-link&gt;</p>
+        <p>- &lt;tag-link id=”RFCRCK00000051_R73_channel_B”&gt;</p>
+        <p>&lt;attrib id=”tagid”&gt;RFCRCK00000051&lt;/attrib&gt;</p>
+        <p>&lt;attrib id=”channelid”&gt;R73_channel_B&lt;/attrib&gt;</p>
+        <p>&lt;attrib id=”ssi”&gt;-92&lt;/attrib&gt;</p>
+        <p>&lt;/tag-link&gt;</p>
+        <p>- &lt;tag-link id=”RFCRCK00000051_m64_channel_A”&gt;</p>
+        <p>&lt;attrib id=”tagid”&gt;RFCRCK00000051&lt;/attrib&gt;</p>
+        <p>&lt;attrib id=”channelid”&gt;m64_channel_A&lt;/attrib&gt;</p>
+        <p>&lt;attrib id=”ssi”&gt;-107&lt;/attrib&gt;</p>
+        <p>&lt;/tag-link&gt;</p>
+        <h2>Introduction</h2>
+        <p>- &lt;tag-link id=”RFCRCK00000051_m64_channel_B”&gt;</p>
+        <p>&lt;attrib id=”tagid”&gt;RFCRCK00000051&lt;/attrib&gt;</p>
+        <p>&lt;attrib id=”channelid”&gt;m64_channel_B&lt;/attrib&gt;</p>
+        <p>&lt;attrib id=”ssi”&gt;-95&lt;/attrib&gt;</p>
+        <p>&lt;/tag-link&gt;</p>
+        <p>&lt;/tag-link-list&gt;</p>
+        <p>&lt;/tag&gt;</p>
+        <p>&lt;/tag-list&gt;</p>
+        <p MadCap:conditions="Default.Notes for authors">source:&#160;unreleased doc Zone Manager User Manual (beta)</p>
+    </body>
+</html>

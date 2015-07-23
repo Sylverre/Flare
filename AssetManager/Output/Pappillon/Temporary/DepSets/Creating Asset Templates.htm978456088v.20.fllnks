@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultFileLinkSet
+  FileTitle=""
+  FileSearchable="true"
+  FileTimeEstimate="0"
+  FilePriority="0">
+  <Links>
+    <Link
+      Url="Content/D_Images/UserManual for reference/0300002E.png" />
+    <Link
+      Url="Content/D_Images/UserManual for reference/0300002F.png" />
+    <Link
+      Url="Content/D_Images/UserManual for reference/03000030.png" />
+    <Link
+      Url="Content/D_Images/UserManual for reference/03000031.png" />
+    <Link
+      Url="Content/D_Images/UserManual for reference/03000032.png" />
+    <Link
+      Url="Project/VariableSets/Variables.flvar" />
+  </Links>
+  <LongLinks>
+    <Link
+      Url="Content/D_Images/UserManual for reference/0300002E.png" />
+    <Link
+      Url="Content/D_Images/UserManual for reference/0300002F.png" />
+    <Link
+      Url="Content/D_Images/UserManual for reference/03000030.png" />
+    <Link
+      Url="Content/D_Images/UserManual for reference/03000031.png" />
+    <Link
+      Url="Content/D_Images/UserManual for reference/03000032.png" />
+    <Link
+      Url="Project/VariableSets/Variables.flvar" />
+  </LongLinks>
+  <Anchors>
+    <Anchor
+      Name="__RefHeading___Toc414541353" />
+  </Anchors>
+  <Keywords />
+  <Concepts />
+  <ConceptControlNames />
+  <IndexControlNames />
+  <Variables>
+    <Variable
+      Name="Variables.ProductName" />
+  </Variables>
+  <FileConditions />
+  <FileTags />
+  <AllConditions />
+  <Stylesheets />
+</CatapultFileLinkSet>

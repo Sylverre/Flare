@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="3363" MadCap:lastWidth="1096">
+    <head>
+        <title>
+        </title>
+    </head>
+    <body>
+        <h1>
+            <a name="__RefHeading___Toc414541489">
+            </a>
+            <a name="_Advanced_Reader_Configuration">
+            </a>Advanced Reader Configuration</h1>
+        <p>The following areas and fields are available to you when configuring RF Code readers.</p>
+        <p>The first two advanced reader configuration settings are <span class="Strong">Authentication</span> and <span class="Strong">Up Connect</span> settings.&#160; The third – <span class="Strong">Position</span> <span class="Strong">Settings</span> – as well as the <span class="Strong">Advanced</span> settings area and those that follow it are very rarely changed. </p>
+        <p>
+            <img src="../../../RFC-AM Comprehensive/Content/Resources/Images/UserManual for reference/03000118.png" style="height: 336px;width: 479px;" class="img_2" />
+        </p>
+        <h2>Authentication</h2>
+        <ul>
+            <li>
+                <span class="Strong">User ID: </span> Enter your user name or user ID
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <span class="Strong">Password: </span> Enter a password. 
+            </li>
+            <li>
+                <span class="Strong">Confirm Password:</span>  Enter the same password again.
+            </li>
+        </ul>
+        <p>&#160;</p>
+        <h2>Up Connect Settings</h2>
+        <ul>
+            <li>
+                <span class="Strong">Up Connection Enabled: </span> If you are configuring an “Up-Connection Reader” that you would like to go active and receive and transmit tag data once you configure it within <MadCap:variable name="General.ProductName" />, this box should be checked.&#160; (Please refer to the Reader Configuration Utility User Manualfor more information, found in the .zip file with the Reader Configuration Utility here:&#160; </li>
+        </ul>
+        <p>
+            <a href="http://www.rfcode.com/helpdesk_downloads/Dropbox/Public/Utilities/RFCodeRCU.zip">http://www.rfcode.com/helpdesk_downloads/Dropbox/Public/Utilities/RFCodeRCU.zip</a>)
+        </p>
+        <ul>
+            <li>
+                <span class="Strong">Up Connection Reader ID: </span> The ID that was assigned when you configured your reader as an up-connection reader should be entered in this field.<br /></li>
+            <li>
+                <span class="Strong">Up Connection Password: </span> If you assigned a password when you configured your Up-Connection reader with the Reader Configuration Utility, you will need to enter and confirm the password for use with <MadCap:variable name="General.ProductName" />. <br /></li>
+        </ul>
+        <ul>
+            <li>
+                <span class="Strong">Confirm Password:</span>  Enter the same password again.
+            </li>
+        </ul>
+        <p>&#160;</p>
+        <p class="note" MadCap:autonum="&lt;b&gt;NOTE:&lt;/b&gt; &#160;">The following sections are generally not used, and should be done with caution and planning.
+        </p>
+        <h2>Position Settings</h2>
+        <ul>
+            <li>
+                <span class="Strong">Position Source: </span>
+                <br />
+            </li>
+        </ul>
+        <ul>
+            <li>If your reader is not going to use a GPS location, then leave the default setting of <span class="Strong">None</span>.&#160; <br /></li>
+            <li>If you are going to connect the reader to a GPS device, select <span class="Strong">Reader GPS</span> to enable it to report its GPS coordinates and to filter GPS data. Doing so will present you with additional fields related to configuring GPS settings.<br /></li>
+        </ul>
+        <ul>
+            <li>
+                <span class="Strong">Minimum Tag SSI for Position Match: </span> Input the minimum SSI value required that will indicate that the tagged asset will match the position of the reader to indicate the GPS location. 
+            </li>
+            <li>
+                <span class="Strong">GPS Data Reporting: </span> For this field, choose which GPS data you want reported in the <MadCap:variable name="General.ProductName" /> system. 
+            </li>
+            <li>
+                <span class="Strong">Minimum GPS Update Period:</span>  Select this checkbox to use global settings or enter a value. 
+            </li>
+            <li>
+                <span class="Strong">Minimum Horizontal Change:</span>  Select this checkbox to use global settings or enter a value. 
+            </li>
+            <li>
+                <span class="Strong">Minimum Vertical Change:</span>  Select this checkbox to use global settings or enter a value. <br /></li>
+        </ul>
+        <ul>
+            <li>If you would like to set a static GPS location for the reader, select <span class="Strong">Static Position</span>, enter the <span class="Strong">Minimum Tag SSI for Position Match</span> (described above), and then manually enter its GPS coordinates in <span class="Strong">Reader Position</span> field that becomes visible.&#160; <br /></li>
+        </ul>
+        <p>
+            <img src="../../../RFC-AM Comprehensive/Content/Resources/Images/UserManual for reference/03000119.png" style="height: 444px;width: 449px;" class="img_2" />
+        </p>
+        <h2>Advanced Settings</h2>
+        <ul>
+            <li>
+                <span class="Strong">SSI Change Threshold: </span> &lt;min-ssi-change&gt; is a parameter that allows messages that report small Signal Strength Indicator (SSI) value changes to be treated as “unchanged”. Any message where all the SSI values reported are &lt;min-ssi-change&gt; or less dBm different from the previously reported message will be considered to have not changed.&#160; The default value is 3. <br /></li>
+            <li>
+                <span class="Strong">SSI Cutoff (Channel A, B): </span> Sets the channel SSI threshold to the respective dBm (fixed threshold value).&#160; RF Code reader limitation is 41 to 115 dB.&#160; This feature is used to reduce the effective read range of a reader.&#160; For example, entering a value of 68 for channel A and B will cause tags that are read at -68dB or less to not be reported. In general, tags that are further away from a reader have lower SSI values. <br /></li>
+            <li>
+                <span class="Strong">Tag Age-Out Time: </span> is the number of seconds since the last successful message read from a tag before the tag is considered “lost.” The allowed values range from 10 to 32767. The default value is 60 seconds. If the value is set to 0, the tag timeout is infinite. A tag that has not been seen by a reader for “n” seconds will be reported as not present. <br /></li>
+            <li>
+                <span class="Strong">Tag Age-Out Time (Channel A, B): </span> This field functions the same as Tag Age-Out Time, but is Channel specific. <br /></li>
+            <li>
+                <span class="Strong">Tag Age-Out Time (Reader Offline): </span> Is the length of time to keep tags in the system if a reader goes offline. “n” seconds after a reader goes offline the tags that had been reported by this reader will be reported as offline. <br /></li>
+            <li>
+                <span class="Strong">Tag Age-In Count: </span> is an optional parameter used to tell the reader to not report messages from a tag until “n” messages have been received from that tag. This allows the option of ignoring tags that may appear for a short period of time (for example, due to a tag isolation box being opened for a few seconds). <br /></li>
+            <li>
+                <span class="Strong">Channel Bias (Channel A, B): </span> This setting allows for a compensation offset value to be added when different gain antennae are used. <br /></li>
+            <li MadCap:conditions="Default.SourceText">
+                <span class="Strong">Report Tag Controller Events Checkbox: </span> Enables a reader to report events that occur when using the RF Code Tag <MadCap:annotation MadCap:createDate="2015-06-01T14:43:48.9449846-05:00" MadCap:creator="Pappillon" MadCap:initials="PA" MadCap:comment="per Beau 06/01/15 should not be in any current publication." MadCap:editor="Pappillon" MadCap:editDate="2015-06-01T14:44:00.7886620-05:00">Controller.</MadCap:annotation> <br /></li>
+            <li>
+                <span class="Strong">Join Reader Channels Checkbox: </span> Enables a reader’s channel A and B into a single channel, by evaluating the raw samples and reporting the strongest single sample stream. <br /></li>
+            <li>
+                <span class="Strong">Merge Reader Channels Checkbox: </span> Enables a reader’s channel A and B to be merged into a single channel, by combining the raw samples into an average single sample stream. <br /></li>
+            <li>
+                <span class="Strong">Fault In Mask:</span> These is the first tag payload filter and limiting function that is set in octal values.<br /></li>
+            <li>
+                <span class="Strong">Fault In Value:</span> These is the second tag payload filter and limiting function that is set in octal values.<br /></li>
+            <li>
+                <span class="Strong">Change Ignore Mask: </span> These is the third tag payload filter and limiting function that is set in octal values.
+            </li>
+        </ul>
+        <p>&#160;</p>
+        <p>
+            <img src="../../../RFC-AM Comprehensive/Content/Resources/Images/UserManual for reference/0300011A.png" style="height: 241px;width: 449px;" class="img_2" />
+        </p>
+        <h2>Reader Partitioning</h2>
+        <ul>
+            <li>
+                <span class="Strong">Reader Partition Count: </span> This indicates the number of portions the tag ID range will be divided into. The value must be from 1 to 32, and must be greater than the Reader Partition Index. The default is 1.<br /></li>
+            <li>
+                <span class="Strong">Reader Partition Index: </span>This indicates which portion of the range of tag IDs the reader will observe (specifically, what the remainder must be when the tag ID is divided by the Reader Partition Count). The value must be from 0 to 31, and must be less than the Reader Partition Count. The default is 0. <br /></li>
+            <li>
+                <span class="Strong">Reader Partition Rotation Time: </span> This specifies the amount of time that the reader is reset to observe tag IDs of the next partition index. The default is 0, which will not reset the reader to observe tag IDs of the next partition index. <br />For additional in-depth information about Reader Partitioning, consult the following RF Code Support KB article: <a href="http://support.rfcode.com/customer/portal/articles/846730">http://support.rfcode.com/customer/portal/articles/846730</a></li>
+        </ul>
+        <p>&#160;</p>
+        <h2>Diagnostics </h2>
+        <ul>
+            <li>
+                <span class="Strong">Noise Threshold: </span> This is the threshold for <MadCap:variable name="General.ProductName" /> to send an alert for excessive RF noise in the system, as detected by the reader (“D” command for noise level). If the noise is excessive, the reader performance is compromised. 
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <span class="Strong">Tag Event Rate Threshold: </span> This is the threshold that will determine high reader event activity. 
+            </li>
+        </ul>
+        <p>&#160;</p>
+        <h2>Serial Port </h2>
+        <ul>
+            <li>
+                <span class="Strong">Serial Driver: </span> Choose the serial driver parameters used to communicate with the serial device. This should be indicated with the literature that came with the device.&#160; <br />For additional information, consult the following KB article: <a href="http://support.rfcode.com/customer/portal/articles/728501">http://support.rfcode.com/customer/portal/articles/728501</a></li>
+        </ul>
+    </body>
+</html>

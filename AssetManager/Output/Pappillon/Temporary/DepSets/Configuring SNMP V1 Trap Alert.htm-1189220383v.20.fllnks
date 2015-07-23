@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultFileLinkSet
+  FileTitle=""
+  FileSearchable="true"
+  FileTimeEstimate="0"
+  FilePriority="0">
+  <Links>
+    <Link
+      Url="Content/Topics/Asset Manager Administration and Usage Manual/SNMP V1 and V3 Trap Formatting.htm" />
+  </Links>
+  <LongLinks>
+    <Link
+      Url="Content/Topics/Asset Manager Administration and Usage Manual/SNMP V1 and V3 Trap Formatting.htm#_SNMP_V1_or_1" />
+  </LongLinks>
+  <Anchors />
+  <Keywords />
+  <Concepts />
+  <ConceptControlNames />
+  <IndexControlNames />
+  <Variables />
+  <FileConditions />
+  <FileTags />
+  <AllConditions />
+  <Stylesheets />
+</CatapultFileLinkSet>

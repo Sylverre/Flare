@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="2268" MadCap:lastWidth="776">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>How to Set Up a Humidity Alert Email for Existing Temperature and/or Humidity Tags</h1>
+        <p>To set up a humidity alert email for an existing temperature and/or humidity tag, perform the following steps:</p>
+        <ol>
+            <li>In <span class="strong">User Console</span>, click on the <span class="strong">Alert Management</span> tab in the left-hand column.<br /></li>
+            <li>Click on the <span class="strong">Thresholds</span> tab.<br /></li>
+            <li>In the <span class="strong">Asset Alert Threshold</span> window, choose <span class="strong">Humidity Alert Threshold</span> from the drop-down menu. <br /></li>
+            <li>Complete the relevant form fields.<br /><span class="strong">Name</span>: Humidity Alert Threshold<br /><span class="strong">Threshold Filter Asset Type</span>: Sensor (would cover all sensor tags).<br /><span class="strong">First Attribute Value Operator</span>: “&gt;=” or “&gt;” are logical choices.<br /><span class="strong">First Attribute Value</span>: “45” or your numerical preference (this is the Relative Humidity (RH) percentage value).<br /><br /><img src="../../Images/AM Alert Management - Thresholds - New - Humidity Alert.bmp" class="imgfullwidth" /><br /></li>
+            <li>Click the <span class="strong">Save Changes</span> button.<br /></li>
+            <li>Click <span class="strong">Actions</span>.</li>
+            <li>In the <span class="strong">Asset Alert Action</span> window, select <span class="strong">Email Alert Action</span> from the drop-down menu. <br /><br /><img src="../../Images/AM Alert Management - Actions - New Email Alert Action.bmp" class="imgfullwidth" /></li>
+            <li>Complete the relevant form fields.<br /><br /><span class="strong">Name</span>:&#160; Email John Doe.<br /><span class="strong">Email Address(es)</span>:&#160; jdoe@yourcompany.com<br /></li>
+        </ol>
+        <p class="note" MadCap:autonum="&lt;b&gt;NOTE:&lt;/b&gt; &#160;"> There are other fields you can complete to enable other features, but they are not required for simple email alerts. </p>
+        <p><span class="strong">Repeat Alert Action</span>: to repeat the email alert<br /><span class="strong">Alert Action Repeat Interval</span>: to choose the time interval you want the alert email to be repeatedly sent <MadCap:annotation MadCap:createDate="2015-04-28T14:40:26.8102895-05:00" MadCap:creator="DSFoxx" MadCap:initials="DSF" MadCap:comment="...using?  Also, format?" MadCap:editor="DSFoxx" MadCap:editDate="2015-04-28T14:42:56.7420676-05:00">using</MadCap:annotation><br /><span class="strong">Alert When Resolved</span>: to inform you when the alert is resolved<br /></p>
+        <ol>
+            <li>Click the <span class="strong">Save Changes</span> button.<br /></li>
+            <li>Click on the <span class="strong">Thresholds</span> tab under <span class="strong">Alert Management</span>. <br /></li>
+            <li>In the <span class="strong">Asset Alert Threshold</span> window, choose <span class="strong">Humidity Alert Threshold</span> from the drop-down menu.<br /></li>
+            <li>Scroll down to the <span class="strong">Alert Actions</span> field and then click the Ellipsis <span class="strong">[…]</span> button.<br /><br /><img src="../../Images/AM Alert Management - Thresholds - Select Action.bmp" class="imgfullwidth" /></li>
+            <li>Double-click the alert on the left side under <span class="strong">Available</span> and it will move to the right side under <span class="strong">Selected</span>.<br /></li>
+            <li>Click the <span class="strong">OK</span> button.<br />The <span class="strong">Action</span> will then be available in the <span class="strong">Alert Actions </span>field.<br /></li>
+            <li>Click the <span class="strong">Save Changes</span> button.</li>
+        </ol>
+    </body>
+</html>

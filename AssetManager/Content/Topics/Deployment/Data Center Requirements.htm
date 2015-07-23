@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="2" MadCap:lastHeight="1627" MadCap:lastWidth="741">
+    <head>
+        <title>
+        </title>
+    </head>
+    <body>
+        <h1>Physical Operations and Requirements for Data Centers  </h1>
+        <p>During the purchase process, you completed a needs assessment, site survey, and inventory.  <MadCap:variable name="General.CompanyName" />, using information you provided, determined quantities and types of hardware needed, and recommended reader and locator placements. When selecting a pilot area or if necessary for troubleshooting, you may wish to review these considerations.</p>
+        <p>Each site is somewhat unique, but a general rule of thumb for data centers is to have every reader cover a zone of tags with 25-foot radius, with overlapping zones of coverage to ensure there are no dead zones. To accomplish this most effectively, <MadCap:variable name="General.CompanyName" /> recommends that CAD drawings and/or site maps are used to properly locate where the readers should be <MadCap:annotation MadCap:createDate="2015-06-19T11:06:10.8447892-05:00" MadCap:creator="Pappillon" MadCap:initials="PA" MadCap:comment="061815 review, Frank says: see if Wilfried has a map that you can use.  E-mailed W. 061915, he says he'll have to take a look next week when he's in the office, as most of them are customer confidential.\r\n" MadCap:editor="Pappillon" MadCap:editDate="2015-06-19T11:17:16.4288584-05:00">placed.</MadCap:annotation> <![CDATA[ ]]></p>
+        <p MadCap:conditions="Default.NewText" style="font-weight: normal;font-style: normal;">Depending on site, you may wish to include some level of monitoring for hallways, storage areas, etc. Range reads for these areas would follow the general rule for typical office spaces. </p>
+        <p>Note that as opposed to data centers, range reads in the 75-foot range are normal in typical office spaces and 300-foot ranges are possible outside; the limiting factor in a data center is the density of metal in the environment that impairs RF signals. These guidelines were developed by <MadCap:variable name="General.CompanyName" /> deployment specialists and are found to work in most environments.</p>
+        <p>Three major considerations of reader and tag placement are as follows:</p>
+        <h2>Measurement of RF Noise</h2>
+        <p>Generally, you want noise levels to be no greater than -90dB.</p>
+        <p>Most environments have some level of RF noise from other electronic devices but usually not enough to have any effect on tag read range. In rare cases, RF noise sources that affect read range may include on-site plant equipment or equipment from nearby facilities such as airports or military installations. In these cases,  additional readers may be necessary to get the necessary coverage.</p>
+        <h2>Tag Read Range</h2>
+        <p>Building materials, obstructions, racks, stacked equipment, and the material of the tagged equipment itself can all affect tag read range and will give an indication of the number of readers needed to cover a given area.</p>
+        <h2>IR&#160;Locator Considerations</h2>
+        <p>Data centers commonly use both IR&#160;Rack Locators and IR&#160;Room Locators. These require power and do not work in direct sunlight, and require that IR-enabled tags be used. Rack type and dimensions determine which IR&#160;strips are required and how IR&#160;Rack Locator equipment will be mounted. </p>
+        <h2>IT Considerations</h2>
+        <p>Power and network drops should be noted in relation to desired reader and locator placement. Also, network topology needs to be considered especially in cases of multi-site deployments. Most <MadCap:variable name="General.CompanyName" /> deployments in the data center utilize Power over Ethernet (PoE) for readers so that power drops are not needed; IR Rack Locators can be plugged into Rack PDUs; but IR&#160;Room Locators may require external power. <MadCap:conditionalText MadCap:conditions="Default.SysManual">For guidelines about hardware, software, and database requirements, refer to <a href="DCM Hardware, Software, and Database Requirements.htm"><MadCap:variable name="General.ProductName" /> Hardware, Software, and Database Requirements</a>.</MadCap:conditionalText></p>
+        <h2 MadCap:conditions="Default.NewText,Default.Logan">Regulations and Guidelines</h2>
+        <p MadCap:conditions="Default.NewText">Your strategic coals and the need to comply with industry or government regulations and Service Level Agreements (SLAs) are key considerations in the deployment plan.  Which elements you monitor determines the type and number of tags you deploy in a given area.</p>
+    </body>
+</html>

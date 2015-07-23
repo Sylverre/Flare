@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="429" MadCap:lastWidth="1070">
+    <head>
+        <title>
+        </title>
+    </head>
+    <body>
+        <h1>
+            <a name="__RefHeading___Toc414541498">
+            </a>Using SSL Certificates with <MadCap:variable name="Variables.CompanyName" /> Readers</h1>
+        <p>By default, when HTTPS is enabled, a self-signed 10-year SSL certificate is generated so that communication on the HTTPS port is encrypted.&#160; To communicate with both encryption and authentication, an SSL certificate must be digitally signed by a well-known certificate authority (CA).&#160; Contact your Network or System Administrator to obtain a signed SSL Certificate.</p>
+        <p>First, you will need to generate a private key or use a certificate authority to create one. You will need a private key to generate a CSR, and then submit the CSR to a certificate authority.</p>
+        <ol>
+            <li>Obtain a private key using a preferred tool or use a certificate authority to provide this service. <br /></li>
+        </ol>
+        <p class="note">Archive the key and file in a safe place for security purposes. This key will be needed later when you configure the SSL certificate.</p>
+        <p>A Certificate Signing Request (CSR) is then generated based on the private key.<br /></p>
+        <ol MadCap:continue="true">
+            <li>Submit the CSR to a certificate authority.</li>
+        </ol>
+        <p>The certificate authority then issues an SSL certificate (in a PEM format) based on the CSR.</p>
+    </body>
+</html>

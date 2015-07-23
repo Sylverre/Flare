@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="2" MadCap:lastHeight="818" MadCap:lastWidth="802">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>Database Backup and Restore without Microsoft SQL Management <MadCap:annotation MadCap:createDate="2015-05-22T14:46:44.7950376-05:00" MadCap:creator="DSFoxx" MadCap:initials="DSF" MadCap:comment="still applicable?  Studio is free..." MadCap:editor="Pappillon" MadCap:editDate="2015-06-29T09:52:20.4055676-05:00">Studio</MadCap:annotation> <![CDATA[ ]]></h1>
+        <p>It may be necessary to backup and/or restore an <MadCap:variable name="Variables.CompanyName" /> SQL database without the ability to use the SQL Management Studio.&#160; In this case, you can use the following SQL commands and run them from the Windows SQL Server.&#160;<br /><br />To backup an <MadCap:variable name="Variables.CompanyName" /> database called “<MadCap:annotation MadCap:createDate="2015-04-27T12:51:26.2960386-05:00" MadCap:creator="DSFoxx" MadCap:initials="DS" MadCap:comment="correct for Logan?" MadCap:editor="DSFoxx" MadCap:editDate="2015-04-27T12:51:30.4442759-05:00">daytona”</MadCap:annotation> (which is the default name assigned to the <MadCap:variable name="Variables.CompanyName" /> database when it is installed with the SQL Server Express option in the <MadCap:variable name="Variables.ProductName" /> installation wizard) to a file named <span class="codefont">c:\sqlback.bak</span>, issue the following command on a Windows Command (cmd) prompt on the SQL Server, which may or may not be on the same server as the <MadCap:variable name="Variables.ProductName" /> server application:
+        </p>
+        <p class="note" MadCap:autonum="&lt;b&gt;NOTE:&lt;/b&gt; &#160;"> SQL Server Express 2012 is bundled with a version of the SQL Management Studio; therefore, you can back up and restore SQL databases, such as the <MadCap:variable name="Variables.ProductName" /> database, using that menu-driven utility.
+        </p>
+        <p><span class="strong">SQL Express 2008 Syntax:</span>
+        </p>
+        <p><span class="codefont">c:\Users\Administrator&gt;sqlcmd –E –S localhost\<MadCap:annotation MadCap:createDate="2015-06-08T16:04:13.0746042-05:00" MadCap:creator="Pappillon" MadCap:initials="PA" MadCap:comment="needs update for CS" MadCap:editor="Pappillon" MadCap:editDate="2015-06-08T16:04:18.1458943-05:00">RFCASSETMGR</MadCap:annotation> –Q “BACKUP DATABASE [daytona] TO DISK=’c:\sqlback.bak'"</span>
+        </p>
+        <p class="note" MadCap:autonum="&lt;b&gt;NOTE:&lt;/b&gt; &#160;">&#160;“localhost\RFCASSETMGR”= Installed by default by <MadCap:variable name="Variables.ProductName" /></p>
+        <p>“RFCASSETMGR” is the Database “instance” running on the local server (that is, “localhost”).&#160; </p>
+        <p>The actual database name, running within the SQL instance, is “daytona”&#160;</p>
+    </body>
+</html>

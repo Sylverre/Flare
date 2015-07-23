@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="1563" MadCap:lastWidth="639">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>For SNMP V3 Event Actions</h1>
+        <p>The configuration settings for SNMP V3 Event Actions are the same as those for SNMP V1 Event Actions, with the addition of the following configuration settings:</p>
+        <p>
+            <img src="../../Images/UserManual for reference/03000069.png" style="height: 269px;width: 393px;" class="img_2" />
+        </p>
+        <p class="note" MadCap:autonum="&amp;lt;b&amp;gt;NOTE:&amp;lt;/b&amp;gt; &#160;">&#160; <MadCap:variable name="Variables.ProductName" /> can send out-bound SNMP "traps" (alarms) to an external (third-party) management system; however, it does not support being polled by third-party applications with commands like snmp-get or snmp-walk.</p>
+        <ul>
+            <li><span class="Strong">Transport Protocol</span>: Select UDP or TCP.</li>
+            <li><span class="Strong">Hostname</span>: The hostname.</li>
+            <li><span class="Strong">Port: </span>By default, 162.</li>
+            <li><span class="Strong">Type of Notification</span>: Select TRAP or INFORM.</li>
+            <li><span class="Strong">Authentication User ID/Password/Confirm</span>: Enter the user ID and password for your server and confirm it.</li>
+            <li><span class="Strong">Authentication Protocol</span>: Select None, SHA-1, or MD5 (by default this is set to SHA-1).<br /></li>
+        </ul>
+        <p>
+            <img src="../../Images/UserManual for reference/0300006A.png" style="height: 283px;width: 396px;" class="img_2" />
+            <br />
+        </p>
+        <ul>
+            <li><span class="Strong">Additional Attributes</span>: Select the additional attributes you would like to publish for the event.</li>
+            <li><span class="Strong">Engine ID</span>: Within an administrative domain, an SNMP Engine ID is the unique and unambiguous identifier of an SNMP engine. Since there is a one-to-one association between SNMP engines and SNMP entities, it also uniquely and unambiguously identifies the SNMP entity. Enter the SNMP Engine ID (if applicable).</li>
+            <li><span class="Strong">Context Engine ID</span>: Within an administrative domain, a contextEngineID uniquely identifies an SNMP entity that may realize an instance of a context with a particular contextName. Enter the SNMP Context Engine ID (if applicable).</li>
+            <li><span class="Strong">Context Name</span>: A contextName is used to name a context. Each contextName MUST be unique within an SNMP entity. Enter a Context Name (if applicable).</li>
+            <li><span class="Strong">Encryption Protocol</span>: Select None, DES, or AES-128 as encryption protocol.</li>
+            <li><span class="Strong">Encryption Password/Confirm</span>: Enter the encryption password and confirm it.</li>
+        </ul>
+        <p class="note" MadCap:autonum="&amp;lt;b&amp;gt;NOTE:&amp;lt;/b&amp;gt; &#160;">&#160; The <MadCap:variable name="Variables.CompanyName" /> MIB file can be found in the "mib" directory with the <MadCap:variable name="Variables.ProductName" /> installation directory in Windows, or on the <MadCap:variable name="Variables.CompanyName" /> Support website: <a href="http://support.rfcode.com/customer/portal/articles/716055">http://support.rfcode.com/customer/portal/articles/716055</a><![CDATA[  ]]></p>
+    </body>
+</html>

@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="2389" MadCap:lastWidth="750">
+    <head><title></title>
+    </head>
+    <body>
+        <h1><a name="__RefHeading___Toc414541446"></a> Adding Users </h1>
+        <p>Users can be created within <MadCap:variable name="General.ProductName" /> or imported from LDAP/Active Directory if using. Security settings can be applied when user accounts are created or at any time thereafter.</p>
+        <p MadCap:conditions="Default.SourceText">The first step to managing Users and setting levels of access for them is to create <MadCap:annotation MadCap:createDate="2015-05-18T10:26:36.4421720-05:00" MadCap:creator="DSFoxx" MadCap:initials="DSF" MadCap:comment="I roll my eyes every time I actually read this statement.  " MadCap:editor="DSFoxx" MadCap:editDate="2015-05-18T10:26:48.2808492-05:00">them.</MadCap:annotation>&#160; </p>
+        <h2>Create a User <MadCap:annotation MadCap:createDate="2015-07-02T14:12:57.2808614-05:00" MadCap:creator="Pappillon" MadCap:initials="PA" MadCap:comment="check heading level settings for this section!" MadCap:editor="Pappillon" MadCap:editDate="2015-07-02T14:13:05.0483057-05:00">Account</MadCap:annotation></h2>
+        <ol>
+            <li>Access the <span class="Strong">Admin Console.</span></li>
+            <li>Click <span class="Strong">Security &gt; Users</span>. </li>
+            <li MadCap:conditions="Default.SourceText">Click the <span class="Strong">New</span> button.<br>Enabled </br><br /><img src="../../Images/UserManual for reference/030000CC.png" /><br /><br />For each User account, there are several mandatory fields and others that are optional.&#160; At a minimum, provide each User with a Name (which is the username), a Password (unless you are integrating with Active Directory), a Full Name (which is a description or the real name of the user), and a Role.<br /><br /><img src="../../Images/AM Add Users - New User.bmp" class="imgfullwidth" /></li>
+        </ol>
+        <p MadCap:conditions="Default.SourceText">Other settings that can be configured for each User account include:&#160; </p>
+        <p MadCap:conditions="Default.NewText">4. Complete all required and any desired additional fields.</p>
+        <h4>User Information</h4>
+        <ul>
+            <li><span class="strong">Enabled:</span>&#160;Check this box to activate the user account.</li>
+            <li><span class="Strong">Name:</span> Assign a User Name.</li>
+            <li><span class="strong">LDAP&#160;User:</span>&#160;will be checked by default if users imported from LDAP.</li>
+            <li><span class="Strong">Password:</span> Use this for Users created and managed within <MadCap:variable name="Variables.ProductName" /> that are not authenticated by LDAP.</li>
+            <li><span class="strong">Confirm Password:</span>&#160;Enter the password again to confirm it.</li>
+            <li><span class="strong">Full Name:</span> The User’s full name.</li>
+            <li><span class="Strong">Email Address(es):</span> Enter the User’s email address.</li>
+            <li><span class="Strong">Expiration Date:</span> Set this to make a User account inactive on some future date.</li>
+        </ul>
+        <h4>Region Settings</h4>
+        <ul>
+            <li><span class="Strong">Units Display:</span> Choose an option in this drop-down menu to define how the user will see units of measurement and time:<ul style="list-style-type: circle;"><li><span class="Strong">Browser/OS Locale:</span> The user’s settings will be inherited from their local web browser settings.</li></ul><ul style="list-style-type: circle;"><li><span class="Strong">English:</span> Asset and Sensor Attributes will appear as those of the imperial or English (USA) systems of measurement, that is, ounces, feet, temperature expressed in Fahrenheit, etc.</li></ul><ul style="list-style-type: circle;"><li><span class="Strong">Metric:</span> Asset and Sensor Attributes will be displayed in the metric system, that is, grams, meters, temperature expressed in Celsius, etc.</li></ul></li>
+            <li><span class="Strong">Time Zone:</span> Use this to set the time zone for the User.&#160; By default, this is set to Browser/OS Locale, but you can manually change it to hard code the time zone by choosing a time zone from the drop-down menu.</li>
+        </ul>
+        <h4>Asset Links</h4>
+        <ul>
+            <li><span class="strong">Asset Links:</span>Click the Ellipsis <span class="strong">...</span> button to select Asset Links this user will see on the Assets menu. </li>
+        </ul>
+        <h4>User Groups</h4>
+        <ul>
+            <li><span class="Strong">User Groups:</span> After these have been created, you can assign one or more Groups to each User account in order to allow the User to inherit traits assigned to the Group(s).</li>
+            <li><span class="strong">User Groups For New Assets:</span> Select <span class="strong">Same As User Group Membership</span> or click the Ellipsis <span class="strong">...</span> button to select the specific group-level permissions this user will have for new assets.<br /><br /></li>
+        </ul>
+        <p class="note" MadCap:autonum="&lt;b&gt;NOTE:&lt;/b&gt; &#160;"> A User can be assigned to a User Group even if Advanced Security is not enabled on the <MadCap:variable name="Variables.ProductName" /> server; however, the assignment of Users to Groups enables advanced functionality only if Advanced Security is enabled.&#160; To configure Advanced Security settings, go to: <span class="Strong">Configuration &gt; Server &gt; Asset Security</span>.&#160; For more information about Advanced Security, refer to the <a href="User Accounts and Security.htm#_Advanced_Security">Advanced Security</a> section.&#160; Do not change the Advanced Security settings without first consulting <MadCap:variable name="Variables.CompanyName" /> Support.</p>
+    </body>
+</html>

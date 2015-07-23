@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="1343" MadCap:lastWidth="1096">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>BACnet Slave Device</h1>
+        <p>The BACnet Slave Device is used to configure a set of assets and attributes whose values will be published by the <MadCap:variable name="Variables.ProductName" /> BACnet server. BACnet clients can then query the current values of the attributes published for each of the BACnet Slave Devices.</p>
+        <ol>
+            <li>Navigate to <span class="Strong">Integration</span> &gt; <span class="Strong">BACnet Slave Devices</span>.</li>
+            <li>Click the <span class="Strong">New</span> button.</li>
+            <li> Complete all required and any desired additional fields.</li>
+        </ol>
+        <p>
+            <img src="../../Images/UserManual for reference/03000100.png" style="height: 347px;width: 387px;" class="img_2" />
+        </p>
+        <h2>Basic Information</h2>
+        <ul>
+            <li><span class="Strong">Name:</span> Create a name for the Slave Device.</li>
+            <li><span class="Strong">Description:</span> Create a description for the Slave Device.</li>
+        </ul>
+        <h2>BACnet Slave Device Sensor Attributes</h2>
+        <ul>
+            <li><span class="Strong">Attributes:</span> The Attributes parameter allows the administrator to determine which attributes to publish via BACnet. Currently, <MadCap:variable name="Variables.ProductName" /> allows numeric (Float, Integer, and Enum) and Boolean attributes to be selected. The BACnet object type for numeric attributes is analog input. The BACnet object type for Boolean attributes is binary input. Select the attributes from your schema that you would like to publish using BACnet.</li>
+        </ul>
+        <h2>Asset Filter for Publishing BACnet Device Sensor Attributes</h2>
+        <ul>
+            <li><span class="Strong">Filter Asset Type:</span> The Asset Filter is used to define the criteria for selecting which assets and their corresponding attributes will be published by the BACnet server and therefore made available to BACnet clients. Select the asset type when you wish to limit the filter to.</li>
+            <li><span class="Strong">Filter Location:</span> Select a location that you would like to filter by.</li>
+            <li><span class="Strong">First Attribute:</span> Choose an attribute that you would like to filter by.</li>
+            <li><span class="Strong">First Attribute Value Operator:</span> Choose the operator for the attribute you have selected.</li>
+            <li><span class="Strong">First Attribute Value:</span> Input the value that the first attribute should have for the filter.</li>
+            <li><span class="Strong">Second Attribute:</span> Choose a second attribute you would like to filter by.</li>
+            <li><span class="Strong">Second Attribute Value Operator:</span> Choose the operator for the attribute you have selected.</li>
+            <li><span class="Strong">Second Attribute Value:</span> Input the value that the second attribute should have for the filter.</li>
+        </ul>
+        <ol start="4">
+            <li><span class="strong">Save Changes</span>.</li>
+        </ol>
+    </body>
+</html>

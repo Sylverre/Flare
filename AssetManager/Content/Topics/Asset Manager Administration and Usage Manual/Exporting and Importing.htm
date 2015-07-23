@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="6775" MadCap:lastWidth="750">
+    <head><title></title>
+    </head>
+    <body>
+        <h1><a name="__RefHeading___Toc414541503"></a>Exporting and <MadCap:annotation MadCap:createDate="2015-06-13T21:07:33.8208329-05:00" MadCap:creator="Pappillon" MadCap:initials="PA" MadCap:comment="the top part of this, at least, is a good example of my preferred format: heading, brief explanation, sub-head above numbered steps, images where necessary but not every little click OK depicted." MadCap:editor="Pappillon" MadCap:editDate="2015-06-18T17:34:27.0798288-05:00">Importing</MadCap:annotation></h1>
+        <p>System configuration files, data schemas, and data files of assets with their associated attributes can be exported from and imported to <MadCap:variable name="General.ProductName" />. System administrator access is required to export or import system configurations and data schemas. Some user roles have permission to export and import assets. Exported files can be retained as backups, but are generally used as templates for uploading large amounts of data rather than entering information manually.</p>
+        <h2>Export System Configuration or Data Schema</h2>
+        <ol>
+            <li>Navigate to <span class="Strong">Admin Console &gt; Configuration &gt;&#160;Export Configuration</span>. By default, all system configuration variables are selected, and the Binary Data box is unchecked. </li>
+        </ol>
+        <p>
+            <img src="../../Images/UserManual for reference/03000121.png" style="height: 514px;width: 544px;" class="img_2" />
+        </p>
+        <ol MadCap:continue="true">
+            <li>If you have included image files or other non-textual data in your database, select <span class="Strong">Binary&#160;Data</span>. Otherwise, leave unchecked.</li>
+            <li>Select desired file type, either <span class="Strong">JSON</span> or <span class="Strong">CSV</span>.<br /></li>
+        </ol>
+        <p class="note" MadCap:autonum="&lt;b&gt;NOTE:&lt;/b&gt; &#160;">If Binary Data is included, the export will download as a compressed ZIP file including that binary data and the configurations in the selected file type.</p>
+        <ol MadCap:continue="true">
+            <li>Click the desired <span class="Strong">Export</span>... button. </li>
+        </ol>
+        <h2>Export Assets</h2>
+        <p>Users can export a basic asset file to use as a template, in order to populate the file with assets and asset attributes and then import those assets, attributes, and tags back into the <MadCap:variable name="Variables.ProductName" /> database.&#160; </p>
+        <ol>
+            <li>Navigate to <span class="Strong">User Console &gt;&#160;Assets.</span></li>
+        </ol>
+        <p>
+            <img src="../../Images/AM Manage Assets.bmp" class="imgfullwidth" />
+        </p>
+        <ol MadCap:continue="true">
+            <li>Click <span class="Strong">Export</span>. </li>
+        </ol>
+        <p>
+            <img src="../../Images/AM Export Assets dialog.bmp" class="imgfullwidth" />
+        </p>
+        <ol MadCap:continue="true">
+            <li>Select the desired Export Style. Generally,&#160;<span class="strong">Advanced Export</span> is required, so it is selected by default. Simple Export files are suitable for printing. <ol MadCap:continue="true"><li>Export asset references by name if you prefer alphabetical sorting.</li></ol></li>
+            <li>Select the Attributes to Export. By default, all assets and attributes are exported. If you have applied a filter to your assets and wish to export only the results of that filter, select <span class="Strong">Export asset attributes in view</span>.</li>
+            <li>Include or exclude binary data. Check to include maps or other image files in your export.</li>
+            <li>Select desired file type to export. Click <span class="Strong">Export JSON</span> or <span class="Strong">Export CSV</span>. CSV files can be manipulated with a spreadsheet program such as Microsoft Excel.</li>
+        </ol>
+        <p MadCap:conditions="Default.SourceText">For periodic maintenance, all of the assets in the system can be exported as a backup file for an additional means of ensuring data integrity.&#160; However, regular backups of the entire <MadCap:variable name="Variables.ProductName" /> database should be made regularly according to your standard database procedures. For more information, refer to the <a href="Backing Up and Restoring the.htm#_Backing_Up_and_1">Backing Up and Restoring the <MadCap:variable name="Variables.ProductName" /> Database</a> section in the Appendix.</p>
+        <h2>Import Assets</h2>
+        <p>CSV, JSON, or compressed ZIP files containing CSV or JSN files can be edited and then re-imported into <MadCap:variable name="General.ProductName" />. Files cannot be created outside of <MadCap:variable name="General.ProductName" /> and <MadCap:annotation MadCap:createDate="2015-05-28T10:58:00.6430951-05:00" MadCap:creator="Pappillon" MadCap:initials="PA" MadCap:comment="[Verify?!]" MadCap:editor="Pappillon" MadCap:editDate="2015-05-28T10:58:01.6051501-05:00">imported.</MadCap:annotation><![CDATA[  ]]></p>
+        <p class="note" MadCap:autonum="&lt;b&gt;NOTE:&lt;/b&gt; &#160;">Files can be exported from one instance or version of <MadCap:variable name="General.ProductName" /> and imported to another.</p>
+        <p class="note" MadCap:autonum="&lt;b&gt;NOTE:&lt;/b&gt; &#160;">Asset files cannot be imported until the <MadCap:variable name="General.ProductName" /> system is fully configured.</p>
+        <ol>
+            <li>Navigate to <span class="Strong">User Console &gt; Assets &gt; Import Assets</span>.</li>
+        </ol>
+        <p>
+            <img src="../../Images/AM Import Assets.bmp" class="imgfullwidth" />
+        </p>
+        <ol MadCap:continue="true">
+            <li>Click the <span class="Strong">Browse</span> button and find the file, and then click <span class="Strong">Upload</span>.</li>
+            <li>A pop-up window will inform you the import job is queued. Click <span class="Strong">OK</span>.</li>
+        </ol>
+        <p MadCap:conditions="Default.User">
+            <img src="../../Images/UserManual for reference/03000122.png" style="height: 118px;width: 312px;" class="img_2" />
+        </p>
+        <ol MadCap:continue="true">
+            <li>The Import Jobs pane will update, showing the status of your import and total number of assets imported. </li>
+        </ol>
+        <p MadCap:conditions="Default.User">
+            <img src="../../Images/UserManual for reference/03000128.png" style="height: 105px;width: 657px;" class="img_2" />
+        </p>
+        <ol MadCap:continue="true">
+            <li>If errors occurred, click <span class="Strong">Download Errors</span> to view a report of <MadCap:annotation MadCap:createDate="2015-05-28T10:56:01.0012520-05:00" MadCap:creator="Pappillon" MadCap:initials="PA" MadCap:comment="not clickable 052815" MadCap:editor="Pappillon" MadCap:editDate="2015-05-28T10:56:06.5835712-05:00">failures.</MadCap:annotation> <![CDATA[ ]]></li>
+        </ol>
+        <h2>Import System Configurations or Data Schemas</h2>
+        <p>CSV, JSON, or compressed ZIP files containing CSV or JSN files can be edited and then re-imported into <MadCap:variable name="General.ProductName" />. Files cannot be created outside of <MadCap:variable name="General.ProductName" /> and <MadCap:annotation MadCap:createDate="2015-05-28T10:58:00.6430951-05:00" MadCap:creator="Pappillon" MadCap:initials="PA" MadCap:comment="[Verify?!]" MadCap:editor="Pappillon" MadCap:editDate="2015-05-28T10:58:01.6051501-05:00">imported.</MadCap:annotation><![CDATA[  ]]></p>
+        <p class="note" MadCap:autonum="&lt;b&gt;NOTE:&lt;/b&gt; &#160;">Files can be exported from one instance or version of <MadCap:variable name="General.ProductName" /> and imported to another.</p>
+        <ol>
+            <li>Navigate to <span class="Strong">Admin Console &gt;&#160;Configuration &gt;&#160;Import Configuration</span>.</li>
+            <li>Click the <span class="Strong">Browse</span> button and find the file, and then click <span class="Strong">Upload</span>.</li>
+            <li>A pop-up window will inform you the import job is queued. Click <span class="Strong">OK</span>.</li>
+            <li>The Import Jobs pane will update, showing the status of your import.<br /> </li>
+        </ol>
+        <p class="note" MadCap:autonum="&lt;b&gt;NOTE:&lt;/b&gt; &#160;">When <MadCap:variable name="Variables.ProductName" /> imports a file, the import file is parsed and validated.&#160; If an error general to the entire file is encountered, the import process is terminated. If an error specific to a single data type or record is found, the import job continues. If not all data imports successfully, the data that was not imported is presented in a file of the same type as the import; that is, a CSV import file generates a CSV error file and a JSON import with errors generates a JSON file.&#160; The file contains each entity that failed to import and an error message beneath it giving the reason why.</p>
+        <p>
+            <img src="../../Images/UserManual for reference/03000123.png" style="height: 139px;width: 657px;" class="img_2" />
+        </p>
+        <p>The following are all of the possible <span class="Strong">Job Status</span> values for imports:</p>
+        <ul>
+            <li><span class="Strong">COMPLETE</span>: The import job completed successfully.</li>
+            <li><span class="Strong">CREATED</span>: The import job was created, but it has not begun to import nor entered the import queue.</li>
+            <li><span class="Strong">QUEUED</span>: The import job is waiting for another import job to finish importing.</li>
+            <li><span class="Strong">RUNNING</span>: The file is currently importing.</li>
+            <li><span class="Strong">COMPLETE WITH ERRORS</span>: The file imported some of the data, but not all of it.&#160; <MadCap:variable name="General.ProductName" /> creates an updated import file containing only the items that the system could not successfully import.&#160; The user can then modify and correct the generated <MadCap:annotation MadCap:createDate="2015-05-28T11:58:31.8077858-05:00" MadCap:creator="Pappillon" MadCap:initials="PA" MadCap:comment="isn't it then an export file?  That is, don't I-the-user have to export it before I can modify it?" MadCap:editor="Pappillon" MadCap:editDate="2015-05-28T11:58:53.7980436-05:00">import</MadCap:annotation> file and attempt to reimport the corrected file. The system-generated error messages are ignored on import so the user does not have to remove this information when re-importing a corrected import file.</li>
+        </ul>
+        <ul>
+            <li><span class="Strong">FAILURE</span>: The file failed to import.&#160; <MadCap:variable name="General.ProductName" /> creates an error log file of the same type as the import file, either CSV or JSN, containing information about the failures.</li>
+            <li><span class="Strong">ACCESS DENIED</span>: You do not have permission to import the file.<br /></li>
+        </ul>
+        <p MadCap:conditions="Default.SourceText">When files are imported, <MadCap:variable name="Variables.ProductName" /> must resolve dependencies for the objects in the import file; that is, if you are importing server assets, then the Server Asset Type must be first be defined in <MadCap:variable name="Variables.ProductName" /> or the import job will fail. You can manually create these dependencies, for example, Asset Types, Locations, etc., or you can import a schema file and/or a configuration file that contains them.&#160;</p>
+        <p class="note" MadCap:conditions="Default.SourceText" MadCap:autonum="&lt;b&gt;NOTE:&lt;/b&gt; &#160;">&#160; If the proper dependencies do not exist, the import will fail or it will complete with errors.</p>
+        <ol start="5">
+            <li>If an import completes with errors, click the <span class="Strong">Download Errors</span> button to open the import file with annotated errors in order to determine which items did not import into the system&#160;and why. The error message is presented at the bottom of each entity’s section so you can examine the characteristics of the entity to determine what needs to be fixed. Modify and re-import the <MadCap:annotation MadCap:createDate="2015-05-28T12:06:34.3633864-05:00" MadCap:creator="Pappillon" MadCap:initials="PA" MadCap:comment="see above--are there two files, a log and an import, for some error scenarios?" MadCap:editor="Pappillon" MadCap:editDate="2015-05-28T12:06:51.3123558-05:00">file.</MadCap:annotation></li>
+        </ol>
+        <p>
+            <img src="../../Images/UserManual for reference/03000124.png" style="height: 477px;width: 542px;" class="imgfullwidth" />
+        </p>
+        <p>The Job Message column lists the number of Assets and/or Attributes that were successfully imported.</p>
+        <p>
+            <img src="../../Images/UserManual for reference/03000125.png" style="height: 73px;width: 657px;" class="imgfullwidth" />
+        </p>
+        <p class="note" MadCap:autonum="&lt;b&gt;NOTE:&lt;/b&gt; &#160;">&#160; Assets with respect to Import Jobs can be any entity other than an Asset Type or an Asset Attribute.&#160; An “Asset” that is counted in the Job Message column can be an Event, an Action, a Threshold, etc.&#160; The log file shows entities that failed to import.<br /></p>
+        <p>
+            <img src="../../Images/UserManual for reference/03000126.png" style="height: 371px;width: 605px;" class="imgfullwidth" />
+        </p>
+        <p MadCap:conditions="Default.SourceText">When an import completes successfully, the number of types and assets (entities) will still be reported and there will be no Download Errors button to click.</p>
+        <p MadCap:conditions="Default.SourceText">
+            <img src="../../Images/UserManual for reference/03000127.png" style="height: 101px;width: 658px;" class="imgfullwidth" />
+        </p>
+        <p MadCap:conditions="Default.SourceText">When importing a schema, for example, the default V4.1_IT_Comprehensive_Schema, a pop-up window will show you what was imported.</p>
+        <p MadCap:conditions="Default.SourceText">
+            <img src="../../Images/UserManual for reference/03000129.png" style="height: 136px;width: 292px;" class="imgfullwidth" />
+        </p>
+        <p class="note" MadCap:conditions="Default.AM only,Default.SourceText" MadCap:autonum="&lt;b&gt;NOTE:&lt;/b&gt; &#160;">&#160; For more detailed information about entities in <MadCap:variable name="Variables.ProductName" />, refer to the <a href="The Asset Manager Data Model.htm#_The_Asset_Manager"><MadCap:variable name="Variables.ProductName" /> Data Model</a>.</p>
+    </body>
+</html>

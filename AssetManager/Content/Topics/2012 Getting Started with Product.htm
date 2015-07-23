@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="2200" MadCap:lastWidth="395">
+    <head>
+        <title>
+        </title>
+    </head>
+    <body>
+        <h1>2012 Getting Started with <MadCap:variable name="General.ProductName" /></h1>
+        <ol>
+            <li>Open <MadCap:variable name="General.ProductName" /> by double-clicking the shortcut that was installed on your desktop or navigate to <span class="Strong">Start&gt; Programs&gt; RF Code&gt; <MadCap:variable name="General.ProductName" /></span> or navigate with your browser to http://&lt;server host name&gt;:6580. The following screen will appear. In order to begin the initial setup of the <MadCap:variable name="General.ProductName" /> software, you must log in with the default Administrator user name and password which is as follows:</li>
+        </ol>
+        <p>username: admin</p>
+        <p>password: admin</p>
+        <p class="note" MadCap:autonum="&lt;b&gt;NOTE:&lt;/b&gt; &#160;">Please note that the login is case sensitive.</p>
+        <p>Figure 19: Initial <MadCap:variable name="General.ProductName" /> Screen</p>
+        <ol MadCap:continue="true">
+            <li>Database Configuration: <MadCap:variable name="General.ProductName" /> requires a database to function. All configuration and information is stored in this database. If you did not choose to install Microsft SQL Server Express 2008 as part of the <MadCap:variable name="General.ProductName" /> installation process, you will be automatically directed to the database configuration screen. <MadCap:variable name="General.ProductName" /> requires access to a database with full read/write privileges. If you are using a remote database, then the database administrator must create the database and create a userid/password that has full access to the database. If you are using a local copy of Microsoft SQL Server Express, these items were setup at installation time. Please enter your database information into the fields and click on the Test button.</li>
+        </ol>
+        <MadCap:snippetBlock src="../Resources/Snippets/required fields note.flsnp" />
+        <ol MadCap:continue="true">
+            <li>If you have setup your database correctly, you will receive a message confirming that the database test was successful. Click <span class="Strong">Save Changes</span> to continue.</li>
+            <li>A message indicating that the <MadCap:variable name="General.ProductName" /> Service needs to be restarted will appear, click <span class="Strong">OK</span> to continue. You will be redirected to the main login screen again. Sign into <MadCap:variable name="General.ProductName" /> again with the default administrator user-name and password.</li>
+            <li>You should now see the default screen of <MadCap:variable name="General.ProductName" /> also known as the Dashboard. Notice that there is a window in the top right corner of the dashboard called System Configuration. At this step it should indicate that your database is correctly configured as well as other required tasks that are not configured. These tasks are the minimal steps required to get <MadCap:variable name="General.ProductName" /> into a functional state.</li>
+            <li>
+                <p>Zone Manager(s) Configuration: Once the database is installed, notice that in the System Configuration Task Pane that your Zone Manager is configured as well. <MadCap:variable name="General.ProductName" /> automatically configures a local Zone Manager. In some cases this may be your only Zone Manager. However, in larger deployment scenarios, you may choose to setup other “remote Zone Managers”.</p>
+                <p>To configure <MadCap:variable name="General.ProductName" /> to interact with newly installed Zone Manager, follow the steps outlined below. To integrate previously installed and running Zone Managers, please refer to the Existing Remote Zone Manager Integration section in the Appendix.</p>
+            </li>
+        </ol>
+    </body>
+</html>

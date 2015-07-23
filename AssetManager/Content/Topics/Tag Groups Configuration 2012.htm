@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="551" MadCap:lastWidth="639">
+    <head>
+        <title>
+        </title>
+    </head>
+    <body>
+        <h1>Tag Groups Configuration 2012</h1>
+        <p>Configure <MadCap:variable name="General.ProductName" /> for the tag groups of tags you intend to track. The purpose of this step is to enable <MadCap:variable name="General.ProductName" /> to “listen” to specific groups of tags and to correctly interpret the data sent from the tags. To do this you can either double-click on the Tag Groups line in the System Configuration box in the dashboard or navigate to <span class="Strong">Configuration &gt; Tag Groups</span>. The reader configuration screen appears.</p>
+        <ol>
+            <li>Click the <span class="Strong">New</span> button and select the treatment code associated with the tag group you would like to configure.</li>
+        </ol>
+        <p class="note" MadCap:autonum="&lt;b&gt;NOTE: &#160;&lt;/b&gt; "> All RF Code tags are defined as being members of a specific group, and have a unique tag ID number within that group. When an RF Code reader is configured, it can be supplied with up to 8 (for M200 or R200 Readers) or 16 (for M250 Readers) group code IDs and a corresponding treatment code for each group code. The treatment code instructs the reader how to interpret the payload data for each tag event within that group code. RF Code tags are smart and have the ability to transmit various types of data within its radio frequency beacon such as indicators for motion, panic, tamper, infrared location, humidity, pressure, temperature, and low battery. The group ID is printed on the label of a tag.</p>
+        <p>TIP: A support page with the most updated list of group/treatment codes is available to help you determine your specific Group Code and Treatment Code: <a href="http://www.rfcode.com/codes">http://www.rfcode.com/codes</a></p>
+        <ol MadCap:continue="true">
+            <li>Enter the required name, group code, and location update delay setting (start with the default value for this setting and then tune the configuration later if needed).</li>
+        </ol>
+        <ol MadCap:continue="true">
+            <li>Click the <span class="Strong">Save Changes</span> button. The tag group that you have just configured will appear in the list box on the left.</li>
+        </ol>
+        <ol MadCap:continue="true">
+            <li>To configure additional group codes, repeat these steps. You will see the additional tag groups appear in the list box to the left.</li>
+        </ol>
+    </body>
+</html>

@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="954" MadCap:lastWidth="1070">
+    <head><title></title>
+    </head>
+    <body>
+        <h1><a name="__RefHeading___Toc414541499"></a>Configuring SSL for <MadCap:variable name="Variables.CompanyName" /> Readers using the Reader Web Interface</h1>
+        <p>After you get a signed SSL certificate from a certificate authority, import it to the reader. </p>
+        <p>To configure the reader with an SSL Certificate, perform the following steps:</p>
+        <ol>
+            <li>In the reader web interface, browse to <span class="strong">Configuration &gt; Network &gt; General</span>.<br /><br /><img src="../../Images/UserManual for reference/0300011F.png" style="height: 395px;width: 568px;" class="img_2" /></li>
+            <li>Open the PEM file and copy the portion of the SSL certificate in the PEM from <span class="strong">BEGIN CERTIFICATE</span> to <span class="strong">END CERTIFICATE</span> and then paste it into the <span class="strong">SSL Certificate</span> field in the <span class="strong">Advanced</span> area.</li>
+        </ol>
+        <ol MadCap:continue="true">
+            <li>Copy the private key and paste it to <span class="strong">SSL Private Key</span> field.</li>
+        </ol>
+        <ol MadCap:continue="true">
+            <li>Click the <span class="strong">Save Changes</span> button for the signed SSL certificate to take effect.
+            </li>
+        </ol>
+        <p class="note">If the SSL Certificate and the SSL Private Key do not match, the signed SSL certificate configuration will not be successful. If the SSL certificate configuration fails, for whatever reason, then the default self-signed certificate for the reader will be applied.
+        </p>
+        <p class="tip">
+            <MadCap:annotation MadCap:createDate="2015-05-22T14:09:00.2825149-05:00" MadCap:creator="DSFoxx" MadCap:initials="DSF" MadCap:comment="I'm not entirely sold on having Tip as well as Note, but there it is, for now." MadCap:editor="DSFoxx" MadCap:editDate="2015-05-22T14:09:15.1133632-05:00">If</MadCap:annotation> the reader setup process fails and you cannot access the reader, then you can reset the reader back to its factory defaults. For more information, refer to the following article: <br /><a href="http://support.rfcode.com/customer/portal/articles/746969">support.rfcode.com/customer/portal/articles/746969</a></p>
+        <p>After configuring the reader in the web interface, you must also configure <span class="strong"><MadCap:variable name="Variables.ProductName" /></span> (or the <span class="strong">Zone Manager </span>for the specific reader) so they will accept the SSL configuration that you just enabled.</p>
+    </body>
+</html>

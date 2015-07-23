@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="855" MadCap:lastWidth="1096">
+    <head>
+        <title>
+        </title>
+    </head>
+    <body>
+        <h1>
+            <MadCap:variable name="General.ProductName" /> Installation<a name="CS_Install"></a></h1>
+        <p MadCap:conditions="Default.NewText" style="font-weight: normal;font-style: normal;">If you have selected the database to be used, set up the database before installing <MadCap:variable name="General.ProductName" />. Otherwise, for a pilot deployment, install <MadCap:variable name="General.ProductName" /> using the Microsoft SQL&#160;Server Express that is bundled with the product. </p>
+        <p MadCap:conditions="Default.NewText" class="note" MadCap:autonum="&lt;b&gt;NOTE:&lt;/b&gt; &#160;">Per database requirements, choose the SQL Server Express option only for pilot installations, not for full roll-outs when you deploy into a production environment. </p>
+        <p>To install <MadCap:variable name="General.ProductName" />:</p>
+        <ol>
+            <li>Run the installer image provided by <MadCap:variable name="General.CompanyName" /> or insert the <MadCap:variable name="General.ProductName" /> CD.</li>
+            <li>Follow the prompts of the Installation Wizard.</li>
+            <li>Choose the <b>Local Zone Manager</b> option. <br />•If you are using an external database, do not check the <b>Install and Configure Microsoft SQL Server Express</b> box. You will later be able to specify the database to which <MadCap:variable name="General.ProductName" /> will connect. <br />•If you are using the default SQL Server Express Database that is integrated into the <MadCap:variable name="General.ProductName" /> installer, check the <b>Install and Configure Microsoft SQL Server Express</b> box.<br /></li>
+        </ol>
+        <p class="note" MadCap:autonum="&lt;b&gt;NOTE:&lt;/b&gt; &#160;">If you are using the SQL Server Express option, do not change the default SQL password assigned to the sa administrator account.</p>
+        <ol MadCap:continue="true">
+            <li>The Admin Console will launch automatically upon completion of installation.<br /></li>
+        </ol>
+        <p class="note" MadCap:autonum="&lt;b&gt;NOTE:&lt;/b&gt; &#160;">It will take a few minutes for Zone Manager to initialize.</p>
+        <ol MadCap:continue="true">
+            <li>Log in with the default Administrator user name and password (case sensitive):</li>
+        </ol>
+        <ul>
+            <li>Username: admin</li>
+            <li>Password: <MadCap:annotation MadCap:createDate="2015-04-20T14:06:39.3649141-05:00" MadCap:creator="DSFoxx" MadCap:initials="DS" MadCap:comment="Is it recommended _not_ to change password until config complete?  Seems strange not to see the usual &quot;change the password immediately!&quot; text associated with the default." MadCap:editor="DSFoxx" MadCap:editDate="2015-04-20T14:06:59.6800761-05:00">admin</MadCap:annotation></li>
+        </ul>
+        <ol start="6">
+            <li>After logging in, proceed to the Software Configuration section(s).<br /></li>
+        </ol>
+        <p class="note" MadCap:autonum="&lt;b&gt;NOTE:&lt;/b&gt; &#160;">At any time, you can launch the <MadCap:variable name="General.ProductName" /> web interface by navigating to <span class="strong">Start &gt; Programs &gt; <MadCap:variable name="General.CompanyName" /> &gt; <MadCap:variable name="General.ProductName" /> </span>or by navigating in a browser to http://<span class="ital">{server host name}</span>:6580</p>
+        <p class="note" MadCap:autonum="&lt;b&gt;NOTE:&lt;/b&gt; &#160;">Refer to the <MadCap:variable name="General.ProductName" /> System Administration Guide for further details about installing and configuring <MadCap:variable name="General.ProductName" />. This is available from <a href="http://www.support.rfcode.com/">Support.RFCode.com</a>.</p>
+    </body>
+</html>

@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="1571" MadCap:lastWidth="776">
+    <head><title></title>
+    </head>
+    <body>
+        <h1><a name="__RefHeading___Toc414541415"></a>How to Set Up a Temperature Alert</h1>
+        <p>Thresholds are limits for specific attribute values.&#160; Alerts are notifications you will receive if the value of a particular attribute goes beyond the threshold set for it.&#160;&#160; For example, you can set a threshold for a sensor tag’s temperature reading to be 80° <MadCap:annotation MadCap:createDate="2015-06-01T15:47:54.1989205-05:00" MadCap:creator="Pappillon" MadCap:initials="PA" MadCap:comment="S&amp;R" MadCap:editor="Pappillon" MadCap:editDate="2015-06-01T15:47:56.1870342-05:00">F</MadCap:annotation> and have an alert sent when the temperature exceeds this threshold.</p>
+        <p>To configure a basic threshold and alert, perform the following steps:</p>
+        <ol>
+            <li>In the <span class="strong">User Console</span>, go to <span class="strong">Alert Management</span>.<br /></li>
+            <li>Click <span class="strong">Actions</span> and then click the <span class="strong">New</span> button.<br /></li>
+            <li>Choose <span class="strong">Email Alert Action</span> from the drop-down menu.<br /></li>
+            <li>Give the alert a name and enter the email address of the alert recipient.<br /></li>
+            <li> Click <span class="strong">Save Changes</span>.<br /></li>
+            <li>Select <span class="strong">Temperature Alert Threshold</span> from the drop-down list.<br /></li>
+            <li>Give the alert threshold a <span class="strong">Name</span>, for example, “Rack too hot” <br /></li>
+            <li>In the <span class="strong">Alert</span> <span class="strong">Condition</span> section, set the <span class="strong">Threshold</span> <span class="span_23"><MadCap:annotation MadCap:createDate="2015-07-03T21:06:30.1869463-05:00" MadCap:creator="Pappillon" MadCap:initials="PA" MadCap:comment="format" MadCap:editor="Pappillon" MadCap:editDate="2015-07-03T21:06:33.4241314-05:00">Attribute</MadCap:annotation> Value Operator</span><span class="span_22"> for example, Greater Than (</span><span class="span_23">&gt;</span>) <br /></li>
+            <li>Set the <span class="strong">Threshold Attribute Value</span>, for example, <span class="strong">80</span>. <br /><br /><img src="../../Images/AM temperature alert threshold.bmp" class="imgfullwidth" /></li>
+            <li>Set the <span class="strong">Alert Filter</span> so that all temperature sensors in the <span class="strong">RFC Data Center</span> are monitored. <br />This is a convenient way of setting a threshold on multiple sensors at one time for a given location, which let you receive an alert any time a sensor reads a temperature that is greater than the threshold you set.<br /></li>
+            <li>Pick the <span class="strong">Email Frank</span> Alert Action.<br />An email like the one below will be sent to Frank when any temperature sensor in a particular data center location (for example, RFC Data Center) reads greater than 80 degrees.<br /><br /><img src="../../Images/UserManual for reference/0600008C.png" style="height: 340px;width: 554px;" class="img_2" /></li>
+        </ol>
+        <p class="note" MadCap:autonum="&lt;b&gt;NOTE:&lt;/b&gt; &#160;">&#160; Alert thresholds and email notifications can be set up for other sensors such as humidity, fluid detection, and/or open door states.</p>
+    </body>
+</html>

@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="3216" MadCap:lastWidth="1096">
+    <head>
+        <title>
+        </title>
+    </head>
+    <body>
+        <h1>BIRT <MadCap:annotation MadCap:createDate="2015-05-13T10:58:43.9529460-05:00" MadCap:creator="DSFoxx" MadCap:initials="DSF" MadCap:comment="05/13: BIRT no longer a separate license for Logan.  Per e-mail thread, may be integrated into AM 4.0, too, but not yet confirmed." MadCap:editor="DSFoxx" MadCap:editDate="2015-05-13T10:59:24.4722636-05:00">Templates</MadCap:annotation></h1>
+        <p MadCap:conditions="General.Source text,Default.SourceText">
+            <span class="Strong">BIRT Templates</span>: Business Intelligence and Reporting Tools (BIRT™) is an open-source report generation tool developed by the Eclipse™ Foundation. You can create reports in the BIRT Designer and then add them to <MadCap:variable name="General.ProductName" /> where the report will be executed. The BIRT <MadCap:annotation MadCap:createDate="2015-06-11T11:15:43.6209780-05:00" MadCap:creator="Pappillon" MadCap:initials="PA" MadCap:comment="&quot;module&quot; isn't the right word if it's embedded, though certainly works when licensed." MadCap:editor="Pappillon" MadCap:editDate="2015-06-11T11:16:00.7179559-05:00">module</MadCap:annotation> enables a rich variety of features, such as custom formatting, charts, data grouping and logos. You can even include data from <span class="span_2">multiple reports and external data sources</span> to create reports tailored to your specific needs. </p>
+        <p MadCap:conditions="General.New text">For more information about BIRT&#160;templates, visit <a href="http://www.eclipse.org/birt">http://www.eclipse.org/birt</a></p>
+        <p>BIRT™ (Business Intelligence and Reporting Tools) is an open-source report generation tool developed by the Eclipse™ Foundation. To create report templates for use in <MadCap:variable name="General.ProductName" />, download the BIRT&#160;Designer, a tool that allows you to create reports, add graphical elements, adjust layout, and link to data sources. <MadCap:conditionalText MadCap:conditions="Default.SourceText">There are two main components of BIRT:</MadCap:conditionalText></p>
+        <p MadCap:conditions="Default.SourceText">
+            <span class="Strong">BIRT Designer:</span> A graphical report-designing tool that allows you to create reports, add graphical elements, adjust layout, and link to data sources.</p>
+        <p MadCap:conditions="Default.SourceText">
+            <span class="Strong">BIRT Engine:</span> A software component that runs the reports created in the Designer.<br /><br /></p>
+        <p>Reports created in the BIRT Designer can be added to <MadCap:variable name="General.ProductName" />, where the reports will be executed. With BIRT, you can add a rich variety of features to <MadCap:variable name="General.ProductName" /> reports such as custom formatting, charts, data grouping and logos. You can even include data sets from data sources other than <MadCap:variable name="General.ProductName" />, which can then be integrated with <MadCap:variable name="General.ProductName" />r data to create reports that integrate the various software systems you use.</p>
+        <p class="note" MadCap:conditions="Default.AM only" MadCap:autonum="&lt;b&gt;NOTE:&lt;/b&gt; &#160;">Please note that in order to use BIRT within <MadCap:variable name="General.ProductName" /> you must purchase and install an <MadCap:variable name="General.CompanyName" /> BIRT license key. For instructions on installing this license key, please refer to the License Key Configuration section of this document.</p>
+        <h2>Installing BIRT</h2>
+        <p>Install the BIRT&#160;Designer from the <MadCap:variable name="General.ProductName" /> installation disc by browsing to the BIRT folder and running the Birt Designer Installation EXE file. Or download the file from the Eclipse foundation at</p>
+        <p MadCap:conditions="Default.SourceText">The BIRT Designer can be installed through one of two methods. The full version of the BIRT Designer can be accessed by navigating to the BIRT folder on the <MadCap:variable name="General.ProductName" /> Installation disc and accessing the executable BIRT Designer installation file. Alternatively, you can download this file from the Eclipse Foundation at:</p>
+        <p>
+            <a href="http://www.eclipse.org/birt">http://www.eclipse.org/birt</a>
+        </p>
+        <p>If you choose to download the BIRT Designer, please ensure that you obtain the version that matches the BIRT engine that is integrated with your distribution of <MadCap:variable name="General.ProductName" />. Differences in versions between the BIRT Designer and the engine may produce unexpected results. <MadCap:variable name="General.ProductName" /> requires BIRT Designer version 4.4.<MadCap:annotation MadCap:createDate="2015-06-11T11:20:52.2936331-05:00" MadCap:creator="Pappillon" MadCap:initials="PA" MadCap:comment="latest version (as of 06/11/15) is 4.4.2, requiring Java 1.6" MadCap:editor="Pappillon" MadCap:editDate="2015-06-11T11:21:29.7257741-05:00">2.</MadCap:annotation></p>
+        <p>To install the BIRT Designer from download, unzip the Designer distribution into a directory of your choice, then run the EXE file.</p>
+        <p>For more detailed installation instructions, please visit <a href="http://www.eclipse.org/birt">http://www.eclipse.org/birt</a>.</p>
+        <p>
+            <MadCap:annotation MadCap:createDate="2015-06-11T14:35:47.4725591-05:00" MadCap:creator="Pappillon" MadCap:initials="PA" MadCap:comment="Example, so maybe not in Workflow, but should be in SysAdmin. Reformat somehow? A new heading, anwyay. " MadCap:editor="Pappillon" MadCap:editDate="2015-06-11T14:35:48.5956233-05:00">The</MadCap:annotation> following is an example of how to use the BIRT Designer. BIRT has many advanced features that enable you to create complex reports.</p>
+        <h2>
+            <MadCap:variable name="General.ProductName" /> Integration with BIRT Reporting</h2>
+        <p MadCap:conditions="Default.AM only">If the BIRT License key has been installed by an administrator you will be able to create a BIRT Template for use in running a BIRT enabled report in Asset Manager. To do this perform the following steps:</p>
+        <p>1. Create a report in <MadCap:variable name="General.ProductName" />. This report will become the data source that BIRT uses to generate its report.</p>
+        <p>2. Run a sample of the report and export it as a BIRT Design or CSV file. Save the file in its own directory. If the export is a ZIP file, extract the files.</p>
+        <h2>Creating a BIRT Project</h2>
+        <p>3. Access and open the BIRT Designer and navigate to <span class="strong">File &gt; New &gt; Project</span>. Select “Report Project” in the BIRT Wizard.</p>
+        <p>4. Name the project and click <span class="strong">Finish</span>.</p>
+        <h2>Creating a BIRT Report</h2>
+        <p>5. To create a report, select the “Navigator” tab in Eclipse, then right-click your project and select <span class="strong">New &gt; Report</span>. You will be prompted with a window asking you to name your report. Enter a name and click <span class="strong">Next</span>.</p>
+        <p>6. Next you will select your report type. There are several pre-defined choices with various options. For this example, just choose “Blank Report” and click <span class="strong">Finish</span>.</p>
+        <h2>Connecting to Data within BIRT Designer</h2>
+        <p>BIRT Designer uses “Data Sources” to connect to the data you would like to use in your report. There are many ways that BIRT can connect to data for report generation. Creating “data sources” like these teaches BIRT how to retrieve data from various sources to combine into the reports. For example:</p>
+        <ul>
+            <li>You can connect to most DBMS systems using SQL queries with JDBC Data Sources.</li>
+            <li>Web Services and XML files can be accessed for report data.</li>
+            <li>Simple flat-file systems can be used as data sources.<br /><br /></li>
+        </ul>
+        <p>7. In the Data Explorer tab or in the Outline tab, right-click Data Sources and choose New Data Source and create a new flat-file data source. The new data source MUST be named “RFCodeDataSource”. When prompted, use the directory where you stored your sample BIRT Design or .CSV file as the directory for the new data source.</p>
+        <p>A flat-file data source is a BIRT data source that references a file-system folder which contains one or more CSV files.</p>
+        <p>Once the flat-file data source is added to your BIRT report, each .csv file in the folder can be configured as a BIRT Data Set. Like all BIRT Data Sets, many things can be done to manipulate the data within BIRT, such as creating joins between data sets, using computed columns, aliasing, etc.</p>
+        <h2>Specifying Data Sets</h2>
+        <p>Data Sets are derived from Data Sources in BIRT. Each Data Set becomes it’s own table of data and can be displayed and manipulated.</p>
+        <p>8. In the Data Explorer tab or in the Outline tab, right-click Data Sets and choose New Data Set.</p>
+        <p>9. Click Next, then create the query: Select the CSV file that you created from the report generation and choose the columns that you would like to have in your BIRT Report. If a Data Source contains multiple CSV files, create a data set per CSV file. Click Finish and click OK to confirm the column selections.</p>
+        <h2>Adding Data to a BIRT Report</h2>
+        <p>10. To add the data from your data set to your report, select the Outline (or Data Explorer) tab in Eclipse and drag and drop the data set onto your report. This will create a table based on the data set.</p>
+        <p>A data set on the design area is a “table”. You can customize formatting for this table in the Table’s property section.</p>
+        <p>11. Click the Preview tab to view your report. To view the report in a different format, use the menus to select <span class="Strong">Run &gt; View Report &gt; As PDF</span> (or as other format as desired).</p>
+        <h2>Accessing BIRT Report XML Source</h2>
+        <p>12. The XML Source tab in the BIRT Eclipse environment displays the report source code. The primary purpose of the BIRT Designer is to create this XML file. This XML File will be used to integrate with Asset Manager. The report XML file (.rptdesign) can be found inside your project in the Eclipse Workspace directory.</p>
+        <h2>Using <MadCap:variable name="General.ProductName" /> with BIRT Reporting</h2>
+        <p>BIRT Templates are Asset Manager entities that encapsulate a BIRT Report. The following diagram shows how BIRT Templates are created.</p>
+        <p>Once a BIRT Template is configured and added to a report, the report can output in any supported BIRT Format.</p>
+        <p>Below is an example of when a user views a BIRT configured <MadCap:variable name="General.ProductName" /> Report:</p>
+        <p>13. In <MadCap:variable name="General.ProductName" />, create a BIRT Template and upload your rptdesign file. This file will be found in your BIRT workspace &gt; project folder.</p>
+        <h2>Template Configuration</h2>
+        <ul>
+            <li>
+                <span class="Strong">Name:</span> enter a name for the BIRT Template.</li>
+            <li>
+                <span class="Strong">BIRT XML Config:</span> locate the BIRT Template configuration file that was generated with the BIRT Designer (step 12).</li>
+            <li>
+                <span class="Strong">BIRT Output Formats:</span> select the output formats you want to be generated for the BIRT Report.<br /><br /></li>
+        </ul>
+        <p>14. Edit the report you created in step 2, and add the template as the report’s BIRT Template.</p>
+        <p>15. Run and view the report.</p>
+        <p>These are the minimum required steps to configure <MadCap:variable name="General.ProductName" /> to utilize the BIRT reporting features. For more detailed information regarding the implementation and use of the BIRT Designer, please utilize the Help menus within the Eclipse BIRT Designer or refer to the Eclipse Foundation’s website:</p>
+        <p>
+            <a href="http://www.eclipse.org/birt">http://www.eclipse.org/birt</a>
+        </p>
+    </body>
+</html>

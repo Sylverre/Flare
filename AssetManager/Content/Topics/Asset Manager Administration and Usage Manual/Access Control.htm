@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html MadCap:lastBlockDepth="4" MadCap:lastHeight="1722" MadCap:lastWidth="1096" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title></title>
+    </head>
+    <body>
+        <h1><a name="__RefHeading___Toc414541449"></a>Access Control</h1>
+        <p>To further restrict visibility of assets and sensors, you can go to the Access Control feature to limit what assets/sensors are seen by different Groups.</p>
+        <p>Access Control allows users who are assigned an Asset Manager or Asset Editor Role to change User access to an asset or sensor after it is created.&#160; Access Control allows Asset Managers and Asset Editors to assign Groups to Assets and to other User Console objects in the system, such as Reports, Graphs, Alerts, Thresholds, Views, Maps, etc. </p>
+        <p class="note" MadCap:autonum="&lt;b&gt;NOTE:&lt;/b&gt; &#160;">Access Control does not appear in the task list for Asset Managers or Asset Editors if Security is enabled. Also, if an Asset Manager or an Asset Editor is a member of only one Group and that Group cannot assign Assets to the Everyone Group (the default group where its member can see all assets/sensors), then neither does the Access Control task appear for them. </p>
+        <p>Information presented in Access Control is reported in real-time; all sensor and location data changes automatically as soon as <MadCap:variable name="Variables.ProductName" /> receives any updates from the tags.&#160; A user can select the <span class="Strong">Pause Updates</span> button to stop the view from being updated dynamically if a current snapshot of asset state is needed.&#160; The <span class="Strong">Resume</span> button will be presented to enable automatic updating again.&#160; The dynamic filter allows users to narrow the list of assets/objects by Type, Location, Status, Attribute, Attribute Value, or any combination of these.&#160; There are four ways to manipulate assets within the Access Control panel: Edit Groups, Add Groups, Remove Groups, and View functions.</p>
+        <p>To enable a Group and the Users within it to have access to a specific asset (and information about it), perform the following steps:</p>
+        <ol>
+            <li>In the  <span class="strong">User Console</span>, go to <span class="strong">Access Control</span> and click the <span class="strong">Access Control</span> sub-task.<br /><br /><img src="../../Images/UserManual for reference/030000D0.png" style="width: 603px;height: 235px;" /><br /></li>
+            <li>Click the <span class="strong">Edit Groups </span>button.&#160; 
+            </li>
+        </ol>
+        <p>You will be prompted with the Group Membership window. <br /><br /><img src="../../Images/UserManual for reference/030000D1.png" /><br /></p>
+        <ol MadCap:continue="true">
+            <li>Select one or more Groups that will have access to information about the Asset and then click the <span class="Strong">Right Arrow[→]</span> button to move the Group from the <span class="span_3">Available </span>side to the <span class="span_3">Selected </span>side. </li>
+            <li>Click <span class="strong">OK </span>when finished. <br />The Group you selected will appear in the row for that Asset in the Allowed User Groups column.<br /><br /><img src="../../Images/UserManual for reference/030000D2.png" style="width: 598px;height: 230px;" /></li>
+        </ol>
+        <p class="note" MadCap:autonum="&lt;b&gt;NOTE:&lt;/b&gt; &#160;">While the use of Access Control enables the granularity of allowing and restricting views of assets to Groups of Users, it does require some administrative overhead because you must then manually enable all new assets and/or sensors that are added to a location so that they can be viewed by the necessary Group(s).</p>
+    </body>
+</html>

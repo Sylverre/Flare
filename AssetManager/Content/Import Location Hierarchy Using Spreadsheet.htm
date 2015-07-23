@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="2003" MadCap:lastWidth="1096">
+    <head>
+    </head>
+    <body>
+        <h1>Import Location Hierarchy Using Spreadsheet</h1>
+        <p>
+            <MadCap:snippetText src="Resources/Snippets/location hierarchy.flsnp" />
+        </p>
+        <ul>
+            <li>File must be created in and exported from <MadCap:variable name="General.ProductName" />, then populated and imported into system.</li>
+            <li>Every Location must have a unique name. </li>
+        </ul>
+        <p MadCap:conditions="Default.NewText">As a best practice, structure the levels of your Location Hierarchy to fit within <MadCap:variable name="General.ProductName" />'s data schema. The schema's expected levels are:</p>
+        <ul>
+            <li MadCap:conditions="Default.NewText">Country</li>
+            <li MadCap:conditions="Default.NewText">State</li>
+            <li MadCap:conditions="Default.NewText">City</li>
+            <li MadCap:conditions="Default.NewText">Campus</li>
+            <li MadCap:conditions="Default.NewText">Building </li>
+            <li MadCap:conditions="Default.NewText">Floor</li>
+            <li MadCap:conditions="Default.NewText">Zone</li>
+            <li MadCap:conditions="Default.NewText">Room</li>
+        </ul>
+        <p>Use as many of these levels as are appropriate for current or anticipated needs.</p>
+        <ol>
+            <li>Though it is not required, it is recommended that you create one or two locations manually before exporting a location configuration. </li>
+            <li>Navigate to <span class="Strong">Admin Console &gt; Export Configuration</span>. Deselect all variables except for <span class="Strong">Locations &amp;&#160;Rules</span>. Select <span class="Strong">CSV</span> and click <span class="Strong">Export Configuration</span>.</li>
+        </ol>
+        <p>
+            <img src="Images/AM Export Configuration - export locations.bmp" style="width: 1084px;height: 528px;" class="imgfullwidth" />
+        </p>
+        <ol MadCap:continue="true">
+            <li>Open file in spreadsheet program.</li>
+            <li>Add Locations. Each location must have a unique name and a parent. All other fields are optional.</li>
+            <li>Save file.</li>
+            <li><span class="Strong">Browse</span> to and <span class="Strong">Upload</span> the system configuration file.</li>
+        </ol>
+        <p>
+            <img src="Images/AM Import Configuration.bmp" style="width: 1084px;height: 529px;" class="imgfullwidth" />
+        </p>
+        <p class="note" MadCap:autonum="&lt;b&gt;NOTE:&lt;/b&gt; &#160;">The location hierarchy is part of the system configuration. Use the Zone Manager configuration (bottom) task pane only to import Zone Manager configuration files.</p>
+    </body>
+</html>

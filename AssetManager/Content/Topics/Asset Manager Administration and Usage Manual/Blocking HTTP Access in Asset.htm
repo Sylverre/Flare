@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="325" MadCap:lastWidth="1070">
+    <head>
+        <title>
+        </title>
+    </head>
+    <body>
+        <h1>
+            <a name="__RefHeading___Toc414541497">
+            </a>Blocking HTTP Access in <MadCap:variable name="Variables.ProductName" /> </h1>
+        <p>To configure <MadCap:variable name="Variables.ProductName" /> to block HTTP access from external requests, perform the following steps:</p>
+        <ol>
+            <li>From the host running <MadCap:variable name="Variables.ProductName" />, go to <span class="strong">Control Panel &gt; Administrative Tools &gt; Services</span> and stop the<span class="strong"> <MadCap:variable name="Variables.ProductName" /> </span>service.<br /></li>
+            <li>Edit the <span class="strong">System Properties</span> file in {<MadCap:variable name="Variables.ProductName" /> Install Path}\conf directory by removing the line “<span class="strong">http.port=6580</span>”
+            </li>
+            <li>Save the file.</li>
+            <li>Re-start the <span class="strong"><MadCap:variable name="Variables.ProductName" /> </span>service.<br /><br />Now, only <span class="span_3">localhost </span>can get to port 6580. A request from an external host cannot.
+            </li>
+        </ol>
+    </body>
+</html>

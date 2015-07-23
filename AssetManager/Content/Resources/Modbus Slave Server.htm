@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <title>
+        </title>
+        <link href="../../../RFC-AM Comprehensive/Content/Resources/Stylesheets/UserManual for reference.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h3 class="Heading3">
+            <a name="__RefHeading___Toc414541474">
+            </a>Modbus Slave Server</h3>
+        <p>To enable Modbus integration and to set the Port, perform the following steps:</p>
+        <ol start="1" class="ol_1">
+            <li class="li_28">
+                <span class="span_2">Go to </span>
+                <span class="span_5">Admin Console &gt; Integration&#160;&#160; &gt; Modbus Slave Server</span>
+                <span class="span_2"> and check the </span>
+                <span class="span_5">Enabled</span>
+                <span class="span_2"> check box. <br /><br /></span>
+                <span class="span_2">
+                    <img src="../../../RFC-AM Comprehensive/Content/Resources/Images/UserManual for reference/03000103.png" style="height: 245px;width: 604px;" class="img_2" />
+                </span>
+            </li>
+            <li class="li_15">
+                <span class="span_2">Under </span>
+                <span class="span_5">Modbus Slave Server Configuration</span>
+                <span class="span_2">, set the </span>
+                <span class="span_5">Port</span>
+                <span class="span_2">.<br /><br /></span>
+                <span class="span_5">NOTE</span>
+                <span class="span_2">: By default, the port is set to </span>
+                <span class="span_5">502</span>
+                <span class="span_2">. However, this is a common port used for networking industrial electronic devices. Therefore, if you complete the configuration of Asset manager for Modbus and there is still no communication between the RF Code and BMS systems (e.g., the Port reports that it is not responding), you will want to change this port setting (to some port higher than 1024, such as 9502) and test communication between the systems again.<br /><br /></span>
+                <span class="span_5">NOTE</span>
+                <span class="span_2">: Whether you use port 502 or another port, you will need to ensure that this port is open in your firewall as this port will need to be queried by the external system consuming the data, i.e. BMS/Modbus Server.<br /></span>
+            </li>
+        </ol>
+    </body>
+</html>

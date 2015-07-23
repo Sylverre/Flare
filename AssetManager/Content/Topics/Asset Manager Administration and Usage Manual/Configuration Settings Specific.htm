@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="1032" MadCap:lastWidth="776">
+    <head><title></title>
+    </head>
+    <body>
+        <h1><a name="_Configuring_Event_Actions"></a>Configuration Settings Specific to Email Event Actions</h1>
+        <p>When you choose to create an Email Event Action, the following fields and settings are available.</p>
+        <p>
+            <img src="../../Images/UserManual for reference/03000064.png" style="height: 284px;width: 462px;" class="img_2" />
+        </p>
+        <ul>
+            <li><span class="Strong">Email Address(es):</span> The email address(es) that will receive the Event notification.</li>
+            <li><span class="Strong">Event Action Message:</span> The message about the Event that will be delivered.<br /><br /></li>
+        </ul>
+        <p class="note" MadCap:autonum="&lt;b&gt;NOTE:&lt;/b&gt; &#160;">One or more macros can be configured to generate the Event Action Message.&#160; The default Event Action Message is configured with macros in the following way:</p>
+        <p>
+            <MadCap:annotation MadCap:createDate="2015-04-28T13:47:14.1328813-05:00" MadCap:creator="DSFoxx" MadCap:initials="DSF" MadCap:comment="format?" MadCap:editor="DSFoxx" MadCap:editDate="2015-04-28T13:47:17.0100459-05:00">Event</MadCap:annotation> Source: ${SOURCE.$aName}</p>
+        <p>Event Time: ${TIME}</p>
+        <p>Event Trigger Type: ${TRIGGER_TYPE}</p>
+        <p>Additional Event Source Information:</p>
+        <p>Name: ${SOURCE.$aName}</p>
+        <p>Asset Location: ${SOURCE.$aLocation}</p>
+        <p>Description: ${SOURCE.$aDescription}</p>
+        <p>For more information, refer to the <a href="Using Macros.htm#_Using_Macros">Macros</a> section.</p>
+    </body>
+</html>

@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="5645" MadCap:lastWidth="750">
+    <head><title></title>
+    </head>
+    <body>
+        <h1><a name="__RefHeading___Toc414541372"></a><a name="_Asset_Attributes_and"></a>Adding Asset Attributes to Asset Types</h1>
+        <p MadCap:conditions="Default.SourceText">Adding an Asset Attribute to an Asset Type involves a little forethought and planning.&#160; First, you need to have already created the Asset Attribute.&#160; If you have not already done so, refer to the Asset <MadCap:annotation MadCap:createDate="2015-06-30T13:44:28.3772722-05:00" MadCap:creator="Pappillon" MadCap:initials="PA" MadCap:comment="need a link here" MadCap:editor="Pappillon" MadCap:editDate="2015-06-30T13:44:31.6704605-05:00">Attribute</MadCap:annotation> section.&#160; Second, you need to know where on the Asset Type input form the new Asset Attribute will appear.&#160; To help you determine the best placement of the new Attribute, you can click the <span class="Strong">View the Sample Input Form</span> button to view the form.</p>
+        <p MadCap:conditions="Default.NewText">Asset Attributes can be added to Asset Types and will then appear on the Asset Input form when users add assets.  To add an Asset Attribute to an Asset Type, the Attribute must first be created. </p>
+        <p>The following steps will guide you through associating or adding an Asset Attribute to an Asset Type:</p>
+        <ol>
+            <li>Navigate to <span class="Strong">Admin Console &gt; Data Schema &gt; Asset Types</span>. Select the asset type to which an attribute will be added or associated and then click the <span class="strong">View Sample Input Form</span> button.<br /><img src="../../Images/AM Asset Types, Sample Input Form.bmp" class="imgfullwidth" /></li>
+            <li>Decide where in the form your newly added or associated attribute should appear. <ol><li>The example in the screenshot, Ent Inventory, has only one selected category:&#160;Basic Information. You can add the new attribute this category or select one or more additional categories for the new attributes to be associated with the asset type.<br /></li></ol><p class="note" MadCap:autonum="&lt;b&gt;NOTE:&lt;/b&gt; &#160;">Basic Information will always be the top category. If you wish to insert a new category between Basic Information and a second category present on the Input Form of a selected asset type, assign a Field Order number smaller than the smallest Field Order number in the second category.</p><p class="note" MadCap:autonum="&lt;b&gt;NOTE:&lt;/b&gt; &#160;">Field Order numbers (in parentheses) to the left of each attribute are arbitrary user-assigned numbers. A best practice is to skip ten digits with each number used, which should leave adequate space for future expansion without having to re-number all of the Asset Attributes.<br /></p><ol MadCap:continue="true"><li>Select the <span class="strong">Attribute</span> and <span class="strong">Category</span> and assign a <span class="strong">Field Order</span>. Click <span class="strong">OK</span>.</li></ol></li>
+            <li>Click the <span class="strong">View Sample Input Form</span> button. The input form appears with the new attributes.<br /><img src="../../Images/UserManual for reference/03000047.png" /><br /><br /></li>
+        </ol>
+        <h1 MadCap:conditions="Default.User">How to Add An Attribute to An Asset Type:&#160;Step by Step</h1>
+        <ol>
+            <li MadCap:conditions="Default.User">Select the Asset Type.<br /> <img src="../../Images/AM Asset Type add attribute 1.bmp" class="imgfullwidth" /></li>
+        </ol>
+        <p MadCap:conditions="Default.User">In the example above you are using the Asset Type “Tablet.”</p>
+        <p MadCap:conditions="Default.User">Determine where in the Input Form the attributes should go.</p>
+        <p MadCap:conditions="Default.User">
+            <img src="../../Images/AM Asset Type add attribute 2 - sample input form.bmp" class="imgsmall" />
+            <br />
+            <br />The Asset Attribute that we wish to add is the “Screen Size” and this Asset Attribute already exists and is also used by the Asset Types “Laptop” and “Monitors”.&#160; Looking at the Sample Input Form, the desired position of the Asset Attribute “Screen Size” is in the section titled “Computer Details” at the bottom of the list.&#160; Notice the numbers that are in parentheses to the left of the attribute labels.&#160; These numbers are “Field Order” numbers and they are used to determine the order or positioning of the Asset Types that are added to an Asset Type.&#160; <MadCap:variable name="Variables.ProductName" /> orders Asset Attributes in an ascending order (smallest to largest) from top to bottom.&#160; In this example, in order to make “Screen Size” appear at the bottom of the list it needs to have a field order number greater than 1300.<br /><br /><span class="Strong">TIP</span>: The Field Order numbers are arbitrary numbers that you assign.&#160; Do not use consecutive numbers as that leaves no extra space to add additional Asset Attributes in the future should the need arise.&#160; A best practice is to skip about 10 digits with each number used leaving adequate space for future expansion without having to re-number all of the Asset Attributes.<br /></p>
+        <ol>
+            <li MadCap:conditions="Default.User">In the Asset Type editor area of the task pane, the second section titled Attributes lists the attributes that have been added to the selected Asset Type.<br /><img src="../../Images/UserManual for reference/03000048.png" /><br /><br /></li>
+        </ol>
+        <p class="note" MadCap:conditions="Default.User" MadCap:autonum="&lt;b&gt;NOTE:&lt;/b&gt; &#160;">For new Asset Types, the list of Attributes will be empty.&#160;</p>
+        <ol MadCap:continue="true">
+            <li MadCap:conditions="Default.User">To add an Attribute, click the <span class="Strong">Add</span> button.<br />The Add Attribute window appears.<br /><img src="../../Images/UserManual for reference/03000049.png" /><br /></li>
+            <li MadCap:conditions="Default.User">From the <span class="Strong">Add Attribute</span> window, choose an Attribute, for example, Screen Size.<br /></li>
+            <li MadCap:conditions="Default.User">Chose a category from the drop-down menu or create a new one as a container for the new Attribute.&#160;</li>
+        </ol>
+        <p class="note" MadCap:conditions="Default.User" MadCap:autonum="&lt;b&gt;NOTE:&lt;/b&gt; &#160;">The Category is simply an arbitrary group of similar Attributes, for example, Computer Details.<br /><br /><img src="../../Images/UserManual for reference/0300004A.png" /><br /></p>
+        <ol MadCap:continue="true">
+            <li MadCap:conditions="Default.User">Assign a <span class="Strong">Field</span> <span class="Strong">Order</span> number.<br />The Field Order determines the placement of the Attribute on the input form.&#160; <br /></li>
+            <li MadCap:conditions="Default.User">To place the new Attribute at the bottom of the list, enter <span class="Strong">1400</span>.<br /></li>
+            <li MadCap:conditions="Default.User">Leave the Value Required box unchecked to allow entry of Assets with the Attribute unknown or unspecified.&#160;</li>
+        </ol>
+        <p class="note" MadCap:conditions="Default.User" MadCap:autonum="&lt;b&gt;NOTE:&lt;/b&gt; &#160;"> Checking the box requires that when each time a “Tablet” asset is added to the system, this information must be provided in order to save the asset information to the database.</p>
+        <ol MadCap:continue="true">
+            <li MadCap:conditions="Default.User">Leave the Static box unchecked. <br /></li>
+        </ol>
+        <p class="note" MadCap:conditions="Default.User" MadCap:autonum="&lt;b&gt;NOTE:&lt;/b&gt; &#160;"> By leaving this box unchecked, the value in the “Screen Size” attribute is not changeable and is provided automatically.&#160; If the box is checked, then the end-user must choose the default value from the “Default Value” entry box.</p>
+        <ol MadCap:continue="true">
+            <li MadCap:conditions="Default.User">Click the <b>OK</b> button to add the Asset Attribute to the Asset Type.<br /><br /><img src="../../Images/UserManual for reference/0300004B.png" /><br /></li>
+            <li MadCap:conditions="Default.User">Click the <span class="Strong">Save</span> button.<br /></li>
+            <li MadCap:conditions="Default.User">To verify that the Asset Attribute works correctly, click <span class="Strong">View Sample Input Form</span>.<br /><br /><img src="../../Images/UserManual for reference/0300004C.png" /><br /><br />The Attribute Type “Screen Size” appears in the “Computer Details” Category at the bottom of the Attribute list for Tablet Assets.</li>
+        </ol>
+    </body>
+</html>

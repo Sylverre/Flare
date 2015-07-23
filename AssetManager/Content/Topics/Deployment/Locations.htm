@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="2474" MadCap:lastWidth="814">
+    <head>
+        <title>
+        </title>
+    </head>
+    <body>
+        <h1>Locations and Location <MadCap:annotation MadCap:createDate="2015-05-21T10:19:05.0354039-05:00" MadCap:creator="DSFoxx" MadCap:initials="DSF" MadCap:comment="again, this is a different topic page than the one in SysAdmin.  Odd thought!" MadCap:editor="DSFoxx" MadCap:editDate="2015-05-21T10:19:24.2745044-05:00">Hierarchies</MadCap:annotation></h1>
+        <p>Create your location hierarchy before adding any assets to the system.</p>
+        <p>A location hierarchy is a top-down grouping of your locations, beginning with a large category that contains all the others and then moving down, as from Country (US) to State (TX) to City (Austin, Dallas, Houston).</p>
+        <p>A data schema is included with <MadCap:variable name="General.ProductName" />, and is imported early in the configuration process to ensure that all those terms {W/C!} the system expects are present.  These terms include eight hierarchical location categories.  <MadCap:variable name="General.CompanyName" /> recommends that you consider those categories when creating your location hierarchy, though you may not need to begin at the top level.</p>
+        <p>Country</p>
+        <p>State</p>
+        <p>City</p>
+        <p>Campus</p>
+        <p>Building</p>
+        <p>Floor</p>
+        <p>Zone</p>
+        <p>Room</p>
+        <p>Location names should be specific and have meaning to the users.  Create locations from the largest applicable level first.  Locations are inflexible.  [I want to say “be careful!” but without that.]</p>
+        <p>Note that these generic terms cannot be used as Location names, as they are already present.</p>
+        <p>&#160;</p>
+        <p>Add Your Location Hierarchy:</p>
+        <p>Admin Console&gt;Locations&gt;Location.</p>
+        <p>Click New and add your top-level location. If you are integrating with third-party products that include location-based hierarchies, these should be matched.  If in doubt, begin at the Country level (USA, Canada).</p>
+        <p>Save your new location, then click that location to create a new location one level down in the hierarchy.</p>
+        <p>Note:	The top-level Location and Unknown Location cannot be removed or edited.</p>
+        <p>Your Location Hierarchy can be created before deployment, and should be created before any assets are added to the system.</p>
+        <p>&#160;</p>
+        <p MadCap:conditions="General.notes for reviewers" style="font-weight: normal;text-decoration: underline;font-style: normal;">Need a best-practice recommendation here. Is there any disadvantage--other than the need to drill down--to beginning at the Global level? Wilfred reminds:&#160;For integration with third-party products, need to match trees. Screenshot includes summary locations from schema for <MadCap:annotation MadCap:createDate="2015-04-27T17:45:52.7600657-05:00" MadCap:creator="DSFoxx" MadCap:initials="DSF" MadCap:comment="Frank says: Talk to Barry. He has gone through the pain of having to refactor the location tree and has strong opinions on this. I would think you would want to start at a global level. We have had customers start at a site level and then later on had problems adding a peer site.\r\n\r\nE-mailed Barry 04/27/15!" MadCap:editor="DSFoxx" MadCap:editDate="2015-04-27T17:46:03.1936625-05:00">reference.</MadCap:annotation></p>
+        <p MadCap:conditions="General.notes for reviewers" style="font-weight: normal; text-decoration: underline; font-style: normal;">Instruction must include:&#160;Define your location hierarchy using unique names and a logical naming convention that integrates with the default or custom schema(s) selected. Be aware that hierarchies are difficult to change; locations <i>can</i> be deleted and recreated if misplaced, but only after all assets and rules have been cleared from each one.  </p>
+        <p MadCap:conditions="General.notes for reviewers" style="font-weight: bold; font-style: italic;">
+            <img src="../../D_Images/placeholder best practice location hierarchy created 051515.bmp" alt="" title="" style="width: 595px;height: 322px;" />
+        </p>
+        <p>Define your Location hierarchy in <b>Admin Console &gt; Locations/Rules/Maps</b> using naming conventions that provide distinct nomenclature.</p>
+        <p class="note" MadCap:autonum="&lt;b&gt;NOTE:&lt;/b&gt; &#160;">If your data center already has naming conventions for the assets within it, you can model the Location hierarchy based on that convention. If not, it might be necessary to document externally some mapping of the two for reference. Also, for the pilot, you only need to configure locations for a handful of racks. For the roll-out, you can use the Export/Import process covered later in this <MadCap:annotation MadCap:createDate="2015-04-24T14:08:52.0154016-05:00" MadCap:creator="DSFoxx" MadCap:initials="DS" MadCap:comment="xref--except that it wasn't actually _in_ Deployment's source text!" MadCap:editor="DSFoxx" MadCap:editDate="2015-05-21T11:53:23.9470752-05:00">document.</MadCap:annotation></p>
+        <p class="note" MadCap:autonum="&lt;b&gt;NOTE:&lt;/b&gt; &#160;">The location tree is difficult to change after it has been configured and you have associated your assets with the locations in the hierarchy. Take care to name your locations and define your hierarchy at the beginning of your deployment.</p>
+        <p class="note" MadCap:autonum="&lt;b&gt;NOTE:&lt;/b&gt; &#160;">The “Name” field must be unique throughout the system, so it is important to use very specific names for each location/object.</p>
+        <p>For example, Austin &gt; Data Center &gt; Row 1 &gt; Rack 1 and Austin &gt; Data Center &gt; Row 2 &gt; Rack 1 leaves ambiguity as to which “Rack 1” is of mention in reports, dashboards, etc., since there is generally a Rack 1 in both Row 1 and Row 2. Instead, use a naming convention more like World &gt; USA &gt; Texas &gt; Austin &gt; ADC &gt; ADC-R1 &gt; ADC-R1-Rack1 and World &gt; USA &gt; Texas &gt; Austin &gt; ADC &gt; ADC-R2 &gt; ADC-R2-Rack1 where the following is true:</p>
+        <ul>
+            <li>Austin = City</li>
+            <li>ADC = Austin Data Center</li>
+            <li>ADC-R1 = Austin Data Center Row 1</li>
+            <li>ADC-R1-Rack1 = Austin Data Center Row 1 Rack #1</li>
+            <li>ADC-R2-Rack1 = Austin Data Center Row 2 Rack #1</li>
+            <li>Etc.</li>
+        </ul>
+        <p>When you have finished configuring your Location tree, it will look similar to the image above.</p>
+    </body>
+</html>

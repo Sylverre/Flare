@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="2" MadCap:lastHeight="380" MadCap:lastWidth="665">
+    <head>
+        <title>
+        </title>
+    </head>
+    <body>
+        <h2>Allocating Memory <MadCap:annotation MadCap:createDate="2015-05-12T14:32:18.0716260-05:00" MadCap:creator="DSFoxx" MadCap:initials="DSF" MadCap:comment="this topic needs to be in here or SysAdmin, but not here in the TOC." MadCap:editor="DSFoxx" MadCap:editDate="2015-05-12T14:32:44.4841367-05:00">to</MadCap:annotation> <MadCap:variable name="General.ProductName" /></h2>
+        <p>By default the amount of memory that is allocated to the <MadCap:variable name="General.ProductName" /> software is configured for relatively small deployments. For many installations this amount of memory is sufficient, however if the number of assets exceeds roughly 5,000 or the calculated field function is heavily used, additional memory resource may need to be allocated to maintain good performance characteristics. Adding physical memory to the server that runs <MadCap:variable name="General.ProductName" /> may help if swapping is experienced but to fully utilize the free memory, the software must be defined to allow <MadCap:variable name="General.ProductName" /> to use more memory than the default.</p>
+        <p>To change the amount of memory being used by <MadCap:variable name="General.ProductName" />, edit system.properties file and change the value of the memory directive. The following example sets the memory footprint to 2 GB or 2048 MB of memory:</p>
+        <p class="ccodefont">wrapper.java.maxmemory=2048</p>
+        <p>The maximum amount of memory that can be allocated to <MadCap:variable name="General.ProductName" /> on a 32bit operating system is 4096mb. Depending on the version of Microsoft Windows you are running, the operating system may limit the amount of physical memory that can be addressed. The use of 64bit versions of Windows Operating System is encouraged when more than 2GB of memory is <MadCap:annotation MadCap:createDate="2015-05-06T13:19:30.9922387-05:00" MadCap:creator="DSFoxx" MadCap:initials="DSF" MadCap:comment="Windows? " MadCap:editor="DSFoxx" MadCap:editDate="2015-05-06T13:19:33.9254064-05:00">needed.</MadCap:annotation></p>
+    </body>
+</html>

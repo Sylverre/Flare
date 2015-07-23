@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <title>
+        </title>
+    </head>
+    <body>
+        <h3 class="Heading3">
+            <a name="__RefHeading___Toc414541381">
+            </a>Conditional Formatting with Attributes</h3>
+        <p>Formatting for Asset Attributes, Status Attributes, and Calculated Attributes can also be configured to conditionally change the foreground and background color of a cell in Asset View panels and in Asset grids in the Administrator or User Dashboards, depending on the attribute value.&#160; </p>
+        <p>For example, a numerical attribute can be configured so that the cell background turns red when its value exceeds 100.&#160; </p>
+        <p class="p_50">
+            <img src="../../../../RFC-AM Comprehensive/Content/Resources/Images/UserManual for reference/03000053.png" style="height: 333px;width: 470px;" class="img_2" />
+        </p>
+        <p class="MediumGrid21_1">Multiple rules can be applied to formatting and the value of an attribute is evaluated against rules from the top down.&#160; The first rule matched determines the formatting.</p>
+        <p class="MediumGrid21_2">&#160;</p>
+        <p class="MediumGrid21_3">
+            <img src="../../../../RFC-AM Comprehensive/Content/Resources/Images/UserManual for reference/03000054.png" style="height: 240px;width: 462px;" class="img_2" />
+        </p>
+        <p class="MediumGrid21">&#160;</p>
+        <p class="MediumGrid21_1">To configure conditional formatting for an Attribute, perform the following steps:<br /></p>
+        <ol start="1" class="ol_1">
+            <li class="MediumGrid21_1">
+                <span class="span_12">In the </span>
+                <span class="span_14">Admin Console,</span>
+                <span class="span_12"> go to</span>
+                <span class="span_14"> Data Schema &gt; Status Attributes</span>
+                <span class="span_12">.<br /><br /></span>
+                <img src="../../../../RFC-AM Comprehensive/Content/Resources/Images/UserManual for reference/03000055.png" style="height: 290px;width: 448px;" class="img_2" />
+                <span class="span_12">
+                    <br />
+                </span>
+            </li>
+            <li class="MediumGrid21">
+                <span class="span_12">Next, choose an Attribute to reformat, e.g., Temperature (highlighted in the screenshot below).<br /><br /></span>
+                <img src="../../../../RFC-AM Comprehensive/Content/Resources/Images/UserManual for reference/03000056.png" style="height: 319px;width: 447px;" class="img_2" />
+                <span class="span_12">
+                    <br />
+                </span>
+            </li>
+            <li class="MediumGrid21_1">
+                <span class="span_12">Under the </span>
+                <span class="span_14">Formatting</span>
+                <span class="span_12"> heading, click the </span>
+                <span class="span_14">Add</span>
+                <span class="span_12"> button:<br /><br /></span>
+                <img src="../../../../RFC-AM Comprehensive/Content/Resources/Images/UserManual for reference/03000057.png" style="height: 158px;width: 388px;" class="img_2" />
+                <span class="span_12">
+                    <br />
+                    <br />The </span>
+                <span class="span_14">Add Formatting</span>
+                <span class="span_12"> dialog box will appear:<br /><br /></span>
+                <img src="../../../../RFC-AM Comprehensive/Content/Resources/Images/UserManual for reference/03000058.png" style="height: 219px;width: 366px;" class="img_2" />
+            </li>
+        </ol>
+        <p class="MediumGrid21">&#160;</p>
+        <p class="MediumGrid21_4">The Add Formatting box has four (4) fields:</p>
+        <ul class="ul_5">
+            <li class="MediumGrid21_2">
+                <span class="span_14">Foreground Color</span>
+                <span class="span_12"> – The color of the text itself.</span>
+            </li>
+            <li class="MediumGrid21_2">
+                <span class="span_14">Background Color</span>
+                <span class="span_12"> – The color of the background of the cell.</span>
+            </li>
+            <li class="MediumGrid21_2">
+                <span class="span_14">Operator</span>
+                <span class="span_12"> – Certain mathematical, conditional, or Boolean operands used to define (along with the Value) the scope of the desired formatting.&#160; The possible operands (depending on the Attribute) are:</span>
+            </li>
+        </ul>
+        <ul class="ul_6">
+            <li class="MediumGrid21_3">
+                <span class="span_14">=</span>
+                <span class="span_12">&#160; (Equal to)</span>
+            </li>
+            <li class="MediumGrid21_3">
+                <span class="span_14">!=</span>
+                <span class="span_12">&#160; (NOT Equal to)</span>
+            </li>
+            <li class="MediumGrid21_3">
+                <span class="span_14">&gt; </span>
+                <span class="span_12"> (Greater than)</span>
+            </li>
+            <li class="MediumGrid21_3">
+                <span class="span_14">&lt;</span>
+                <span class="span_12">&#160; (Less than)</span>
+            </li>
+            <li class="MediumGrid21_3">
+                <span class="span_14">&gt;=</span>
+                <span class="span_12">&#160; (Greater than OR Equal to)</span>
+            </li>
+            <li class="MediumGrid21_3">
+                <span class="span_14">&lt;=&#160; </span>
+                <span class="span_12">(Less than OR Equal to)</span>
+            </li>
+            <li class="MediumGrid21_4">Contains</li>
+            <li class="MediumGrid21_4">Does Not Contain</li>
+            <li class="MediumGrid21_5">Starts With</li>
+        </ul>
+        <ul class="ul_5">
+            <li class="MediumGrid21_6">
+                <span class="span_14">Value</span>
+                <span class="span_12"> – Depending on the Attribute, this can be a mathematical, conditional or Boolean quantity.</span>
+            </li>
+        </ul>
+        <p class="MediumGrid21">&#160;</p>
+        <p class="MediumGrid21_1">When you click on the drop-down menu for the foreground and background colors, you will get a dialog box with a color palette for you to choose, like in the below screenshot:</p>
+        <p class="MediumGrid21_2">&#160;</p>
+        <p class="MediumGrid21_1">
+            <img src="../../../../RFC-AM Comprehensive/Content/Resources/Images/UserManual for reference/03000059.png" style="width: 624px;height: 382px;" />
+        </p>
+        <p class="MediumGrid21">&#160;</p>
+        <p class="MediumGrid21">&#160;</p>
+        <p class="MediumGrid21_5">For the example “Temperature” attribute, we chose:</p>
+        <p class="MediumGrid21">&#160;</p>
+        <ul class="ul_7">
+            <li class="MediumGrid21_7">
+                <span class="span_12">A </span>
+                <span class="span_15">Red</span> <span class="span_14">Foreground Color</span><span class="span_12"> when Temperature is </span><span class="span_14">Greater-Than-Or-Equal-To </span><span class="span_12">90</span> <span class="span_12">degrees F.<br /></span></li>
+            <li class="MediumGrid21_7">
+                <span class="span_12">A </span>
+                <span class="span_16">Blue</span> <span class="span_14">Foreground Color</span><span class="span_12"> when Temperature is </span><span class="span_14">Less-Than-Or-Equal-To</span> <span class="span_17">70 </span><span class="span_12">degrees F.</span></li>
+        </ul>
+        <p class="MediumGrid21">&#160;</p>
+        <p class="MediumGrid21_2">
+            <span class="span_12">That example configuration for the </span>
+            <span class="span_14">Temperature</span>
+            <span class="span_12"> Attribute would look like this in the </span>
+            <span class="span_14">Formatting</span>
+            <span class="span_12"> section of the Status Attributes configuration options as seen in the screenshot below:</span>
+        </p>
+        <p class="MediumGrid21_2">&#160;</p>
+        <p class="MediumGrid21_1">
+            <img src="../../../../RFC-AM Comprehensive/Content/Resources/Images/UserManual for reference/0300005A.png" style="width: 624px;height: 462px;" />
+        </p>
+        <p class="MediumGrid21">&#160;</p>
+    </body>
+</html>

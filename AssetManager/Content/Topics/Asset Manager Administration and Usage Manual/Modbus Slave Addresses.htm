@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="1170" MadCap:lastWidth="1096">
+    <head><title></title>
+    </head>
+    <body>
+        <h1><a name="__RefHeading___Toc414541476"></a>Modbus Slave Addresses</h1>
+        <p>After licensing, enabling, and configuring the Modbus functionality, you can display and/or export the mapping.&#160; For each attribute value to be published by the Modbus Slave Devices, <MadCap:variable name="Variables.ProductName" /> will automatically assign a unique Holding Register Address used by Modbus clients to query an attribute’s current value. The Modbus Slave Addresses panel allows you to view the Modbus Slave Device ID and the value of the Modbus Holding Register address <MadCap:variable name="Variables.ProductName" /> has assigned to each attribute published via Modbus.
+        </p>
+        <h2>View and/or Export the Modbus Mapping</h2>
+        <ol>
+            <li>In the <span class="strong">Admin Console, </span>go to<span class="strong"> Integration &gt; Modbus Slave Addresses</span> tab. <br /></li>
+            <li>Click the desired Slave Device in the middle column <MadCap:conditionalText MadCap:conditions="Default.AM only"> (this example uses “Datacenter Temperature”) </MadCap:conditionalText>to display the registers/addresses on the right side of the screen. <br /><br /><img src="../../Images/UserManual for reference/03000108.png" style="height: 186px;width: 589px;" class="img_2" /><br /></li>
+            <li>To export this mapping, select the desired output format and click the appropriate <span class="strong">Export</span> button at the top of the screen. <br /></li>
+        </ol>
+        <p class="note" MadCap:autonum="&lt;b&gt;NOTE:&lt;/b&gt; &#160;"> The Excel screenshot below shows a CSV-formatted mapping of this particular Modbus integration. <br /><br /><img src="../../Images/UserManual for reference/02000109.jpg" style="width: 608px;height: 338px;" /></p>
+        <p>Upon completion and exporting of this mapping, a BMS (data consuming) system should now be able to pull/query information using Modbus TCP from the <MadCap:variable name="Variables.ProductName" /> server.</p>
+        <p class="note" MadCap:autonum="&lt;b&gt;NOTE:&lt;/b&gt; &#160;">For information regarding how to integrate your Modbus system, please refer to your Modbus manuals or refer to the Modbus website <a href="http://www.modbus.org/">http://www.modbus.org</a>.</p>
+    </body>
+</html>

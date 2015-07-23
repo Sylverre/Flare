@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="1224" MadCap:lastWidth="776">
+    <head><title></title>
+    </head>
+    <body>
+        <h1><a name="__RefHeading___Toc414541385"></a>Configuring SMTP</h1>
+        <p>In order to send email notifications, you must configure SMTP (Simple Mail Transfer Protocol) settings for <MadCap:variable name="Variables.ProductName" />.</p>
+        <p>To configure an SMTP Server:</p>
+        <ol>
+            <li>From the <span class="Strong">Admin Console</span>, navigate to <span class="Strong">Configuration &gt; SMTP Server</span>.<br /><br /><img src="../../Images/UserManual for reference/0300005B.png" style="height: 213px;width: 560px;" class="img_2" /></li>
+            <li>Under <span class="Strong">Basic Information</span>, input a <span class="Strong">Name</span> for the SMTP server.</li>
+            <li>Complete the <span class="Strong">Network Settings</span> fields.<br /><img src="../../Images/UserManual for reference/0300005C.png" style="height: 222px;width: 336px;" class="img_2" /><br /><span class="Strong">Hostname</span>: The name of the mail server.<br /><span class="Strong">Port</span>: The port of the mail server.<br /><span class="Strong">Connection Security</span>: Set the desired secure connection protocol:<br /></li>
+        </ol>
+        <ul class="nonbulleted">
+            <li><span class="strong">STARTTLS:</span>	secures an unsecured channel. No additional configuration is necessary to send 				notifications with Transport Layer Security (TLS)</li>
+            <li><span class="strong">SSL/TLS:</span>	Secure Sockets Layer (SSL) and Transport Layer Security (TLS). Requires that 				your mail system be configured for SSL.</li>
+            <li><span class="strong">None:</span>		no secure connection protocol.</li>
+        </ul>
+        <ol>
+            <br /><span class="Strong">SMTP Username</span>: The username for an account with admin permissions for the SMTP mail server.<br /><span class="Strong">SMTP Password</span>: The password for an SMTP server admin account.<br /><span class="Strong">Confirm Password</span>: The same as above.<br /><span class="Strong">From Address</span>: The email address of the admin for notifications about the SMTP server/configuration.</ol>
+        <ol class="nonbulleted" start="4">
+            <li>Click the <span class="Strong">Test</span> button to ensure that the configuration works.</li>
+            <li>Click the <span class="Strong">Save</span> button if the test succeeds; if not, troubleshoot the configuration.</li>
+        </ol>
+    </body>
+</html>

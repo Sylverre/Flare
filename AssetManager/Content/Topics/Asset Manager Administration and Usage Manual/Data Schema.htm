@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="2121" MadCap:lastWidth="776">
+    <head><title></title>
+    </head>
+    <body>
+        <h1><a name="__RefHeading___Toc414541346"></a>Data Schema</h1>
+        <p>The Data Schema task configuration area in the Admin Console lets you edit and/or add all of the following:</p>
+        <ul>
+            <li>Asset Attributes</li>
+            <li style="text-align: left;">
+                Status Attributes</li>
+            <li>Calculated Asset Attributes</li>
+            <li>Asset Types</li>
+            <li>Custom Attribute Types</li>
+            <li>Statistical Pack</li>
+            <li>Statistical Policy</li>
+            <li>Schema Import</li>
+            <br />
+            <br />
+        </ul>
+        <p>
+            <img src="../../Images/UserManual for reference/03000028.png" style="width: 305px;height: 397px;" />
+        </p>
+        <p class="note" MadCap:autonum="&lt;b&gt;NOTE:&lt;/b&gt; &#160;">  The Schema Import task lets you load a Default Asset Schema or a Custom Schema that has been pre-defined.</p>
+        <p>Asset attributes are defined fields which hold specific pieces of information about assets. Examples of asset attributes in a data schema would be:</p>
+        <ul>
+            <li>Asset Description</li>
+            <li>Asset Tag ID</li>
+            <li>Purchase Date</li>
+            <li>Manufacturer</li>
+        </ul>
+        <p>
+            Status
+            attributes are fields that indicate information about the state of assets. </p>
+        <ul>
+            <li>Temperature</li>
+            <li>Low Battery</li>
+            <li>Online Status</li>
+            <li>Motion<br /></li>
+        </ul>
+        <p>Calculated asset attributes use formulas to derive values from data held by other attributes.</p>
+        <ul>
+            <li>Asset Count</li>
+            <li>Average Humidity</li>
+            <li>Total Offline Assets</li>
+            <li>Oldest Assets<br /></li>
+        </ul>
+        <p class="note" MadCap:autonum="&lt;b&gt;NOTE:&lt;/b&gt; &#160;">Conditional Formatting for Asset Attributes, Status Attributes, and Calculated Attributes can be configured to  change the foreground and/or background color of a cell in views and dashboards depending on the attribute value. For example, a numerical attribute can be configured so that the cell background turns red when its value exceeds 100. Multiple rules can be applied to formatting and the value of an attribute is evaluated against rules from the top down. The first rule matched determines the <MadCap:annotation MadCap:createDate="2015-06-08T11:39:57.1506972-05:00" MadCap:creator="Pappillon" MadCap:initials="PA" MadCap:comment="why is this whole explanation here, rather than a brief and href?" MadCap:editor="Pappillon" MadCap:editDate="2015-06-08T11:40:10.9754880-05:00">formatting.</MadCap:annotation></p>
+        <p>Asset Types define specific types of assets. Asset Types can be created hierarchically, allowing for more specific asset definition as you go further down the hierarchy. Here are examples of some Asset Types:</p>
+        <ul>
+            <li>Laptop</li>
+            <li>Server</li>
+            <li>Copier</li>
+            <li>Employee</li>
+            <br />
+        </ul>
+        <p>Once an asset attribute is defined, it can be applied to one or more asset types to define the specific information to be collected about the asset. Typically an asset type will have multiple asset attributes associated with it.</p>
+        <p>A Custom Attribute type can be an individual value or a list of values that can be added to asset types. Custom attribute types can be implemented as either flat lists of values or as a hierarchy of values. There is no predefined way to use custom attribute types, but a good example of their use might be a company directory, where a hierarchy of divisions and departments could be created. Custom attribute types could then reference the department hierarchy to describe their position within an organization.</p>
+        <p>The Schema Import feature provides various pre-canned data schemas that are created by RF Code for some common types of asset organization. Administrators can choose to import one or all of the RF Code created schemas to quickly and easily start using the <MadCap:variable name="General.ProductName" /> software.</p>
+    </body>
+</html>

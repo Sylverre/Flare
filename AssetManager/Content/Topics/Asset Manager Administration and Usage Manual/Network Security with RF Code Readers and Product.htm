@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="616" MadCap:lastWidth="1096">
+    <head>
+        <title>
+        </title>
+    </head>
+    <body>
+        <h1>
+            <a name="__RefHeading___Toc414541496">
+            </a>Network Security with <MadCap:variable name="Variables.CompanyName" /> Readers and <MadCap:variable name="Variables.ProductName" /></h1>
+        <p>In addition to configuring <MadCap:variable name="Variables.ProductName" /> login and user login access, you can also secure your readers and <MadCap:variable name="Variables.ProductName" /> within your network by disabling ports and web services, using SSL certificates, and/or locking down readers.</p>
+        <p class="note" MadCap:autonum="&lt;b&gt;NOTE:&lt;/b&gt; &#160;">By default, HTTP and HTTPS will use ports 6580 and 6581 respectively. However, these can be changed if necessary. 
+        </p>
+        <p>On an M250 Reader, web services can be turned off. You can lock a reader by restricting access to it except from one or more users with specific usernames and passwords. The server software will also need to use these login credentials in order to log in to the reader. Port 6500 is the only port required for proper operation. Ports 80, 443, and 6501 can be turned off. SSH can also be turned off.</p>
+        <p>Readers that appear too open and respond to every request in an unsecure manner can be locked down.</p>
+        <p>You will notice that you can also turn off the HTTPS port. This port is only used for the web interface; therefore, it is not absolutely necessary, although turning off this port will prevent you from being able to log into the web interface. </p>
+        <p>The port that <MadCap:variable name="Variables.ProductName" /> and Zone Manager both use to communicate with readers is the legacy port 6500; therefore, this is the only port that absolutely must remain open.</p>
+        <p>By default SSL is enabled (default HTTPS port 6581 is listening) with a self-signed SSL certificate. Steps for configuring a CA-signed SSL certificate can be found in the <a href="User Accounts and Security.htm#_Configuring_SSL_Certificates">Configuring SSL Certificates for use with <MadCap:variable name="Variables.CompanyName" /> Readers</a> section.</p>
+    </body>
+</html>

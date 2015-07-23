@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultFileLinkSet
+  FileSearchable="true"
+  FileTimeEstimate="0"
+  FilePriority="0">
+  <Links>
+    <Link
+      Url="Content/Resources/TableStyles/StandardOnDarkBackground.css" />
+    <Link
+      Url="Content/Resources/Images/RedX.png" />
+    <Link
+      Url="Content/Resources/Images/GreenCheck.png" />
+    <Link
+      Url="Project/ConditionTagSets/General.flcts" />
+  </Links>
+  <LongLinks>
+    <Link
+      Url="Content/Resources/TableStyles/StandardOnDarkBackground.css" />
+    <Link
+      Url="Content/Resources/Images/RedX.png" />
+    <Link
+      Url="Content/Resources/Images/GreenCheck.png" />
+    <Link
+      Url="Project/ConditionTagSets/General.flcts" />
+  </LongLinks>
+  <Anchors />
+  <Keywords>
+    <IndexCacheEntry
+      Term="Tables"
+      Conditions="General.PDF"
+      LocalConditions=""
+      Position="6" />
+  </Keywords>
+  <Concepts />
+  <ConceptControlNames />
+  <IndexControlNames />
+  <Variables />
+  <FileConditions>
+    <Condition
+      Tag="General.PDF" />
+  </FileConditions>
+  <FileTags />
+  <AllConditions>
+    <Condition
+      Tag="General.PDF" />
+  </AllConditions>
+  <Stylesheets>
+    <Url
+      Source="Content/Resources/TableStyles/StandardOnDarkBackground.css" />
+  </Stylesheets>
+</CatapultFileLinkSet>

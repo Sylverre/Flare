@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="1350" MadCap:lastWidth="750">
+    <head><title></title>
+    </head>
+    <body>
+        <h1><a name="__RefHeading___Toc414541347"></a>Asset Types</h1>
+        <p>An asset type defines a specific type of asset (such as an IT asset with a sub-type of a server, desktop, or laptop) that will be managed within <MadCap:variable name="Variables.ProductName" />. Asset Types are most typically arranged in a hierarchical tree that becomes more granular from top to bottom.</p>
+        <p>The Asset Types task is found in the <span class="strong">Admin Console </span>under <span class="strong">Data Schema &gt; Asset Type </span>and provides the following functions:</p>
+        <ul>
+            <li>Viewing the Asset Types hierarchy</li>
+            <li>Creating Asset Types</li>
+            <li>Editing Asset Types</li>
+            <li>Deleting Asset Types</li>
+            <li>Associating Asset Attributes with Asset Types</li>
+            <li>Configuration of Asset Type input form</li>
+            <li>Viewing sample Asset Type input form</li>
+            <br />
+        </ul>
+        <p>The default schema is usually sufficient for most deployments; however, it can also be customized. Before beginning to customize your Asset Schema, <MadCap:annotation MadCap:createDate="2015-06-13T23:24:15.9329669-05:00" MadCap:creator="Pappillon" MadCap:initials="PA" MadCap:comment="I really don't like this approach--it sounds...preachy." MadCap:editor="Pappillon" MadCap:editDate="2015-07-03T18:46:07.0611710-05:00">plan</MadCap:annotation> for the following:</p>
+        <ul>
+            <li>Decide and document all of the different types of assets you wish to manage with <MadCap:variable name="Variables.ProductName" />.<br /></li>
+            <li>
+                Create and document an Asset Type hierarchy from your list of types of assets.<br /></li>
+            <li>Determine and document the Attribute Types (information) you wish to collect about each type of asset.<br /></li>
+            <li>For each Attribute Type, determine the data type of the attribute (string, date, number, etc.).<br /></li>
+            <li>For each Attribute Type, determine where in the Asset Type hierarchy it should be applied, remembering that children of an Asset Type inherit Asset Attributes from their parents.</li>
+            <br />
+        </ul>
+        <p>After planning, perform the following steps in the following order:</p>
+        <ol>
+            <li>Use the Asset Type task to create all of your Asset Types organized in your desired hierarchy.<br /></li>
+            <li>Use the Asset Attribute task to create all of your Asset Attributes.<br /></li>
+            <li>Use the Asset Type task to associate the Asset Attributes with the appropriate Asset Types.<br /></li>
+            <li>Validate that Asset Type input forms are correct by viewing the Sample Input Form for each Asset Type.</li>
+        </ol>
+        <p>
+            <br />From the Asset Types task menu, you can perform all of the following primary <MadCap:annotation MadCap:createDate="2015-06-08T14:01:51.6857008-05:00" MadCap:creator="Pappillon" MadCap:initials="PA" MadCap:comment="might want bookmarks here, esp. for Create New Asset, that's in the same page as View." MadCap:editor="Pappillon" MadCap:editDate="2015-06-08T14:02:14.0249785-05:00">functions:</MadCap:annotation></p>
+        <ul>
+            <li>The <span class="strong">New Asset Type</span> button for creating new Asset Types.<br /></li>
+            <li>The <span class="strong">Delete Asset Type</span> button for deleting Asset Types.<br /></li>
+            <li>The <span class="strong">View Sample Input Form</span> button for viewing a sample of the Asset Type’s input form.<br /></li>
+            <li>The <span class="strong">Expand All</span> icon button just beneath the “New Asset Type”. This button expands the entire Asset Type hierarchy.<br /></li>
+            <li>The <span class="strong">Collapse All</span> icon button just beneath the “New Asset Type”. This button collapses the entire Asset Type hierarchy.
+            </li>
+        </ul>
+    </body>
+</html>

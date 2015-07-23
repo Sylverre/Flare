@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="3082" MadCap:lastWidth="776">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>How to Set Up an Asset Online Alert</h1>
+        <p>To set up a threshold alert to generate a notification when an asset comes online, perform the following steps:</p>
+        <ol>
+            <li>Navigate to <span class="strong">User Console &gt; Alert Management &gt; Thresholds</span>.<br /><br /><img src="../../Images/AM Alert Management - Thresholds.bmp" class="imgfullwidth" /><br /></li>
+            <li>Click the <span class="strong">New</span> button.<br /></li>
+            <li>In the right pane, click the drop-down menu for <span class="strong">Asset Alert Threshold</span>. <br /><br /><img src="../../Images/AM Alert Management - Thresholds - dropdown.bmp" class="imgfullwidth" /><br /></li>
+            <li>From the drop-down menu choose <span class="strong">Custom Alert Threshold</span>.<br /></li>
+            <li>Complete all required and any desired additional fields to configure the Asset Alert Threshold.<br /><br /><img src="../../Images/AM Alert Management - Thresholds - Custom Alert Threshold.bmp" class="imgfullwidth" /></li>
+        </ol>
+        <h2>Basic Information</h2>
+        <p><span class="strong">Name:</span>&#160; User-defined, but probably best to include the name of the Asset or the tag ID or both.</p>
+        <p><span class="strong">Enabled:</span>&#160; <span class="strong">Check</span> the box if it is not already checked.</p>
+        <p><span class="strong">Alert Severity</span>:&#160; The default is <span class="strong">Warning</span>, but you can select any of the other choices that you desire.</p>
+        <p><span class="strong">User Required To Acknowledge Alert:</span>&#160; Again, this is up to the user to choose if they want to have to acknowledge alerts.</p>
+        <h2>Alert Filter</h2>
+        <ul>
+            <li><span class="strong">Threshold Filter Asset Type</span><span class="strong">:</span>&#160; Selecting <span class="strong">Asset</span> will include all tags/assets.
+            </li>
+            <li><span class="strong">Threshold Filter Location:</span>&#160; Leave <span class="strong">BLANK</span> to search all locations.
+            </li>
+            <li><span class="strong">First Attribute</span><span class="strong">:</span>&#160; Choose <span class="strong">Online Status</span> from the drop-down menu.
+            </li>
+            <li><span class="strong">First Attribute Value Operator</span><span class="strong">:</span>&#160; Choose the <span class="strong">equal sign</span> (<span class="strong">=</span>) from the drop-down menu.</li>
+            <li><span class="strong">First Attribute Value</span>:&#160; <span class="strong">Check</span> the box.
+            </li>
+            <li><span class="strong">Second Attribute:</span>&#160; Choose <span class="strong">Asset Tag</span> from the drop-down menu.
+            </li>
+            <li><span class="strong">Second Attribute Value Operator:</span>&#160; Choose the <span class="strong">equal sign</span> (<span class="strong">=</span>) from the drop-down menu.
+            </li>
+            <li><span class="strong">Second Attribute Value:</span>&#160; Enter the <span class="strong">tag ID</span> of the tag/asset you want to watch for (examples: <span class="strong">LOCATE00008398</span>, <span class="strong">RCKIRC000856498</span>, etc.).
+            </li>
+        </ul>
+        <h2>Alert Actions</h2>
+        <p class="note" MadCap:autonum="&lt;b&gt;NOTE:&lt;/b&gt; &#160;">Be sure to add all the Alert Actions that you want in order to make sure you receive the notifications you want to receive.&#160; 
+        </p>
+        <p>For the example, the Action “<span class="strong">Jon Doe Email</span>” was used.</p>
+        <h2>Alert Messages</h2>
+        <p><span class="strong">Alert Start Message:&#160; </span>User-defined to say whatever you want it to say. Example: “An online alert condition has been detected for the asset {$aAlertEntity}.”
+        </p>
+        <p><span class="strong">Alert Resolve Message:&#160; </span>User-defined to say whatever you want it to say.  Example: “An online alert condition was detected for the asset {$aAlertEntity}.” 
+        </p>
+        <p>When you are done, click the <span class="strong">Save Changes</span> button.</p>
+        <p>Below are two screenshots of the example with the form fields <MadCap:annotation MadCap:createDate="2015-07-02T13:40:08.5922588-05:00" MadCap:creator="Pappillon" MadCap:initials="PA" MadCap:comment="really need a third image class--medium? " MadCap:editor="Pappillon" MadCap:editDate="2015-07-02T13:40:22.8900766-05:00">completed.</MadCap:annotation><br /></p>
+        <p>
+            <img src="../../Images/AM Alert Management - Thresholds - Custom Alert Threshold - fields 1.bmp" class="imgsmall" />
+        </p>
+        <p>
+            <img src="../../Images/AM Alert Management - Thresholds - Custom Alert Threshold - fields 2.bmp" class="imgsmall" />
+        </p>
+    </body>
+</html>

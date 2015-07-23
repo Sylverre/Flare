@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="2" MadCap:lastHeight="789" MadCap:lastWidth="802">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>Restoring the Database</h1>
+        <p>To restore the <MadCap:variable name="Variables.CompanyName" /> SQL database, enter the command given below on the destination SQL server (if not the same one).&#160; In this example, the database is called “daytona” on the local server (to which SQL database needs to be restored).&#160; The <span class="codefont">WITH REPLACE</span> option over-writes the existing “daytona” database:
+        </p>
+        <p><span class="codefont">c:\Users\Administrator&gt;sqlcmd -E -S localhost\RFCASSETMGR –Q “RESTORE DATABASE [daytona] FROM DISK=’c:\sqlbak.bak’ WITH REPLACE"</span>
+        </p>
+        <p class="note" MadCap:autonum="&lt;b&gt;NOTE:&lt;/b&gt; &#160;">&#160; If during the Backup or Restore process an “Operating system error 5(Access is denied.)” error occurs, you will need to change the Windows Service (SQL Server (RFCASSETMGR)) to run as a “Local System account.”&#160;<br /><span class="span_21"><br /></span><span class="span_21"><img src="../../Images/UserManual for reference/0300012A.png" style="width: 643px;height: 362px;" /></span></p>
+    </body>
+</html>

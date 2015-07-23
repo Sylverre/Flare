@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultFileLinkSet
+  FileTitle=""
+  FileSearchable="true"
+  FileTimeEstimate="0"
+  FilePriority="0">
+  <Links>
+    <Link
+      Url="../RFC-AM Comprehensive/Content/Asset Manager Administration and Usage Manual/Maps.htm" />
+    <Link
+      Url="../RFC-AM Comprehensive/Content/Resources/Images/UserManual for reference/030000A1.png" />
+    <Link
+      Url="../RFC-AM Comprehensive/Content/Resources/Images/UserManual for reference/030000A2.png" />
+    <Link
+      Url="../RFC-AM Comprehensive/Content/Resources/Images/UserManual for reference/030000A3.png" />
+    <Link
+      Url="Project/ConditionTagSets/General.flcts" />
+  </Links>
+  <LongLinks>
+    <Link
+      Url="../RFC-AM Comprehensive/Content/Asset Manager Administration and Usage Manual/Maps.htm#_Using_Actions_with" />
+    <Link
+      Url="../RFC-AM Comprehensive/Content/Resources/Images/UserManual for reference/030000A1.png" />
+    <Link
+      Url="../RFC-AM Comprehensive/Content/Resources/Images/UserManual for reference/030000A2.png" />
+    <Link
+      Url="../RFC-AM Comprehensive/Content/Resources/Images/UserManual for reference/030000A3.png" />
+    <Link
+      Url="Project/ConditionTagSets/General.flcts" />
+  </LongLinks>
+  <Anchors />
+  <Keywords />
+  <Concepts />
+  <ConceptControlNames />
+  <IndexControlNames />
+  <Variables />
+  <FileConditions />
+  <FileTags />
+  <AllConditions>
+    <Condition
+      Tag="General.notes for reviewers" />
+  </AllConditions>
+  <Stylesheets />
+</CatapultFileLinkSet>

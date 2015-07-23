@@ -1,0 +1,405 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="1727" MadCap:lastWidth="698">
+    <head>
+        <title>
+        </title>
+    </head>
+    <body>
+        <h1>
+            <a name="__RefHeading___Toc414541495">
+            </a>Calculations and Functions <MadCap:annotation MadCap:createDate="2015-05-08T12:28:51.0515507-05:00" MadCap:creator="DSFoxx" MadCap:initials="DSF" MadCap:comment="2012 Admin attaches this to Calculated Atrtributes" MadCap:editor="DSFoxx" MadCap:editDate="2015-05-08T12:29:00.6110975-05:00">Matrix</MadCap:annotation></h1>
+        <p>Below is a table of the common functions available for use within the <MadCap:variable name="Variables.ProductName" /> software. <MadCap:variable name="Variables.ProductName" /> functions are used in a similar way to the functions in the Microsoft Excel application.</p>
+        <table class="TableNormal" style="margin-left: 0;margin-right: auto;">
+            <col style="width: 74pt;" />
+            <col style="width: 203pt;" />
+            <col style="width: 219pt;" />
+            <thead>
+                <tr>
+                    <th>Type</th>
+                    <th>Function</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr style="height: 15pt;" class="tr_8">
+                    <td class="td_21">
+                        <p class="p_31">Count</p>
+                    </td>
+                    <td class="td_21">
+                        <p class="p_31">count(*.attribute)</p>
+                    </td>
+                    <td class="td_22">
+                        <p class="p_13">Count of assets with a specified attribute</p>
+                    </td>
+                </tr>
+                <tr style="height: 15pt;" class="tr_8">
+                    <td class="td_21">
+                        <p class="p_31">Miscellaneous</p>
+                    </td>
+                    <td class="td_21">
+                        <p class="p_31">abs(value)</p>
+                    </td>
+                    <td class="td_22">
+                        <p class="p_13">Absolute value/Magnitude</p>
+                    </td>
+                </tr>
+                <tr style="height: 15pt;" class="tr_8">
+                    <td class="td_21">
+                        <p class="p_31">Miscellaneous</p>
+                    </td>
+                    <td class="td_21">
+                        <p class="p_31">binom(n, i)</p>
+                    </td>
+                    <td class="td_22">
+                        <p class="p_13">Binomial coefficients</p>
+                    </td>
+                </tr>
+                <tr class="tr_8">
+                    <td class="td_21">
+                        <p class="p_31">Miscellaneous</p>
+                    </td>
+                    <td class="td_21">
+                        <p class="p_31">changed(attribute)</p>
+                    </td>
+                    <td class="td_22">
+                        <p class="p_13">Returns true if any attribute’s value changes</p>
+                    </td>
+                </tr>
+                <tr class="tr_8">
+                    <td class="td_21">
+                        <p class="p_31">Miscellaneous</p>
+                    </td>
+                    <td class="td_21">
+                        <p class="p_31">current(optional initial value)</p>
+                    </td>
+                    <td class="td_22">
+                        <p class="p_13">Current value of attribute (argument is initial value)</p>
+                    </td>
+                </tr>
+                <tr style="height: 15pt;" class="tr_8">
+                    <td class="td_21">
+                        <p class="p_31">Miscellaneous</p>
+                    </td>
+                    <td class="td_21">
+                        <p class="p_31">filter(*.attribute, operator, value, default value)</p>
+                    </td>
+                    <td class="td_22">
+                        <p class="p_13">Filter on an attribute</p>
+                    </td>
+                </tr>
+                <tr style="height: 15pt;" class="tr_8">
+                    <td class="td_21">
+                        <p class="p_31">Miscellaneous</p>
+                    </td>
+                    <td class="td_21">
+                        <p class="p_31">if(cond, trueval, falseval)</p>
+                    </td>
+                    <td class="td_22">
+                        <p class="p_13">If condition, value if true, value if false</p>
+                    </td>
+                </tr>
+                <tr style="height: 27pt;" class="tr_8">
+                    <td class="td_21">
+                        <p class="p_31">Miscellaneous</p>
+                    </td>
+                    <td class="td_21">
+                        <p class="p_31">in(value, list)</p>
+                    </td>
+                    <td class="td_22">
+                        <p class="p_13">Returns true if the value is equal to or is a descendant of a value specified in the list</p>
+                    </td>
+                </tr>
+                <tr style="height: 15pt;" class="tr_8">
+                    <td class="td_21">
+                        <p class="p_31">Miscellaneous</p>
+                    </td>
+                    <td class="td_21">
+                        <p class="p_31">isNull(attribute)</p>
+                    </td>
+                    <td class="td_22">
+                        <p class="p_13">Checks if an attribute is null</p>
+                    </td>
+                </tr>
+                <tr style="height: 15pt;" class="tr_8">
+                    <td class="td_21">
+                        <p class="p_31">Miscellaneous</p>
+                    </td>
+                    <td class="td_21">
+                        <p class="p_31">mod(x,y)</p>
+                    </td>
+                    <td class="td_22">
+                        <p class="p_13">Modulus</p>
+                    </td>
+                </tr>
+                <tr class="tr_8">
+                    <td class="td_21">
+                        <p class="p_31">Miscellaneous</p>
+                    </td>
+                    <td class="td_21">
+                        <p class="p_31">previous(attribute, default value)</p>
+                    </td>
+                    <td class="td_22">
+                        <p class="p_13">Previous value of attribute is updated otherwise default value is supplied, (argument is attribute)</p>
+                    </td>
+                </tr>
+                <tr style="height: 15pt;" class="tr_8">
+                    <td class="td_21">
+                        <p class="p_31">Miscellaneous</p>
+                    </td>
+                    <td class="td_21">
+                        <p class="p_31">rand()</p>
+                    </td>
+                    <td class="td_22">
+                        <p class="p_13">Random number (between 0 and 1)</p>
+                    </td>
+                </tr>
+                <tr class="tr_8">
+                    <td class="td_21">
+                        <p class="p_31">Miscellaneous</p>
+                    </td>
+                    <td class="td_21">
+                        <p class="p_31">signum(value)</p>
+                    </td>
+                    <td class="td_22">
+                        <p class="p_13">Signum (-1,0,1 depending on sign of argument)</p>
+                    </td>
+                </tr>
+                <tr style="height: 15pt;" class="tr_8">
+                    <td class="td_21">
+                        <p class="p_31">Miscellaneous</p>
+                    </td>
+                    <td class="td_21">
+                        <p class="p_31">sqrt(value)</p>
+                    </td>
+                    <td class="td_22">
+                        <p class="p_13">Square root</p>
+                    </td>
+                </tr>
+                <tr style="height: 15pt;" class="tr_8">
+                    <td class="td_21">
+                        <p class="p_31">Rounding</p>
+                    </td>
+                    <td class="td_21">
+                        <p class="p_31">ceil(value)</p>
+                    </td>
+                    <td class="td_22">
+                        <p class="p_13">Ceiling</p>
+                    </td>
+                </tr>
+                <tr style="height: 15pt;" class="tr_8">
+                    <td class="td_21">
+                        <p class="p_31">Rounding</p>
+                    </td>
+                    <td class="td_21">
+                        <p class="p_31">floor(value)</p>
+                    </td>
+                    <td class="td_22">
+                        <p class="p_13">Floor</p>
+                    </td>
+                </tr>
+                <tr style="height: 15pt;" class="tr_8">
+                    <td class="td_21">
+                        <p class="p_31">Rounding</p>
+                    </td>
+                    <td class="td_21">
+                        <p class="p_31">round(value), round(value decimal places)</p>
+                    </td>
+                    <td class="td_22">
+                        <p class="p_13">Round</p>
+                    </td>
+                </tr>
+                <tr style="height: 15pt;" class="tr_8">
+                    <td class="td_21">
+                        <p class="p_31">Statistical</p>
+                    </td>
+                    <td class="td_21">
+                        <p class="p_31">avg(*.attribute)</p>
+                    </td>
+                    <td class="td_22">
+                        <p class="p_13">Average</p>
+                    </td>
+                </tr>
+                <tr style="height: 15pt;" class="tr_8">
+                    <td class="td_21">
+                        <p class="p_31">Statistical</p>
+                    </td>
+                    <td class="td_21">
+                        <p class="p_31">max(*.attribute)</p>
+                    </td>
+                    <td class="td_22">
+                        <p class="p_13">Maximum</p>
+                    </td>
+                </tr>
+                <tr style="height: 15pt;" class="tr_8">
+                    <td class="td_21">
+                        <p class="p_31">Statistical</p>
+                    </td>
+                    <td class="td_21">
+                        <p class="p_31">min(*.attribute)</p>
+                    </td>
+                    <td class="td_22">
+                        <p class="p_13">Minimum</p>
+                    </td>
+                </tr>
+                <tr style="height: 15pt;" class="tr_8">
+                    <td class="td_21">
+                        <p class="p_31">Statistical</p>
+                    </td>
+                    <td class="td_21">
+                        <p class="p_31">sum(*.attribute)</p>
+                    </td>
+                    <td class="td_22">
+                        <p class="p_13">Sum</p>
+                    </td>
+                </tr>
+                <tr style="height: 15pt;" class="tr_8">
+                    <td class="td_21">
+                        <p class="p_31">String</p>
+                    </td>
+                    <td class="td_21">
+                        <p class="p_31">len(string attribute)</p>
+                    </td>
+                    <td class="td_22">
+                        <p class="p_13">Length of string (0 if null)</p>
+                    </td>
+                </tr>
+                <tr style="height: 15pt;" class="tr_8">
+                    <td class="td_21">
+                        <p class="p_31">String</p>
+                    </td>
+                    <td class="td_21">
+                        <p class="p_31">lower(string attribute)</p>
+                    </td>
+                    <td class="td_22">
+                        <p class="p_13">Lower case string</p>
+                    </td>
+                </tr>
+                <tr style="height: 15pt;" class="tr_8">
+                    <td class="td_21">
+                        <p class="p_31">String</p>
+                    </td>
+                    <td class="td_21">
+                        <p class="p_31">trim(string attribute)</p>
+                    </td>
+                    <td class="td_22">
+                        <p class="p_13">Trim leading/trailing blanks</p>
+                    </td>
+                </tr>
+                <tr style="height: 15pt;" class="tr_8">
+                    <td class="td_21">
+                        <p class="p_31">String</p>
+                    </td>
+                    <td class="td_21">
+                        <p class="p_31">upper(string attribute)</p>
+                    </td>
+                    <td class="td_22">
+                        <p class="p_13">Upper case string</p>
+                    </td>
+                </tr>
+                <tr style="height: 15pt;" class="tr_8">
+                    <td class="td_21">
+                        <p class="p_31">Time</p>
+                    </td>
+                    <td class="td_21">
+                        <p class="p_31">date(year, months, day)</p>
+                    </td>
+                    <td class="td_22">
+                        <p class="p_13">Date in YYYY, or YYYY, MM, DD format</p>
+                    </td>
+                </tr>
+                <tr style="height: 15pt;" class="tr_8">
+                    <td class="td_21">
+                        <p class="p_31">Time</p>
+                    </td>
+                    <td class="td_21">
+                        <p class="p_31">day(date)</p>
+                    </td>
+                    <td class="td_22">
+                        <p class="p_13">Day of month given a date</p>
+                    </td>
+                </tr>
+                <tr style="height: 27pt;" class="tr_8">
+                    <td class="td_21">
+                        <p class="p_31">Time</p>
+                    </td>
+                    <td class="td_21">
+                        <p class="p_31">dayofweek(date)</p>
+                    </td>
+                    <td class="td_22">
+                        <p class="p_13">Day of week (Sunday = 1, Monday = 2, etc.) given a date</p>
+                    </td>
+                </tr>
+                <tr style="height: 15pt;" class="tr_8">
+                    <td class="td_21">
+                        <p class="p_31">Time</p>
+                    </td>
+                    <td class="td_21">
+                        <p class="p_31">dayofyear(date)</p>
+                    </td>
+                    <td class="td_22">
+                        <p class="p_13">Day of year given a date</p>
+                    </td>
+                </tr>
+                <tr style="height: 15pt;" class="tr_8">
+                    <td class="td_21">
+                        <p class="p_31">Time</p>
+                    </td>
+                    <td class="td_21">
+                        <p class="p_31">days(date)</p>
+                    </td>
+                    <td class="td_22">
+                        <p class="p_13">Days since epoch given a date</p>
+                    </td>
+                </tr>
+                <tr class="tr_8">
+                    <td class="td_21">
+                        <p class="p_31">Time</p>
+                    </td>
+                    <td class="td_21">
+                        <p class="p_31">month(date)</p>
+                    </td>
+                    <td class="td_22">
+                        <p class="p_13">Month of year (January = 1, etc.) given a date</p>
+                    </td>
+                </tr>
+                <tr style="height: 15pt;" class="tr_8">
+                    <td class="td_21">
+                        <p class="p_31">Time</p>
+                    </td>
+                    <td class="td_21">
+                        <p class="p_31">time()</p>
+                    </td>
+                    <td class="td_22">
+                        <p class="p_13">Current time</p>
+                    </td>
+                </tr>
+                <tr style="height: 15pt;" class="tr_8">
+                    <td class="td_21">
+                        <p class="p_31">Time</p>
+                    </td>
+                    <td class="td_21">
+                        <p class="p_31">year(date)</p>
+                    </td>
+                    <td class="td_22">
+                        <p class="p_13">Year given a date</p>
+                    </td>
+                </tr>
+                <tr style="height: 27pt;" class="tr_8">
+                    <td class="td_21">
+                        <p class="p_31">Update</p>
+                    </td>
+                    <td class="td_21">
+                        <p class="p_31">update(target attribute, value) or update(asset reference, target attribute, value)</p>
+                    </td>
+                    <td class="td_22">
+                        <p class="p_13">update an attribute</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="note" MadCap:autonum="&lt;b&gt;NOTE:&lt;/b&gt; &#160;">
+            <a name="_Backing_Up_and">
+            </a>When an expression involves multiple statements, the expressions are evaluated one at a time, from left to right.&#160; The last statement which is evaluated will be returned as the value of the calculated field attribute. If any exception occurs anywhere in the evaluation process, <span class="ital">null</span> is returned as the value of the calculated field.
+        </p>
+    </body>
+</html>

@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <title>
+        </title>
+    </head>
+    <body>
+        <h3 class="Heading3">
+            <a name="__RefHeading___Toc414541380">
+            </a>Applying a Calculated Asset Attribute to an Asset Type</h3>
+        <p>In the following example, a calculated asset attribute will be applied to an asset type. The calculated attribute expression is a <span class="Strong">Warranty Expiration Date</span> for the <span class="Strong">Server</span> Asset Type.</p>
+        <p>The formula used in this example is:</p>
+        <p>date( year (PURCHASE_DATE) + 1, month (PURCHASE_DATE), day (PURCHASE_DATE) )</p>
+        <p>The functions that will be used are:</p>
+        <p>date, year, month, day</p>
+        <p>The attribute that will be used in this example is:</p>
+        <p>PURCHASE_DATE</p>
+        <p>
+            <span class="Strong">NOTE</span>:&#160; This attribute has been previously configured using the Asset Attributes sub-task.</p>
+        <p class="p_10">To create a Warranty Expiration Date for the Server Asset Type, perform the following steps:</p>
+        <ol start="1" class="ol_1">
+            <li class="ColorfulListAccent11_2">Enter the required Name and Type information in the Settings Task Pane. In this example the information should appear as follows:<br /></li>
+        </ol>
+        <p class="ColorfulListAccent11_13">
+            <span class="Strong">Name</span>:One-Year Warranty Expiration Date</p>
+        <p class="ColorfulListAccent11_13">
+            <span class="Strong">Description</span>:The date upon which the one-year warranty will expire for an asset.</p>
+        <p class="ColorfulListAccent11_14">
+            <span class="Strong">Record Value Changes</span>:This box should be checked so for example, if in the future an extended warranty is purchased and this expiration date changes, this occurrence will be recorded to the database.</p>
+        <p class="ColorfulListAccent11_14">
+            <span class="Strong">ID</span>:ONE_YEAR_WARRANTY_EXPIRATION_DATE <br />This is automatically generated from the creation of the name for the calculated attribute.</p>
+        <p class="ColorfulListAccent11_13">
+            <span class="Strong">Type</span>:Time and Date should be selected from the drop-down list.<br /></p>
+        <ol start="2" class="ol_1">
+            <li class="ColorfulListAccent11">To build the calculated attribute expression (formula), click the <span class="Strong">Function</span> button and from <span class="Strong">Time Functions</span>, select <span class="Strong">date(year, month, day)</span> function. <br /><br /><img src="../../../../RFC-AM Comprehensive/Content/Resources/Images/UserManual for reference/03000050.png" style="height: 277px;width: 331px;" class="img_2" /><br /></li>
+            <li class="ColorfulListAccent11">Click the <span class="Strong">OK</span> button and the function will appear in the Attribute Expression box.<br /></li>
+            <li class="ColorfulListAccent11">Add the attribute to the function by placing the cursor in the <span class="span_13">date</span> function string just after the word “year”. <br /></li>
+            <li class="ColorfulListAccent11">Type an open parentheses “(“ and then click the <span class="Strong">Attribute</span> button. <br /></li>
+            <li class="ColorfulListAccent11">Select <span class="Strong">Purchase Date</span> as the attribute.<br /><br /><span class="Strong">NOTE</span>: You can use the Filter field to find this attribute by typing the first few letters of the attribute you want to use.<br /><br /> <img src="../../../../RFC-AM Comprehensive/Content/Resources/Images/UserManual for reference/03000051.png" style="height: 274px;width: 328px;" class="img_2" /><br /></li>
+            <li class="ColorfulListAccent11">Click the <span class="Strong">OK</span> button. <br />The attribute will appear in the attribute expression box. <br /></li>
+            <li class="ColorfulListAccent11_22">Type a closed parenthesis “)”. <br />At this stage the attribute expression will appear as follows:<br /></li>
+        </ol>
+        <p class="ColorfulListAccent11">date(year(PURCHASE_DATE), month, day)<br /></p>
+        <ol start="9" class="ol_1">
+            <li class="ColorfulListAccent11">Repeat the function assignment for the other two components of the <span class="span_13">date</span> function (month and day by first placing the cursor next to the word “month” and typing an open parenthesis “(“.<br /></li>
+            <li class="ColorfulListAccent11">Click the <span class="Strong">Attribute</span> button. <br /></li>
+            <li class="ColorfulListAccent11">Select the <span class="Strong">Purchase Date</span> from the attributes list and then click <span class="Strong">OK</span>. <br /></li>
+            <li class="ColorfulListAccent11_22">Repeat these steps again for the “day” component of the <span class="span_13">date</span> function. <br />After completing these steps the function should appear like the following:<br /></li>
+        </ol>
+        <p class="ColorfulListAccent11">date(year(PURCHASE_DATE), month(PURCHASE_DATE), day(PURCHASE_DATE))<br /></p>
+        <p class="ColorfulListAccent11">
+            <span class="Strong">TIP</span>:&#160; Alternatively, instead of using the Attribute button, you can simply type the attribute exactly as it appears above for each time section.<br /></p>
+        <ol start="13" class="ol_1">
+            <li class="ColorfulListAccent11_22">Add a one (1) to the <span class="span_13">year</span> component of the <span class="span_13">date</span> function (in order to represent a one-year warranty) to complete the formula by placing the cursor after the closed parentheses of the <span class="span_13">year(PURCHASE_DATE) </span>parameter and type <span class="Strong">+1</span>.<br /><br />The expression will now look like:</li>
+        </ol>
+        <p class="ColorfulListAccent11">date(year(PURCHASE_DATE)+1, month(PURCHASE_DATE), day(PURCHASE_DATE))<br /></p>
+        <ol start="14" class="ol_1">
+            <li class="ColorfulListAccent11">Review the expression a final time to ensure that all parentheses are opened and closed properly as necessary for any regular mathematical function in order for the expression to calculate the correct data.<br /></li>
+            <li class="ColorfulListAccent11">Click the <span class="Strong">Save Changes</span> button.<br /></li>
+        </ol>
+        <p>After you create a Calculated Asset Attribute, you need to apply it to an Asset Type.</p>
+        <p>To apply an Attribute to an Asset Type, perform the following steps:</p>
+        <ol start="1" class="ol_4">
+            <li class="ColorfulListAccent11">Navigate to Asset Tag in the Asset Types list in the Asset Types Sub-Task. <br />The Attributes screen for Asset Tag will appear. <br /></li>
+            <li class="ColorfulListAccent11">Under the Attribute box, click the Add button and select the Calculated Asset Attribute that you just created called “One-Year Warranty Expiration Date”<br /></li>
+            <li class="ColorfulListAccent11">Select a category (Calculation) and a field order and then click the <span class="Strong">OK</span> button. <br />The Attribute will now appear in the Attributes box. <br /></li>
+            <li class="ColorfulListAccent11">Click <span class="Strong">Save Changes</span>. <br /><br />Now that the Calculated Asset Attribute has been created and applied to an Asset Type, all assets that are assigned the Asset Type (in this example “Asset Tag”) will now have a Calculated Asset Attribute that can be used with various other tasks and sub-tasks (Reports, Alerts, etc.) within Asset Manager.<br /><br /><img src="../../../../RFC-AM Comprehensive/Content/Resources/Images/UserManual for reference/03000052.png" style="width: 464px;height: 359px;" /></li>
+        </ol>
+    </body>
+</html>

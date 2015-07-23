@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="2" MadCap:lastHeight="1185" MadCap:lastWidth="665">
+    <head><title></title>
+    </head>
+    <body>
+        <h1><a name="_RF_Code_Tag_1"></a><a name="__RefHeading___Toc414541488"></a><MadCap:variable name="Variables.CompanyName" /> Tag Group Codes, IDs, and Treatment Codes</h1>
+        <p>All <MadCap:variable name="Variables.CompanyName" /> tags have three distinguishing characteristics, regardless of the type, model, or function of the tag. In the example below is an R155 Temperature/Humidity Tag. <br /><br /></p>
+        <p>Outlined in the following photo in red rectangles are the three characteristics that distinguish this tag (and all individual tags) from every other tag:  <br /><br /></p>
+        <p>
+            <img src="../../Images/UserManual for reference/03000117.png" style="width: 354px;height: 235px;" />
+        </p>
+        <p>&#160;</p>
+        <p><span class="strong">Group Code</span>: The Group Code is a six-letter code. Examples of this code are THSRCK, LOCATE, IRCODE, HUMRCK, and RFCRCK.
+        </p>
+        <p><span class="strong">Tag ID</span>: The Tag ID is a unique eight-digit numeric identifier. You might have 2,000 THSRCK tags in your environment, but you can only have one with the Tag ID of 00001900. 
+        </p>
+        <p><span class="strong">Treatment Code</span>: The Treatment Code is used together with the Group Code to tell <MadCap:variable name="Variables.CompanyName" /> software how to interpret the data that each tag sends in beacons to <MadCap:variable name="Variables.CompanyName" /> readers. A Treatment Code can be associated with multiple Group Codes, so it is important to match them exactly when adding them to a specific environment of <MadCap:variable name="Variables.CompanyName" /> readers and tags. <MadCap:annotation MadCap:createDate="2015-04-29T10:02:50.2637981-05:00" MadCap:creator="DSFoxx" MadCap:initials="DSF" MadCap:comment="can I condition this out yet?  It's been three years!" MadCap:editor="DSFoxx" MadCap:editDate="2015-04-29T10:02:57.7582267-05:00">Note</MadCap:annotation> that all tags currently shipped by <MadCap:variable name="Variables.CompanyName" /> (as of November 2012) use Treatment Code 04.
+        </p>
+        <p>All <MadCap:variable name="Variables.CompanyName" /> tags are defined as being members of a specific group, and have a unique tag ID number within that group. When an <MadCap:variable name="Variables.CompanyName" /> reader is configured, it can be supplied with up to eight group code IDs and a corresponding treatment code for each group code. The treatment code instructs the reader how to interpret the payload data for each tag event within that group code. <MadCap:variable name="Variables.CompanyName" /> tags are smart and have the ability to transmit various types of data within its radio frequency beacon such as indicators for motion, panic, tamper, infrared location, and low battery.</p>
+    </body>
+</html>

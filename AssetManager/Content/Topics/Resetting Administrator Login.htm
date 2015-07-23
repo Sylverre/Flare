@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="3500" MadCap:lastWidth="294">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>
+            <MadCap:conditionalText MadCap:conditions="Default.SysManual">Right noResetting </MadCap:conditionalText>
+            <MadCap:conditionalText MadCap:conditions="Default.workflow">Reset </MadCap:conditionalText>Administrator Login</h1>
+        <p>A <MadCap:variable name="General.ProductName" /> has a built-in administrator account. To reset this account, all references to “admin” in the system properties file on the host running <MadCap:variable name="General.ProductName" /> and in the database with which <MadCap:variable name="General.ProductName" /> connects will need to be removed.</p>
+        <ol>
+            <li>Before making changes, it is important that <MadCap:variable name="General.ProductName" /> service is shut down. If in Windows, stop “RF Code <MadCap:variable name="General.ProductName" />” service in <span class="Strong">Administrator Tools &gt; Services</span> task. If in Linux, follow Linux protocols.</li>
+            <li>In the system properties file stored in the conf directory in <MadCap:variable name="General.ProductName" /> install path, remove all lines that contain <span class="codefont">admin.*</span> properties.</li>
+            <li>Remove all references to the ADMIN entity in the database. Connect to the database using a client tool that you can execute SQL queries. For example, when using Microsoft SQL Server 2008 you can use Microsoft SQL Server Management Studio Express.</li>
+            <li>Execute the following SQL statements:<br /><br /></li>
+        </ol>
+        <ul class="nonbulleted">
+            <li><span MadCap:createDate="2015-06-23T12:39:48.5060174-05:00" MadCap:creator="Pappillon" MadCap:initials="PA" class="codefont">Delete</span><span class="codefont"> from t1_entity_current_val where entity_id IN (SELECT entity_id from t1_entity where GUID = 'ADMIN');</span>
+            </li>
+            <li><span class="codefont">Delete from t1_attribute_history where e_id IN (SELECT entity_id from t1_entity where GUID = 'ADMIN');</span>
+            </li>
+            <li><span class="codefont">Delete from t1_entity_type_mapping where entity_id IN (SELECT entity_id from t1_entity where GUID = 'ADMIN');</span>
+            </li>
+            <li><span class="codefont">Delete from t1_entity where guid = 'ADMIN'</span>
+            </li>
+        </ul>
+        <ol MadCap:continue="true">
+            <li>Start “RF Code <MadCap:variable name="General.ProductName" />” service.</li>
+            <li><MadCap:variable name="General.ProductName" /> can be authenticated using user account admin and its default password admin.</li>
+        </ol>
+    </body>
+</html>

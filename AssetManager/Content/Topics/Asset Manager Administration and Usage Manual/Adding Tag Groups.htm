@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="2104" MadCap:lastWidth="776">
+    <head><title></title>
+    </head>
+    <body>
+        <h1><a name="__RefHeading___Toc414541336"></a><a name="_Adding_Tag_Groups"></a>
+            Adding Tag Groups
+        </h1>
+        <p MadCap:conditions="Default.SourceText">Adding a new Tag Group (for example, 04V), lets you add new Group Codes (for example, THSRCK) to the system; by doing so, you are telling the system how to interpret beacons from your tag population. Group Codes need to be configured in the system for each type of tag that you have. After this, you can then see what your readers “see,” which are all of the individual tags sending beacons to and being received by the readers configured in <MadCap:variable name="Variables.ProductName" />. After identifying the active tag population, you can associate the individual tags with your assets and/or identify them as sensor tags and assign them to the locations where they will be monitoring environmental conditions. </p>
+        <p>Tag Groups tell <MadCap:variable name="General.ProductName" /> how to interpret beacons it receives. A Tag Group is made up of a three-character Treatment Code and a six-letter Group Code (both printed on the label of each tag).  This combination signals <MadCap:variable name="General.ProductName" /> to expect data from those types of tags defined by the Tag Group and how to treat the data it receives from them.  Tag models that look and behave similarly are assigned the same Tag Group. Tag Groups must be configured for all the types of tags you have deployed, which can then be detected and associated to assets or, in the case of sensor tags, assigned to the locations where they will be monitoring environmental conditions.</p>
+        <h2>Add a New Tag Group</h2>
+        <ol>
+            <li>In the Admin Console, navigate to <span class="strong">Configuration &gt; Tag Groups</span>.<br /><img src="../../Images/UserManual for reference/03000019.png" class="img_fullwidth" /><br /><br /></li>
+            <li>In the right pane, click the <span class="strong">Tag Group</span> drop-down menu and find the correct <span class="strong">Treatment Code</span> for the Tag Group that you want to add.<br /></li>
+        </ol>
+        <p class="note" MadCap:autonum="&lt;b&gt;NOTE:&lt;/b&gt; &#160;">The Treatment Code is printed on each tag on the bottom right corner of the label.&#160; When you enter a Treatment Code, the Group Code will pre-populate with a common Group Code; however, this may not match the Group Code on your tag.&#160; If it does not, enter the Group Code on your tag instead. Refer to the sections on <a href="RF Code Tag Group Codes IDs.htm#_RF_Code_Tag_1">Tag Codes</a> in the Appendix and/or to following <MadCap:variable name="Variables.CompanyName" /> Knowledge Base article for more information about Group Codes and Treatment Codes:&#160; <a href="http://support.rfcode.com/customer/portal/articles/723973">support.rfcode.com/customer/portal/articles/723973</a>.<br /><br /><img src="../../Images/UserManual for reference/0300001A.png" />When a Treatment Code is clicked, the right pane fills with Tag Group configuration fields. <br /><br /> <img src="../../Images/UserManual for reference/0300001B.png" /><br /><br />In the <span class="strong">Basic Information</span> section, the <span class="strong">Group Code</span> (for example, RFCRCK) will be pre-populated.</p>
+        <p class="note" MadCap:autonum="&lt;b&gt;NOTE:&lt;/b&gt; &#160;"> Each Tag Group can have multiple Group Codes, so you may need to specify a different Group Code.&#160; For more information, refer to the <a href="Appendix.htm#_RF_Code_Tag"><MadCap:variable name="Variables.CompanyName" /> Tag Group Codes, IDs, and Treatment Codes</a> section in the Appendix.<br /></p>
+        <ol MadCap:continue="true">
+            <li>In the <span class="strong">Name </span>field, type the<span class="strong"> Group Code</span> again, unless you need to name the Tag Group something <MadCap:annotation MadCap:createDate="2015-06-03T13:41:16.0234076-05:00" MadCap:creator="Pappillon" MadCap:initials="PA" MadCap:comment="one of my earliest notes: any reason I-the-user shouldn't do this?  Long-form doc discourages but without a clear reason." MadCap:editor="Pappillon" MadCap:editDate="2015-06-03T13:41:57.4617778-05:00">different</MadCap:annotation>.<br /></li>
+            <li>Click the <span class="strong">Save Changes</span> button at the bottom of the window.
+            </li>
+        </ol>
+    </body>
+</html>

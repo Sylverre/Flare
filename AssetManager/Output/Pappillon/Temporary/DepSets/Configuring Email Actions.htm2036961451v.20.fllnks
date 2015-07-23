@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultFileLinkSet
+  FileTitle=""
+  FileSearchable="true"
+  FileTimeEstimate="0"
+  FilePriority="0">
+  <Links>
+    <Link
+      Url="Content/D_Images/UserManual for reference/030000B8.png" />
+    <Link
+      Url="Content/Resources/Snippets/required fields note.flsnp" />
+    <Link
+      Url="Content/Topics/Asset Manager Administration and Usage Manual/Macros for Reports and Graphs.htm" />
+    <Link
+      Url="Project/VariableSets/General.flvar" />
+  </Links>
+  <LongLinks>
+    <Link
+      Url="Content/D_Images/UserManual for reference/030000B8.png" />
+    <Link
+      Url="Content/Resources/Snippets/required fields note.flsnp" />
+    <Link
+      Url="Content/Topics/Asset Manager Administration and Usage Manual/Macros for Reports and Graphs.htm#_Macros_for_Reports" />
+    <Link
+      Url="Project/VariableSets/General.flvar" />
+  </LongLinks>
+  <Anchors>
+    <Anchor
+      Name="__RefHeading___Toc414541433" />
+  </Anchors>
+  <Keywords />
+  <Concepts />
+  <ConceptControlNames />
+  <IndexControlNames />
+  <Variables>
+    <Variable
+      Name="General.ProductName" />
+  </Variables>
+  <FileConditions />
+  <FileTags />
+  <AllConditions />
+  <Stylesheets />
+</CatapultFileLinkSet>

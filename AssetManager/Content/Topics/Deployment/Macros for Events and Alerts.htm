@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="2" MadCap:lastHeight="2121" MadCap:lastWidth="840">
+    <head>
+        <title>
+        </title>
+    </head>
+    <body>
+        <h3 class="Heading3">
+            <a name="_Macros_for_Events">
+            </a>
+            <a name="__RefHeading___Toc414541494">
+            </a>Macros for Events and Alerts</h3>
+        <p>Macros provide access to information from two sources. The first source is the Event or Alert itself.&#160; It’s common to label the Event or Alert the date or time an event happened, or to display the name or description or configuration information from the Event or Alert template definition itself. This can be done using the various pre-defined macros as seen in the list below. </p>
+        <p>The other source of information that macros can use is the source entity for the Event or Alert. Because both Events and Alerts are generated from a source entity (e.g., a Reader or a Zone Manager) you can use macros to display values from the entity that triggered the Event or Alert. To do this, specify the macro name “SOURCE” followed by a period followed by the ID of the attribute that you wish to display. These macros can also be used to generate a context sensitive email address so that the appropriate contact can be notified in response to alerts or events. </p>
+        <p>Below is a table of the macros available for use with Event Email Actions.</p>
+        <p>
+            <img src="../../../../RFC-AM Comprehensive/Content/Resources/Images/UserManual for reference/0300011D.png" style="height: 640px;width: 536px;" class="img_2" />
+        </p>
+        <p class="p_10">Below is a table of the macros available for use with Alert Email Actions.</p>
+        <p class="p_10">
+            <img src="../../../../RFC-AM Comprehensive/Content/Resources/Images/UserManual for reference/0300011E.png" style="height: 758px;width: 505px;" class="img_2" />
+        </p>
+        <p>The following macro will display an entity’s description:&#160; ${SOURCE.$aDescription}</p>
+        <p class="p_135">The replaced values for all macros available to the action (refer to the macro tables above), with the exception of the following macros,&#160; which only output a partial date or time: DATE, YEAR, MONTH, DAY, TIME, HOUR, MINUTE, SECOND, MILLISECOND, TIMEZONE_OFFSET.</p>
+        <p>&#160;</p>
+        <p>
+            <span class="Strong">NOTE</span>: A few macros only output a partial date or time; these are: DATE, YEAR, MONTH, DAY, TIME, HOUR, MINUTE, SECOND, MILLISECOND, TIMEZONE_OFFSET.</p>
+    </body>
+</html>

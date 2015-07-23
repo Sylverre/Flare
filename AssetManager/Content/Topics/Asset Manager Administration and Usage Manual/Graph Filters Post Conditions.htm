@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="2855" MadCap:lastWidth="776">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>Graph Filters, Post-Conditions, Columns, and Appearance</h1>
+        <p>The last four configuration areas for Graphs are Filter, Post-Condition, Columns, and Appearance.</p>
+        <p>
+            <img src="../../Images/UserManual for reference/030000B1.png" style="height: 376px;width: 454px;" class="img_2" />
+        </p>
+        <h2>Graph Filter and Post-Condition</h2>
+        <p>Filter and Post-Condition sections define the criteria that must be met in order for a data point to be included in a graph. If left blank, all data points related to the type and time specified in the graph configuration will be included.</p>
+        <p>Both the filter and the post-condition are configured by selecting an attribute, an operator, and a value as follows: </p>
+        <p>Attribute = <span class="ital">Reader State</span><br />Value Operator = <span class="emphasis">=</span><br />Value = <span class="ital">Active</span></p>
+        <p>If this example is used in the filter section of the graph definition then points on the graph will only be produced for Zone Manager attribute changes that happen while the reader is active (online).</p>
+        <p>If this example was used in the post-condition section of the graph definition then report rows will be produced for all attribute value changes for any reader that had a value for active status at least once during the graphʼs time period.&#160; In other words, the graph may produce data points for attribute changes that happen when the online status did not have a value, but only if at least one point of data in the graph for that reader has an active value.</p>
+        <h2>Graph Columns (Attributes)</h2>
+        <p>The Graph Columns section allows for the selection of which information will appear in the graph. </p>
+        <p>
+            <img src="../../Images/UserManual for reference/030000B2.png" style="height: 311px;width: 456px;" class="img_2" />
+        </p>
+        <p>By clicking the Ellipsis button <span class="Strong">[</span><span class="Strong">…] </span>button, the following window will appear to allow columns to be <MadCap:annotation MadCap:createDate="2015-04-28T16:41:19.5999328-05:00" MadCap:creator="DSFoxx" MadCap:initials="DSF" MadCap:comment="awk!  Upon clicking, the window appears (subjunctive but not incorrect), but not &quot;by&quot; clicking." MadCap:editor="DSFoxx" MadCap:editDate="2015-04-28T16:41:44.3263471-05:00">selected.</MadCap:annotation></p>
+        <p>
+            <img src="../../Images/UserManual for reference/020000B3.jpg" style="height: 204px;width: 368px;" class="img_2" />
+        </p>
+        <h2>Graph Appearance</h2>
+        <p>The final section of the graph editor is the Appearance section. </p>
+        <p>
+            <img src="../../Images/UserManual for reference/030000B4.png" style="height: 203px;width: 515px;" class="img_2">
+            </img>
+        </p>
+        <p>This section allows you to:</p>
+        <ul>
+            <li>Choose the size of the Graph</li>
+            <li>Choose a background color for the Graph (defaults to white)</li>
+            <li>Choose the line thickness of the Graph </li>
+            <li>Group axis values by unit</li>
+            <li>Display a grid on the Graph</li>
+            <li>Specify the location of the Graph legend</li>
+        </ul>
+        <p>To configure the appearance of a graph, perform the following steps:</p>
+        <ol>
+            <li>Choose whether or not to group the Y-axis of the graph by the unit type of the displayed attributes. </li>
+        </ol>
+        <p class="note" MadCap:autonum="&lt;b&gt;NOTE:&lt;/b&gt; &#160;">If this box is not checked and two or more attributes are chosen, then each of the attributes will be given its own Y-axis. For example, since the reader noise attribute for channel A on a reader is a different attribute than for channel B, then two Y-axis will be produced, each with its own minimum and maximum values and the result may be that the point produced for the value of "-<MadCap:annotation MadCap:createDate="2015-07-02T13:49:32.9665392-05:00" MadCap:creator="Pappillon" MadCap:initials="PA" MadCap:comment="S&amp;R for -numbers/dB once Robert has a verdict" MadCap:editor="Pappillon" MadCap:editDate="2015-07-02T13:49:48.9174515-05:00">80"</MadCap:annotation> for Channel A might be at a different place than the point produced for the same value for Channel B.&#160; Since both of these attributes share the same attribute unit type, you can correct this problem by choosing to "Group Axis by Unit". By doing this, only one Y-axis will be produced that will represent both of the reader channels and all the points will line up correctly when compared to each other.<br /></p>
+        <ol MadCap:continue="true">
+            <li>After you choose the graph configuration settings, click the <span class="Strong">Save Changes </span>button at the bottom of the editor screen to save the graph. <br />At this point the graph is defined, created and ready to run.<br /></li>
+        </ol>
+        <p class="note" MadCap:autonum="&lt;b&gt;NOTE:&lt;/b&gt; &#160;">You can make a copy of a graph so that other users can quickly build a new graph based on an existing graph. To do this, click the <span class="Strong">Copy </span>button.</p>
+    </body>
+</html>

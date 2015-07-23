@@ -1,0 +1,184 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="16" MadCap:lastHeight="7114" MadCap:lastWidth="620" MadCap:conditions="Default.AM only">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>Schema Details</h1>
+        <p>This detailed schema for IT assets, office assets, and people/employees has a large number of Asset Attributes and Calculated Attributes as well as the full list of system Standard Attributes. </p>
+        <p>The V4.1_Comprehensive Schema focuses its environmental monitoring approach around classifying sensors based on where in the airflow they reside. Intake and exhaust temperatures are monitored on per point, per rack, per row and even at a data center. This schema also includes live and historical temperature change (delta) information for hot and cold sides of racks, rows, and cold/hot aisle containment setups. Sensor points are monitored individually, but as more sensors are added to <MadCap:variable name="Variables.ProductName" /> the key summarized stats become more accurate. Also included in this schema are Rack Cooling Index (RTI) and Return Temperature Index (RTI) Calculated Assets, which are used to determine compliance with data center thermal guidelines. </p>
+        <p>This schema is also designed to handle all of the data provided by all models of <MadCap:variable name="Variables.CompanyName" /> environmental monitoring sensor tags including: </p>
+        <ul>
+            <li>Temperature sensor tags</li>
+            <li>Humidity and Temperature sensor tags</li>
+            <li>Fluid sensor tags</li>
+            <li>Door sensor tags</li>
+            <li>Dry Contact sensor tags</li>
+            <li>PDU sensor tags</li>
+            <li>Differential air pressure tags</li>
+        </ul>
+        <p>The <MadCap:annotation MadCap:createDate="2015-04-29T09:19:10.5729603-05:00" MadCap:creator="DSFoxx" MadCap:initials="DSF" MadCap:comment="Bullet/hierarchy Format?   (see Doorstop p. 238) Schema will need to be updated for Logan anyway." MadCap:editor="DSFoxx" MadCap:editDate="2015-04-29T09:23:44.1346072-05:00">schema</MadCap:annotation> contains the following <span class="Strong">Asset Types</span> in the following Asset Type Hierarchy:</p>
+        <ul>
+            <li>Asset<ul><li>Inventory<ul style="list-style-type: circle;"><li>IT Equipment<ul style="list-style-type: square;"><li>Computer</li><li>Desktop<ul style="list-style-type: circle;"><li>Desktop</li><li>Laptop</li><li>Server</li></ul><ul style="list-style-type: circle;"><li>Tablet</li></ul></li><li>Monitor<ul style="list-style-type: circle;"><li>CRT&#160;Monitor</li><li>LCD&#160;Monitor</li><li>LED&#160;Monitor</li></ul><ul style="list-style-type: circle;"><li>Plasma Monitor</li></ul></li><li>Network Equipment<ul style="list-style-type: circle;"><li>Firewall</li><li>Router</li><li>Switch</li><li>VPN</li></ul></li><li>Other IT Equipment<ul style="list-style-type: circle;"><li>Backup Storage</li><li>UPS&#160;System</li></ul></li><li>Printer<ul style="list-style-type: square;"><li>Networked Printer</li><li>Peripheral Printer</li></ul></li></ul></li><li>Office Equipment<ul style="list-style-type: square;"><li>Copier</li><li>Projector</li></ul></li><li>Other Equipment</li><li>Person<ul style="list-style-type: square;"><li>Employee</li><li>Visitor</li></ul></li><li>Vehicle<ul style="list-style-type: square;"><li>Car</li><li>Forklift</li><li>Trailer</li><li>Truck</li><li>Van</li></ul></li></ul></li><li>Sensor<ul style="list-style-type: circle;"><li>Differential Pressure</li><li>Door</li><li>Dry Contact</li><li>Fluid</li><li>PDU</li><li>PDU Breaker</li><li>PDU Input Channel</li><li>PDU&#160;Outlet</li><li>PDU Phase</li><li>Temperature - Humidity</li></ul></li><li>Summary - Location<ul><li>Campus<ul><li>Building<ul><li>Floor<ul><li>Zone<ul><li>Room</li></ul></li></ul></li></ul></li></ul></li><li>Country<ul><li>State or Province<ul><li>City</li></ul></li></ul></li><li>IT&#160;Area<ul><li>Computing Facility<ul><li>Data Center</li><li>IT&#160;Room</li><li>Wiring Closet</li></ul></li><li>CRAC&#160;Unit</li><li>Rack</li><li>Row of Racks</li></ul></li></ul></li></ul></li>
+        </ul>
+        <p>The schema contains the following <span class="Strong">Asset Attributes</span>: </p>
+        <ul>
+            <li>Airflow Position</li>
+            <li>Asset Lifecycle Tracking</li>
+            <li>Asset Purchase Order (document)</li>
+            <li>Building Environmental Monitoring</li>
+            <li>CRAC Airflow Position</li>
+            <li>CRAC Cooling Capacity</li>
+            <li>Color</li>
+            <li>Desktop Form Factor</li>
+            <li>Equipment Power Outlet 1</li>
+            <li>Equipment Power Outlet 2</li>
+            <li>Equipment Power Outlet 3</li>
+            <li>Equipment Power Outlet 4</li>
+            <li>Expected Service Life (Years)</li>
+            <li>Include Asset Information</li>
+            <li>IT Environmental Monitoring</li>
+            <li>MAC Address (xx:xx:xx:xx:xx:xx)</li>
+            <li>Manufacturer</li>
+            <li>Model</li>
+            <li>Monitor Power via PDU</li>
+            <li>Operating System</li>
+            <li>Outlet</li>
+            <li>PCI Slots (quantity)</li>
+            <li>Processor</li>
+            <li>Projector Resolution</li>
+            <li>Purchase Date</li>
+            <li>Purchase Terms</li>
+            <li>Purchase Value ($)</li>
+            <li>Rack Capacity Monitoring</li>
+            <li>Rack Environmental Monitoring</li>
+            <li>Rack Equipment Form Factor</li>
+            <li>Rack PDU 1</li>
+            <li>Rack PDU 2</li>
+            <li>Rack Position</li>
+            <li>Rack Power Capacity</li>
+            <li>Rack Power Monitoring</li>
+            <li>Rack U Space Capacity</li>
+            <li>Rack Weight Capacity</li>
+            <li>RAM Amount (GB)</li>
+            <li>Row Capacity Monitoring</li>
+            <li>Row Environmental Monitoring</li>
+            <li>Row Power Monitoring</li>
+            <li>Screen Size</li>
+            <li>Server Form Factor</li>
+            <li>Server Use</li>
+            <li>Storage or Disk Size (GB)</li>
+            <li>System Criticality</li>
+            <li>System U Height</li>
+            <li>System Weight</li>
+            <li>Temperature Sensor Application</li>
+            <li>Title</li>
+            <li>Volumetric Air Flow Rate</li>
+            <li>Warranty Term (months)</li>
+        </ul>
+        <p>&#160;</p>
+        <p>The schema contains the following <span class="Strong">Calculated Asset Attributes</span>: </p>
+        <ul>
+            <li>Any Door Open</li>
+            <li>Any Doors Last Opened</li>
+            <li>Any Fluid Detected</li>
+            <li>Any Sensor Offline</li>
+            <li>Any Warranty Expired</li>
+            <li>Asset Age (months)</li>
+            <li>Asset Count</li>
+            <li>Available Rack Weight Capacity (%)</li>
+            <li>Available U Space Capacity (%)</li>
+            <li>Average Asset Age (months)</li>
+            <li>Average Asset Value ($)</li>
+            <li>Average Exhaust Temperature</li>
+            <li>Average Humidity</li>
+            <li>Average Intake Humidity</li>
+            <li>Average Intake Temperature</li>
+            <li>Average Return Humidity</li>
+            <li>Average Return Temperature</li>
+            <li>Average Return Temperature (Weighted)</li>
+            <li>Average Temperature</li>
+            <li>Average Temperature Delta</li>
+            <li>Calculated Max Alert Severity</li>
+            <li>Cold Aisle Containment Door Link (Hidden)</li>
+            <li>Cold Aisle Door Open</li>
+            <li>CRAC Return Humidity Link</li>
+            <li>CRAC Return Temp Link</li>
+            <li>CRAC Supply Humidity Link</li>
+            <li>CRAC Supply Temp Link</li>
+            <li>CRAC Temperature</li>
+            <li>Door Counter</li>
+            <li>Door Opens per Day</li>
+            <li>Equipment Active Power</li>
+            <li>Equipment Apparent Power</li>
+            <li>Exhaust Humidity Link (Hidden)</li>
+            <li>Exhaust Temp Link (Hidden)</li>
+            <li>Fluid Sensor Count</li>
+            <li>Intake Humidity Link (Hidden)</li>
+            <li>Intake Temp Link (Hidden)</li>
+            <li>Last Door Opened</li>
+            <li>Max Exhaust Humidity</li>
+            <li>Max Exhaust Temperature</li>
+            <li>Max Intake Humidity</li>
+            <li>Max Exhaust Temperature</li>
+            <li>Maximum Humidity</li>
+            <li>Maximum Temperature</li>
+            <li>Minimum Humidity</li>
+            <li>Minimum Temperature</li>
+            <li>Minimum Humidity</li>
+            <li>Newest Asset Age (months)</li>
+            <li>Oldest Asset Age (months)</li>
+            <li>Rack Active Power</li>
+            <li>Rack Apparent Power</li>
+            <li>Rack Cooling Index - RCI(HI)</li>
+            <li>Rack Cooling Index - RCI(LO)</li>
+            <li>Rack Door Status Link (hidden)</li>
+            <li>Rack Power % Capacity</li>
+            <li>Rack Temperature Delta</li>
+            <li>RCI(HI) Violation</li>
+            <li>RCI(LO) Violation</li>
+            <li>Return Temperature Index (RTI)</li>
+            <li>Room Active Power</li>
+            <li>Room Apparent Power</li>
+            <li>Row Active Power</li>
+            <li>Row Apparent Power</li>
+            <li>Sensor Offline Link (Hidden)</li>
+            <li>Total Asset Value ($)</li>
+            <li>Total Rack Cooling Index - RCI(HI)</li>
+            <li>Total Rack Cooling Index - RCI(LO)</li>
+            <li>Total Row Weight Capacity</li>
+            <li>Total U Space Available (U's)</li>
+            <li>Total U Space Capacity (U's)</li>
+            <li>Total U Space Utilized (U's)</li>
+            <li>Total Weight Available</li>
+            <li>Total Weight Utilized</li>
+            <li>Under Warranty</li>
+            <li>Used U Space Capacity (%)</li>
+            <li>Used Weight Capacity (%)</li>
+            <li>Warranty Expiration Date</li>
+            <li>Weighted CRAC Return Temp</li>
+            <li>Weighted CRAC RTI Cooling</li>
+            <li>Weighted CRAC Supply Temp</li>
+        </ul>
+        <p>&#160;</p>
+        <p>The schema contains the following <span class="Strong">Custom Attribute Types</span>: </p>
+        <ul>
+            <li>Asset Lifecycle Profile</li>
+            <li>Building Environmentals</li>
+            <li>Computing Facility Environmentals</li>
+            <li>CRAC Airflow Profile</li>
+            <li>CRAC Environmentals</li>
+            <li>Door Sensor Profile</li>
+            <li>Location</li>
+            <li>Power Outlet Monitoring Profiles</li>
+            <li>Rack Asset Information</li>
+            <li>Rack Capacity Profiles</li>
+            <li>Rack Environmental (Sensors)</li>
+            <li>Rack Power Profiles</li>
+            <li>Row Capacity Profile</li>
+            <li>Row Environmental Tracking</li>
+            <li>Row Power Tracking</li>
+            <li>Temp Airflow Profile</li>
+            <li>Temperature Sensor Profile</li>
+        </ul>
+    </body>
+</html>

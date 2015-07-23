@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="2135" MadCap:lastWidth="776">
+    <head><title></title>
+    </head>
+    <body>
+        <h1><a name="__RefHeading___Toc414541448"></a>Creating Groups</h1>
+        <p>To define Groups to which Users can be assigned, follow these steps: </p>
+        <ol>
+            <li>In the <span class="Strong">Admin Console</span>, go to <span class="Strong">Security &gt; Groups</span>. <br /><br /><img src="../../Images/UserManual for reference/030000CE.png" style="height: 145px; width: 299px;" class="imgsmall" /></li>
+        </ol>
+        <p class="note" MadCap:autonum="&lt;b&gt;NOTE:&lt;/b&gt; &#160;"> The “Everyone” Group is the default Group in the Group tree; it encompasses all Users that have been created in <MadCap:variable name="Variables.ProductName" /> and exists to provide a single common Group available to all Users by default. </p>
+        <ol MadCap:continue="true">
+            <li>Click the <span class="Strong">New</span> button.<br />Configuration fields will appear for the new Group in the right pane.<br /><br /><img src="../../Images/UserManual for reference/030000CF.png" style="height: 429px;width: 393px;" class="img_2" /><br /></li>
+            <li MadCap:conditions="Default.SourceText">Complete the Group configuration fields.</li>
+            <li>Complete all required and any desired additional fields.</li>
+        </ol>
+        <h2>Basic Information</h2>
+        <ul>
+            <li><span class="Strong">Name: </span>The name of the new Group.</li>
+            <li><span class="Strong">Description:</span> The description of the Group.</li>
+        </ul>
+        <h2>Asset And User Console Object Access</h2>
+        <ul>
+            <li><span class="Strong">Asset And User Console Object Access:</span> This checkbox determines if the Group has visibility to all assets.&#160; If the box is checked, the User can see all assets regardless of Group membership.&#160; If the box is <span class="emphasis">not</span> checked, the User can only access assets that have the Group name associated with these assets. </li>
+        </ul>
+        <h2>Everyone Group Access</h2>
+        <ul>
+            <li><span class="Strong">Everyone Group Access:</span> Specifies whether or not the User can create assets that everyone can access. </li>
+        </ul>
+        <h2>Asset Links</h2>
+        <ul>
+            <li><span class="strong">Asset Links:</span> Click the Ellipsis <span class="strong">...</span> button to select from available asset links. Click <span class="strong">OK</span>&#160;when finished.</li>
+        </ul>
+        <h2>Locations And Custom Types</h2>
+        <ul>
+            <li><span class="Strong">Allowed Locations And Custom Types Access:</span> Determines if the Users can see all Locations and Custom Types or only selected Locations and Custom Types. </li>
+        </ul>
+        <h2>Attributes</h2>
+        <ul>
+            <li><span class="Strong">Allowed Restrictable Attributes: </span>Determines if the User can see all attributes of an asset or not.&#160; If the User is not granted access to all attributes, then the User can see all non-restricted attributes and only the restricted attributes that are granted to this User.&#160; All other restricted attributes are hidden. </li>
+        </ul>
+        <ol start="4" class="ol_4">
+            <li>Click <span class="Strong">Save Changes</span>. <br />The new Group appears in the left column. Any User assigned to this Group will be allowed access to all things to which the Group has access.<br /></li>
+        </ol>
+        <p class="note" MadCap:autonum="&lt;b&gt;NOTE:&lt;/b&gt; &#160;">Permissions are cumulative.&#160; Users have access to anything in <MadCap:variable name="Variables.ProductName" /> that is permitted by any Group to which that User has been assigned. This means that if a User belongs to two Groups and one Group has access to certain parts of the system that are prohibited to the other group to which the User belongs, then the User will have permission to see those things. Do not add a User to a Group that provides an access level greater than you intend for that User.</p>
+    </body>
+</html>

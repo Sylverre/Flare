@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="882" MadCap:lastWidth="643">
+    <head>
+        <title>
+        </title>
+    </head>
+    <body>
+        <h1>Data Schema</h1>
+        <p MadCap:conditions="General.notes for reviewers" style="font-weight: normal;text-decoration: underline;font-style: normal;">My first-impression notes on Deployment point out that there was no definition of "assets"&#160;before this point. From observation, looks like importing at least one default schema should be done during initial configuration, so change "you will" to actual instruction. Also, ask dev whether pre-installation is an option for DCM product, and what happens to hierarchies if more than one schema is loaded. Adapt text from Asset Manager API Specification for this area--better <MadCap:annotation MadCap:createDate="2015-04-27T17:44:39.3818687-05:00" MadCap:creator="DSFoxx" MadCap:initials="DSF" MadCap:comment="Frank says:\r\nWhen originally designed, we were thinking that there would eventually be several schemas for a user to import (DC, hospital, industrial, etc.) but that has turned out not to be the case. I asked the dev team if we should have the schema “pre-loaded”. Will let you know.\r\n\r\nAnd Gary says, as of 04/27/15, that Marty has, in fact, done this.  So, update text for that." MadCap:editor="DSFoxx" MadCap:editDate="2015-04-27T17:45:02.8232095-05:00">explanations.</MadCap:annotation></p>
+        <p>A data schema is the combination of asset types and attributes that allow you to determine what types of assets/sensors you are monitoring and specific attributes related to those. By default, <MadCap:variable name="General.ProductName" /> contains two schemas that can be used in a general environmental monitoring deployment. Custom schemas can also be imported. For both the pilot and roll-out, you will use one of the default schemas. If you have specific needs in the future that are not addressed by the default schema, please consult with <MadCap:variable name="General.CompanyName" /> Support to customize the default schema or design a schema from scratch. Depending on the nature of the customization, it may also be necessary to work with <MadCap:variable name="General.ProductName" /> Professional Services.</p>
+        <h2 MadCap:conditions="General.New text">Import a Default Schema</h2>
+        <ol>
+            <li MadCap:conditions="General.New text">From the Dashboard/Admin View, select <b>Schemas</b> and <b>Schema Import</b>. </li>
+        </ol>
+        <p MadCap:conditions="General.New text">
+            <img src="../../D_Images/temp schema import.bmp" class="OneHundredPercent" />
+        </p>
+        <p style="text-align: right;" MadCap:conditions="General.New text">
+            <i>figcaption</i>
+        </p>
+        <ol MadCap:continue="true">
+            <li MadCap:conditions="General.New text">Click a schema name in the right-hand pane and click the <b>Schema Description</b> button to view details. </li>
+            <li MadCap:conditions="General.New text">Click <b>Load Schema</b> to add the described asset types, attributes, and hierarchy.</li>
+        </ol>
+        <p>NOTE: For more information about Asset Types, refer to the following KB article: <a href="http://support.rfcode.com/customer/portal/articles/977425-how-to-create-new-asset-types-in-asset-manager-and-sensor-manager">http://support.rfcode.com/customer/portal/articles/977425-how-to-create-new-asset-types-in-asset-manager-and-sensor-manager</a></p>
+        <p style="text-decoration: underline;" MadCap:conditions="General.notes for reviewers">Consider adapting text on Object Types, or including reference to API&#160;doc.</p>
+        <p>Assets Types that represent various <MadCap:variable name="General.ProductName" /> sensor tags and Attributes that represent various environmental conditions that sensor tags monitor can be found in the Admin Console under Data Schema.</p>
+    </body>
+</html>

@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="3759" MadCap:lastWidth="776">
+    <head><title></title>
+    </head>
+    <body>
+        <h1><a name="__RefHeading___Toc414541454"></a>LDAP Server Configuration</h1>
+        <p>The LDAP Server sub-task is used to configure access to an LDAP server for User and Group account management. To configure LDAP for use with <MadCap:variable name="Variables.ProductName" />:</p>
+        <ol>
+            <li>In the <span class="Strong">Admin Console</span>, go to <span class="Strong">Security &gt; LDAP Server &gt; Server Configuration</span>.<br /><br /><img src="../../Images/UserManual for reference/030000E0.png" style="height: 237px;width: 400px;" class="img_2" /></li>
+            <li>Complete all required and any desired additional fields.<br /><br /><img src="../../Images/UserManual for reference/030000E1.png" style="height: 125px;width: 252px;" class="img_2" /><br /></li>
+        </ol>
+        <h2>Basic Information</h2>
+        <ul>
+            <li><span class="Strong">Name</span>: This can be any name you choose to call your LDAP server.</li>
+            <li><span class="Strong">Enabled</span>: This must be checked in order for <MadCap:variable name="Variables.ProductName" /> to access your LDAP server.<br /><br /></li>
+        </ul>
+        <h2>Network Settings</h2>
+        <ul>
+            <li><span class="Strong">Hostname</span>: Enter the hostname name of your LDAP server.<br /></li>
+            <li><span class="Strong">Port</span>: Enter the port number over which you will connect to your LDAP server.&#160;&#160;&#160; In most cases this is port 389 which is the default for Active Directory.<br /><br /></li>
+        </ul>
+        <p class="note" MadCap:autonum="&lt;b&gt;NOTE:&lt;/b&gt; &#160;">If you enable use of SSL, your port number will be 636 unless you have changed the default setting.</p>
+        <ul>
+            <li><span class="Strong">Use SSL</span>:&#160; Check this box if you have a signed certificate installed on your server. This will cause <MadCap:variable name="Variables.ProductName" /> to communicate with your LDAP server using SSL.<br /><br /></li>
+        </ul>
+        <h2>Authentication Settings&gt;</h2>
+        <ul>
+            <li><span class="Strong">Bind User</span>: Specify the User account who will perform bind requests to the LDAP server. To do so, you will need to enter information pertinent to tree path.</li>
+        </ul>
+        <p> <img src="../../Images/UserManual for reference/030000E2.png" style="height: 102px;width: 347px;" class="img_2" /></p>
+        <p class="note" MadCap:autonum="&lt;b&gt;NOTE:&lt;/b&gt; &#160;">Binding is the step where the LDAP server authenticates the client and, if the client is successfully authenticated, allows the client access to the LDAP server based on that client᾽s privileges.&#160; The screenshot below shows a User in an LDAP/AD tree.<br /></p>
+        <p>
+            <img src="../../Images/UserManual for reference/030000E3.png" style="height: 190px;width: 589px;" class="img_2" />
+        </p>
+        <p class="note" MadCap:autonum="&lt;b&gt;NOTE:&lt;/b&gt; &#160;">The <span class="strong">Bind User</span> resides in the <span class="strong">Users</span> directory.&#160; Any user who has privilege to query the directory can be the Bind User. Users to be added must reside under the top level, which is known as the <span class="strong">Search Base</span>. The users <MadCap:annotation MadCap:createDate="2015-05-01T19:46:42.9912248-05:00" MadCap:creator="DSFoxx" MadCap:initials="DSF" MadCap:comment="revise!" MadCap:editor="DSFoxx" MadCap:editDate="2015-05-01T19:46:45.3893619-05:00">could</MadCap:annotation> reside in sub-folders beneath the Search Base, but they must be somewhere within this hierarchy and not under a separate or parallel hierarchy. The <span class="strong">Search Filter</span> is typically pre-populated by the system and shouldn’t be modified. Depending on the size of your LDAP tree, you may need one or more of the following monikers when specifying the path in the tree:<br /></p>
+        <ul>
+            <li>cn – common name</li>
+            <li>ou – organizational unit</li>
+            <li>dc&#160; – domain component</li>
+        </ul>
+        <p>Example Simple Path: cn=Dan Horowitz, cn=users, dc=rfcode, dc=com</p>
+        <p class="note" MadCap:autonum="&lt;b&gt;NOTE:&lt;/b&gt; &#160;">The path must be specified in reverse order of the tree.</p>
+        <p class="note" MadCap:autonum="&lt;b&gt;NOTE:&lt;/b&gt; &#160;">The default naming convention for Active Directory is <span class="span_6">Lastname, Firstname</span>. If you use the default naming convention, then you will have to use an escape character.</p>
+        <ul>
+            <li><span class="Strong">Bind Password</span>: The LDAP password of the bind user. </li>
+            <li><span class="Strong">Confirm Password</span>: Type the bind user password again.<span class="Strong"><br /><br /></span><img src="../../Images/UserManual for reference/030000E4.png" style="height: 183px;width: 348px;" class="img_2" /></li>
+        </ul>
+        <h2>Query Information for LDAP Users</h2>
+        <ul>
+            <li><span class="Strong">User Search Base Field</span>: In this field you will need to enter the path to the directory in the tree that contains the users that match the names of the users configured in <MadCap:variable name="Variables.ProductName" />.</li>
+        </ul>
+        <p class="note" MadCap:autonum="&lt;b&gt;NOTE:&lt;/b&gt; &#160;">All LDAP users within <MadCap:variable name="Variables.ProductName" /> must be within this search base.</p>
+        <p>Example Search Base Path: cn=Users, dc=example, dc=com</p>
+        <ul>
+            <li><span class="Strong">User Filter:</span>&#160; This is simply the object class for filtering the LDAP request for matching users.</li>
+            <li><span class="Strong">Search Filter</span>: This field determines the field name for login id. It is populated by default in <MadCap:variable name="Variables.ProductName" />. If you are using Active Directory, this field should not be altered.</li>
+            <li><span class="Strong">User DN Attribute:</span> This field is used to configure <MadCap:variable name="Variables.ProductName" /> with LDAP servers other than Active Directory.</li>
+            <li><span class="Strong">Account Expiration Attribute</span>:&#160; This is set so that user accounts can be expired programmatically based on a date.&#160; Do not change this field unless first contacting <MadCap:variable name="Variables.CompanyName" /> Support.</li>
+            <li><span class="Strong">Email Attribute</span>:&#160; This defaults to “mail” and should not be changed.<br /><br /><img src="../../Images/UserManual for reference/030000E5.png" style="height: 136px;width: 357px;" class="img_2" /></li>
+        </ul>
+        <h2>Query Information for LDAP Groups</h2>
+        <ul>
+            <li><span class="Strong">Group Search Base</span>:&#160; In this field you will need to enter the path to the directory in the tree that contains the groups that match the names of the groups configured in <MadCap:variable name="Variables.ProductName" />.</li>
+            <li><span class="Strong">Group Filter</span>:&#160; This is the object class for filtering the LDAP request for matching groups. The defaults are setup for Active Directory but can be modified if using another LDAP server.</li>
+            <li><span class="Strong">Group DN Attribute</span>:&#160; This is the Distinguished Name (DN) of the LDAP group.</li>
+            <li><span class="Strong">User Membership Attribute</span>:&#160; This defaults to “memberOf” and should not be changed.<br /><br /></li>
+        </ul>
+        <p class="note" MadCap:autonum="&lt;b&gt;NOTE:&lt;/b&gt; &#160;">Frequently the same search base used for users can be reused for Groups.&#160; </p>
+        <ol start="3">
+            <li>After you have entered all of the fields correctly, click the <span class="Strong">Test</span> button at the top left of the screen. <br /><br />You will receive a message box that indicates that the LDAP server test was successful.</li>
+        </ol>
+        <p MadCap:conditions="Default.User">
+            <img src="../../Images/UserManual for reference/030000E6.png" style="height: 39px;width: 87px;" class="img_2" />
+            <br />
+        </p>
+        <ol MadCap:continue="true">
+            <li>Click <span class="Strong">Save Changes</span> to save your LDAP Settings. <br /><br /></li>
+        </ol>
+        <p>You can now add LDAP Users and/or LDAP Groups to <MadCap:variable name="Variables.ProductName" />.</p>
+    </body>
+</html>

@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="1184" MadCap:lastWidth="1070">
+    <head>
+        <title>
+        </title>
+    </head>
+    <body>
+        <h1>Configuring  M250 Readers via USB<a name="Reader_Config"></a></h1>
+        <p style="font-weight: normal;font-style: normal;">The Reader Configuration Utility (RCU) must be installed and readers configured via USB during initial deployment.  The RCU is available on the CD included with the reader, and is available for download from <a href="http://support.rfcode.com/">support.rfcode.com</a>. </p>
+        <p MadCap:conditions="General.New text,Default.NewText" class="note" MadCap:autonum="&lt;b&gt;NOTE:&lt;/b&gt; &#160;">All readers should be configured, if necessary, prior to being installed in their permanent locations. Readers must be configured prior to use if a static IP address needs to be assigned or if the Up <MadCap:annotation MadCap:createDate="2015-06-15T16:01:55.1670689-05:00" MadCap:creator="Pappillon" MadCap:initials="PA" MadCap:comment="href" MadCap:editor="Pappillon" MadCap:editDate="2015-06-15T16:01:57.2781896-05:00">Connect</MadCap:annotation> feature is to be used. Readers other than the first may not need to be pre-configured if the intent is to use DHCP for IP address assignment.  </p>
+        <h2 style="font-weight: normal;font-style: normal;">Configuring the Reader for Static IP Address or DHCP with Up Connect </h2>
+        <ol>
+            <li style="font-weight: normal;font-style: normal;">Install the RCU on the PC being used to configure the reader. If installing from CD, the CD should remain in the CD-ROM drive 	during the install.<br /><br /></li>
+        </ol>
+        <p class="note" MadCap:autonum="&lt;b&gt;NOTE:&lt;/b&gt; &#160;">If you run into any issues installing the driver, refer to the following <MadCap:variable name="General.CompanyName" /> KB Article: <a href="http://support.rfcode.com/customer/portal/articles/721801">http://support.rfcode.com/customer/portal/articles/721801</a></p>
+        <ol MadCap:continue="true">
+            <li style="font-weight: normal;font-style: normal;">Connect the reader to the USB port using the USA-to-USB cable included in <MadCap:variable name="General.CompanyName" /> pilot pack.<br /> </li>
+        </ol>
+        <p class="note" MadCap:autonum="&lt;b&gt;NOTE:&lt;/b&gt; &#160;">USB cables are not provided with purchases other than pilot packs; they can be purchased at an electronics store or big box general retailer.</p>
+        <ol MadCap:continue="true">
+            <li> When prompted, install the RFCUSB.inf driver from the configuration utility folder of the CD-ROM or installation directory from the download.</li>
+        </ol>
+        <ol MadCap:continue="true">
+            <li>Run the configuration utility.<ol MadCap:continue="true"><li> Select <b>Local</b> as the connection method. The M250 Reader should be seen on 	one of the COM ports listed. </li><li>Select the COM port and click <b>Next</b>.  </li><li>If desired, change any setting in the 	configuration tabs including the IP address and Up Connect settings. </li><li>Click <b>Save Changes</b> so that the configuration is saved to the reader.</li></ol></li>
+        </ol>
+        <ol MadCap:continue="true">
+            <li> After a static IP is entered, you will be able to connect to the M250 Reader with a web browser. If you wish to use DHCP, the Reader Configuration Utility will also report the IP address that has been assigned to the reader. However, this address may change. Therefore, if you choose this manner of configuration instead, use the Up Connect feature to connect the M250 Reader to <MadCap:variable name="General.ProductName"></MadCap:variable>.</li>
+        </ol>
+        <p> For more information, refer to the M250 Reader User Manual available at <a href="http://support.rfcode.com/customer/portal/articles/722910-user-guides-manuals-docs">http://support.rfcode.com/customer/portal/articles/722910-user-guides-manuals-docs</a>.</p>
+        <ol MadCap:continue="true">
+            <li>Following configuration, attach the two helical antennas packaged with the reader. Align the antennas at a right angle from one another.<br /></li>
+        </ol>
+        <p class="note" MadCap:autonum="&lt;b&gt;NOTE:&lt;/b&gt; &#160;">A reader configuration file may be provided by <MadCap:variable name="General.CompanyName" /> and loaded onto a USB thumb drive, created following the instructions in the <a href="http://support.rfcode.com/customer/portal/articles/716022-reader-api-details">M250 API&#160;Specification</a> document, or exported from <MadCap:variable name="General.ProductName" /> following the pilot deployment, and used to configure readers for a full roll-out. Plug the USB containing the CSV into the reader and it will begin processing. The USB drive is safe to remove as soon as the LEDs begin flashing.</p>
+    </body>
+</html>

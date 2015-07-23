@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="8" MadCap:lastHeight="2822" MadCap:lastWidth="762">
+    <head>
+        <title>
+        </title>
+    </head>
+    <body>
+        <h1>Install and Configure IR Locators<a name="IR_Install_Config"></a></h1>
+        <p>Rack and room locators<MadCap:conditionalText MadCap:conditions="Default.SourceText">, and optional IR continuous-transmit <MadCap:annotation MadCap:createDate="2015-06-16T16:51:29.7924498-05:00" MadCap:creator="Pappillon" MadCap:initials="PA" MadCap:comment="current?" MadCap:editor="Pappillon" MadCap:editDate="2015-06-16T16:51:31.9385726-05:00">tags,</MadCap:annotation></MadCap:conditionalText> are mounted according to the deployment plan to allow asset management at up to rack-level <MadCap:annotation MadCap:createDate="2015-06-19T10:49:52.9518569-05:00" MadCap:creator="Pappillon" MadCap:initials="PA" MadCap:comment="061815 review, Frank wants to &quot;get away from asset tracking&quot; and move toward &quot;asset management.&quot;  But I'm not sure about this particular instance..." MadCap:editor="Pappillon" MadCap:editDate="2015-06-19T10:50:28.8719114-05:00">accuracy.</MadCap:annotation> IR Locators require power, and cannot be placed in areas that are exposed to direct sunlight. See <a href="http://support.rfcode.com/customer/portal/articles/722910-user-guides-manuals-docs">A740 Rack Locator User Manual</a> or <a href="http://support.rfcode.com/customer/portal/articles/722910-user-guides-manuals-docs">A750 Room Locator User Manual</a> for more information.</p>
+        <p>Use of IR&#160;locators requires IR-enabled tags. Tag groups and at least one reader must be added to the system before IR locators can be used. Rack Locators and Room Locators are configured using different Utilities. To configure locators of either type:</p>
+        <ol>
+            <li>Install <a href="http://support.rfcode.com/customer/portal/articles/716055-reader-utilities-downloads">RCU</a> to <MadCap:annotation MadCap:createDate="2015-06-19T12:05:03.5217389-05:00" MadCap:creator="Pappillon" MadCap:initials="PA" MadCap:comment="061915--Frank didn't flag this during review, but now I'm curious: Windows only?  Can't run under Linux/iOS?" MadCap:editor="Pappillon" MadCap:editDate="2015-06-19T12:05:37.8545531-05:00">Windows</MadCap:annotation> computer.<br />Plug Locator in with USB 2.0 cable.<br /></li>
+            <li>Assign unique four-digit code. <ol><li>If configuring multiple locators, click Apply and Increment Location Code.</li></ol></li>
+            <li>Set the IR-emitted intensity level.<ol><li>For open racks, begin at 30%; 50% or stronger for closed racks. Some testing in your environment may be required to determine a setting that ensures appropriate tag reach without interference.</li><li>For Room Locators, set the IR&#160;Output Regions if desired.</li></ol></li>
+            <li>Configure Room Locators for Standalone or Team Mode.</li>
+            <li>Associate an IR Rule to the location where IR locators are to be mounted.</li>
+            <li>
+                <a href="http://support.rfcode.com/customer/portal/articles/1511773-a740-rack-locator-installation-video-">Mount IR Locator(s)</a>.<ol><li>IR&#160;Locators require power. Rack Locators can be plugged into Rack PDUs. Mount Room Locators near an appropriate power source.</li></ol></li>
+        </ol>
+        <h2>Asset Auditing with IR-Enabled&#160;Tags and IR Locators</h2>
+        <p>The A740 Rack Locator is designed for use in both open and closed rack environments. Each Rack Locator transmits an infrared (IR) pulse pattern containing a unique four-digit location code. The intensity of the IR transmissions can be adjusted to achieve complete coverage for open or closed racks with minimal bleed-over to adjacent racks.</p>
+        <p>IR-enabled tags will detect incoming IR signals and periodically transmit the tag’s unique ID and a current IR location code. Tag transmissions are processed in real-time to quickly locate and identify tagged assets with rack-level accuracy.</p>
+        <p>A750 Room Locators are used to cover larger areas or rooms such as receiving and staging areas. In a typical installation that utilizes both <MadCap:variable name="General.CompanyName" /> Rack and Room Locators, assets can be managed during their complete life cycle.</p>
+        <p>Room Locators have a typical transmission radius of 35 feet or more. The IR transmissions occur within line-of-sight and by reflection effectively flooding the coverage zone with the room location code. It is important that Room Locators are not installed directly in areas where the Rack Locators are being used, since a Room Locator will overpower the IR transmissions of a Rack Locator.  IR coverage zones are limited by solid structures, so Room Locators should be used only when there are physical walls between the Room and Rack Locators.</p>
+        <p MadCap:conditions="Default.SourceText">
+            <img src="../../D_Images/placeholder A740 IR deployment.bmp" class="imgfullwidth" />
+        </p>
+        <p>The major components of IR&#160;Asset Auditing consist of the <MadCap:annotation MadCap:createDate="2015-05-20T16:30:54.7920386-05:00" MadCap:creator="DSFoxx" MadCap:initials="DSF" MadCap:comment="Image from A740, though I'm not at all averse to leaving it out." MadCap:editor="Pappillon" MadCap:editDate="2015-06-22T08:58:56.9117701-05:00">following:</MadCap:annotation></p>
+        <ul>
+            <li>
+                <span class="Strong">IR Locator:</span> Each IR Locator periodically transmits a short burst of infrared pulses to report a location ID. This IR signal pulse is transmitted once every second to avoid interference with other devices that receive IR transmissions. The locator’s configuration settings such as location ID, LED intensity, and enabling regions are performed using the Room Locator Utility or Rack Locator Utility (RLU).</li>
+            <li>
+                <span class="Strong">IR Signal:</span> All IR-enabled active tags in a room look for the locator’s IR signals at specific intervals.  Since the IR signals transmit by line of sight or reflections, the proper placement of locators and tags is essential to optimally detect the IR signals. The tags should be mounted in a manner where the IR sensor is pointing toward a locator whenever possible. In areas that may have many items blocking the IR transmissions, multiple locators can be used to increase the coverage area.</li>
+            <li>
+                <span class="Strong">IR-Enabled Active Tags:</span> Active tags are attached to assets to manage the movement and current location of those assets. The tags relay an RF beacon to a reader that contains the A740 or A750 location identifier seen by the <MadCap:annotation MadCap:createDate="2015-06-16T17:04:45.7159740-05:00" MadCap:creator="Pappillon" MadCap:initials="PA" MadCap:comment="awkward!" MadCap:editor="Pappillon" MadCap:editDate="2015-06-16T17:04:50.1052251-05:00">tag.</MadCap:annotation><![CDATA[  ]]></li>
+            <li>
+                <span class="Strong">RF Reader:</span> The RF reader receives data transmitted by the active tags, this includes the location code data that is received from the Locators.</li>
+            <li>
+                <span class="Strong">Rack Locator Utility</span> or <span class="Strong">Room Locator Utility:</span> The (RLU) program is provided to allow configuration of the IR Locator. This utility has a GUI interface to allow setting the A740’s or A750’s location code, LED intensity levels, and other locator parameters.<br /><br /></li>
+        </ul>
+        <p>
+            <span class="Strong">
+                <MadCap:annotation MadCap:createDate="2015-06-16T17:05:35.4098164-05:00" MadCap:creator="Pappillon" MadCap:initials="PA" MadCap:comment="Notes?  Can I get away with that?" MadCap:editor="Pappillon" MadCap:editDate="2015-06-16T17:05:44.3593282-05:00">Notes</MadCap:annotation> for IR Locator and Tag Deployment</span>
+        </p>
+        <p>When deploying locators and IR-enabled tags, it is possible that other IR sources can interfere with the locators’ IR transmissions. If an interference occurs, the IR tag may not be able to successfully decode the IR signal. This will cause the tag to report a payload indicating that it does not detect a valid signal. The tag’s RF signal will not be effected by any IR interference, however the IR location code will not be received. To avoid any IR interference refer to the following notes:</p>
+        <ul>
+            <li>IR-enabled active tags are not designed to work outdoors. In direct sunlight, the IR tags will not detect the IR&#160;Locator transmissions.</li>
+            <li>Do not cover the IR sensor on the tag label. This will affect the ability of the tag to read IR signals.</li>
+            <li>The placement of tags within a room can affect the ability of the tag to decode infrared signals. Where possible tags should be placed so that their IR sensor would typically be facing towards an IR device, or have an unobstructed view of a surface, such as a wall, that will be illuminated by an IR&#160;device.</li>
+            <li>For tags in general, the RF field of the tags are affected by large metal surfaces. Users should take caution when placing tags directly on metal surfaces that are large relative to the tag. This can cause a diminished read-range in some cases.</li>
+        </ul>
+        <p>&#160;</p>
+    </body>
+</html>

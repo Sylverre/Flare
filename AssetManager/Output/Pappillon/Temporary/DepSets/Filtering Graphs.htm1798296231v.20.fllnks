@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultFileLinkSet
+  FileTitle=""
+  FileSearchable="true"
+  FileTimeEstimate="0"
+  FilePriority="0">
+  <Links>
+    <Link
+      Url="../RFC-AM Comprehensive/Content/Resources/Images/UserManual for reference/030000B6.png" />
+    <Link
+      Url="../RFC-AM Comprehensive/Content/Resources/Images/UserManual for reference/020000B7.jpg" />
+  </Links>
+  <LongLinks>
+    <Link
+      Url="../RFC-AM Comprehensive/Content/Resources/Images/UserManual for reference/030000B6.png" />
+    <Link
+      Url="../RFC-AM Comprehensive/Content/Resources/Images/UserManual for reference/020000B7.jpg" />
+  </LongLinks>
+  <Anchors />
+  <Keywords />
+  <Concepts />
+  <ConceptControlNames />
+  <IndexControlNames />
+  <Variables />
+  <FileConditions />
+  <FileTags />
+  <AllConditions />
+  <Stylesheets />
+</CatapultFileLinkSet>

@@ -1,0 +1,232 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="2" MadCap:lastHeight="6051" MadCap:lastWidth="580">
+    <head>
+    </head>
+    <body>
+        <h1>Reporting Tag Data</h1>
+        <p>Reporting Tag Data</p>
+        <p>The following are a list of commands to use the Zone Manager software to report tag data:</p>
+        <p>Tag List</p>
+        <p>taglist</p>
+        <p>http://&lt;baseurl&gt;/taglist</p>
+        <p>This function lists all tags currently being observed, including tag ID and tag group ID.</p>
+        <p>EXAMPLE COMMAND</p>
+        <p>taglist, taglist.xml</p>
+        <p>OR</p>
+        <p>http://10.1.20.90:6580/rfcode_zonemgr/zonemgr/api/taglist</p>
+        <p>TIP</p>
+        <p>Reporting Tag Data</p>
+        <p>EXAMPLE RESPONSE</p>
+        <p>RFCRCK00000092: taggroupid=rfcrck</p>
+        <p>RFCRCK00000093: taggroupid=rfcrck</p>
+        <p>RFCRCK00000094: taggroupid=rfcrck</p>
+        <p>RFCRCK00000095: taggroupid=rfcrck</p>
+        <p>RFCRCK00000096: taggroupid=rfcrck</p>
+        <p>RFCRCK00000097: taggroupid=rfcrck</p>
+        <p>RFCRCK00000098: taggroupid=rfcrck</p>
+        <p>RFCRCK00000099: taggroupid=rfcrck</p>
+        <p>RFCRCK00000100: taggroupid=rfcrck</p>
+        <p>&lt;tag-list&gt;&lt;tag id=”RFCRCK00000092”&gt;&lt;attrib id=”taggroupid”&gt;rfcrck&lt;/attrib&gt;&lt;/</p>
+        <p>tag&gt;</p>
+        <p>&lt;tag id=”RFCRCK00000093”&gt;&lt;attrib id=”taggroupid”&gt;rfcrck&lt;/attrib&gt;&lt;/tag&gt;</p>
+        <p>&lt;tag id=”RFCRCK00000094”&gt;&lt;attrib id=”taggroupid”&gt;rfcrck&lt;/attrib&gt;&lt;/tag&gt;</p>
+        <p>&lt;tag id=”RFCRCK00000095”&gt;&lt;attrib id=”taggroupid”&gt;rfcrck&lt;/attrib&gt;&lt;/tag&gt;</p>
+        <p>&lt;tag id=”RFCRCK00000096”&gt;&lt;attrib id=”taggroupid”&gt;rfcrck&lt;/attrib&gt;&lt;/tag&gt;</p>
+        <p>&lt;tag id=”RFCRCK00000097”&gt;&lt;attrib id=”taggroupid”&gt;rfcrck&lt;/attrib&gt;&lt;/tag&gt;</p>
+        <p>&lt;tag id=”RFCRCK00000098”&gt;&lt;attrib id=”taggroupid”&gt;rfcrck&lt;/attrib&gt;&lt;/tag&gt;</p>
+        <p>&lt;tag id=”RFCRCK00000099”&gt;&lt;attrib id=”taggroupid”&gt;rfcrck&lt;/attrib&gt;&lt;/tag&gt;</p>
+        <p>&lt;tag id=”RFCRCK00000100”&gt;&lt;attrib id=”taggroupid”&gt;rfcrck&lt;/attrib&gt;&lt;/tag&gt;</p>
+        <p>OR</p>
+        <p>RFCRCK00000092: taggroupid=rfcrck</p>
+        <p>RFCRCK00000093: taggroupid=rfcrck</p>
+        <p>RFCRCK00000094: taggroupid=rfcrck</p>
+        <p>RFCRCK00000095: taggroupid=rfcrck</p>
+        <p>RFCRCK00000096: taggroupid=rfcrck</p>
+        <p>RFCRCK00000097: taggroupid=rfcrck</p>
+        <p>RFCRCK00000098: taggroupid=rfcrck</p>
+        <p>RFCRCK00000099: taggroupid=rfcrck</p>
+        <p>RFCRCK00000100: taggroupid=rfcrck</p>
+        <p>Tag Count</p>
+        <p>tagcount</p>
+        <p>http://&lt;baseurl&gt;/tagcount</p>
+        <p>This function returns the current number of all tags being observed.</p>
+        <p>EXAMPLE COMMAND</p>
+        <p>tagcount</p>
+        <p>OR</p>
+        <p>http://10.1.20.90:6580/rfcode_zonemgr/zonemgr/api/tagcount</p>
+        <p>EXAMPLE RESPONSE</p>
+        <p>TagCount: count=9</p>
+        <p>#</p>
+        <p>OR</p>
+        <p>TagCount: count=9</p>
+        <p>Introduction</p>
+        <p>Tag List by Location</p>
+        <p>taglistbylocation &lt;loc-id&gt; ...</p>
+        <p>http://&lt;baseurl&gt;/taglistbylocation?locid0=&lt;loc-id&gt;&amp;locid1=&lt;loc-id&gt;&amp;...</p>
+        <p>where &lt;loc-id&gt; is alphanumeric ID for one or more specific locations (zones).</p>
+        <p>This function lists all the tags found in one of the listed locations (zones), or any of their children. It also</p>
+        <p>returns tag IDs, as well as all location attributes for the zone where the tag is found.</p>
+        <p>EXAMPLE COMMAND</p>
+        <p>taglistbylocation Rack1</p>
+        <p>OR</p>
+        <p>http://10.1.20.90:6580/rfcode_zonemgr/zonemgr/api/taglistbylocation?id=Rack1,</p>
+        <p>http://10.1.20.92:6580/rfcode_xonemgr/zonemgr/api/taglistbylocation.xml?id=Rack1</p>
+        <p>EXAMPLE RESPONSE</p>
+        <p>RFCRCK00000092: locationzone=Rack1, addr=”9229Waterford”, city=”Austin”,</p>
+        <p>country=”USA”, state=”Texas”, suite=”500”</p>
+        <p>RFCRCK00000093: locationzone=Rack1, addr=”9229Waterford”, city=”Austin”,</p>
+        <p>country=”USA”, state=”Texas”, suite=”500”</p>
+        <p>RFCRCK00000094: locationzone=Rack1, addr=”9229Waterford”, city=”Austin”,</p>
+        <p>country=”USA”, state=”Texas”, suite=”500”</p>
+        <p>OR</p>
+        <p>- &lt;tag-list&gt;</p>
+        <p>- &lt;tag id=”RFCRCK00000092”&gt;</p>
+        <p>&lt;attrib id=”locationzone”&gt;Rack1&lt;/attrib&gt;</p>
+        <p>&lt;attrib id=”addr”&gt;9229Waterford&lt;/attrib&gt;</p>
+        <p>&lt;attrib id=”city”&gt;Austin&lt;/attrib&gt;</p>
+        <p>&lt;attrib id=”country”&gt;USA&lt;/attrib&gt;</p>
+        <p>&lt;attrib id=”state”&gt;Texas&lt;/attrib&gt;</p>
+        <p>&lt;attrib id=”suite”&gt;500&lt;/attrib&gt;</p>
+        <p>&lt;/tag&gt;</p>
+        <p>- &lt;tag id=”RFCRCK00000093”&gt;</p>
+        <p>&lt;attrib id=”locationzone”&gt;Rack1&lt;/attrib&gt;</p>
+        <p>&lt;attrib id=”addr”&gt;9229Waterford&lt;/attrib&gt;</p>
+        <p>&lt;attrib id=”city”&gt;Austin&lt;/attrib&gt;</p>
+        <p>&lt;attrib id=”country”&gt;USA&lt;/attrib&gt;</p>
+        <p>&lt;attrib id=”state”&gt;Texas&lt;/attrib&gt;</p>
+        <p>&lt;attrib id=”suite”&gt;500&lt;/attrib&gt;</p>
+        <p>&lt;/tag&gt;</p>
+        <p>- &lt;tag id=”RFCRCK00000094”&gt;</p>
+        <p>&lt;attrib id=”locationzone”&gt;Rack1&lt;/attrib&gt;</p>
+        <p>&lt;attrib id=”addr”&gt;9229Waterford&lt;/attrib&gt;</p>
+        <p>&lt;attrib id=”city”&gt;Austin&lt;/attrib&gt;</p>
+        <p>&lt;attrib id=”country”&gt;USA&lt;/attrib&gt;</p>
+        <p>&lt;attrib id=”state”&gt;Texas&lt;/attrib&gt;</p>
+        <p>&lt;attrib id=”suite”&gt;500&lt;/attrib&gt;</p>
+        <p>&lt;/tag&gt;</p>
+        <p>EXAMPLE COMMAND</p>
+        <p>taglistbylocation Row1</p>
+        <p>EXAMPLE RESPONSE</p>
+        <p>RFCRCK00000158: locationzone=Rack1, addr=”9229Waterford”, city=”Austin”,</p>
+        <p>country=”USA”, state=”Texas”, suite=”500”</p>
+        <p>RFCRCK00000159: locationzone=Rack1, addr=”9229Waterford”, city=”Austin”,</p>
+        <p>country=”USA”, state=”Texas”, suite=”500”</p>
+        <p>RFCRCK00000160: locationzone=Rack2, addr=”9229Waterford”, city=”Austin”,</p>
+        <p>country=”USA”, state=”Texas”, suite=”500”</p>
+        <p>EXAMPLE COMMAND</p>
+        <p>taglistbylocation Row1</p>
+        <p>EXAMPLE RESPONSE</p>
+        <p>RFCRCK00000158: locationzone=Rack1, addr=”9229Waterford”, city=”Austin”,</p>
+        <p>country=”USA”, state=”Texas”, suite=”500”</p>
+        <p>RFCRCK00000159: locationzone=Rack1, addr=”9229Waterford”, city=”Austin”,</p>
+        <p>country=”USA”, state=”Texas”, suite=”500”</p>
+        <p>RFCRCK00000160: locationzone=Rack2, addr=”9229Waterford”, city=”Austin”,</p>
+        <p>country=”USA”, state=”Texas”, suite=”500”</p>
+        <p>Row1 is the parent of Rack1 and Rack2, and reports tags for both of these locations. The same</p>
+        <p>would hold true for the following example tagcountbylocation.</p>
+        <p>Tag Count by Location</p>
+        <p>tagcountbylocation &lt;loc-id&gt;</p>
+        <p>http://&lt;baseurl&gt;/tagcountbylocation?locid0=&lt;loc-id&gt;&amp;locid1=&lt;loc-id&gt;&amp;...</p>
+        <p>where &lt;loc-id&gt; is alphanumeric ID for one or more specific locations (zones)</p>
+        <p>This function returns count of tags contained in one or more specific lcations, or any of their children.</p>
+        <p>EXAMPLE COMMAND</p>
+        <p>tagcountbylocation Rack1</p>
+        <p>EXAMPLE RESPONSE</p>
+        <p>TagCount: count=3</p>
+        <p>#</p>
+        <p>Tag Print by Channel</p>
+        <p>tagprintbychannel &lt;reader-id&gt; ...</p>
+        <p>http://&lt;baseurl&gt;/tagprintbychannel?channelid0=&lt;reader-id&gt;&amp;channelid1=&lt;reader-id&gt;...</p>
+        <p>where &lt;reader-id&gt; is the alphanumeric ID for the reader to be queried</p>
+        <p>This function prints details of all the tags currently being observed by any of the channels of specific readers.</p>
+        <p>EXAMPLE COMMAND</p>
+        <p>tagprintbychannel R60</p>
+        <p>OR</p>
+        <p>http://10.1.20.92:6580/rfcode_zonemgr/zonemgr/api/tagprintbychannel?channelid0=</p>
+        <p>R60&amp;channelid1=R60</p>
+        <p>http://10.1.20.92:6580/rfcode_zonemgr/zonemgr/api/tagprintbychannel.xml?channeli</p>
+        <p>d0=R60&amp;channelid1=R60</p>
+        <p>EXAMPLE RESPONSE</p>
+        <p>RFCRCK00000092: tagid=”00000092”, taggroupid=rfcrck, tagtype=mantis04A,</p>
+        <p>irlocator=null, motion=false, tamper=false, panic=false, lowbattery=false,</p>
+        <p>locationzone=”Rack1”, confidencebyrule={rule1=0.82125,rule2=0.5175}</p>
+        <p>(R60_channel_A: reader=R60, channel=”A”, ssi=-67)</p>
+        <p>(R60_channel_B: reader=R60, channel=”B”, ssi=-60)</p>
+        <p>(R61_channel_A: reader=R61, channel=”A”, ssi=-75)</p>
+        <p>(R61_channel_B: reader=R61, channel=”B”, ssi=-79)</p>
+        <p>RFCRCK00000093: tagid=”00000093”, taggroupid=rfcrck, tagtype=mantis04A,</p>
+        <p>irlocator=null, motion=false, tamper=false, panic=false, lowbattery=false,</p>
+        <p>locationzone=”Rack1”, confidencebyrule={rule1=0.7875,rule2=0.52875}</p>
+        <p>(R60_channel_A: reader=R60, channel=”A”, ssi=-69)</p>
+        <p>(R60_channel_B: reader=R60, channel=”B”, ssi=-61)</p>
+        <p>(R61_channel_A: reader=R61, channel=”A”, ssi=-75)</p>
+        <p>(R61_channel_B: reader=R61, channel=”B”, ssi=-78)</p>
+        <p>OR</p>
+        <p>RFCRCK00000092: tagid=”00000092”, taggroupid=rfcrck, tagtype=mantis04A,</p>
+        <p>irlocator=null, motion=false, tamper=false, panic=false, lowbattery=false,</p>
+        <p>locationzone=”Rack1”, confidencebyrule={rule1=0.82125,rule2=0.5175}</p>
+        <p>(R60_channel_A: reader=R60, channel=”A”, ssi=-67)</p>
+        <p>(R60_channel_B: reader=R60, channel=”B”, ssi=-60)</p>
+        <p>(R61_channel_A: reader=R61, channel=”A”, ssi=-75)</p>
+        <p>(R61_channel_B: reader=R61, channel=”B”, ssi=-79)</p>
+        <p>RFCRCK00000093: tagid=”00000093”, taggroupid=rfcrck, tagtype=mantis04A,</p>
+        <p>irlocator=null, motion=false, tamper=false, panic=false, lowbattery=false,</p>
+        <p>locationzone=”Rack1”, confidencebyrule={rule1=0.79875,rule2=0.52875}</p>
+        <p>(R60_channel_A: reader=R60, channel=”A”, ssi=-69)</p>
+        <p>(R60_channel_B: reader=R60, channel=”B”, ssi=-60)</p>
+        <p>(R61_channel_A: reader=R61, channel=”A”, ssi=-75)</p>
+        <p>(R61_channel_B: reader=R61, channel=”B”, ssi=-78)</p>
+        <p>RFCRCK00000094: tagid=”00000094”, taggroupid=rfcrck, tagtype=mantis04A,</p>
+        <p>irlocator=null, motion=false, tamper=false, panic=false, lowbattery=false,</p>
+        <p>locationzone=”Rack1”, confidencebyrule={rule1=0.8099999999999999,rule2=0.54}</p>
+        <p>(R60_channel_A: reader=R60, channel=”A”, ssi=-67)</p>
+        <p>(R60_channel_B: reader=R60, channel=”B”, ssi=-61)</p>
+        <p>(R61_channel_A: reader=R61, channel=”A”, ssi=-75)</p>
+        <p>(R61_channel_B: reader=R61, channel=”B”, ssi=-77)</p>
+        <p>OR</p>
+        <p>- &lt;tag-list&gt;</p>
+        <p>- &lt;tag id=”RFCRCK00000092”&gt;</p>
+        <p>&lt;attrib id=”tagid”&gt;00000092&lt;/attrib&gt;</p>
+        <p>&lt;attrib id=”taggroupid”&gt;rfcrck&lt;/attrib&gt;</p>
+        <p>&lt;attrib id=”tagtype”&gt;mantis04A&lt;/attrib&gt;</p>
+        <p>- &lt;attrib id=”irlocator”&gt;</p>
+        <p>&lt;null /&gt;</p>
+        <p>&lt;/attrib&gt;</p>
+        <p>&lt;attrib id=”motion”&gt;false&lt;/attrib&gt;</p>
+        <p>&lt;attrib id=”tamper”&gt;false&lt;/attrib&gt;</p>
+        <p>&lt;attrib id=”panic”&gt;false&lt;/attrib&gt;</p>
+        <p>&lt;attrib id=”lowbattery”&gt;false&lt;/attrib&gt;</p>
+        <p>&lt;attrib id=”locationzone”&gt;Rack1&lt;/attrib&gt;</p>
+        <p>- &lt;attrib id=”confidencebyrule”&gt;</p>
+        <p>- &lt;map&gt;</p>
+        <p>&lt;entry id=”rule1”&gt;0.82125&lt;/entry&gt;</p>
+        <p>&lt;entry id=”rule2”&gt;0.5175&lt;/entry&gt;</p>
+        <p>&lt;/map&gt;</p>
+        <p>&lt;/attrib&gt;</p>
+        <p>- &lt;tag-link-list&gt;</p>
+        <p>- &lt;tag-link id=”RFCRCK00000092_R60_channel_A”&gt;</p>
+        <p>&lt;attrib id=”tagid”&gt;RFCRCK00000092&lt;/attrib&gt;</p>
+        <p>&lt;attrib id=”channelid”&gt;R60_channel_A&lt;/attrib&gt;</p>
+        <p>&lt;attrib id=”ssi”&gt;-67&lt;/attrib&gt;</p>
+        <p>&lt;/tag-link&gt;</p>
+        <p>- &lt;tag-link id=”RFCRCK00000092_R60_channel_B”&gt;</p>
+        <p>&lt;attrib id=”tagid”&gt;RFCRCK00000092&lt;/attrib&gt;</p>
+        <p>&lt;attrib id=”channelid”&gt;R60_channel_B&lt;/attrib&gt;</p>
+        <p>&lt;attrib id=”ssi”&gt;-60&lt;/attrib&gt;</p>
+        <p>&lt;/tag-link&gt;</p>
+        <p>- &lt;tag-link id=”RFCRCK00000092_R61_channel_A”&gt;</p>
+        <p>&lt;attrib id=”tagid”&gt;RFCRCK00000092&lt;/attrib&gt;</p>
+        <p>&lt;attrib id=”channelid”&gt;R61_channel_A&lt;/attrib&gt;</p>
+        <p>&lt;attrib id=”ssi”&gt;-75&lt;/attrib&gt;</p>
+        <p>&lt;/tag-link&gt;</p>
+        <p>- &lt;tag-link id=”RFCRCK00000092_R61_channel_B”&gt;</p>
+        <p>&lt;attrib id=”tagid”&gt;RFCRCK00000092&lt;/attrib&gt;</p>
+        <p>&lt;attrib id=”channelid”&gt;R61_channel_B&lt;/attrib&gt;</p>
+        <p>&lt;attrib id=”ssi”&gt;-79&lt;/attrib&gt;</p>
+        <p>&lt;/tag-link&gt;</p>
+        <p>&lt;/tag-link-list&gt;</p>
+        <p>&lt;/tag&gt;</p>
+        <p>This command is very helpful to evaluate tag reads (signal strength) to verify and tune Rules.</p>
+        <p MadCap:conditions="Default.Notes for authors">source:&#160;unreleased doc Zone Manager User Manual (beta)</p>
+    </body>
+</html>

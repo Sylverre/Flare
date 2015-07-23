@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultFileLinkSet
+  FileTitle=""
+  FileSearchable="true"
+  FileTimeEstimate="0"
+  FilePriority="0">
+  <Links>
+    <Link
+      Url="Content/D_Images/AM Manage Tags - new Asset - PDU.bmp" />
+    <Link
+      Url="Content/D_Images/UserManual for reference/030000F1.png" />
+    <Link
+      Url="Content/D_Images/UserManual for reference/030000F2.png" />
+  </Links>
+  <LongLinks>
+    <Link
+      Url="Content/D_Images/AM Manage Tags - new Asset - PDU.bmp" />
+    <Link
+      Url="Content/D_Images/UserManual for reference/030000F1.png" />
+    <Link
+      Url="Content/D_Images/UserManual for reference/030000F2.png" />
+  </LongLinks>
+  <Anchors>
+    <Anchor
+      Name="__RefHeading___Toc414541463" />
+  </Anchors>
+  <Keywords />
+  <Concepts />
+  <ConceptControlNames />
+  <IndexControlNames />
+  <Variables />
+  <FileConditions />
+  <FileTags />
+  <AllConditions />
+  <Stylesheets />
+</CatapultFileLinkSet>

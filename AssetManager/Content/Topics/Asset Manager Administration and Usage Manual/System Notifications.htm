@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="12" MadCap:lastHeight="1449" MadCap:lastWidth="672">
+    <head>
+        <title>
+        </title>
+    </head>
+    <body>
+        <h1>
+            <a name="__RefHeading___Toc414541382">
+            </a>System Notifications</h1>
+        <h2>
+            <a name="__RefHeading___Toc414541383">
+            </a>Overview of System <MadCap:annotation MadCap:createDate="2015-04-28T13:31:56.0783716-05:00" MadCap:creator="DSFoxx" MadCap:initials="DSF" MadCap:comment="Topic is absolutely requires for SysAdmin.  However, the text is in dire need of an overhaul.\r\nAmong other issues, remember to condition out any seriously basic end-user-text for the admin, if only for length." MadCap:editor="DSFoxx" MadCap:editDate="2015-04-28T13:37:08.5212423-05:00">Notifications</MadCap:annotation></h2>
+        <p>System notifications take the form of Events and Alerts.&#160; Both can be accessed and configured in the Admin Console and in the User Console.&#160; Both Events and Alerts enable the Administrator and Users (who have the necessary Role or Permissions) to configure notifications about states of the <MadCap:variable name="Variables.ProductName" /> system, which includes <MadCap:variable name="Variables.CompanyName" /> hardware used to monitor it, as well as notifications about the state of the assets you are managing and the environment you are monitoring.&#160; In other words, the former (Events) allow administrators to set conditions for when and how they want to be notified about something within the <MadCap:variable name="Variables.ProductName" /> system. When information within the <MadCap:variable name="Variables.ProductName" /> system changes in a way that satisfies these conditions, the Events sub-system sends notifications to users or outside systems based on the actions that are configured for the event. </p>
+        <p>Alerts have a “set condition” and a “clear condition” (or a “begin” and “end”), while Events do not need to have a beginning and end for notifications but rather use "triggers," configured by the administrator, that will cause an Event notification to be produced. The events feature might be used to send data from <MadCap:variable name="Variables.ProductName" /> to other software systems or to notify users when certain conditions occur, while the latter (Alerts) are configured to ensure that you know the location of your assets, their operational state, and conditions of the environment in which they are being used.</p>
+        <p>The following is a summary of the differences and similarities among Events and Alerts:</p>
+        <ul>
+            <li>Events and Alerts are similar in that both Events and Alerts can be configured with the same types of notifications (Actions), which include sending email, posting messages via HTTP, writing notification messages to logs, etc., with the exception that Alerts can also be sent to Serial Devices.</li>
+            <li>Events and Alerts are different in the following ways:<ul style="list-style-type: circle;"><li>Events happen by Triggers, which are configured using Asset Condition Filters in both the Admin Console and the User Console, although the latter has an additional Trigger setting called Security that can be configured to define the Execution User Account.</li><li>Alerts happen at Thresholds, which are configured by setting a hardware state, asset state, or environmental state beyond which the Alert will occur.&#160; Threshold configuration differs between the Admin Console and the User Console in the following way:<ul style="list-style-type: square;"><li><p>The Admin Console is used to configure Alert condition filters for the following: Reader conditions (high traffic, noise, offline, tag capacity) and Zone Manager conditions (offline).&#160; You can also set a Global Alert Policy in the Admin Console that affects all alerts for all users.</p></li><li>The User Console is used to configure Alert condition filters for the following: Asset Offline Conditions, Custom Conditions, Pressure Conditions, Door States, Fluid Leaks, Humidity Conditions, Low Battery States, Motion Detected Conditions, Tamper States, Temperature Conditions, and Unexpected Conditions.</li></ul></li></ul></li>
+        </ul>
+        <ul style="list-style-type: circle;">
+            <li>
+                <MadCap:annotation MadCap:createDate="2015-04-28T13:38:59.8906123-05:00" MadCap:creator="DSFoxx" MadCap:initials="DSF" MadCap:comment="match to above!" MadCap:editor="DSFoxx" MadCap:editDate="2015-04-28T13:39:04.3168655-05:00">Alerts</MadCap:annotation> create historical events in the “Alert Viewer”, where Events do not generate a historical event.<br /><br /></li>
+        </ul>
+        <p class="note" MadCap:autonum="&lt;b&gt;NOTE:&lt;/b&gt; &#160;">An essential prerequisite to using email for notifications of any Event or Alert is to configure SMTP, which is described in the <a href="SMTP and System Notifications.htm#_Configuring_SMTP">Configuring SMTP</a> section.</p>
+        <p>The Global Alert Policy task allows an administrator to suspend Alert <MadCap:annotation MadCap:createDate="2015-05-29T13:34:53.4432500-05:00" MadCap:creator="Pappillon" MadCap:initials="PA" MadCap:comment="old manual said Alert Alerts &lt;g&gt;" MadCap:editor="Pappillon" MadCap:editDate="2015-05-29T13:35:01.2296954-05:00">Actions</MadCap:annotation> or both Thresholds &amp; Alert Actions.</p>
+    </body>
+</html>

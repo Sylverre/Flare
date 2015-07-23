@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="5001" MadCap:lastWidth="750">
+    <head><title></title>
+    </head>
+    <body>
+        <h1><a name="__RefHeading___Toc414541419"></a>Manage Reports</h1>
+        <p>The Manage Reports task lets you create Reports based on specific criteria. <MadCap:variable name="Variables.ProductName" /> provides several predefined reports you can use and customize.  In addition, you can create Consolidated Reports which let you run multiple reports simultaneously so that they can be viewed or exported as a group.</p>
+        <p>Reports in <MadCap:variable name="Variables.ProductName"></MadCap:variable> are created in a tabular style that produces a table output of multiple rows and columns based on the report criteria specified.</p>
+        <p>
+            <img src="../../Images/UserManual for reference/03000097.png" style="height: 215px;width: 556px;" class="img_2" />
+        </p>
+        <p MadCap:conditions="">The following System Reports are available in the Admin Console:</p>
+        <ul>
+            <li MadCap:conditions="">Consolidated System Report</li>
+            <li MadCap:conditions="">Reader Custom Report</li>
+            <li MadCap:conditions="">Reader Noise Report</li>
+            <li MadCap:conditions="">Reader Offline Report</li>
+            <li MadCap:conditions="">Reader Online Report</li>
+            <li MadCap:conditions="">System Alert Report</li>
+            <li MadCap:conditions="">User Access Report</li>
+            <li MadCap:conditions="">Zone Manager Custom Report</li>
+            <li MadCap:conditions="">Zone Manager Offline Report</li>
+            <li MadCap:conditions="">Zone Manager Online Report<br /><br /></li>
+        </ul>
+        <p MadCap:conditions="">The following Reports are available in the User Console:</p>
+        <ul>
+            <li MadCap:conditions="">Asset Alert Report</li>
+            <li MadCap:conditions="">Assets in Motion Report</li>
+            <li MadCap:conditions="">Assets With Low Battery Level Report</li>
+            <li MadCap:conditions="">Assets With Panic Report</li>
+            <li MadCap:conditions="">Assets With Tamper Report</li>
+            <li MadCap:conditions="">Consolidated Asset Report</li>
+            <li MadCap:conditions="">Custom Report</li>
+            <li MadCap:conditions="">Door Close Report</li>
+            <li MadCap:conditions="">Door Open Report</li>
+            <li MadCap:conditions="">Expected Location Report</li>
+            <li MadCap:conditions="">Humidity Report</li>
+            <li MadCap:conditions="">Location Change Report</li>
+            <li MadCap:conditions="">Offline Asset Report</li>
+            <li MadCap:conditions="">Online Asset Report</li>
+            <li MadCap:conditions="">Summary Report - Assets by Location</li>
+            <li MadCap:conditions="">Summary Report - Assets by Type</li>
+            <li MadCap:conditions="">Summary Report - Assets By Unexpected Location</li>
+            <li MadCap:conditions="">Temperature Report</li>
+            <li MadCap:conditions="">Unassigned Tag Report</li>
+            <li MadCap:conditions="">Unexpected Location Report</li>
+            <li MadCap:conditions="">Untagged Asset Report<br /><br /></li>
+        </ul>
+        <p>Reports can be run at any time or they can be scheduled either to run once or according to a defined schedule at specific times in the future.</p>
+        <p>
+            <img src="../../Images/UserManual for reference/03000096.png" style="height: 220px;width: 461px;" class="img_2" />
+        </p>
+        <h2>To Create a New Report</h2>
+        <ol>
+            <li>Navigate to <span class="strong">Reports/Graphs &gt;&#160;Manage Reports</span> and click <span class="strong">New</span>.</li>
+            <li>Select the Report type from the drop-down.</li>
+            <li>Complete all required and any desired additional fields.</li>
+        </ol>
+        <h2>Basic Information</h2>
+        <ul>
+            <li><span class="Strong">Name:</span> Assign a name to the Report.<br /></li>
+        </ul>
+        <ul>
+            <li><span class="strong">BIRT&#160;Template:</span>  Click the Ellipsis <span class="strong">...</span> button to access a list of available templates. BIRT&#160;Templates for SLA compliance are included in <MadCap:variable name="General.ProductName" />, and templates you create and upload appear here. Move items from&#160;Available to Selected as desired. Click <span class="strong">OK</span>&#160;when finished.</li>
+            <li><span class="strong">Create output only if data exists:</span> check this box to prevent the creation of empty reports. If unchecked, <MadCap:variable name="General.ProductName" /> will create a report if a report is scheduled to be created, even if the report contains no data.</li>
+        </ul>
+        <h2>Security</h2>
+        <ul>
+            <li><span class="strong">Execution User Account:</span> On the User Console, this drop-down menu provides a list of <MadCap:annotation MadCap:createDate="2015-06-17T17:32:00.3012877-05:00" MadCap:creator="Pappillon" MadCap:initials="PA" MadCap:comment="and does what, please?  AM says &quot;when used in conjunction with Admin Security, can limit report execution to authorized users.&quot;  No idea what that means!  Do group names appear here, as well as individual user IDs?  Looks like only a single selection is possible. " MadCap:editor="Pappillon" MadCap:editDate="2015-06-17T17:35:03.7437800-05:00">users. The Execution User Account, when used in conjunction with Admin Security, can limit report execution to authorized users. The default value of Admin is appropriate for most situations.</MadCap:annotation></li>
+        </ul>
+        <h2>Time</h2>
+        <ul>
+            <li><span class="strong">Lead In Timestamps:</span> Include attribute state changes if they occurred before the specified report time. For example, if you are generating a report to show offline assets during a specific week, and some of the assets went from online to offline before the report start time, then that information will be included in the report. If you leave this box unchecked, the report will only show the state of the attribute at the specified start time.</li>
+            <li><span class="strong">Time Type:</span>Select from Relative, Specific, Calendar, or Consolidated Time Range. </li>
+            <li><span class="strong">Consolidated Report Time:</span> If Consolidated Time Range is chosen, select from Beginning of consolidated report, End of consolidated report, or Same time range as consolidated <MadCap:annotation MadCap:createDate="2015-06-26T10:11:06.6234903-05:00" MadCap:creator="Pappillon" MadCap:initials="PA" MadCap:comment="An explanation wouldn't go amiss!" MadCap:editor="Pappillon" MadCap:editDate="2015-06-26T10:11:13.6728935-05:00">report.</MadCap:annotation></li>
+            <li><span class="strong">Time Range</span> Select the period.</li>
+            <li><span class="strong">Reports:</span> for Consolidated Reports. Click the Ellipsis <span class="strong">...</span> button to access a list of available reports to include. Move items from&#160;Available to Selected as desired. Click <span class="strong">OK</span>&#160;when finished.</li>
+        </ul>
+        <h2>Schedule</h2>
+        <ul>
+            <li><span class="strong">Schedule:</span> Click the Ellipsis <span class="strong">...</span> button to access the scheduler. Set frequency to daily, weekly, or monthly and select the start time.</li>
+            <li><span class="strong">Enable Schedule:</span>Check this box to enable the schedule. Temporarily disable an schedule without deleting it by unchecking this box.</li>
+        </ul>
+        <h2>Actions</h2>
+        <ul>
+            <li><span class="strong">Action Format:</span>Select output format for report or graph distributed via Action. Reports and Graphs can be sent in CSV, JSON, PDF, SQLITE, or XML formats.</li>
+            <li><span class="strong">Report/Graph Actions:</span> Click the Ellipsis <span class="strong">...</span> button to access a list of available Email, FTP, or HTTP&#160;Post actions. Move actions from&#160;Available to Selected as desired. Click <span class="strong">OK</span>&#160;when finished.</li>
+            <li><span class="strong">Filters:</span> Filters define the criteria that must be met in order for data to be included. Select Attributes, Value Operators, and Values to limit the amount of data included. Leave empty to include all data related to the type and time specified. </li>
+            <li><span class="strong">Post-Conditions:</span>Set to include all status changes for items meeting criteria during any part of specified period.</li>
+            <li><span class="strong">Exceptions:</span> Select to define data change handling. Every change to an Exception Attribute during the report period is included. 
+            If no exception attributes are specified, then all of the column attributes are used as exception attributes for the report.</li>
+            <li><span class="strong">Columns:</span> Select Attributes to display. Click the Ellipsis <span class="strong">...</span> button to access a list of available Attributes. Move actions from&#160;Available to Selected as desired. Click <span class="strong">OK</span>&#160;when finished.</li>
+        </ul>
+        <ol start="4">
+            <li><span class="strong">Save Changes</span>.</li>
+        </ol>
+        <p>&#160;</p>
+        <h2>To Run a Report</h2>
+        <ol>
+            <li>Navigate to <span class="strong">Reports/Graphs &gt;&#160;Manage Reports</span>.</li>
+            <li>Select the Report from the list in the middle pane.</li>
+            <li>Click Run <span class="strong">Report</span> or <span class="strong">Run and View Report</span>.<br /> Run Report behaves as if scheduled to run immediately. Navigate to <span class="strong">Reports/Graphs &gt;&#160;Reports</span> to view the report once <MadCap:annotation MadCap:createDate="2015-06-18T13:55:04.6269796-05:00" MadCap:creator="Pappillon" MadCap:initials="PA" MadCap:comment="including actions?" MadCap:editor="Pappillon" MadCap:editDate="2015-06-18T13:55:08.9632276-05:00">completed.</MadCap:annotation><br />Run and View <MadCap:annotation MadCap:createDate="2015-06-18T13:55:12.3664222-05:00" MadCap:creator="Pappillon" MadCap:initials="PA" MadCap:comment="does this include actions?" MadCap:editor="Pappillon" MadCap:editDate="2015-06-18T13:55:17.2016988-05:00">Report</MadCap:annotation> displays results onscreen without requiring you to navigate away from the Manage Reports Task. </li>
+            <li>Enter a name for the report.</li>
+            <li>If Run and View Report selected, click <span class="strong">Run in Background</span> if desired. </li>
+            <li>When complete, the report opens in a pop-up.</li>
+        </ol>
+        <h2>To Export a Report</h2>
+        <ol>
+            <li>Navigate to<span class="strong">Reports/Graphs.</span></li>
+            <li>To export a completed report, select the <span class="strong">Reports</span> sub-task, select the report, and click <span class="strong">View</span>. To run and export a new report, <span class="strong">Run and View Report</span>.</li>
+            <li>From View Report Window, click desired <span class="strong">Export Format</span> button.</li>
+        </ol>
+        <h2>To Delete a Report Template</h2>
+        <ol>
+            <li>Navigate to <span class="strong">Reports/Graphs &gt; Manage Reports</span>.</li>
+            <li>Select the report from the list in the middle pane.</li>
+            <li>Click <span class="strong">Delete</span>. </li>
+        </ol>
+        <p>The template is deleted, but any reports that have been run remain.</p>
+        <h2>To Delete a Report </h2>
+        <ol>
+            <li>Navigate to <span class="strong">Reports/Graphs &gt; Reports</span>.</li>
+            <li>Select the report.</li>
+            <li>Click <span class="strong">Delete</span>. </li>
+        </ol>
+        <p>The report is deleted, but the template remains. &#160;</p>
+        <p MadCap:conditions="Default.SourceText">
+            <MadCap:annotation MadCap:createDate="2015-06-01T15:58:05.9349098-05:00" MadCap:creator="Pappillon" MadCap:initials="PA" MadCap:comment="numbered steps, please!" MadCap:editor="Pappillon" MadCap:editDate="2015-06-01T15:58:10.6621802-05:00">To</MadCap:annotation> run a report and view it immediately, navigate to <span class="strong">Reports/Graphs &gt; Manage Reports</span> and choose the report from the list of report definitions.&#160; Once selected, click the <b>Run Report</b> button at the top of the page.&#160; The report will begin to execute and you can navigate to the Reports task to view its progress and see the results once it is complete.&#160;&#160; Optionally, you can click the <span class="Strong">Run and View Report</span> button to run the report and view the results of it onscreen without navigating away from the Manage Reports task.</p>
+        <p MadCap:conditions="Default.SourceText">Reports in <MadCap:variable name="Variables.ProductName" /> are created in a tabular style that produces a table output of multiple rows and columns based on the report criteria specified.</p>
+        <p MadCap:conditions="Default.SourceText">
+            <img src="../../Images/UserManual for reference/03000097.png" style="height: 215px;width: 556px;" class="img_2" />
+        </p>
+    </body>
+</html>

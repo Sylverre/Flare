@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="5" MadCap:lastHeight="1112" MadCap:lastWidth="1083">
+    <head><title></title>
+    </head>
+    <body>
+        <h1><a name="__RefHeading___Toc414541323"></a><a name="_Licensing"></a>Licensing Overview</h1>
+        <h2>Asset Licenses</h2>
+        <p><MadCap:variable name="Variables.ProductName" /> is licensed based on the number of assets configured in the system. &#160; When an asset is added to <MadCap:variable name="General.ProductName" /> it immediately and automatically consumes a license. The asset continues to consume a license until the asset is deleted. At that time, the license is immediately and automatically released. The types of assets defined are irrelevant as any asset counts and consumes a license. &#160;An asset can be an inventory type asset (with or without an asset tag associated with it), a sensor asset (sensor tag), or a summary asset. &#160; &#160; All the assets defined in the system consume licenses, regardless of the schema configuration.  Every Inventory, Sensor and Summary Asset will each consume a license. However, no other configured object in the system consumes a license;  the number of Locations, Users, Readers, etc. defined in the system has no bearing on the licensing. &#160;</p>
+        <p>For example,&#160;none&#160;of the following items consume licenses:
+        </p>
+        <ul>
+            <li>Readers</li>
+            <li>Zone Managers (local or remote)</li>
+            <li>Users, Managers, or Administrators</li>
+            <li>Locations or Rules</li>
+            <li>Tag Groups or Unassigned tags</li>
+            <li>Maps</li>
+            <li>Dashboards</li>
+        </ul>
+        <p>Assume an <MadCap:variable name="Variables.ProductName" /> system contains all of the following:</p>
+        <ul>
+            <li>50 readers</li>
+            <li>10 users</li>
+            <li>60 IT Racks spread across 6 rows in a single data center</li>
+            <li>75 unique locations defined in the Location Tree</li>
+            <li>2,500 inventory assets</li>
+            <li>350 sensors assets</li>
+            <li>67 summary assets (associated to the 60 IT Racks, 6 Rows, 1 Data Center locations)</li>
+        </ul>
+        <p>Licenses are consumed only by the assets in the last three bullets: the 2,500 inventory assets, the 350 sensor assets, and the 67 summary assets.&#160; However, none of the readers, users, racks, or locations in the Location Tree consume a license; therefore, the total number of licenses required in this scenario would be 2,917.</p>
+        <p class="note" MadCap:autonum="&lt;b&gt;NOTE:&lt;/b&gt; &#160;"> An asset is not the same as a tag. &#160;An asset can be created without a tag associated to it and this will still consume a license. Most often an asset does have an asset tag or sensor tag associated with it, but this not always the case, especially with summary assets. &#160;Summary assets are assets that represent a location and an asset.&#160; Summary assets typically do not have asset tags associated to them, but like all other assets, they each consume a license. &#160;For more about summary assets, refer to the <a href="Summary Assets.htm#_Summary_Assets">Summary Asset</a> section.
+        </p>
+        <p>Knowing how licenses are consumed is important when you calculate the number of licenses that you need to purchase.</p>
+    </body>
+</html>

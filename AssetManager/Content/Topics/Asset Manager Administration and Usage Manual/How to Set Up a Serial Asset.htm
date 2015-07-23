@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="1076" MadCap:lastWidth="776">
+    <head><title></title>
+    </head>
+    <body>
+        <h1><a name="__RefHeading___Toc414541413"></a>How to Set Up a Serial Asset Alert</h1>
+        <p>To set up a Serial Alert Action, perform the following steps:</p>
+        <ol>
+            <li>Connect the serial device to the reader using a USB-to-RS232 (USB-to-serial) converter.</li>
+        </ol>
+        <p class="note" MadCap:autonum="&lt;b&gt;NOTE:&lt;/b&gt; &#160;"> A female/female (F/F) gender changer may be required to connect the cable.</p>
+        <ol MadCap:continue="true">
+            <li>Use the web interface to the reader, and set the Serial Port to the following: <br /><br /><img src="../../Images/UserManual for reference/0300007C.png" style="height: 144px;width: 548px;" class="img_2" /><br /></li>
+        </ol>
+        <p class="note" MadCap:autonum="&lt;b&gt;NOTE:&lt;/b&gt; &#160;"> The baud rate and driver setting depends on the hardware to be connected.</p>
+        <ol MadCap:continue="true">
+            <li>In the <span class="strong">Admin Console</span> browse to <span class="strong">Configuration</span> &gt; <span class="strong">Readers</span>.</li>
+            <li>Select the reader to be configured.</li>
+            <li>Set the Serial Driver for the Serial Port to <span class="strong">text-8n1</span>.<br /><br /><img src="../../Images/UserManual for reference/0300007D.png" style="height: 50px;width: 341px;" class="img_2" /><br /></li>
+            <li>Then, in the <span class="strong">User Console, </span>go to <span class="strong">Alert Management</span> &gt; <span class="strong">Actions</span>.</li>
+            <li>Set up a new Alert Action for the serial device:</li>
+        </ol>
+        <p>The following command strings are used to communicate with serial interface converter-controllers, that is, output relays (for example, Patlite PHC-100 Relays Panels):</p>
+        <ul>
+            <li>:toser,@??101!&#160; (Relay 1)</li>
+            <li>:toser,@??102! (Relay 2)</li>
+            <li>:toser,@??103! (Relays 1&amp;2)</li>
+            <li>:toser,@??104! (Relay 3)</li>
+        </ul>
+        <p>etc.... </p>
+        <ul>
+            <li>:toser,@??001! (Relay 1 off)<br /></li>
+        </ul>
+    </body>
+</html>

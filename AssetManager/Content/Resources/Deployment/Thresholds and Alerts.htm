@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="2" MadCap:lastHeight="1427" MadCap:lastWidth="421">
+    <head>
+    </head>
+    <body>
+        <h1>Thresholds and Alerts</h1>
+        <p MadCap:conditions="General.notes for reviewers" style="text-decoration: underline;">More properly SysAdmin than Deployment, but could be argued either way. Not yet removed from TOC, since personnel completing physical deployment may be more aware of thresholds, but I tend to feel that anything involving the User Console is beyond the scope of the Deployment <MadCap:annotation MadCap:createDate="2015-04-27T17:57:49.7240737-05:00" MadCap:creator="DSFoxx" MadCap:initials="DSF" MadCap:comment="Frank says: IMO, SysAdmin." MadCap:editor="DSFoxx" MadCap:editDate="2015-04-27T17:57:53.2692765-05:00">Guide.</MadCap:annotation></p>
+        <p>Thresholds are limits for specific attribute values. Alerts are notifications you will receive if the value of a particular attribute goes beyond the threshold set for it. For example, you can set a threshold for a sensor tag’s temperature reading to be 77°F and have an alert sent when the temperature exceeds this threshold.</p>
+        <p>To configure a basic threshold and alert, perform the following steps:</p>
+        <p>1. In the User Console, go to <b>Alert Management</b>.</p>
+        <p>2. Click Actions, click the New button, and choose Email Alert Action from the drop-down menu.</p>
+        <p>3. Give the alert a name, enter the email address of the alert recipient, and then click Save Changes.</p>
+        <p>4. Select Temperature Alert Threshold from the dropdown list and fill in a Name for the alert, e.g. “Rack too hot” (see screenshot below).</p>
+        <p>5. In the Alert Condition section, set the Threshold Attribute Value Operator to be Greater Than (&gt;) and the Threshold Attribute Value to 80.</p>
+        <p>6. Set the Alert Filter so that all temperature sensors in the <MadCap:variable name="General.CompanyName" /> Data Center are monitored. This is a convenient way of setting a threshold on multiple sensors at one time for a given location, which will result in you receiving an alert anytime a sensor reads a temperature that is greater than the threshold you set.</p>
+        <p>7. If you choose the Email Alert Action, then an email like the one below will be sent when any temperature sensor in a particular data center location (e.g., <MadCap:variable name="General.CompanyName" /> Data Center) reads greater than 80 degrees.</p>
+        <p class="note" MadCap:autonum="&lt;b&gt;NOTE:&lt;/b&gt; &#160;">Alert thresholds and email notifications can be set up for other sensors such as humidity, fluid detection, and/or open door states.</p>
+    </body>
+</html>

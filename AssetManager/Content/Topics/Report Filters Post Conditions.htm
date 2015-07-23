@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <title>
+        </title>
+    </head>
+    <body>
+        <h4 class="Heading4">Report Filters, Post-Conditions, Exception Conditions, and Columns Settings</h4>
+        <p class="p_10">The last four (4) sections available when configuring Report Definitions are shown below.</p>
+        <p class="p_42">
+            <img src="../../../RFC-AM Comprehensive/Content/Resources/Images/UserManual for reference/030000A5.png" style="height: 531px;width: 448px;" class="img_2" />
+        </p>
+        <p class="p_42">&#160;</p>
+        <p class="Heading4Char_1">Report Filter and Post Conditions</p>
+        <p>The Filter and Post-Condition sections define the criteria that must be met in order for a row of data to be included in a report. <br /><br /><span class="Strong">NOTE</span>:&#160; If you leave the Filter and Post-Condition sections empty, all rows related to the type and time specified in the report configuration will be included.<br /><br />Both the filter and the post-condition are configured by selecting at least one Attribute, a Value Operator, and a Value. For example, you could choose to filter out reader noise values in a report for those readers that are offline for any or all of a report time range with the following configuration:</p>
+        <ul class="ul_2">
+            <li class="ColorfulListAccent11_1">Attribute = “Online Status”</li>
+            <li class="ColorfulListAccent11_1">Operator = “Has Value”</li>
+            <li class="ColorfulListAccent11_1">Value = “√”</li>
+        </ul>
+        <p>This same Filter configuration example could be used for Zone Manager, such that report rows would only be produced for Zone Manager attribute changes that happen while the online status has a value, i.e., to create a report showing only the status of a reader or Zone Manager when that reader or Zone Manager is online.<br /><br /><span class="Heading4Char">Report Post-Conditions</span></p>
+        <p>If the example above (Online Status, Has Value) was used in the post-condition section of the report, then report rows would be produced for all attribute value changes for any Zone Manager that had a value for online status at least once during the reporting period. In other words, the report may produce rows for attribute changes that happen when the online status did not have a value, but ONLY if at least one row of data in the report for that Zone Manager had an online status value.</p>
+        <p class="Heading4Char">Report Exception Conditions (Exception Attributes)</p>
+        <p>Exception Attributes are a list of attributes that are evaluated for report data changes. For instance, if a reader went through several state changes during the configured report period then each of those changes will become a row in the report only if "Reader State" is selected as an exception condition (or if no exception conditions are specified AND "Reader State" is included in the column attributes). If that same reader only has "Noise Floor (Channel A)" as an exception attribute, then even if "Reader State" is a column attribute the reader state changes will not be reported as column rows; instead, the reader state column will report whatever the reader state was when "Noise Floor (Channel A)" changed value.</p>
+        <p> <img src="../../../RFC-AM Comprehensive/Content/Resources/Images/UserManual for reference/020000A6.jpg" style="height: 201px;width: 359px;" class="img_2" /></p>
+        <p>If no exception attributes are specified, then all of the column attributes are used as exception attributes for the report.</p>
+        <p class="Heading4Char_1">Report Columns (Attributes)</p>
+        <p class="p_10">The final section of the report editor is the Report Columns section. This section lets you choose what information will appear in the report columns. By default the “Name” attribute is always in the list. By clicking the Ellipsis [<span class="Strong">…</span>] button, the following window will appear to allow more columns to be selected.</p>
+        <p class="p_10">
+            <img src="../../../RFC-AM Comprehensive/Content/Resources/Images/UserManual for reference/020000A7.jpg" style="height: 201px;width: 359px;" class="img_2" />
+        </p>
+        <p>Use the left and right arrows to move attributes between the available and selected list boxes. Use the up and down arrows to order the attributes in the selected list box (and consequently in the Report itself).</p>
+        <p class="p_10">Once the correct information is completed in the report editor, click the <span class="Strong">Save Changes </span>button at the bottom of the editor screen to save the report. At this point the report is defined, created and ready to run.</p>
+        <p class="p_10">
+            <span class="Strong">NOTE</span>:&#160; A copy of a report can be made so that a user can quickly build a new report based on an existing report. To do this, click the <span class="Strong">Copy </span>button.</p>
+    </body>
+</html>
